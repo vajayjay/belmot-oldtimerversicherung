@@ -39,7 +39,7 @@ const Nav = styled.div`
     }
   }
 `
-const DekstopLinks = styled.div`
+const DesktopLinks = styled.div`
   /*Hide Dekstop Nav links on mobile*/
   @media (max-width: 768px) {
       display: none;
@@ -47,8 +47,10 @@ const DekstopLinks = styled.div`
 
   /*Desktop Nav links*/
   & > a{
-    color: var( --color-black);
+    color: var( --color-darker);
     text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 600;
     opacity:0.8;
     transition: opacity 200ms;
     margin-left: 1rem;
@@ -60,8 +62,8 @@ const DekstopLinks = styled.div`
     }
 
     &.active {
-      color: var(--color-accent);
-      border-bottom: 4px solid var(--color-accent);
+      color: var(--color-primary);
+      border-bottom: 4px solid var(--color-primary);
     }
   }
 `
@@ -73,10 +75,12 @@ const NavBar = props => (
         <Link to="/">
           <img src={logo} alt="Company Logo"/>
         </Link>
-        <DekstopLinks>
-          <Link to="/about" activeClassName="active">About</Link>
-          <Link to="/page-2" activeClassName="active">Nav item 2</Link>
-        </DekstopLinks>
+        <DesktopLinks>
+          {/* <Link to="/about" activeClassName="active">About</Link> */}
+          <Link to="/faq" activeClassName="active">FAQ</Link>
+          <Link to="/kontakt" activeClassName="active">Kontakt</Link>
+          <Link to="/anfrage" activeClassName="active">Online-Anfrage</Link>
+        </DesktopLinks>
         <BurgerButtton 
           click={props.burgerButtonClickHandler}
           showMobileMenu={props.showMobileMenu}

@@ -24,10 +24,12 @@ const StyledLink = styled(Link)`
     margin-top: 5vh;
     display: block;
     text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 500;
     text-align: center;
 
     &.active {
-      color: var(--color-accent);
+      color: var(--color-primary-light);
     }
     
     /*animation of Menu items flying in slightly delayed*/
@@ -56,28 +58,34 @@ const MobileMenu = props => {
     return(
         <MobileNav showMobileMenu={props.showMobileMenu}>
             <StyledLink 
-                to="/about/"
+                to="/"
                 showMobileMenu={props.showMobileMenu}
                 activeClassName="active">
-                About
+                Home
             </StyledLink>
             <StyledLink 
-                to="/x/"
+                to="/anfrage/"
                 showMobileMenu={props.showMobileMenu}
                 activeClassName="active">
-                Item 2
+                Online-Anfrage
             </StyledLink>
             <StyledLink 
-                to="/x/"
+                to="/kontakt/"
                 showMobileMenu={props.showMobileMenu}
                 activeClassName="active">
-                Item 3
+                Kontakt
             </StyledLink>
             <StyledLink 
-                to="/x/"
+                to="/faq/"
                 showMobileMenu={props.showMobileMenu}
                 activeClassName="active">
-                Item 4
+                FAQ
+            </StyledLink>
+            <StyledLink 
+                to="/versicherungsbedingungen/"
+                showMobileMenu={props.showMobileMenu}
+                activeClassName="active">
+                Versicherungsbedingungen
             </StyledLink>
         </MobileNav>
     )

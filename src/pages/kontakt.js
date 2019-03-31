@@ -1,16 +1,21 @@
 import React from 'react'
+// import { Link } from 'gatsby'
 
 import StandardLayout from '../components/StandardLayout'
 import SEO from '../components/Seo'
-import Hero from '../components/Hero'
+
+
+
 
 
 class IndexPage extends React.Component {
   render(){
     return(
       <StandardLayout>
-        <SEO title="Belmot Oldtimerversicherung" keywords={[`Belmot`, `Oldtimerversicherung`, `Youngtimer`, `Oldtimer`]} />
-        <Hero/>
+        <SEO title="Kontakt" keywords={[`gatsby`, `application`, `react`]} />
+        <section>
+          <h1>Kontakt</h1>
+        </section>
       </StandardLayout>
     )
   }

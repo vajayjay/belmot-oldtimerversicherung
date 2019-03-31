@@ -1,8 +1,8 @@
 :root {
  /* main colors */
- --color-primary: #222;
- --color-primary-light: #333;
- --color-primary-dark: #000;
+ --color-primary: #2A72D3;
+ --color-primary-light: rgb(47, 125, 235);
+ --color-primary-dark: #2360B2;
 
  --color-accent: #F10053;
  --color-accent-light: #FF6197;
@@ -10,9 +10,9 @@
 
 /* colors - shades of gray */
  --color-black: #1d1d21;
- --color-darker: #2e2e31;
- --color-dark: #7b7a7d;
- --color-medium: #5E728D;
+ --color-darker: #333;
+ --color-dark: #xxxxxx;
+ --color-medium: #959595;
  --color-light: #D4E3FF;
  --color-lighter: #F8F9FB;
  --color-white: white;
@@ -32,37 +32,42 @@
   --space-l: calc(2 * var(--space-unit));
 
 
-  /* Typography */
-  --font-size: 1rem;
-  --ratio: 1.25;
-  --line-height: 1.4;
-
-  /* Calculate values */
-  --small: calc(var(--font-size)/4*3);
-  --h4: calc(var(--font-size) * var(--ratio));
-  --h3: calc(var(--font-size) * var(--ratio) * var(--ratio));
-  --h2: calc(var(--font-size) * var(--ratio) * var(--ratio) * var(--ratio));
-  --h1: calc(var(--font-size) * var(--ratio) * var(--ratio) * var(--ratio) * var(--ratio));
-
-
   /* Timing */
   --time-fast: 0.2s;
+
+  /* Typography */
+  /*For mobile*/
+  --small: 14px;
+  --font-size: 16px;
+  --h2: 20px;
+  --h1: 36px;
+
+
+  --line-height: 1.4;
+
+
+  /* Unused variables */
+  --ratio: 1.25;
+
+  --h4: calc(var(--font-size) * var(--ratio));
+  --h3: calc(var(--font-size) * var(--ratio) * var(--ratio));
+
 } 
 
-@media  (min-width: 376px) {
+@media  (min-width: 480px) {
   :root{
-  --font-size: 1.2rem;
-  font-size: 1.2rem;
-  line-height: 1.5;
-
+    --small: 15px;
+    --font-size: 18px;
+    --h2: 36px;
+    --h1: 44px;
   }
 }
-@media  (min-width: 600px) {
+@media  (min-width: 769px) {
   :root{
-  --font-size: 1.3rem;
-  --space-m: calc(2 * var(--space-unit));
-  font-size: 1.3rem;
-  line-height: 1.4;
+    --small: 16px;
+    --font-size: 20px;
+    --h2: 31px;
+    --h1: 44px;
   }
 }
 

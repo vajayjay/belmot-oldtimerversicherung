@@ -16,12 +16,9 @@ const App = styled.div`
   height:100%;
 ` 
 const Main = styled.div`
-  padding: 0 1rem;
   margin-top: 50px;
   @media (min-width:769px){
     margin-top: 70px;
-    padding: 0 2rem;
-
   }
 `
 
