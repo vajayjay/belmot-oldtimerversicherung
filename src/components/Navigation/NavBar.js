@@ -12,20 +12,20 @@ const Nav = styled.div`
   justify-content: space-between;
   top: 0;
   left: 0;
-  height: 50px;
+  height: 52px;
   width: 100%;
   background: var(--color-white);
   box-shadow: 0 2px 3px rgba(0,0,0,0.1);
   overflow: hidden;
   z-index: 3;
-  padding-left: 0.5rem;
+  padding-left: 14px;
   font-size: var(--small);
 
   /*Nav bar on desktop*/
   @media (min-width: 769px) {
-    height: 70px;
-    padding-left: 1rem;
-    padding-right: 1rem;
+    height: 100px;
+    padding-left: 34px;
+    padding-right: 48px;
   }
   /*Vertically center the Logo*/
   & > a {
@@ -33,12 +33,19 @@ const Nav = styled.div`
   }
 
   /*Hide BurgerButton on Dektop*/
-  @media (min-width: 768px) {
+  @media (min-width: 769px) {
     & > :last-child {
       display: none;
     }
   }
 `
+const StyledLogo = styled.img`
+  height: 34px;
+  @media (min-width: 769px) {
+    height: 36px;
+  }
+`
+
 const DesktopLinks = styled.div`
   /*Hide Dekstop Nav links on mobile*/
   @media (max-width: 768px) {
@@ -53,7 +60,7 @@ const DesktopLinks = styled.div`
     font-weight: 600;
     opacity:0.8;
     transition: opacity 200ms;
-    margin-left: 1rem;
+    margin-left: var(--space-l);
     padding-bottom: 20px;
 
     :hover{
@@ -73,7 +80,7 @@ const NavBar = props => (
   <header>
       <Nav>
         <Link to="/">
-          <img src={logo} alt="Company Logo"/>
+          <StyledLogo src={logo} alt="Company Logo"/>
         </Link>
         <DesktopLinks>
           {/* <Link to="/about" activeClassName="active">About</Link> */}

@@ -37,13 +37,13 @@ class StandardLayout extends React.Component {
   render(){
     return(
       <>
-        {/* <Header siteTitle={data.site.siteMetadata.title} /> */}
         <App>
           <NavBar 
               burgerButtonClickHandler={this.burgerButtonToggleClickHandler} 
               showMobileMenu={this.state.mobileMenuOpen}  
               />
-          <MobileMenu showMobileMenu={this.state.mobileMenuOpen} />
+          {/* The following line causes an error */}
+          <MobileMenu showMobileMenu={this.state.mobileMenuOpen} /> 
           <Main>{this.props.children}</Main>
           <Footer />
         </App>

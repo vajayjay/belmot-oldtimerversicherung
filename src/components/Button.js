@@ -6,7 +6,7 @@ const StyledButton = styled.a`
     text-decoration: none;
     background: ${props => props.primary ? "var(--color-primary)" : "var(--color-accent)"};
     border: 2px solid ${props => props.primary ? "var(--color-primary)" : "var(--color-accent)"};
-    border-radius: 5px;
+    /* border-radius: 5px; */
     text-align: center;
     color: var(--color-white);
     padding: calc(0.5 * var(--space-unit)) calc(0.75 * var(--space-unit)) calc(0.5 * var(--space-unit) - 2px) calc(0.75 * var(--space-unit));
