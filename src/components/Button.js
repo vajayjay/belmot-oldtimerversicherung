@@ -4,15 +4,18 @@ import styled from 'styled-components'
 const StyledButton = styled.a`
     display: inline-block;
     text-decoration: none;
-    background: ${props => props.primary ? "var(--color-primary)" : "var(--color-accent)"};
-    border: 2px solid ${props => props.primary ? "var(--color-primary)" : "var(--color-accent)"};
+    background: ${props => props.primary ? "var(--color-primary)" : "var(--color-white)"};
+    border: 2px solid ${props => props.primary ? "var(--color-primary)" : "var(--color-white)"};
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 500;
     /* border-radius: 5px; */
     text-align: center;
-    color: var(--color-white);
-    padding: calc(0.5 * var(--space-unit)) calc(0.75 * var(--space-unit)) calc(0.5 * var(--space-unit) - 2px) calc(0.75 * var(--space-unit));
+    color: ${props => props.primary ? "var(--color-white)" : "var(--color-black)"};
+    padding: 1rem 2rem;
     /* margin-top: var(--space-s); */
     margin-bottom: var(--space-s);
-    margin-right: var(--space-s);
+    /* margin-right: var(--space-s); */
     width: 100%;
     transform: translateY(0);
     transition: all var(--time-fast);
@@ -21,14 +24,14 @@ const StyledButton = styled.a`
     }
 
     :hover{
-      color:var(--color-white);
-      background: ${props => props.primary ? "var(--color-primary-light)" : "var(--color-accent-light)"};
-      border-color: ${props => props.primary ? "var(--color-primary-light)" : "var(--color-accent-light)"};
+      color: ${props => props.primary ? "var(--color-white)" : "var(--color-black)"};
+      background: ${props => props.primary ? "var(--color-primary-light)" : "var(--color-lighter)"};
+      border-color: ${props => props.primary ? "var(--color-primary-light)" : "var(--color-lighter)"};
       transform: translateY(-1px);
       transition: all var(--time-fast);    
     }
     :active{
-      background: ${props => props.primary ? "var(--color-primary-dark)" : "var(--color-accent-dark)"};
+      background: ${props => props.primary ? "var(--color-primary-dark)" : "var(--color-light)"};
       transform: translateY(1px);
     }
 `

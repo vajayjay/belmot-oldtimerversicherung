@@ -12,7 +12,7 @@ const Nav = styled.div`
   justify-content: space-between;
   top: 0;
   left: 0;
-  height: 52px;
+  height: 60px;
   width: 100%;
   background: var(--color-white);
   box-shadow: 0 2px 3px rgba(0,0,0,0.1);
@@ -29,6 +29,7 @@ const Nav = styled.div`
   }
   /*Vertically center the Logo*/
   & > a {
+    margin-top: 1px;
     display:flex;
   }
 

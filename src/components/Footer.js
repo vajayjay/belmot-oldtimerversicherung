@@ -5,15 +5,15 @@ import {Link} from 'gatsby'
 const StyledFooter = styled.div`
     background-color: var(--color-darker);
     font-size: var(--small);
-    padding: var(--space-m);
+    padding: var(--space-l) var(--space-side);
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     align-items: top;
     color: var(--color-white);
 
-    @media (min-width: 769px) {
-        padding: 2rem;
-    }
+        /* @media (min-width: 769px) {
+            padding: 2rem;
+        } */
 
     /*Links in footer*/
     a,p {

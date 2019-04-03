@@ -30,6 +30,7 @@
   --space-s: calc(.5 * var(--space-unit));
   --space-m: calc(1 * var(--space-unit));
   --space-l: calc(2 * var(--space-unit));
+  --space-side: 18px;
 
 
   /* Timing */
@@ -56,10 +57,12 @@
 
 @media  (min-width: 480px) {
   :root{
-    --small: 15px;
+    /* --small: 15px;
     --font-size: 18px;
-    --h2: 36px;
-    --h1: 44px;
+    --h2: 27px; */
+    --h1: 40px;
+    --space-side: 36px;
+
   }
 }
 @media  (min-width: 769px) {
@@ -68,6 +71,7 @@
     --font-size: 20px;
     --h2: 31px;
     --h1: 44px;
+    --space-side: 72px;
   }
 }
 

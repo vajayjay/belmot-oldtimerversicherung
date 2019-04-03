@@ -8,11 +8,12 @@ import {ICONS} from '../theme/Icons'
 
 const StyledHero = styled.section`
   position: relative;
+  /* height:calc(100vh - 60px); */
 `
 const StyledImg = styled(Img)`
   position: relative;
-  height: 40vh;
-  min-width: 100%;
+  height: 50vw;
+  /* min-width: 100%; */
 
   @media (min-width: 769px){
     min-height: 500px;
@@ -41,7 +42,7 @@ const HeadlineContainer = styled.div`
     position: absolute;
     top: 20vh;
     max-width: 450px;
-    margin-left: var(--space-m);
+    margin-left: var(--space-side);
   }
 
 `
@@ -104,7 +105,7 @@ const LernMore = styled(Link)`
 
   position: absolute;
   bottom: 0;
-  margin-left: var(--space-m);
+  margin-left: var(--space-side);
   /* left:var(--space-l); */
   background: var(--color-white);
   text-decoration: none;
@@ -154,12 +155,12 @@ const Hero = (props) => (
         <div>
           <span>★★★★★ <wbr/>von 461 zufriedenen Kunden</span>
         </div>
-        <Link to='#'>
+        <Link to='#scroll-anchor'>
           <Icon icon={ICONS.CHEVRON} />
         </Link>
         </RatingContainer>
       </HeadlineContainer>
-      <LernMore to='#'>
+      <LernMore to='#scroll-anchor'>
         <span>Mehr erfahren</span>
         <div><Icon icon={ICONS.CHEVRON} /></div>
       </LernMore>
