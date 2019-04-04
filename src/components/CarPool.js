@@ -5,36 +5,23 @@ import styled from 'styled-components'
 import Button from '../components/Button'
 
 const StyledCarPool = styled.section`
-    display: grid;
-    max-width: 100%;
-    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
-    /* height: 60vh;
-    min-height:500px;
-    max-height:800px; */
+    display: flex;
+    flex-wrap: wrap;
+
       &  img{
         height: 100%;
+        max-width: 100%;
+
       }
     & > div :first-of-type{
-        position: relative;
-        /* display: flex; */
-        /* align-items: center;
-        justify-content: center;
-        min-height: 400px; 
-        overflow: hidden; */
-        /* object-fit: cover; */
-
-        & img {
-            /* position: absolute;
-            left: 50%; 
-            top: 50%;
-            transform: translateY(-50%) translateX(-50%);
-            min-width: 100%;
-            max-width: 110%;
-            min-height: 300px;  */
+        flex: 2 1 500px;
+        & > div {
+            height: 100%;
         }
     }
 `
 const ContentContainer = styled.div`
+    flex: 2 1 500px;
     display: flex;
     justify-content: center;
     align-items: center;

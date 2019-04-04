@@ -23,7 +23,7 @@ const ContentContainer = styled.div`
     max-width: 694px;
     & > h2,
     & > p{
-        color: var(--color-white);
+        color: var(--color-lighter);
         text-align: center;
     }
     & > p{
