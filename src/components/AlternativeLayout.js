@@ -14,7 +14,7 @@ import Footer from  '../components/Footer'
 
 const StyledApp = styled.div`
   height:100%;
-  background: linear-gradient(180deg, var(--color-primary), var(--color-darker));
+  background: linear-gradient(180deg, var(--color-primary) 50%, var(--color-darker) 50%);
 ` 
 const Main = styled.div`
   margin-top: 50px;
