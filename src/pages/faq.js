@@ -1,10 +1,13 @@
 import React from 'react'
 // import { Link } from 'gatsby'
 
+
 import AlternativeLayout from '../components/AlternativeLayout'
 import SEO from '../components/Seo'
 import styled from 'styled-components'
-// import  Accordion from '../components/Accordion'
+import  Accordion from '../components/Accordion'
+// import Collapse from '@kunukn/react-collapse';
+
 
 
 // const Accordion = styled.button`
@@ -71,7 +74,7 @@ class IndexPage extends React.Component {
                     05191- 931 31 99</p>
             </SideInfo>
             <MainContentBox>
-                {/* <Accordion /> */}
+                <Accordion />             
             </MainContentBox>
 
         </SupportSection>

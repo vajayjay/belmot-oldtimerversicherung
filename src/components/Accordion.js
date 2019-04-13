@@ -2,109 +2,90 @@ import React from 'react'
 // import accordionStyles from '../components/accordion.module.styles'
 import styled from 'styled-components'
 
+const Heading = styled.p`
+  border-bottom: 2px solid var(--color-light);
+  margin-bottom: 0;
+  font-weight: 700;
+  color: var(--color-darker);
+  padding-bottom:25px;
 
-const paragraph = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet natus sint provident vel ab reprehenderit cum soluta, suscipit facere nisi sed earum repellendus fuga debitis, nam molestiae minima voluptates possimus.'
+`
+
+const Content = styled.div`
+  border-bottom: 2px solid var(--color-light);
+  border-top: none;
+  opacity: ${props => (props.open ? "1" : "0")};
+  max-height: ${props => (props.open ? "100%" : "0")};
+  overflow: hidden;
+  padding: ${props => (props.open ? "25px" : "0 25px")} 0;
+  transition: all 0.3s;
+
+  p {
+    margin: 0;
+    color: var(--color-medium);
+  }
+`;
+
+const Listitem = styled.li`
+    list-style: disc;
+    list-style-position: inside;
+    color: var(--color-primary);
+
+/* Giving every Lisitem other than the first a top padding */
+  &:not(:first-of-type) p{
+    padding:  25px 0;
+    }
+`
 
 const data = [
   {
-    title: 'Pricing plans',
-    paragraph
+    title: 'Was ist der Wiederbeschaffungswert?',
+    answer: 'Die Versicherungsbedingungen und sonstigen Begleitinformationen finden Sie hier'
   },
   {
-    title: 'How to apply',
-    paragraph
+    title: 'Was versteht man unter dem Begriff Marktwert?',
+    answer: 'Die Versicherungsbedingungen und sonstigen Begleitinformationen  Sie hier'
   },
   {
-    title: 'Purchasing process',
-    paragraph
+    title: 'Was ist eine Selbsteinschätzung bei der Oldtimerversicherung?',
+    answer: 'Die Versicherungsbedingungen und sonstigen  finden Sie hier'
   },
   {
-    title: 'Usage guides',
-    paragraph
+    title: 'Welcher Wert ist der richtige?',
+    answer: 'Die Versicherungsbedingungen und sonstigen Begleitinformationen finden Sie hier'
   }
 ]
 
-const AccordionList = styled.ul`
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    background-color: #fff;
-    max-width: 30rem;
-    border-radius: 0.4rem;
-    overflow: hidden;
-    box-shadow: 0 0 0.8rem 0.1rem rgba(15, 72, 179, 0.06), 0 20px 30px -10px rgba(15, 72, 179, 0.2);  
-`
-const AccordionListItem = styled.li`
-    border-top: 1px solid rgba(0, 0, 0, 0.1);
-
-`
-
-const AccordionItem = styled.div`
-
-`
-
-
 // const Accordion = props => (
 class Accordion extends React.Component {
-    render () {
-      return (
-        <div {...{ className: 'accordionStyles.wrapper' }}>
-          <AccordionList>
-            {data.map((data, key) => {
-              return (
-                <AccordionListItem {...{ className: 'accordionStyles.', key }}>
-                  <AccordionItem {...data} />
-                </AccordionListItem>
-              )
-            })}
-          </AccordionList>
-        </div>
-      )
-    }
-  };
-  
-  class AccordionItem extends React.Component {
-    state = {
-      opened: false
-    }
-    
-    render () {
-      const {
-        props: {
-          paragraph,
-          title
-        },
-        state: {
-          opened
+        constructor() {
+          super();
+          this.state = {};
+          this.toggleOpen = this.toggleOpen.bind(this);
         }
-      } = this
       
-      return (
-        <AccordionItem
-          {...{
-            className: `${opened && 'accordion-itemopened'}`,
-            onClick: () => { this.setState({ opened: !opened }) }
-          }}
-        >
-          <div {...{ className: 'accordionStyles.accordion-item__line' }}>
-            <h3 {...{ className: 'accordionStyles.accordion-item__title' }}>
-              {title}
-            </h3>
-            <span {...{ className: 'accordionStyles.accordion-item__icon' }}/>
-          </div>
-            <div {...{ className: 'accordionStyles.accordion-item__inner' }}>
-              <div {...{ className: 'accordionStyles.accordion-item__content' }}>
-                <p {...{ className: 'accordionStyles.accordion-item__paragraph' }}>
-                  {paragraph}
-                </p>
-              </div>
+        toggleOpen() {
+          this.setState({ open: !this.state.open });
+        }
+      
+        render() {
+          return (
+            <div>
+                 <ul>
+                    {data.map((data, key) => {
+                        return (
+                        <Listitem>
+                            <Heading onClick={this.toggleOpen}>{data.title}</Heading>
+                            <Content open={this.state.open}>
+                                <p {...data}>{data.answer}</p>
+                            </Content>
+                        </Listitem>
+                        )
+                    })}
+                    </ul>
             </div>
-        </AccordionItem>
-      )
-    }
-  }
-  
-  // ReactDOM.render(<Accordion />, document.getElementById('app'));
-
-
+          );
+        }
+      }
+            
 export default Accordion
