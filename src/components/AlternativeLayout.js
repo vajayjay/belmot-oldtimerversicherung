@@ -12,8 +12,9 @@ import Footer from  '../components/Footer'
 
 
 
-const App = styled.div`
+const StyledApp = styled.div`
   height:100%;
+  background: linear-gradient(180deg, var(--color-primary), var(--color-darker));
 ` 
 const Main = styled.div`
   margin-top: 50px;
@@ -37,7 +38,7 @@ class StandardLayout extends React.Component {
   render(){
     return(
       <>
-        <App>
+        <StyledApp>
           <NavBar 
               burgerButtonClickHandler={this.burgerButtonToggleClickHandler} 
               showMobileMenu={this.state.mobileMenuOpen}  
@@ -46,7 +47,7 @@ class StandardLayout extends React.Component {
           <MobileMenu showMobileMenu={this.state.mobileMenuOpen} /> 
           <Main>{this.props.children}</Main>
           <Footer />
-        </App>
+        </StyledApp>
       </>
     )
   }
