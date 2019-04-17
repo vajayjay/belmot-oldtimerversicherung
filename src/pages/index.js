@@ -7,6 +7,7 @@ import ScrollAnchor from '../components/Scrollanchor'
 import OfferComparison from '../components/OfferComparison'
 import Benefit from '../components/Benefit'
 import CarPool from '../components/CarPool';
+import TypesOfCars from '../components/TypesOfCars'
 
 class IndexPage extends React.Component {
   render(){
@@ -18,6 +19,7 @@ class IndexPage extends React.Component {
         <OfferComparison/>
         <Benefit/>
         <CarPool/>
+        <TypesOfCars />
       </StandardLayout>
     )
   }

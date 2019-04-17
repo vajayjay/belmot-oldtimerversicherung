@@ -11,7 +11,7 @@
 /* colors - shades of gray */
  --color-black: #1d1d21;
  --color-darker: #333;
- --color-dark: #xxxxxx;
+ --color-dark: #60748F;
  --color-medium: #959595;
  --color-light: #CFD8E6;
  --color-lighter: #FAFCFF;
@@ -38,8 +38,9 @@
 
   /* Typography */
   /*For mobile*/
-  --small: 14px;
+  --small: 12px;
   --font-size: 16px;
+  --h3: 14px;
   --h2: 20px;
   --h1: 36px;
 
@@ -48,10 +49,10 @@
 
 
   /* Unused variables */
-  --ratio: 1.25;
+  /* --ratio: 1.25;
 
   --h4: calc(var(--font-size) * var(--ratio));
-  --h3: calc(var(--font-size) * var(--ratio) * var(--ratio));
+  --h3: calc(var(--font-size) * var(--ratio) * var(--ratio)); */
 
 } 
 
@@ -69,6 +70,7 @@
   :root{
     --small: 16px;
     --font-size: 20px;
+    --h3: 18px;
     --h2: 31px;
     --h1: 44px;
     --space-side: 72px;

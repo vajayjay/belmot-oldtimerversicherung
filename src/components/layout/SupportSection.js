@@ -15,7 +15,7 @@ const SideInfo = styled.div`
     flex: 1 1 350px;
     margin-bottom: var(--space-l);
     display: grid;
-    grid-template-columns: repeat(2,minmax(244px,1fr));
+    grid-template-columns: repeat(auto-fit, minmax(244px,1fr));
     @media (min-width: 1265px){
         display: inline-block;
         margin-right: var(--space-side);
@@ -39,8 +39,8 @@ const MainContentBox = styled.div`
 const SupportSection = (props) => (
     <StyledSupportSection>
         <SideInfo>
-            <h1>{props.h1}</h1>
-            <p>{props.p}</p>
+            {props.h1}
+            {props.p}
         </SideInfo>
         <MainContentBox>
             {props.children}

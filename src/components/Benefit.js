@@ -9,7 +9,7 @@ import Button from '../components/Button'
 const StyledBenefit = styled.section`
     width: 100%;
     background: var(--color-darker);
-    padding: var(--space-l) var(--space-side);
+    padding: 10vh var(--space-side);
     display: flex;
     flex-direction:column;
     justify-content: center;
@@ -21,13 +21,14 @@ const ContentContainer = styled.div`
     justify-content: center;
     align-items: center;
     max-width: 694px;
-    & > h2,
-    & > p{
-        color: var(--color-lighter);
+    & > h2{
         text-align: center;
+        color: var(--color-white);
     }
     & > p{
         margin-bottom: var(--space-l);
+        color: var(--color-lighter);
+        text-align: center;
     }
 `
 
