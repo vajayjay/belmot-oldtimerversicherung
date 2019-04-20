@@ -4,10 +4,11 @@ import StandardLayout from '../components/StandardLayout'
 import SEO from '../components/Seo'
 import Hero from '../components/Hero'
 import ScrollAnchor from '../components/Scrollanchor'
-import OfferComparison from '../components/OfferComparison'
+// import OfferComparison from '../components/OfferComparison'
 import Benefit from '../components/Benefit'
-import CarPool from '../components/CarPool';
+import CarPool from '../components/CarPool'
 import TypesOfCars from '../components/TypesOfCars'
+import Features from '../components/Features'
 
 class IndexPage extends React.Component {
   render(){
@@ -16,7 +17,8 @@ class IndexPage extends React.Component {
         <SEO title="Belmot Oldtimerversicherung" keywords={[`Belmot`, `Oldtimerversicherung`, `Youngtimer`, `Oldtimer`]} />
         <Hero/>
         <ScrollAnchor/>
-        <OfferComparison/>
+        <Features />
+        {/* <OfferComparison/> */}
         <Benefit/>
         <CarPool/>
         <TypesOfCars />
