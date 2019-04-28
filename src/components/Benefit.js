@@ -58,7 +58,7 @@ const Benefit = (props) => (
         </StyledIcon>
         <h2>Online-Angebot</h2>
         <p>Nutzen Sie das Online-Anfrageformular, um schnell und bequem Ihr persönliches Angebot zur Oldtimer-Versicherung anzufordern. Ihr Angebot kommt innerhalb 24 Stunden.</p>
-        <Button>Jetzt anfragen</Button>
+        <Button link="/anfrage">Jetzt anfragen</Button>
         </ContentContainer>
     </StyledBenefit>
 )

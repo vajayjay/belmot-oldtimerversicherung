@@ -8,10 +8,11 @@ const StyledTypeCard = styled.div`
     background: var(--color-white);
     box-shadow: 0px 3px 15px rgba(58, 71, 143, 0.05);
     text-align: center;
-    padding: 20px 1vw 45px 1vw;
+    padding: 30px 1vw 40px 1vw;
     display: flex;
     flex-direction: column;
     align-items: center;
+    /* max-height: 250px; */
     /* min-width: 180px;
     max-width: 180px; */
     /* margin-right: 20px; */
@@ -26,11 +27,12 @@ const StyledTypeCard = styled.div`
         font-size: var(--small);
         color: var(--color-dark);
         margin-top: 1rem;
+        font-size:14px;
     }
 `
 const Circle = styled.div`
     background: var(--color-lighter);
-    height: 120px;
+    min-height: 120px;
     width: 120px;
     border-radius: 100%;
     display: flex;

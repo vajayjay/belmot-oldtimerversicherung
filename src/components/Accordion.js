@@ -72,9 +72,9 @@ class Accordion extends React.Component {
           return (
             <div>
                  <ul>
-                    {data.map((data, key) => {
+                    {data.map((data, index) => {
                         return (
-                        <Listitem>
+                        <Listitem key={index}>
                             <Heading onClick={this.toggleOpen}>{data.title}</Heading>
                             <Content open={this.state.open}>
                                 <p {...data}>{data.answer}</p>

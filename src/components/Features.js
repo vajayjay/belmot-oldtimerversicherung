@@ -77,9 +77,9 @@ const Features = () => (
             <h2>Grunddeckung</h2>
             <p>Umfangreicher Schutz mit weit mehr als Teilkaskoleistungen:</p>
             <ul>
-                {FeaturesBasic.map((FeaturesBasic, key) => {
+                {FeaturesBasic.map((FeaturesBasic, index) => {
                     return (
-                    <Listitem>
+                    <Listitem key={index}>
                         <StyledIcon>
                             <Icon icon={ICONS.CHECKMARK} />
                         </StyledIcon>
@@ -99,9 +99,9 @@ const Features = () => (
                     </StyledIcon>
                     Enthält alle Leistungen der Grunddeckung
                 </SpecialListitem>
-                {FeaturesPro.map((FeaturesPro, key) => {
+                {FeaturesPro.map((FeaturesPro, index) => {
                     return (
-                    <Listitem>
+                    <Listitem key={index}>
                         <StyledIcon>
                             <Icon icon={ICONS.CHECKMARK} />
                         </StyledIcon>

@@ -45,7 +45,7 @@ const CarPool = (props) => (
             <div>
                 <h2>Fuhrparkversicherung</h2>
                 <p>Besonders attraktiv ist das Angebot einer Fuhrparkversicherung für Sammler. Dabei wird der All-Risk-Beitrag nur für die Anzahl der maximal gleichzeitig bewegten Fahrzeuge berechnet. Eine Fuhrparkversicherung ist schon ab zwei Fahrzeugen möglich.</p>
-                <Button primary>Jetzt anfragen</Button>
+                <Button primary link="/anfrage">Jetzt anfragen</Button>
             </div>
         </ContentContainer>
     </StyledCarPool>

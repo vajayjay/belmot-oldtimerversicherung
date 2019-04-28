@@ -19,8 +19,13 @@ const StyledFooter = styled.div`
     a,p {
         margin:0;
         color: var(--color-white);
-        text-decoration: none;
+        text-decoration: undeline;
+        text-decoration-color: rgba(255,255,255,0.5);
         line-height: 2;
+
+        :hover{
+            text-decoration-color: rgba(255,255,255,1);
+        }
     }
 
 `

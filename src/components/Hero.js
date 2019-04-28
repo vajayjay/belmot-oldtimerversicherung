@@ -98,7 +98,7 @@ const bounce = keyframes`
 `
 
 /*Lern more/scrolldown container on desktop*/
-const LernMore = styled(Link)`
+const LernMore = styled.a`
   @media (max-width: 768px) {
     display: none;
   }
@@ -155,9 +155,9 @@ const Hero = (props) => (
         <div>
           <span>★★★★★ <wbr/>von 461 zufriedenen Kunden</span>
         </div>
-        <Link to='#scroll-anchor'>
+        <a href='#scroll-anchor'>
           <Icon icon={ICONS.CHEVRON} />
-        </Link>
+        </a>
         </RatingContainer>
       </HeadlineContainer>
       <LernMore to='#scroll-anchor'>

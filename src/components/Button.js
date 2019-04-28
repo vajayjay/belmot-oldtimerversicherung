@@ -1,7 +1,8 @@
 import React from 'react'
+import { Link } from 'gatsby'
 import styled from 'styled-components'
 
-const StyledButton = styled.a`
+const StyledButton = styled(Link)`
     display: inline-block;
     background: ${props => props.primary ? "var(--color-primary)" : "var(--color-white)"};
     border: 2px solid ${props => props.primary ? "var(--color-primary)" : "var(--color-white)"};
@@ -44,7 +45,12 @@ const StyledButton = styled.a`
 
 
 const Button = props => (
-  <StyledButton fullwidth={props.fullwidth} primary={props.primary} href={props.link}>
+  <StyledButton 
+    fullwidth={props.fullwidth} 
+    primary={props.primary} 
+    to={props.link}
+    type={props.type}
+    >
     {props.children}
   </StyledButton>
 )

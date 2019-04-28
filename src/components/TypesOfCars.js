@@ -53,12 +53,12 @@ const ContentContainer = styled.div`
     /* display: flex;
     flex-wrap: nowrap; */
     overflow-x: auto; 
-    margin-bottom: 15vh;
     -webkit-overflow-scrolling: touch;
+    overflow-y: hidden;
+    margin-bottom: 15vh;
     display: grid;
     grid-gap: 20px;
-    grid-template-columns: 
-        0px repeat(${CARS.length}, 180px) 20px;    
+    grid-template-columns: 0px repeat(${CARS.length}, 220px) 20px;    
     
     &::before,
     &::after {
@@ -82,9 +82,9 @@ const TypesOfCars = (props) => (
     <StyledSection>
         <StyledH2>Die Oldtimerverischerung für</StyledH2>
         <ContentContainer>
-            {CARS.map((CARS, key) => {
+            {CARS.map((CARS, index) => {
                 return (
-                    <TypeCard type= {CARS.img}>
+                    <TypeCard type={CARS.img} key={index}>
                         <h3>{CARS.type}</h3>
                         <span>{CARS.condition}</span>
                     </TypeCard>
