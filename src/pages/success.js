@@ -2,18 +2,11 @@ import React from 'react'
 // import { Link } from 'gatsby'
 
 import StandardLayout from '../components/StandardLayout'
-import styled from 'styled-components'
+// import styled from 'styled-components'
 
 import SEO from '../components/Seo'
-import TextInput from '../components/TextInput'
-import ApplicationForm from '../components/ApplicationForm'
 
-const StyledForm = styled.form`
-  padding: var(--space-l) var(--space-side);
-  max-width: 600px;
-  margin: auto;
-  background: var(--color-lighter);
-`
+
 
 
 

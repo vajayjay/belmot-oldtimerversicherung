@@ -3,15 +3,26 @@ import React from 'react'
 
 import StandardLayout from '../components/StandardLayout'
 import styled from 'styled-components'
+import '../theme/forms.css'
+
 
 import SEO from '../components/Seo'
 import TextInput from '../components/TextInput'
 
+
+const StyledSection = styled.section`
+  background: var(--color-lighter);
+
+`
 const StyledForm = styled.form`
   padding: var(--space-l) var(--space-side);
-  max-width: 600px;
+  max-width: 480px;
   margin: auto;
-  background: var(--color-lighter);
+`
+
+const StyledSectionH2 = styled.h2`
+    font-size: 18px;
+    margin: 40px 0 18px 0;
 `
 
 
@@ -20,51 +31,101 @@ class IndexPage extends React.Component {
   render(){
     return(
       <StandardLayout>
-        <SEO title="Online-Anfrage" keywords={[`gatsby`, `application`, `react`]} />
-        <h1>Online-Anfrage</h1>
-        <StyledForm
-            name="contact"
-            method="post"
-            action="/success"
-            data-netlify="true"
-            data-netlify-honeypot="bot-field"
-        >
-            <label>
-                <span>Anrede</span>
-                <input label="Anrede" type="radio" name="anrede" defaultChecked></input>
-                Herr
-                <input label="Anrede" type="radio" name="anrede" ></input>
-                Frau
-            </label>
-            <TextInput label="Vorname" type="text" required>
-            </TextInput>
-            <TextInput label="Nachname" type="text" >
-            </TextInput>
-            <TextInput label="Email" type="email" required>
-            </TextInput>
-            <TextInput label="Geburtsdatum des Fahrzeughalters" type="text" required>
-            </TextInput>
-            <TextInput label="Straße und Hausnummer" type="text" required>
-            </TextInput>
-            <TextInput label="Postleitzahl" type="text" required>
-            </TextInput>
-            <TextInput label="Ort" type="text" required>
-            </TextInput>
-            <label>
-                <span>Sind Sie Mitglied in einem Oldtimerclub?</span>
-                <input type="radio" name="Oldtimerclub" defaultChecked></input>
-                Nein
-                <input type="radio" name="Oldtimerclub" ></input>
-                Ja
-            </label>
+        <SEO title="Online-Anfrage" keywords={[`Oldtimerversicherung Anfrage`, `individuelle Anfrage`]} />
+        <StyledSection>
+            <StyledForm
+                name="contact"
+                method="post"
+                action="/success"
+                data-netlify="true"
+                data-netlify-honeypot="bot-field"
+            >
+                <h1>Online-Anfrage</h1>
+                <br />
+                <StyledSectionH2>Persönliche Informationen</StyledSectionH2>
+                <label>
+                    <span>Anrede</span>
+                    <label>
+                        <input label="Anrede" type="radio" name="anrede" defaultChecked></input>
+                        <span>Herr</span>
+                    </label>
+                    <label>
+                        <input label="Anrede" type="radio" name="anrede" ></input>
+                        <span>Frau</span>
+                    </label>
+                </label>
+                <TextInput label="Vorname" type="text" required>
+                </TextInput>
+                <TextInput label="Nachname" type="text" >
+                </TextInput>
+                <TextInput label="Email" type="email" required>
+                </TextInput>
+                <TextInput label="Geburtsdatum des Fahrzeughalters" type="text" required>
+                </TextInput>
+                <TextInput label="Straße und Hausnummer" type="text" required>
+                </TextInput>
+                <TextInput label="Postleitzahl" type="text" required>
+                </TextInput>
+                <TextInput label="Ort" type="text" required>
+                </TextInput>
+                <label>
+                    <span>Sind Sie Mitglied in einem Oldtimerclub?</span>
+                    <label>
+                        <input type="radio" name="Oldtimerclub" defaultChecked></input>
+                        <span>Nein</span>
+                    </label>
+                    <label>
+                        <input type="radio" name="Oldtimerclub" ></input>
+                        <span>Ja</span>
+                    </label>
+                    
+                </label>
 
-            <TextInput label="Name des Oldtimerclubs" type="text">
-            </TextInput>
+                <TextInput label="Name des Oldtimerclubs" type="text">
+                </TextInput>
+                <StyledSectionH2>Fahrzeug-Informationen</StyledSectionH2>
+                <label>
+                    <span>Fahrzeugart</span>
+                    <label>
+                        <input type="checkbox" name="typeofcar" />
+                        <span>PKW</span>
+                    </label>
+                    <label>
+                        <input type="checkbox" name="typeofcar" />
+                        <span>Motorrad</span>
+                    </label>
+                    <label>
+                        <input type="checkbox" name="typeofcar" />
+                        <span>Traktor</span>
+                    </label>
+                    <label>
+                        <input type="checkbox" name="typeofcar" />
+                        <span>Andere</span>
+                    </label>
+                </label>
+                <TextInput label="KFZ-Kennzeichen" type="text">
+                </TextInput>
+                <label>
+                    <span>Fahrzeugart</span>
+                    <label>
+                        <input type="radio" name="seasonplate"   defaultChecked/>
+                        <span>Nein</span>
+                    </label>
+                    <label>
+                        <input type="radio" name="seasonplate"  />
+                        <span>Ja</span>
+                    </label>
+                </label>
 
-
-
-          <input type="submit" value="Abschicken"></input>
-        </StyledForm>
+                <label id="terms">
+                    <label>
+                        <input type="checkbox" required />
+                        <span>Ich akzeptiere die Übertragung und Speicherung meiner Daten zum Zwecke des angebotenen Services.</span>
+                    </label>
+                </label>
+                <input type="submit" value="Abschicken"></input>
+            </StyledForm>
+        </StyledSection>
       </StandardLayout>
     )
   }

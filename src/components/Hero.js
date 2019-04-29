@@ -6,6 +6,7 @@ import styled, {keyframes} from 'styled-components'
 import Icon from '../components/layout/Icon'
 import {ICONS} from '../theme/Icons'
 
+
 const StyledHero = styled.section`
   position: relative;
   /* height:calc(100vh - 60px); */
@@ -98,7 +99,7 @@ const bounce = keyframes`
 `
 
 /*Lern more/scrolldown container on desktop*/
-const LernMore = styled.a`
+const LearnMore = styled(Link)`
   @media (max-width: 768px) {
     display: none;
   }
@@ -160,10 +161,10 @@ const Hero = (props) => (
         </a>
         </RatingContainer>
       </HeadlineContainer>
-      <LernMore to='#scroll-anchor'>
+      <LearnMore to='#scroll-anchor'>
         <span>Mehr erfahren</span>
         <div><Icon icon={ICONS.CHEVRON} /></div>
-      </LernMore>
+      </LearnMore>
   </StyledHero>
 )
 

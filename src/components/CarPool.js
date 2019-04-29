@@ -25,6 +25,12 @@ const ContentContainer = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
+
+    @media(min-width: 100px){
+      padding: 1rem 0;
+    }
+
 
     & > div{
         padding: var(--space-l) var(--space-side);
@@ -32,6 +38,9 @@ const ContentContainer = styled.div`
     }
     & p{
         margin-bottom: var(--space-m);
+    }
+    @media(min-width: 1000px){
+      text-align: left;
     }
 
 `

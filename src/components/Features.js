@@ -15,20 +15,23 @@ const StyledFetaures = styled.section`
     & > div:first-of-type{
         background: var(--color-lighter);
     }
+    hyphens: auto;
+    @media(min-width: 600px) {
+        hyphens: none;
+    }
 `
-const SpecialListitem = styled.li`
+const SpecialListItem = styled.li`
     list-style: none;
-    margin-bottom: var(--space-m);
     display: grid;
     grid-template-columns: 36px auto;
-    margin-left: -1rem;
+    margin: 0 -1rem var(--space-m) -1rem;
     background: var(--color-lighter);
     padding: 1rem;
     font-weight: 500;
     color: var(--color-darker);
 `
 
-const Listitem = styled.li`
+const ListItem = styled.li`
     list-style: none;
     margin-bottom: var(--space-m);
     display: grid;
@@ -79,12 +82,12 @@ const Features = () => (
             <ul>
                 {FeaturesBasic.map((FeaturesBasic, index) => {
                     return (
-                    <Listitem key={index}>
+                    <ListItem key={index}>
                         <StyledIcon>
                             <Icon icon={ICONS.CHECKMARK} />
                         </StyledIcon>
                         {FeaturesBasic}
-                    </Listitem>
+                    </ListItem>
                     )
                 })}
             </ul>
@@ -93,20 +96,20 @@ const Features = () => (
             <h2>Allgefahrendeckung</h2>
             <p>die Belmot Premium-Variante, mit der eine herkömmliche Vollkaskoversicherung nicht mithalten kann:</p>
             <ul>
-                <SpecialListitem>
+                <SpecialListItem>
                     <StyledIcon>
                         <Icon icon={ICONS.CHECKMARK} />
                     </StyledIcon>
                     Enthält alle Leistungen der Grunddeckung
-                </SpecialListitem>
+                </SpecialListItem>
                 {FeaturesPro.map((FeaturesPro, index) => {
                     return (
-                    <Listitem key={index}>
+                    <ListItem key={index}>
                         <StyledIcon>
                             <Icon icon={ICONS.CHECKMARK} />
                         </StyledIcon>
                         {FeaturesPro}
-                    </Listitem>
+                    </ListItem>
                     )
                 })}
             </ul>

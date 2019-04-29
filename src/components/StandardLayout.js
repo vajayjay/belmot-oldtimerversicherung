@@ -9,6 +9,11 @@ import NavBar from '../components/Navigation/NavBar'
 import MobileMenu from '../components/Navigation/MobileMenu'
 import Footer from  '../components/Footer'
 
+/*enable smooth scrolling*/
+if (typeof window !== "undefined") {
+  // eslint-disable-next-line global-require
+  require("smooth-scroll")('a[href*="#"]')
+}
 
 
 
