@@ -71,6 +71,7 @@ const DesktopLinks = styled.div`
 
     &.active {
       color: var(--color-primary);
+      padding-bottom:37px;
       border-bottom: 4px solid var(--color-primary);
     }
   }

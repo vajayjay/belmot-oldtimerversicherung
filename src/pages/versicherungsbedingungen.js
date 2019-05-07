@@ -1,16 +1,28 @@
-import React from "react"
-import { Link } from "gatsby"
+import React from 'react'
+// import { Link } from 'gatsby'
 
-import StandardLayout from "../components/StandardLayout"
-import SEO from "../components/Seo"
+import AlternativeLayout from '../components/AlternativeLayout'
+import SEO from '../components/Seo'
+import SupportSection from '../components/layout/SupportSection'
 
-const SecondPage = () => (
-  <StandardLayout>
-    <SEO title="Versicherungsbedingungen" />
-    <h1>Versicherungsbedingungen</h1>
-    <p>Fülltext</p>
-    <Link to="/">Zurück zur Startseite</Link>
-  </StandardLayout>
-)
 
-export default SecondPage
+class IndexPage extends React.Component {
+   
+  render(){
+    return(
+      <AlternativeLayout>
+        <SEO title="FAQ" keywords={[`Belmot`, `Oldtimerversicherung`, `Fragen`, `Antworten`]} />
+        <SupportSection
+          h1={<h1>Das <br/>Kleingedruckte</h1>}
+          p={<p>Keine Antwort gefunden?<br/>
+                    Erreichen Sie mich unter:<br/>
+                    info@belmot-oldtimerversicherung.de<br/>
+                    05191- 931 31 99</p>}
+          >          
+        </SupportSection>
+      </AlternativeLayout>
+    )
+  }
+}
+
+export default IndexPage
