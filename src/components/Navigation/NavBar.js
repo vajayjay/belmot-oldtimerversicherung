@@ -82,7 +82,7 @@ const NavBar = props => (
   <header>
       <Nav>
         <Link to="/">
-          <StyledLogo src={logo} alt="Company Logo"/>
+          <StyledLogo src={logo} alt="Belmot Oldtimerversicherung Logo"/>
         </Link>
         <DesktopLinks>
           {/* <Link to="/about" activeClassName="active">About</Link> */}

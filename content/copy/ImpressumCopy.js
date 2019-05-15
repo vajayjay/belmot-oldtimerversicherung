@@ -3,21 +3,23 @@ import React from 'react'
 const ImpressumCopy = () => (
     <div>
         <h2>Information des Versicherungsvermittlers nach § 60 VVG in Verbindung mit §&nbsp;15 VersVermV</h2>
-        <p>Angaben zum Versicherungsvertreter:<br/>
-        Heiner Blaskewitz<br/>
+        <br/>
+        <h3>Angaben zum Versicherungsvertreter:</h3>
+        <p>Heiner Blaskewitz<br/>
         B! – Das Versicherungsbüro<br/>
         Generalagentur der Mannheimer Versicherungen&nbsp;<br/>
-        Mobil 0172-5 11 36 11<br/>
+        Mobil: 0172 - 511 3611<br/>
         <a href="mailto:heiner@blaskewitz.com">heiner@blaskewitz.com</a></p>
         <p>Bahnhofstr. 35<br/>
         29614 Soltau<br/>
-        Tel. 05191-9313199<br/>
-        Fax 05191-9739026</p>
-        <p>Verantwortlicher gem. § 5 Telemediengesetz (TMG), § 55 RStV:</p>
+        Tel.: 05191-9313199<br/>
+        Fax 05191-9739026</p><br/>
+        <h3>Verantwortlicher gem. § 5 Telemediengesetz (TMG), § 55 RStV:</h3>
         <p>Heiner Blaskewitz, Generalagentur der Mannheimer Versicherungen,</p>
         <p>Bahnhofstr. 35, 29614 Soltau, Tel. 05191-9313199, Fax 05191-9739026<br/>
         Mobil: 0172-5113611, Mail:&nbsp;<a href="mailto:heiner@blaskewitz.com">heiner@blaskewitz.com</a></p>
-        <p>Angaben zum VERMITTLERREGISTER:</p>
+        <br/>
+        <h3>Angaben zum VERMITTLERREGISTER:</h3>
         <p>Registrierungsnummer: D-34VM-MMPLD-10<br/>
         Anschrift des Registers: Deutscher Industrie- und Handelskammertag (DIHK) e. V.<br/>
         br/eite Str. 29, 10178 Berlin,<br/>
@@ -60,7 +62,7 @@ const ImpressumCopy = () => (
             Augustaanlage 25, 68165 Mannheim,<br/>
             Tel.: 06 21. 42 04-0, Telefax: 06 21. 42 04 65 0,<br/>
             E-Mail: <a href="mailto:nrv@nrv-rechtsschutz.de">nrv@nrv-rechtsschutz.de</a>, Internet: <a href="https://www.nrv-rechtsschutz.de">https://www.nrv-rechtsschutz.de</a></li>
-        </ul>
+        </ul><br/>
         <p>Meine Leistungen erbr/inge ich ausschließlich auf der Grundlage der Produkte der genannten Versicherungsunternehmen, insbesondere der jeweiligen Allgemeinen Versicherungsbedingungen und weiteren Vertragsinformationen.</p>
         <p>Als Versicherungsvertreter im Sinne von § 59 Abs. 2 Versicherungsvertragsgesetz (VVG) bin ich von der Mannheimer Versicherung AG damit betraut, gewerbsmäßig Versicherungsverträge zu vermitteln.&nbsp;Dazu biete ich Versicherungsinteressenten und Versicherungsnehmern eine Beratung an.</p>
         <p>Im Zusammenhang mit der Vermittlung erhalte ich Provisionen, die in der Versicherungsprämie enthalten sind.</p>
@@ -79,8 +81,9 @@ const ImpressumCopy = () => (
         10052 Berlin<br/>
         <a href="http://www.pkv-ombudsmann.de">www.pkv-ombudsmann.de</a></p>
         <p>Ferner informiere ich Sie über die Existenz einer Online-Streitbeilegungs-Plattform und die Möglichkeit, diese für die Beilegung etwaiger Streitigkeiten zu nutzen (wobei von dort eine Weiterleitung der Beschwerde an den zuständigen Ombudsmann erfolgt).</p>
-        <p><a href="http:/ec.europa.eu/consumers/odr/">http:/ec.europa.eu/consumers/odr/</a></p>
-        <p>Berufsrechtliche Regelungen:</p>
+        <p><a href="http:/ec.europa.eu/consumers/odr/">http:/ec.europa.eu/consumers/odr/</a></p><br/>
+        <h3>Berufsrechtliche Regelungen:</h3>
+        <br/>
         <ul>
         <li>§&nbsp;34d Gewerbeordnung (GewO)</li>
         <li>§§&nbsp;59 bis 68&nbsp;Versicherungsvertragsgesetz (VVG)</li>

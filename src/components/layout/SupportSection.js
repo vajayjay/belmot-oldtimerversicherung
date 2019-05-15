@@ -7,16 +7,31 @@ const StyledSupportSection = styled.section`
     margin: auto;
     padding: var(--space-side);
     display: flex;
-    flex-basis:1 1 ;
+    flex-basis:1;
     flex-wrap: wrap;
 `
 
 const SideInfo = styled.div`
     flex: 1 1 350px;
-    margin-bottom: var(--space-l);
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(244px,1fr));
-    @media (min-width: 1265px){
+    margin-bottom: var(--space-m);
+    display: grid; 
+    align-items: flex-start;
+    grid-template-columns: repeat(auto-fill, minmax(244px,1fr));
+    h1{
+        margin-top: 20px;
+        margin-bottom: 0;
+    }
+    @media (min-width: 560px){
+        margin-top: 20px;
+        h1{
+            margin-top: inherit;
+            margin-bottom: inherit;
+        }
+    }
+    @media (min-width: 1264px){
+        h1{
+            margin-top: 0;
+        }
         display: inline-block;
         margin-right: var(--space-side);
     }

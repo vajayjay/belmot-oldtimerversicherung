@@ -24,7 +24,7 @@ const Main = styled.div`
 `
 
 
-class StandardLayout extends React.Component {
+class AlternativeLayout extends React.Component {
   state = {
     mobileMenuOpen: false
   }
@@ -53,4 +53,4 @@ class StandardLayout extends React.Component {
   }
 }
 
-export default StandardLayout
+export default AlternativeLayout
