@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: `My Gatsby Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
+    title: `Belmot Oldtimerversicherung`,
+    description: `SEO Description`,
     author: `@Jannis Wicke`,
 //    image: "/images/gatsby-astronaut-2.png", // Path to your image you placed in the 'static' folder
     siteUrl: `https://www.example.com`,

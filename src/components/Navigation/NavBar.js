@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import {Link} from 'gatsby'
 import BurgerButtton from './BurgerButton'
-import logo from '../../../content/images/Logo.svg'
+import logo from './../../../content/images/Logo.svg'
 
 
 const Nav = styled.div`
