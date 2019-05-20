@@ -13,6 +13,11 @@ body{
   height: 100%;
 }
 
+/*Make links break and not overflow*/
+a {
+  word-break: break-all;
+}
+
 p,a,li,td,label{
   line-height: var(--line-height);
   color: var(--color-dark);

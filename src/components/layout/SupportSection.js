@@ -5,7 +5,7 @@ const StyledSupportSection = styled.section`
     width: 100%;
     max-width: 1500px;
     margin: auto;
-    padding: var(--space-side);
+    /* padding: var(--space-side); */
     display: flex;
     flex-basis:1;
     flex-wrap: wrap;
@@ -13,7 +13,7 @@ const StyledSupportSection = styled.section`
 
 const SideInfo = styled.div`
     flex: 1 1 350px;
-    margin-bottom: var(--space-m);
+    margin: var(--space-side) var(--space-m);
     display: grid; 
     align-items: flex-start;
     grid-template-columns: repeat(auto-fill, minmax(244px,1fr));

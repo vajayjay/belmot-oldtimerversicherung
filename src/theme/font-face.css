@@ -22,7 +22,7 @@ body{
   font-size: var(--font-size);
   font-weight: 400;
   -webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 h1,h2,h3,h4{

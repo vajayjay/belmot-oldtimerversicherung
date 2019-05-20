@@ -8,13 +8,13 @@ import {ICONS} from '../theme/Icons'
 
 
 const StyledHero = styled.section`
-  position: relative;
-  /* height:calc(100vh - 60px); */
+    position: relative;
+    /* height:calc(100vh - 60px); */
 `
 const StyledImg = styled(Img)`
-  position: relative;
-  height: 50vw;
-  /* min-width: 100%; */
+    position: relative;
+    height: 50vw;
+    /* min-width: 100%; */
 
   @media (min-width: 769px){
     min-height: 500px;
