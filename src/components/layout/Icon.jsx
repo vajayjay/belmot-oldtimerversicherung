@@ -1,14 +1,14 @@
-import React from 'react';
+import React from "react"
 
 const Icon = props => {
   const styles = {
     svg: {
-      verticalAlign: 'middle',
+      verticalAlign: "middle",
     },
     path: {
       fill: props.color,
     },
-  };
+  }
 
   return (
     <svg
@@ -17,16 +17,13 @@ const Icon = props => {
       height={`${props.size}px`}
       viewBox="0 0 48 48"
     >
-      <path
-        style={styles.path}
-        d={props.icon}
-      ></path>
+      <path style={styles.path} d={props.icon} />
     </svg>
-  );
-};
+  )
+}
 
 Icon.defaultProps = {
   size: 32,
-};
+}
 
-export default Icon;
+export default Icon

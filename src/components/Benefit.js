@@ -1,31 +1,30 @@
-import React from 'react'
+import React from "react"
 
-import styled from 'styled-components'
-import Icon from '../components/layout/Icon'
-import {ICONS} from '../theme/Icons'
-import Button from '../components/Button'
-
+import styled from "styled-components"
+import Icon from "../components/layout/Icon"
+import { ICONS } from "../theme/Icons"
+import Button from "../components/Button"
 
 const StyledBenefit = styled.section`
     width: 100%;
     background: var(--color-darker);
     padding: 10vh var(--space-side);
     display: flex;
-    flex-direction:column;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 `
 const ContentContainer = styled.div`
     display: flex;
-    flex-direction:column;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     max-width: 694px;
-    & > h2{
+    & > h2 {
         text-align: center;
         color: var(--color-white);
     }
-    & > p{
+    & > p {
         margin-bottom: var(--space-l);
         color: var(--color-lighter);
         text-align: center;
@@ -47,21 +46,21 @@ const StyledIcon = styled.div`
     }
 `
 
-
-
-
-const Benefit = (props) => (
+const Benefit = props => (
     <StyledBenefit>
         <ContentContainer>
-        <StyledIcon>
-            <Icon icon={ICONS.CHECKMARK} />
-        </StyledIcon>
-        <h2>Online-Angebot</h2>
-        <p>Nutzen Sie das Online-Anfrageformular, um schnell und bequem Ihr persönliches Angebot zur Oldtimer-Versicherung anzufordern. Ihr Angebot kommt innerhalb 24 Stunden.</p>
-        <Button link="/anfrage">Jetzt anfragen</Button>
+            <StyledIcon>
+                <Icon icon={ICONS.CHECKMARK} />
+            </StyledIcon>
+            <h2>Online-Angebot</h2>
+            <p>
+                Nutzen Sie das Online-Anfrageformular, um schnell und bequem Ihr
+                persönliches Angebot zur Oldtimer-Versicherung anzufordern. Ihr
+                Angebot kommt innerhalb 24 Stunden.
+            </p>
+            <Button link="/anfrage">Jetzt anfragen</Button>
         </ContentContainer>
     </StyledBenefit>
 )
-
 
 export default Benefit

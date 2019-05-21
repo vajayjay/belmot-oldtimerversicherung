@@ -1,19 +1,18 @@
-import React from 'react'
-import { StaticQuery, graphql } from 'gatsby'
-import Img from 'gatsby-image'
-import styled from 'styled-components'
-import Button from '../components/Button'
+import React from "react"
+import { StaticQuery, graphql } from "gatsby"
+import Img from "gatsby-image"
+import styled from "styled-components"
+import Button from "../components/Button"
 
 const StyledCarPool = styled.section`
     display: flex;
     flex-wrap: wrap;
 
-      &  img{
+    & img {
         height: 100%;
         max-width: 100%;
-
-      }
-    & > div :first-of-type{
+    }
+    & > div :first-of-type {
         flex: 2 1 500px;
         & > div {
             height: 100%;
@@ -27,53 +26,61 @@ const ContentContainer = styled.div`
     align-items: center;
     text-align: center;
 
-    @media(min-width: 100px){
-      padding: 1rem 0;
+    @media (min-width: 100px) {
+        padding: 1rem 0;
     }
 
-
-    & > div{
+    & > div {
         padding: var(--space-l) var(--space-side);
         max-width: 600px;
     }
-    & p{
+    & p {
         margin-bottom: var(--space-m);
     }
-    @media(min-width: 1000px){
-      text-align: left;
+    @media (min-width: 1000px) {
+        text-align: left;
     }
-
 `
 
-const CarPool = (props) => (
+const CarPool = props => (
     <StyledCarPool>
         <div>
-          <Img fluid={props.data.imageOne.childImageSharp.fluid} alt="Oldtimersammlung in einer Garage"/>
+            <Img
+                fluid={props.data.imageOne.childImageSharp.fluid}
+                alt="Oldtimersammlung in einer Garage"
+            />
         </div>
         <ContentContainer>
             <div>
                 <h2>Fuhrparkversicherung</h2>
-                <p>Besonders attraktiv ist das Angebot einer Fuhrparkversicherung für Sammler. Dabei wird der All-Risk-Beitrag nur für die Anzahl der maximal gleichzeitig bewegten Fahrzeuge berechnet. Eine Fuhrparkversicherung ist schon ab zwei Fahrzeugen möglich.</p>
-                <Button primary link="/anfrage">Jetzt anfragen</Button>
+                <p>
+                    Besonders attraktiv ist das Angebot einer
+                    Fuhrparkversicherung für Sammler. Dabei wird der
+                    All-Risk-Beitrag nur für die Anzahl der maximal gleichzeitig
+                    bewegten Fahrzeuge berechnet. Eine Fuhrparkversicherung ist
+                    schon ab zwei Fahrzeugen möglich.
+                </p>
+                <Button primary link="/anfrage">
+                    Jetzt anfragen
+                </Button>
             </div>
         </ContentContainer>
     </StyledCarPool>
 )
 
-
 export default props => (
-  <StaticQuery
-    query={graphql`
-      query {
-        imageOne: file(relativePath: { eq: "Car-pool.jpg" }) {
-          childImageSharp {
-            fluid(maxWidth: 1000) {
-              ...GatsbyImageSharpFluid_withWebp
+    <StaticQuery
+        query={graphql`
+            query {
+                imageOne: file(relativePath: { eq: "Car-pool.jpg" }) {
+                    childImageSharp {
+                        fluid(maxWidth: 1000) {
+                            ...GatsbyImageSharpFluid_withWebp
+                        }
+                    }
+                }
             }
-          }
-        }
-      }
-    `}
-  render={data => <CarPool data={data} {...props} />}
-/>
+        `}
+        render={data => <CarPool data={data} {...props} />}
+    />
 )

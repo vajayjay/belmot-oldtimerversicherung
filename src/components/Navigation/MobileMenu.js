@@ -1,7 +1,6 @@
-import React from 'react'
-import styled from 'styled-components'
-import {Link} from 'gatsby'
-
+import React from "react"
+import styled from "styled-components"
+import { Link } from "gatsby"
 
 const MobileNav = styled.div`
     height: 100vh;
@@ -12,15 +11,17 @@ const MobileNav = styled.div`
     width: 100%;
     z-index: 2;
     background: var(--color-white);
-    /* background: ${props => props.showMobileMenu ? "blue" : "green"}; */
-    transform: ${props => props.showMobileMenu ? "translateY(0%)" : "translateY(-100%)"};
+    /* background: ${props => (props.showMobileMenu ? "blue" : "green")}; */
+    transform: ${props =>
+        props.showMobileMenu ? "translateY(0%)" : "translateY(-100%)"};
     transition: transform 400ms cubic-bezier(0.215, 0.610, 0.355, 1);
 `
 
 /*Mobile Nav Links with animation based on prop */
 const StyledLink = styled(Link)`
-    transform: ${props => props.showMobileMenu ? "translateY(0%)" : "translateY(-100px)"};
-    color:  var(--color-black);
+    transform: ${props =>
+        props.showMobileMenu ? "translateY(0%)" : "translateY(-100px)"};
+    color: var(--color-black);
     margin-top: 5vh;
     display: block;
     text-decoration: none;
@@ -29,9 +30,9 @@ const StyledLink = styled(Link)`
     text-align: center;
 
     &.active {
-      color: var(--color-primary-light);
+        color: var(--color-primary-light);
     }
-    
+
     /*animation of Menu items flying in slightly delayed*/
     &:last-of-type {
         transition-delay: 0;
@@ -55,39 +56,44 @@ const MobileMenu = props => {
     // if(props.showMobileMenu){
     //     console.log("test")
     // }
-    return(
+    return (
         <MobileNav showMobileMenu={props.showMobileMenu}>
-            <StyledLink 
+            <StyledLink
                 to="/"
                 showMobileMenu={props.showMobileMenu}
-                activeClassName="active">
+                activeClassName="active"
+            >
                 Home
             </StyledLink>
-            <StyledLink 
+            <StyledLink
                 to="/anfrage/"
                 showMobileMenu={props.showMobileMenu}
-                activeClassName="active">
+                activeClassName="active"
+            >
                 Online-Anfrage
             </StyledLink>
-            <StyledLink 
+            <StyledLink
                 to="/kontakt/"
                 showMobileMenu={props.showMobileMenu}
-                activeClassName="active">
+                activeClassName="active"
+            >
                 Kontakt
             </StyledLink>
-            <StyledLink 
+            <StyledLink
                 to="/faq/"
                 showMobileMenu={props.showMobileMenu}
-                activeClassName="active">
+                activeClassName="active"
+            >
                 FAQ
             </StyledLink>
-            <StyledLink 
+            <StyledLink
                 to="/versicherungsbedingungen/"
                 showMobileMenu={props.showMobileMenu}
-                activeClassName="active">
+                activeClassName="active"
+            >
                 Versicherungsbedingungen
             </StyledLink>
         </MobileNav>
     )
-};
+}
 export default MobileMenu

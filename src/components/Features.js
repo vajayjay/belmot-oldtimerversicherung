@@ -1,22 +1,22 @@
-import React from 'react'
+import React from "react"
 // import accordionStyles from '../components/accordion.module.styles'
-import styled from 'styled-components'
-import Icon from '../components/layout/Icon'
-import {ICONS} from '../theme/Icons'
+import styled from "styled-components"
+import Icon from "../components/layout/Icon"
+import { ICONS } from "../theme/Icons"
 
 const StyledFetaures = styled.section`
-    @media (min-width: 798px){
+    @media (min-width: 798px) {
         display: grid;
         grid-template-columns: 1fr 1fr;
     }
     & > div {
         padding: var(--space-side);
     }
-    & > div:first-of-type{
+    & > div:first-of-type {
         background: var(--color-lighter);
     }
     hyphens: auto;
-    @media(min-width: 600px) {
+    @media (min-width: 600px) {
         hyphens: none;
     }
 `
@@ -38,7 +38,6 @@ const ListItem = styled.li`
     grid-template-columns: 36px auto;
 `
 
-
 const StyledIcon = styled.div`
     margin-top: -5px;
     margin-right: var(--space-s);
@@ -46,32 +45,31 @@ const StyledIcon = styled.div`
         fill: var(--color-primary);
         max-width: 18px;
     }
-    @media (min-width: 798px){
+    @media (min-width: 798px) {
         margin-top: -2px;
         & > svg {
             fill: var(--color-primary);
             max-width: 22px;
         }
     }
-
 `
 
 const FeaturesBasic = [
-    '20% Vorsorgeversicherung bei Wertsteigerungen, wenn das Wertgutachten im Versicherungsfall nicht älter als zwei Jahre ist',
-    'Bei Glasbruchschäden nur 150 Euro Selbstbehalt – unabhängig vom vertraglich festgelegten generellen Selbstbehalt',
-    'Keine Rückstufung im Schadensfall',
-    'Versicherungsschutz bei Kollision mit Tieren aller Art',
-    'Leistungen bei Tierbissschäden inklusive Folgeschäden',
-    'Schutz bei stationären Risiken, z. B. für Sammlungen',
-    'Diebstahlversicherung'
+    "20% Vorsorgeversicherung bei Wertsteigerungen, wenn das Wertgutachten im Versicherungsfall nicht älter als zwei Jahre ist",
+    "Bei Glasbruchschäden nur 150 Euro Selbstbehalt – unabhängig vom vertraglich festgelegten generellen Selbstbehalt",
+    "Keine Rückstufung im Schadensfall",
+    "Versicherungsschutz bei Kollision mit Tieren aller Art",
+    "Leistungen bei Tierbissschäden inklusive Folgeschäden",
+    "Schutz bei stationären Risiken, z. B. für Sammlungen",
+    "Diebstahlversicherung",
 ]
 const FeaturesPro = [
-    'Motorschaden',
-    'Bruchschaden',
-    'Getriebeschaden',
-    'Bremsschaden',
-    'Schäden durch ausgelaufene Batterie',
-    'Fehlbedienung'
+    "Motorschaden",
+    "Bruchschaden",
+    "Getriebeschaden",
+    "Bremsschaden",
+    "Schäden durch ausgelaufene Batterie",
+    "Fehlbedienung",
 ]
 // const Accordion = props => (
 const Features = () => (
@@ -82,19 +80,22 @@ const Features = () => (
             <ul>
                 {FeaturesBasic.map((FeaturesBasic, index) => {
                     return (
-                    <ListItem key={index}>
-                        <StyledIcon>
-                            <Icon icon={ICONS.CHECKMARK} />
-                        </StyledIcon>
-                        {FeaturesBasic}
-                    </ListItem>
+                        <ListItem key={index}>
+                            <StyledIcon>
+                                <Icon icon={ICONS.CHECKMARK} />
+                            </StyledIcon>
+                            {FeaturesBasic}
+                        </ListItem>
                     )
                 })}
             </ul>
         </div>
         <div>
             <h2>Allgefahrendeckung</h2>
-            <p>die Belmot Premium-Variante, mit der eine herkömmliche Vollkaskoversicherung nicht mithalten kann:</p>
+            <p>
+                die Belmot Premium-Variante, mit der eine herkömmliche
+                Vollkaskoversicherung nicht mithalten kann:
+            </p>
             <ul>
                 <SpecialListItem>
                     <StyledIcon>
@@ -104,18 +105,17 @@ const Features = () => (
                 </SpecialListItem>
                 {FeaturesPro.map((FeaturesPro, index) => {
                     return (
-                    <ListItem key={index}>
-                        <StyledIcon>
-                            <Icon icon={ICONS.CHECKMARK} />
-                        </StyledIcon>
-                        {FeaturesPro}
-                    </ListItem>
+                        <ListItem key={index}>
+                            <StyledIcon>
+                                <Icon icon={ICONS.CHECKMARK} />
+                            </StyledIcon>
+                            {FeaturesPro}
+                        </ListItem>
                     )
                 })}
             </ul>
         </div>
-
-    </StyledFetaures> 
+    </StyledFetaures>
 )
-            
+
 export default Features

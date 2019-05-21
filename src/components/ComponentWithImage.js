@@ -1,16 +1,17 @@
-import React from 'react'
-import { StaticQuery, graphql } from 'gatsby'
-import Img from 'gatsby-image'
+import React from "react"
+import { StaticQuery, graphql } from "gatsby"
+import Img from "gatsby-image"
 
-
-const ComponentWithImage = (props) => (
+const ComponentWithImage = props => (
   <section>
     <div>
-      <Img fluid={props.data.imageOne.childImageSharp.fluid} alt="Description"/>
+      <Img
+        fluid={props.data.imageOne.childImageSharp.fluid}
+        alt="Description"
+      />
     </div>
   </section>
 )
-
 
 export default props => (
   <StaticQuery
@@ -25,6 +26,6 @@ export default props => (
         }
       }
     `}
-  render={data => <ComponentWithImage data={data} {...props} />}
-/>
+    render={data => <ComponentWithImage data={data} {...props} />}
+  />
 )
