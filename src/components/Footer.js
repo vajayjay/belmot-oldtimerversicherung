@@ -43,7 +43,7 @@ const SmallPrint = styled.p`
 const Footer = props => (
     <StyledFooter>
         <div>
-            <FooterTitle>Inhaber</FooterTitle>
+            <FooterTitle>Ansprechpartner</FooterTitle>
             <p>
                 Heiner Blaskewitz
                 <br />
