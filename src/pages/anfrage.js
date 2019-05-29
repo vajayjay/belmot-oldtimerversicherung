@@ -35,12 +35,18 @@ class IndexPage extends React.Component {
                 />
                 <StyledSection>
                     <StyledForm
-                        name="contact"
+                        name="belmot-anfrage"
                         method="POST"
                         action="/success"
                         data-netlify="true"
-                        data-netlify-honeypot="bot-field"
+                        netlify-honeypot="bot-field"
                     >
+                        <input type="hidden" name="bot-field" />
+                        <input
+                            type="hidden"
+                            name="belmot-anfrage"
+                            value="contact"
+                        />
                         <h1>Online-Anfrage</h1>
                         <br />
                         <StyledSectionH2>
