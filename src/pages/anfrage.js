@@ -36,7 +36,7 @@ class IndexPage extends React.Component {
                 <StyledSection>
                     <StyledForm
                         name="contact"
-                        method="post"
+                        method="POST"
                         action="/success"
                         data-netlify="true"
                         data-netlify-honeypot="bot-field"
