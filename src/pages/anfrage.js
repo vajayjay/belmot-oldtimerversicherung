@@ -70,7 +70,6 @@ class IndexPage extends React.Component {
                         </label>
                         <TextInput label="Vorname" type="text" required />
                         <TextInput label="Nachname" type="text" />
-                        <TextInput label="Email" type="email" required />
                         <TextInput
                             label="Geburtsdatum des Fahrzeughalters"
                             type="text"
@@ -83,6 +82,7 @@ class IndexPage extends React.Component {
                         />
                         <TextInput label="Postleitzahl" type="text" required />
                         <TextInput label="Ort" type="text" required />
+                        <TextInput label="Email" type="email" required />
                         <label>
                             <span>
                                 Sind Sie Mitglied in einem Oldtimerclub?
@@ -100,7 +100,6 @@ class IndexPage extends React.Component {
                                 <span>Ja</span>
                             </label>
                         </label>
-
                         <TextInput label="Name des Oldtimerclubs" type="text" />
                         <StyledSectionH2>
                             Fahrzeug-Informationen
@@ -125,22 +124,72 @@ class IndexPage extends React.Component {
                             </label>
                         </label>
                         <TextInput label="KFZ-Kennzeichen" type="text" />
+                        <p>
+                            Hinweis: Wohnmobile und zu Campingzwecken genutzte
+                            Fahrzeuge können leider nicht über Belmot versichert
+                            werden.
+                        </p>{" "}
                         <label>
-                            <span>Fahrzeugart</span>
+                            <span>Kennzeichen</span>
+                            <label>
+                                <input type="radio" name="Saisonkennzeichen" />
+                                <span>Rot</span>
+                            </label>
+                            <label>
+                                <input type="radio" name="Saisonkennzeichen" />
+                                <span>Schwarz</span>
+                            </label>
+                        </label>
+                        <TextInput label="Von" type="text" />
+                        <TextInput label="Bis" type="text" />
+                        <label>
+                            <span>Historisches Kennzeichen</span>
                             <label>
                                 <input
                                     type="radio"
-                                    name="seasonplate"
-                                    defaultChecked
+                                    name="Historisches Kennzeichen"
                                 />
                                 <span>Nein</span>
                             </label>
                             <label>
-                                <input type="radio" name="seasonplate" />
+                                <input
+                                    type="radio"
+                                    name="Historisches Kennzeichen"
+                                />
                                 <span>Ja</span>
                             </label>
                         </label>
-
+                        <TextInput label="Hersteller" type="text" />
+                        <TextInput label="Typ" type="text" />
+                        <TextInput label="Erstzulassung" type="text" />
+                        <TextInput
+                            label="Versicherungssummer (Wiederbeschaffungswert) in € "
+                            type="text"
+                        />
+                        <TextInput
+                            label="Jährliche Fahrleistung in km"
+                            type="text"
+                        />
+                        <p>
+                            Bitte beachten Sie, dass die angegebene
+                            Kilometerleistung Auswirkungen auf die
+                            Beitragsberechnung hat. Geben Sie also bitte im
+                            Rahmen des Möglichen eine realistische und nicht
+                            vorsichtig zu hoch angesetzte Kilometerleistung an.
+                        </p>
+                        <TextInput label="Motorsträke in KW" type="text" />
+                        <label>
+                            <span>Fahrzeugzustand</span>
+                            <label>
+                                <input type="radio" name="Fahrzeugzustand" />
+                                <span>Makellos – Note 1</span>
+                            </label>
+                            <label>
+                                <input type="radio" name="Fahrzeugzustand" />
+                                <span>Sehr gut – Note 1 - 2</span>
+                            </label>
+                        </label>
+                        {/* Hier weitermaccchen */}
                         <label id="terms">
                             <label>
                                 <input type="checkbox" required />
