@@ -10,7 +10,7 @@ const CustomerRatingForm = props => (
         <p>ttest</p>
         <form
             method="post"
-            action="https://api.staticman.net/v2/entry/vajayjay/oldtimer-versicherung/master"
+            action="https://dev.staticman.net/v3/entry/github/vajayjay/oldtimer-versicherung/master"
         >
             <label>
                 Your name
