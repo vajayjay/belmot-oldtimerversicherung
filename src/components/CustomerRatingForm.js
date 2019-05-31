@@ -10,11 +10,11 @@ const CustomerRatingForm = props => (
         <p>ttest</p>
         <form
             method="POST"
-            action="https://dev.staticman.net/v3/entry/github/vajayjay/oldtimer-versicherung/master/reviews"
+            action="https://dev.staticman.net/v3/entry/github/vajayjay/belmot-oldtimerversicherung/master/comments"
         >
             <label>
                 Your name
-                <input type="text" id="movie-form[name]" name="fields[name]" />
+                <input type="text" id="form[name]" name="fields[name]" />
             </label>
             <button>Absenden</button>
         </form>
