@@ -64,6 +64,7 @@ class IndexPage extends React.Component {
                                     label="Anrede"
                                     type="radio"
                                     name="anrede"
+                                    value="Herr"
                                     defaultChecked
                                 />
                                 <span>Herr</span>
@@ -73,6 +74,7 @@ class IndexPage extends React.Component {
                                     label="Anrede"
                                     type="radio"
                                     name="anrede"
+                                    value="Frau"
                                 />
                                 <span>Frau</span>
                             </label>
@@ -101,11 +103,16 @@ class IndexPage extends React.Component {
                                     type="radio"
                                     name="Oldtimerclub"
                                     defaultChecked
+                                    value="Nein"
                                 />
                                 <span>Nein</span>
                             </label>
                             <label>
-                                <input type="radio" name="Oldtimerclub" />
+                                <input
+                                    type="radio"
+                                    name="Oldtimerclub"
+                                    value="Ja"
+                                />
                                 <span>Ja</span>
                             </label>
                         </label>
@@ -119,25 +126,42 @@ class IndexPage extends React.Component {
                             <label>
                                 <input
                                     type="checkbox"
-                                    name="typeofcar"
+                                    name="Fahrzeugart"
                                     defaultChecked
+                                    value="PKW"
                                 />
                                 <span>PKW</span>
                             </label>
                             <label>
-                                <input type="checkbox" name="typeofcar" />
+                                <input
+                                    type="checkbox"
+                                    name="Fahrzeugart"
+                                    value="Motorrad"
+                                />
                                 <span>Motorrad</span>
                             </label>
                             <label>
-                                <input type="checkbox" name="typeofcar" />
+                                <input
+                                    type="checkbox"
+                                    name="Fahrzeugart"
+                                    value="Traktor"
+                                />
                                 <span>Traktor</span>
                             </label>
                             <label>
-                                <input type="checkbox" name="typeofcar" />
+                                <input
+                                    type="checkbox"
+                                    name="Fahrzeugart"
+                                    value="Andere"
+                                />
                                 <span>Andere</span>
                             </label>
                         </label>
-                        <TextInput label="KFZ-Kennzeichen" type="text" />
+                        <TextInput
+                            label="KFZ-Kennzeichen"
+                            type="text"
+                            name="KFZ-Kennzeichen"
+                        />
                         <p>
                             Hinweis: Wohnmobile und zu Campingzwecken genutzte
                             Fahrzeuge können leider nicht über Belmot versichert
@@ -146,16 +170,24 @@ class IndexPage extends React.Component {
                         <label>
                             <span>Kennzeichen</span>
                             <label>
-                                <input type="radio" name="Saisonkennzeichen" />
+                                <input
+                                    type="radio"
+                                    name="Saisonkennzeichen"
+                                    value="Rot"
+                                />
                                 <span>Rot</span>
                             </label>
                             <label>
-                                <input type="radio" name="Saisonkennzeichen" />
+                                <input
+                                    type="radio"
+                                    name="Saisonkennzeichen"
+                                    value="Schwarz"
+                                />
                                 <span>Schwarz</span>
                             </label>
                         </label>
-                        <TextInput label="Von" type="text" />
-                        <TextInput label="Bis" type="text" />
+                        <TextInput label="Von" type="text" name="Von" />
+                        <TextInput label="Bis" type="text" name="Bis" />
                         <label>
                             <span>Historisches Kennzeichen</span>
                             <label>
@@ -163,6 +195,7 @@ class IndexPage extends React.Component {
                                     type="radio"
                                     name="Historisches Kennzeichen"
                                     defaultChecked
+                                    value="Nein"
                                 />
                                 <span>Nein</span>
                             </label>
@@ -170,25 +203,39 @@ class IndexPage extends React.Component {
                                 <input
                                     type="radio"
                                     name="Historisches Kennzeichen"
+                                    value="Ja"
                                 />
                                 <span>Ja</span>
                             </label>
                         </label>
-                        <TextInput label="Hersteller*" type="text" required />
-                        <TextInput label="Typ*" type="text" required />
+                        <TextInput
+                            label="Hersteller*"
+                            type="text"
+                            name="Hersteller"
+                            required
+                        />
+                        <TextInput
+                            label="Typ*"
+                            type="text"
+                            name="Typ"
+                            required
+                        />
                         <TextInput
                             label="Erstzulassung*"
                             type="text"
+                            name="Erstzulassung"
                             required
                         />
                         <TextInput
                             label="Versicherungssummer (Wiederbeschaffungswert) in €*"
                             type="text"
+                            name="Versicherungssummer in €"
                             required
                         />
                         <TextInput
                             label="Jährliche Fahrleistung in km*"
                             type="text"
+                            name="Jährliche Fahrleistung in km"
                             required
                         />
                         <p>
@@ -198,13 +245,18 @@ class IndexPage extends React.Component {
                             Rahmen des Möglichen eine realistische und nicht
                             vorsichtig zu hoch angesetzte Kilometerleistung an.
                         </p>
-                        <TextInput label="Motorsträke in KW" type="text" />
+                        <TextInput
+                            label="Motorsträke in KW"
+                            type="text"
+                            name="Motorsträke in KW"
+                        />
                         <label>
                             <span>Fahrzeugzustand*</span>
                             <label>
                                 <input
                                     type="radio"
                                     name="Fahrzeugzustand"
+                                    value="Makellos – Note 1"
                                     required
                                 />
                                 <span>Makellos – Note 1</span>
@@ -213,6 +265,7 @@ class IndexPage extends React.Component {
                                 <input
                                     type="radio"
                                     name="Fahrzeugzustand"
+                                    value="Sehr gut – Note 1 - 2"
                                     required
                                 />
                                 <span>Sehr gut – Note 1 - 2</span>
@@ -230,6 +283,7 @@ class IndexPage extends React.Component {
                                     type="radio"
                                     name="Originalzustand"
                                     defaultChecked
+                                    value="Ja"
                                     required
                                 />
                                 <span>Ja</span>
@@ -238,6 +292,7 @@ class IndexPage extends React.Component {
                                 <input
                                     type="radio"
                                     name="Originalzustand"
+                                    value="Nein"
                                     required
                                 />
                                 <span>Nein</span>
@@ -246,6 +301,7 @@ class IndexPage extends React.Component {
                         <TextInput
                             label="Wenn nein, welche Umauten?"
                             type="text"
+                            name="Umbauten"
                         />
                         <label>
                             <span>
@@ -256,30 +312,47 @@ class IndexPage extends React.Component {
                                 <input
                                     type="radio"
                                     name="Ölfeuchte"
+                                    value="Nein"
                                     defaultChecked
                                     required
                                 />
                                 <span>Nein</span>
                             </label>
                             <label>
-                                <input type="radio" name="Ölfeuchte" required />
+                                <input
+                                    type="radio"
+                                    name="Ölfeuchte"
+                                    value="Ja"
+                                    required
+                                />
                                 <span>Ja</span>
                             </label>
                         </label>
                         <TextInput
                             label="Wenn ja, bitte erläutern"
                             type="text"
+                            name="Erläuterung zur Ölfeuchte"
                         />
                         <label>
                             <span>Überwiegender Abstellort*</span>
-                            <select name="Abstellort" required>
-                                <option>eigenes Grundstück</option>
-                                <option>Carport</option>
-                                <option>Einzelgarage</option>
-                                <option>Tiefgarage nicht öffentlich</option>
-                                <option>Tiefgarage öffentlich</option>
-                                <option>Tiefgarage Parkbox</option>
-                                <option>Halle</option>
+                            <select name="Abstellort[]" required>
+                                <option value="eigenes Grundstück">
+                                    eigenes Grundstück
+                                </option>
+                                <option value="Carport">Carport</option>
+                                <option value="Einzelgarage">
+                                    Einzelgarage
+                                </option>
+                                <option value="Tiefgarage nicht öffentlich">
+                                    Tiefgarage nicht öffentlich
+                                </option>
+                                <option value="Tiefgarage öffentlich">
+                                    Tiefgarage öffentlich
+                                </option>
+                                <option value="Tiefgarage Parkbox">
+                                    Tiefgarage Parkbox
+                                </option>
+                                <option value="Halle">Halle</option>
                             </select>
                         </label>
                         <label>
@@ -288,6 +361,7 @@ class IndexPage extends React.Component {
                                 <input
                                     type="radio"
                                     name="Wergutachten"
+                                    value="Ja"
                                     required
                                 />
                                 <span>Ja</span>
@@ -296,6 +370,7 @@ class IndexPage extends React.Component {
                                 <input
                                     type="radio"
                                     name="Wergutachten"
+                                    value="Nein"
                                     required
                                 />
                                 <span>Nein</span>
@@ -304,6 +379,7 @@ class IndexPage extends React.Component {
                         <TextInput
                             label="Wenn ja, Datum des Gutachtens"
                             type="text"
+                            name="Datum des Gutachtens"
                         />
                         <p>
                             Wenn es kein Wertgutachten gibt und der Fahrzeugwert
@@ -326,6 +402,7 @@ class IndexPage extends React.Component {
                                 <input
                                     type="radio"
                                     name="Erstfahrzeug vorhanden?"
+                                    value="Ja"
                                     required
                                 />
                                 <span>Ja</span>
@@ -334,6 +411,7 @@ class IndexPage extends React.Component {
                                 <input
                                     type="radio"
                                     name="Erstfahrzeug vorhanden?"
+                                    value="Nein"
                                     required
                                 />
                                 <span>Nein</span>
@@ -345,6 +423,7 @@ class IndexPage extends React.Component {
                                 <input
                                     type="radio"
                                     name="Wohnumfeld"
+                                    value="Einfamilienhaus"
                                     required
                                 />
                                 <span>Einfamilienhaus</span>
@@ -353,6 +432,7 @@ class IndexPage extends React.Component {
                                 <input
                                     type="radio"
                                     name="Wohnumfeld"
+                                    value="Eigentumswohnung"
                                     required
                                 />
                                 <span>Eigentumswohnung</span>
@@ -361,6 +441,7 @@ class IndexPage extends React.Component {
                                 <input
                                     type="radio"
                                     name="Wohnumfeld"
+                                    value="Kein Wohneigentum"
                                     required
                                 />
                                 <span>Kein Wohneigentum</span>
@@ -368,16 +449,23 @@ class IndexPage extends React.Component {
                         </label>
                         <label>
                             <span>Nutzer des KFZ*</span>
-                            <select name="Nutzer" required>
-                                <option>Nur Sie selbst</option>
-                                <option>Sie und Partner</option>
-                                <option>Sie, Partner und Kinder</option>
-                                <option>Auch andere</option>
+                            <select name="Nutzer[]" required>
+                                <option value="Nur Sie selbst">
+                                    Nur Sie selbst
+                                </option>
+                                <option value="Sie und Partner">
+                                    Sie und Partner
+                                </option>
+                                <option value="Sie, Partner und Kinder">
+                                    Sie, Partner und Kinder
+                                </option>
+                                <option value="Auch andere">Auch andere</option>
                             </select>
                         </label>
                         <TextInput
                             label="Geburtsdatum des jüngsten Fahrers*"
                             type="text"
+                            name="Geburtsdatum des jüngsten Fahrers"
                             required
                         />
                         <label>
@@ -386,6 +474,7 @@ class IndexPage extends React.Component {
                                 <input
                                     type="checkbox"
                                     name="Versicherungsumfang"
+                                    value="Grunddeckung"
                                 />
                                 <span>Grunddeckung</span>
                             </label>
@@ -393,6 +482,7 @@ class IndexPage extends React.Component {
                                 <input
                                     type="checkbox"
                                     name="Versicherungsumfang"
+                                    value="Allgefahrendeckung"
                                 />
                                 <span>Allgefahrendeckung</span>
                             </label>
@@ -407,6 +497,7 @@ class IndexPage extends React.Component {
                                 <input
                                     type="checkbox"
                                     name="Selbstbeteiligung"
+                                    value="150€"
                                 />
                                 <span>150€</span>
                             </label>
@@ -414,6 +505,7 @@ class IndexPage extends React.Component {
                                 <input
                                     type="checkbox"
                                     name="Selbstbeteiligung"
+                                    value="300€"
                                 />
                                 <span>300€</span>
                             </label>
@@ -421,6 +513,7 @@ class IndexPage extends React.Component {
                                 <input
                                     type="checkbox"
                                     name="Selbstbeteiligung"
+                                    value="500€"
                                 />
                                 <span>500€</span>
                             </label>
@@ -428,6 +521,7 @@ class IndexPage extends React.Component {
                                 <input
                                     type="checkbox"
                                     name="Selbstbeteiligung"
+                                    value="1000€"
                                 />
                                 <span>1000€</span>
                             </label>
@@ -435,6 +529,7 @@ class IndexPage extends React.Component {
                                 <input
                                     type="checkbox"
                                     name="Selbstbeteiligung"
+                                    value="2500€"
                                 />
                                 <span>2500€</span>
                             </label>
@@ -447,6 +542,7 @@ class IndexPage extends React.Component {
                         <TextInput
                             label="Unverbindlich geplanter Versicherungsbeginn"
                             type="text"
+                            name="Geplanter Versicherungsbeginn"
                         />
                         <label>
                             <span>Ergänzende Angaben / Fragen</span>
