@@ -1,4 +1,6 @@
 import React from "react"
+import { StaticQuery, graphql } from "gatsby"
+
 
 import StandardLayout from "../components/StandardLayout"
 import SEO from "../components/Seo"
@@ -9,22 +11,37 @@ import SEO from "../components/Seo"
 // import TypesOfCars from "../components/TypesOfCars"
 // import Features from "../components/Features"
 
-class IndexPage extends React.Component {
-    render() {
-        return (
-            <StandardLayout>
-                <SEO
-                    title="Belmot Oldtimerversicherung"
-                    keywords={[
-                        `Belmot`,
-                        `Oldtimerversicherung`,
-                        `Youngtimer`,
-                        `Oldtimer`,
-                    ]}
-                />
-            </StandardLayout>
-        )
-    }
-}
+const CarPool = props => (
+    <StandardLayout>
+        <SEO
+            title="Belmot Oldtimerversicherung"
+            keywords={[
+                `Belmot`,
+                `Oldtimerversicherung`,
+                `Youngtimer`,
+                `Oldtimer`,
+            ]}
+        />
+        <div>
+            <p>{props.data.reviewsYaml.name}</p>
+            <p>{props.data.reviewsYaml.date}</p>
+            <p>{props.data.reviewsYaml.review}</p>
+        </div>
+    </StandardLayout>
+)
 
-export default IndexPage
+export default props => (
+    <StaticQuery
+        query={graphql`
+            query {
+                reviewsYaml {
+                    name
+                    review
+                    date
+                    id
+                }
+            }
+        `}
+        render={data => <CarPool data={data} {...props} />}
+    />
+)

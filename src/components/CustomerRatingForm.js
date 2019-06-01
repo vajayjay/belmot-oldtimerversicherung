@@ -1,4 +1,5 @@
 import React from "react"
+import "../theme/forms.css"
 
 // import styled from "styled-components"
 // import Icon from "../components/layout/Icon"
@@ -13,8 +14,14 @@ const CustomerRatingForm = props => (
             action="https://dev.staticman.net/v3/entry/github/vajayjay/belmot-oldtimerversicherung/master/comments"
         >
             <label>
-                Your name
-                <input type="text" id="form[name]" name="fields[name]" />
+                <label>
+                    <span>Ihr Name</span>
+                    <input type="text" id="form[name]" name="fields[name]" />
+                </label>
+                <label>
+                    <span>Ihre Rezension</span>
+                    <input type="text" id="form[name]" name="fields[review]" />
+                </label>
             </label>
             <button>Absenden</button>
         </form>

@@ -45,5 +45,12 @@ module.exports = {
                 // Add any options here
             },
         },
+        `gatsby-transformer-yaml`,
+        {
+            resolve: `gatsby-source-filesystem`,
+            options: {
+                path: `${__dirname}/content/reviews`,
+            },
+        },
     ],
 }
