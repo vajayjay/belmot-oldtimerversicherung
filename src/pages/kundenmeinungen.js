@@ -1,7 +1,6 @@
 import React from "react"
 import { StaticQuery, graphql } from "gatsby"
 
-
 import StandardLayout from "../components/StandardLayout"
 import SEO from "../components/Seo"
 // import Hero from "../components/Hero"
@@ -26,6 +25,7 @@ const CarPool = props => (
             <p>{props.data.reviewsYaml.name}</p>
             <p>{props.data.reviewsYaml.date}</p>
             <p>{props.data.reviewsYaml.review}</p>
+            <p>{props.data.reviewsYaml.rating}</p>
         </div>
     </StandardLayout>
 )
@@ -37,8 +37,9 @@ export default props => (
                 reviewsYaml {
                     name
                     review
-                    date
+                    date(formatString: "D. MMMM YYYY", locale: "de-DE")
                     id
+                    rating
                 }
             }
         `}
