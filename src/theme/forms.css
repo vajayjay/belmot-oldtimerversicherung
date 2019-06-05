@@ -27,9 +27,10 @@ label>input[type="email"] {
 }
 
 
-label>input:focus {
-    border: 3px solid var(--color-primary);
-    outline-width: 0;
+label>input:focus,
+textarea:focus {
+    border: 1px solid white;
+    box-shadow: 0 0 0 3px var(--color-primary);
     outline: none;
 }
 
