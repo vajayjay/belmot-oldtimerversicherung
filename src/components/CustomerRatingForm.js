@@ -52,7 +52,7 @@ const CustomerRatingForm = props => (
         <p>Wir freuen uns über eine positive Bewertung von Ihnen.</p>
         <form
             method="POST"
-            action="https://dev.staticman.net/v3/entry/github/vajayjay/belmot-oldtimerversicherung/master/comments"
+            action="https://dev.staticman.net/v3/entry/github/vajayjay/belmot-oldtimerversicherung/master/reviews"
         >
             <label>
                 <span>Ihr Name</span>
@@ -61,7 +61,7 @@ const CustomerRatingForm = props => (
 
             <label>
                 <span>Ihre Rezension</span>
-                <textarea id="form[name]" name="fields[review]" />
+                <textarea name="fields[review]" />
             </label>
             <StarRating>
                 <span>Rating:</span>
