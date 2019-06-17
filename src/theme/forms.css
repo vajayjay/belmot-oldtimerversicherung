@@ -4,13 +4,13 @@ label {
     margin-bottom: var(--space-m);
 }
 
-label>span {
+label > span {
     margin-bottom: 6px;
     font-size: 18px;
 }
 
-label>input[type="text"],
-label>input[type="email"],
+label > input[type="text"],
+label > input[type="email"],
 textarea {
     max-width: 640px;
     border: 1px solid var(--color-light);
@@ -21,20 +21,19 @@ textarea {
     font-weight: 600;
 }
 
-label>input[type="text"],
-label>input[type="email"] {
+label > input[type="text"],
+label > input[type="email"] {
     height: 64px;
 }
 
-
-label>input:focus,
+label > input:focus,
 textarea:focus {
     border: 1px solid white;
     box-shadow: 0 0 0 3px var(--color-primary);
     outline: none;
 }
 
-label>label {
+label > label {
     display: flex;
     flex-direction: row;
     align-items: baseline;
@@ -42,7 +41,7 @@ label>label {
     margin-bottom: 0;
 }
 
-label>label>span {
+label > label > span {
     font-size: 18px;
 }
 
@@ -52,7 +51,7 @@ input[type="checkbox"] {
 }
 
 /*Aligning terms and conditionscheckbox with first line*/
-#terms>div {
+#terms > div {
     align-items: baseline;
 }
 
@@ -79,7 +78,6 @@ input[type="submit"] {
     transition: all var(--time-fast);
 }
 
-
 input[type="submit"]:hover {
     color: var(--color-white);
     background: var(--color-primary-light);
@@ -91,4 +89,47 @@ input[type="submit"]:hover {
 input[type="submit"]:active {
     background: var(--color-primary-dark);
     transform: translateY(1px);
+}
+
+/* Dropdowns */
+.select-wrapper {
+    position: relative;
+    width: 200px;
+}
+
+.select-wrapper::before {
+    color: var(--color-darker);
+    font-size: 20px;
+    pointer-events: none;
+    position: absolute;
+    right: 15px;
+    top: 10px;
+}
+
+select {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    background: rgba(255, 255, 255, 1)
+        url("../../content/images/chevron-down.svg") no-repeat right 20px center;
+    background-size: 5%;
+    border: 1px solid var(--color-light);
+
+    border-radius: 3px;
+    box-shadow: 2px 2px 5px 1px rgba(207, 216, 230, 0.1);
+    color: var(--color-darker);
+    cursor: pointer;
+    font-size: 16px;
+    height: 64px;
+    outline: none;
+    padding-left: 20px;
+    width: 100%;
+}
+
+select::-ms-expand {
+    display: none;
+}
+
+select:focus::-ms-value {
+    background-color: transparent;
 }

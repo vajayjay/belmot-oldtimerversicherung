@@ -43,7 +43,7 @@ class IndexPage extends React.Component {
                     <StyledForm
                         name="contact"
                         method="POST"
-                        action="/success"
+                        action="/anfrage-erfolgreich"
                         data-netlify="true"
                         netlify-honeypot="bot-field"
                     >
@@ -227,9 +227,9 @@ class IndexPage extends React.Component {
                             required
                         />
                         <TextInput
-                            label="Versicherungssummer (Wiederbeschaffungswert) in €*"
+                            label="Versicherungssumme (Wiederbeschaffungswert) in €*"
                             type="text"
-                            name="Versicherungssummer in €"
+                            name="Versicherungssumme in €"
                             required
                         />
                         <TextInput
@@ -281,19 +281,17 @@ class IndexPage extends React.Component {
                             <label>
                                 <input
                                     type="radio"
-                                    name="Originalzustand"
+                                    name="Originalzustand-ja"
                                     defaultChecked
                                     value="Ja"
-                                    required
                                 />
                                 <span>Ja</span>
                             </label>
                             <label>
                                 <input
                                     type="radio"
-                                    name="Originalzustand"
+                                    name="Originalzustand-nein"
                                     value="Nein"
-                                    required
                                 />
                                 <span>Nein</span>
                             </label>
@@ -491,54 +489,7 @@ class IndexPage extends React.Component {
                             Hinweis: Erläuterungen zu den verschiedenen
                             Versicherungsformen finden Sie hier
                         </p>
-                        <label>
-                            <span>Gewünschte Selbstbeteiligung*</span>
-                            <label>
-                                <input
-                                    type="checkbox"
-                                    name="Selbstbeteiligung"
-                                    value="150€"
-                                />
-                                <span>150€</span>
-                            </label>
-                            <label>
-                                <input
-                                    type="checkbox"
-                                    name="Selbstbeteiligung"
-                                    value="300€"
-                                />
-                                <span>300€</span>
-                            </label>
-                            <label>
-                                <input
-                                    type="checkbox"
-                                    name="Selbstbeteiligung"
-                                    value="500€"
-                                />
-                                <span>500€</span>
-                            </label>
-                            <label>
-                                <input
-                                    type="checkbox"
-                                    name="Selbstbeteiligung"
-                                    value="1000€"
-                                />
-                                <span>1000€</span>
-                            </label>
-                            <label>
-                                <input
-                                    type="checkbox"
-                                    name="Selbstbeteiligung"
-                                    value="2500€"
-                                />
-                                <span>2500€</span>
-                            </label>
-                        </label>
-                        <p>
-                            Hinweis: Unabhänging von der hier gewählten
-                            Selbstbeteiligung wird bei Glasbruchschäden
-                            lediglich ein Eigenanteil von 150€ angerechnet.
-                        </p>
+
                         <TextInput
                             label="Unverbindlich geplanter Versicherungsbeginn"
                             type="text"
@@ -553,18 +504,6 @@ class IndexPage extends React.Component {
                                 rows="10"
                             />
                         </label>
-                        <label>
-                            <span>
-                                Wie sind Sie auf dieses Angebot aufmerksam
-                                geworden? (Suchmaschine, Visitenkarte, Flyer,
-                                Empfehlung durch ...) ?
-                            </span>
-                            <textarea
-                                name="Auf uns aufmerksam geworden"
-                                rows="5"
-                            />
-                        </label>
-                        {/* Hier weitermaccchen */}
                         <label id="terms">
                             <label>
                                 <input type="checkbox" required />

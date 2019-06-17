@@ -3,6 +3,16 @@ import React from "react"
 import StandardLayout from "../components/StandardLayout"
 import SEO from "../components/Seo"
 import CustomerRatingForm from "../components/CustomerRatingForm"
+import styled from "styled-components"
+
+const StyledSection = styled.section`
+    background: var(--color-lighter);
+    padding: var(--space-m);
+`
+const StyledContent = styled.section`
+    max-width: 600px;
+    margin: var(--space-l) auto;
+`
 
 class IndexPage extends React.Component {
     render() {
@@ -17,7 +27,11 @@ class IndexPage extends React.Component {
                         `Oldtimer`,
                     ]}
                 />
-                <CustomerRatingForm />
+                <StyledSection>
+                    <StyledContent>
+                        <CustomerRatingForm />
+                    </StyledContent>
+                </StyledSection>
             </StandardLayout>
         )
     }
