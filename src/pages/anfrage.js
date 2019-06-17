@@ -41,14 +41,14 @@ class IndexPage extends React.Component {
                 />
                 <StyledSection>
                     <StyledForm
-                        name="contact"
+                        name="Anfrage"
                         method="POST"
                         action="/anfrage-erfolgreich"
                         data-netlify="true"
                         netlify-honeypot="bot-field"
                     >
                         <input type="hidden" name="bot-field" />
-                        <input type="hidden" name="form-name" value="contact" />
+                        {/* <input type="hidden" name="form-name" value="Anfrage" /> */}
                         <h1>Online-Anfrage</h1>
                         <MobileDisclaimer>
                             Wir empehlen Ihnen das folgende Formular auf Grund
@@ -63,7 +63,7 @@ class IndexPage extends React.Component {
                                 <input
                                     label="Anrede"
                                     type="radio"
-                                    name="anrede"
+                                    name="anrede-herr"
                                     value="Herr"
                                     defaultChecked
                                 />
@@ -73,27 +73,54 @@ class IndexPage extends React.Component {
                                 <input
                                     label="Anrede"
                                     type="radio"
-                                    name="anrede"
+                                    name="anrede-frau"
                                     value="Frau"
                                 />
                                 <span>Frau</span>
                             </label>
                         </label>
-                        <TextInput label="Vorname" type="text" required />
-                        <TextInput label="Nachname" type="text" required />
+                        <TextInput
+                            label="Vorname"
+                            name="vorname"
+                            type="text"
+                            required
+                        />
+                        <TextInput
+                            label="Nachname"
+                            name="nachname"
+                            type="text"
+                            required
+                        />
                         <TextInput
                             label="Geburtsdatum des Fahrzeughalters"
+                            name="Geburtsdatum"
                             type="text"
                             required
                         />
                         <TextInput
                             label="Straße und Hausnummer"
+                            name="strasse-hausnummer"
                             type="text"
                             required
                         />
-                        <TextInput label="Postleitzahl" type="text" required />
-                        <TextInput label="Ort" type="text" required />
-                        <TextInput label="Email" type="email" required />
+                        <TextInput
+                            label="Postleitzahl"
+                            name="postleitzahl"
+                            type="text"
+                            required
+                        />
+                        <TextInput
+                            label="Ort"
+                            name="ort"
+                            type="text"
+                            required
+                        />
+                        <TextInput
+                            label="Email"
+                            name="email"
+                            type="email"
+                            required
+                        />
                         <label>
                             <span>
                                 Sind Sie Mitglied in einem Oldtimerclub?
@@ -101,7 +128,7 @@ class IndexPage extends React.Component {
                             <label>
                                 <input
                                     type="radio"
-                                    name="Oldtimerclub"
+                                    name="Oldtimerclub-nein"
                                     defaultChecked
                                     value="Nein"
                                 />
@@ -110,13 +137,17 @@ class IndexPage extends React.Component {
                             <label>
                                 <input
                                     type="radio"
-                                    name="Oldtimerclub"
+                                    name="Oldtimerclub-ja"
                                     value="Ja"
                                 />
                                 <span>Ja</span>
                             </label>
                         </label>
-                        <TextInput label="Name des Oldtimerclubs" type="text" />
+                        <TextInput
+                            label="Name des Oldtimerclubs"
+                            name="oldtimerclub-name"
+                            type="text"
+                        />
                         <br />
                         <StyledSectionH2>
                             Fahrzeug-Informationen
@@ -126,7 +157,7 @@ class IndexPage extends React.Component {
                             <label>
                                 <input
                                     type="checkbox"
-                                    name="Fahrzeugart"
+                                    name="Fahrzeugart-pkw"
                                     defaultChecked
                                     value="PKW"
                                 />
@@ -135,7 +166,7 @@ class IndexPage extends React.Component {
                             <label>
                                 <input
                                     type="checkbox"
-                                    name="Fahrzeugart"
+                                    name="Fahrzeugart-motorrad"
                                     value="Motorrad"
                                 />
                                 <span>Motorrad</span>
@@ -143,7 +174,7 @@ class IndexPage extends React.Component {
                             <label>
                                 <input
                                     type="checkbox"
-                                    name="Fahrzeugart"
+                                    name="Fahrzeugart-traktor"
                                     value="Traktor"
                                 />
                                 <span>Traktor</span>
@@ -151,7 +182,7 @@ class IndexPage extends React.Component {
                             <label>
                                 <input
                                     type="checkbox"
-                                    name="Fahrzeugart"
+                                    name="Fahrzeugart-andere"
                                     value="Andere"
                                 />
                                 <span>Andere</span>
@@ -172,7 +203,7 @@ class IndexPage extends React.Component {
                             <label>
                                 <input
                                     type="radio"
-                                    name="Saisonkennzeichen"
+                                    name="Saisonkennzeichen-rot"
                                     value="Rot"
                                 />
                                 <span>Rot</span>
@@ -180,7 +211,7 @@ class IndexPage extends React.Component {
                             <label>
                                 <input
                                     type="radio"
-                                    name="Saisonkennzeichen"
+                                    name="Saisonkennzeichen-schwarz"
                                     value="Schwarz"
                                 />
                                 <span>Schwarz</span>
@@ -193,7 +224,7 @@ class IndexPage extends React.Component {
                             <label>
                                 <input
                                     type="radio"
-                                    name="Historisches Kennzeichen"
+                                    name="Historisches Kennzeichen-nein"
                                     defaultChecked
                                     value="Nein"
                                 />
@@ -202,7 +233,7 @@ class IndexPage extends React.Component {
                             <label>
                                 <input
                                     type="radio"
-                                    name="Historisches Kennzeichen"
+                                    name="Historisches Kennzeichen-ja"
                                     value="Ja"
                                 />
                                 <span>Ja</span>
@@ -255,7 +286,7 @@ class IndexPage extends React.Component {
                             <label>
                                 <input
                                     type="radio"
-                                    name="Fahrzeugzustand"
+                                    name="Fahrzeugzustand-1"
                                     value="Makellos – Note 1"
                                     required
                                 />
@@ -264,7 +295,7 @@ class IndexPage extends React.Component {
                             <label>
                                 <input
                                     type="radio"
-                                    name="Fahrzeugzustand"
+                                    name="Fahrzeugzustand-1-2"
                                     value="Sehr gut – Note 1 - 2"
                                     required
                                 />
@@ -309,7 +340,7 @@ class IndexPage extends React.Component {
                             <label>
                                 <input
                                     type="radio"
-                                    name="Ölfeuchte"
+                                    name="Ölfeuchte-nein"
                                     value="Nein"
                                     defaultChecked
                                     required
@@ -319,7 +350,7 @@ class IndexPage extends React.Component {
                             <label>
                                 <input
                                     type="radio"
-                                    name="Ölfeuchte"
+                                    name="Ölfeuchte-ja"
                                     value="Ja"
                                     required
                                 />
@@ -358,7 +389,7 @@ class IndexPage extends React.Component {
                             <label>
                                 <input
                                     type="radio"
-                                    name="Wergutachten"
+                                    name="Wergutachten-ja"
                                     value="Ja"
                                     required
                                 />
@@ -367,7 +398,7 @@ class IndexPage extends React.Component {
                             <label>
                                 <input
                                     type="radio"
-                                    name="Wergutachten"
+                                    name="Wergutachten-nein"
                                     value="Nein"
                                     required
                                 />
@@ -399,7 +430,7 @@ class IndexPage extends React.Component {
                             <label>
                                 <input
                                     type="radio"
-                                    name="Erstfahrzeug vorhanden?"
+                                    name="Erstfahrzeug vorhanden-ja"
                                     value="Ja"
                                     required
                                 />
@@ -408,7 +439,7 @@ class IndexPage extends React.Component {
                             <label>
                                 <input
                                     type="radio"
-                                    name="Erstfahrzeug vorhanden?"
+                                    name="Erstfahrzeug vorhanden-nein"
                                     value="Nein"
                                     required
                                 />
@@ -420,7 +451,7 @@ class IndexPage extends React.Component {
                             <label>
                                 <input
                                     type="radio"
-                                    name="Wohnumfeld"
+                                    name="Wohnumfeld-Einfamilienhaus"
                                     value="Einfamilienhaus"
                                     required
                                 />
@@ -429,7 +460,7 @@ class IndexPage extends React.Component {
                             <label>
                                 <input
                                     type="radio"
-                                    name="Wohnumfeld"
+                                    name="Wohnumfeld-Eigentumswohnung"
                                     value="Eigentumswohnung"
                                     required
                                 />
@@ -438,7 +469,7 @@ class IndexPage extends React.Component {
                             <label>
                                 <input
                                     type="radio"
-                                    name="Wohnumfeld"
+                                    name="Wohnumfeld-Kein Wohneigentum"
                                     value="Kein Wohneigentum"
                                     required
                                 />
@@ -471,7 +502,7 @@ class IndexPage extends React.Component {
                             <label>
                                 <input
                                     type="checkbox"
-                                    name="Versicherungsumfang"
+                                    name="Versicherungsumfang-grunddeckung"
                                     value="Grunddeckung"
                                 />
                                 <span>Grunddeckung</span>
@@ -479,7 +510,7 @@ class IndexPage extends React.Component {
                             <label>
                                 <input
                                     type="checkbox"
-                                    name="Versicherungsumfang"
+                                    name="Versicherungsumfang-allgefahren"
                                     value="Allgefahrendeckung"
                                 />
                                 <span>Allgefahrendeckung</span>
@@ -501,12 +532,16 @@ class IndexPage extends React.Component {
                                 name="Ergänzende Angaben"
                                 id=""
                                 cols="30"
-                                rows="10"
+                                rows="5"
                             />
                         </label>
                         <label id="terms">
                             <label>
-                                <input type="checkbox" required />
+                                <input
+                                    type="checkbox"
+                                    required
+                                    name="Terms and conditions"
+                                />
                                 <span>
                                     Ich akzeptiere die Übertragung und
                                     Speicherung meiner Daten zum Zwecke des
