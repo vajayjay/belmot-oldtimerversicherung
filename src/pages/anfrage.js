@@ -56,13 +56,12 @@ class IndexPage extends React.Component {
                         <StyledSectionH2>
                             Persönliche Informationen
                         </StyledSectionH2>
-                        <label>
+                        <label name="anrede[]">
                             <span>Anrede</span>
                             <label>
                                 <input
                                     label="Anrede"
                                     type="radio"
-                                    name="anrede[]"
                                     value="Herr"
                                     defaultChecked
                                 />
@@ -72,7 +71,6 @@ class IndexPage extends React.Component {
                                 <input
                                     label="Anrede"
                                     type="radio"
-                                    name="anrede[]"
                                     value="Frau"
                                 />
                                 <span>Frau</span>
