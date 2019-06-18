@@ -27,21 +27,18 @@ class IndexPage extends React.Component {
                     ]}
                 />
                 <SupportSection
-                    h1={
-                        <h1>
-                            Haben Sie <br />
-                            Fragen?
-                        </h1>
-                    }
+                    h1={<h1>Sie haben Fragen?</h1>}
                     p={
                         <p>
                             Keine Antwort gefunden?
                             <br />
                             Erreichen Sie mich unter:
                             <br />
-                            info@belmot-oldtimerversicherung.de
+                            <a href="mailto:info@belmot-oldtimerversicherung.de">
+                                info@belmot-oldtimerversicherung.de
+                            </a>
                             <br />
-                            05191- 931 31 99
+                            <a href="tel:+4951919313199">05191 - 931 31 99</a>
                         </p>
                     }
                 >
