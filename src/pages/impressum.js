@@ -12,13 +12,7 @@ const SecondPage = () => (
         <SEO title="Impressum" />
         <SupportSection
             h1={<h1>Impressum</h1>}
-            p={
-                <p>
-                    Keine Antwort gefunden?
-                    <br />
-                    Erreichen Sie mich unter
-                </p>
-            }
+            // p={<p>Subline.</p>}
         >
             <ImpressumCopy />
             <br />
