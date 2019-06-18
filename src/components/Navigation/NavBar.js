@@ -57,7 +57,8 @@ const DesktopLinks = styled.div`
         color: var(--color-darker);
         text-decoration: none;
         text-transform: uppercase;
-        font-weight: 600;
+        font-weight: 500;
+        letter-spacing: 1px;
         opacity: 0.8;
         transition: opacity 200ms;
         margin-left: var(--space-l);
