@@ -150,7 +150,7 @@ const Hero = props => (
         <HeadlineContainer>
             <div>
                 <h1>
-                    Versicherung für deinen <span>Young-</span> und{" "}
+                    Versicherung für Ihren <span>Young-</span> und{" "}
                     <span>Oldtimer</span>
                 </h1>
             </div>
