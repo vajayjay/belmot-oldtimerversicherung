@@ -1,4 +1,4 @@
-import Selbsteinschaetzung from "../downloads/Selbsteinschätzung.pdf"
+import Selbsteinschaetzung from "../downloads/Selbsteinschaetzung.pdf"
 
 const FAQ = [
     {
