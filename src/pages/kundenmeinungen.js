@@ -59,12 +59,21 @@ const CarPool = props => (
             ]}
         />
         <div>
-            <p>{props.data.reviewsYaml.name}</p>
-            <p>{props.data.reviewsYaml.date}</p>
-            <p>{props.data.reviewsYaml.review}</p>
-            <p>{props.data.reviewsYaml.rating}</p>
-            <Test />
+            {props.data.allReviewsYaml.edges.map((review, index) => {
+                return (
+                    <div key={index}>
+                        <p>{review.node.name}</p>
+                        <p>{review.node.review}</p>
+                        <p>{review.node.rating}</p>
 
+                        <p>
+                            {/* {Array.from.{review.node.rating}.map(rating, i) => <p>test</p>} */}
+                        </p>
+                    </div>
+                )
+            })}
+
+            <Test />
             <IconOff>
                 <Icon icon={ICONS.STAR} off />
             </IconOff>
@@ -79,12 +88,16 @@ export default props => (
     <StaticQuery
         query={graphql`
             query {
-                reviewsYaml {
-                    name
-                    review
-                    date(formatString: "D. MMMM YYYY", locale: "de-DE")
-                    id
-                    rating
+                allReviewsYaml {
+                    edges {
+                        node {
+                            name
+                            review
+                            date(formatString: "D. MMMM YYYY", locale: "de-DE")
+                            id
+                            rating
+                        }
+                    }
                 }
             }
         `}
