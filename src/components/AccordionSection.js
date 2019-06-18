@@ -40,7 +40,10 @@ function AccordionSection(props) {
                 {props.question}
             </Question>
             {props.currentIndex === props.index && (
-                <Answer>{props.answer}</Answer>
+                <Answer>
+                    <p dangerouslySetInnerHTML={{ __html: props.answer }} />
+                    {/* {props.answer} */}
+                </Answer>
             )}
         </StyledSection>
     )

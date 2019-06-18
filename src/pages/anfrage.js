@@ -64,7 +64,6 @@ class IndexPage extends React.Component {
                                     type="radio"
                                     name="anrede-herr"
                                     value="Herr"
-                                    defaultChecked
                                 />
                                 <span>Herr</span>
                             </label>

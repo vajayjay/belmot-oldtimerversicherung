@@ -13,6 +13,7 @@ html {
 
 body {
     height: 100%;
+    white-space: pre-line;
 }
 
 /*Make links break and not overflow*/
@@ -76,11 +77,8 @@ label {
     margin-bottom: var(--space-m);
 }
 
-
-
 @media (min-width: 376px) {
     body {
         user-select: auto;
-
     }
 }
