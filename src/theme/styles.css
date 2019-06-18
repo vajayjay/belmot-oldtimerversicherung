@@ -16,67 +16,6 @@ body {
     white-space: pre-line;
 }
 
-/*Make links break and not overflow*/
-a {
-    word-break: break-all;
-}
-
-p,
-a,
-li,
-td,
-label {
-    line-height: var(--line-height);
-    color: var(--color-dark);
-    /* font-weight: normal; */
-}
-
-p {
-    margin-bottom: var(--space-s);
-    margin-top: var(--space-s);
-}
-
-a {
-    color: var(--color-primary-light);
-}
-
-h1,
-h2,
-h3,
-h4 {
-    color: var(--color-darker);
-    line-height: 1.2;
-}
-
-h1 {
-    font-size: var(--h1);
-    margin-bottom: var(--space-s);
-    font-weight: 600;
-}
-
-h2 {
-    font-size: var(--h2);
-    margin-bottom: var(--space-s);
-}
-
-h3 {
-    font-size: var(--h3);
-}
-
-h4 {
-    font-size: var(--h4);
-}
-
-ul {
-    list-style: none;
-}
-
-label {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: var(--space-m);
-}
-
 @media (min-width: 376px) {
     body {
         user-select: auto;

@@ -1,10 +1,17 @@
 import React from "react"
-// import { Link } from 'gatsby'
-
 import AlternativeLayout from "../components/AlternativeLayout"
 import SEO from "../components/Seo"
 import SupportSection from "../components/layout/SupportSection"
-import Accordion from "../components/Accordion"
+import FAQ from "../../content/copy/Faq"
+import "../theme/accordion.css"
+
+import {
+    Accordion,
+    AccordionItem,
+    AccordionItemHeading,
+    AccordionItemPanel,
+    AccordionItemButton,
+} from "react-accessible-accordion"
 
 class IndexPage extends React.Component {
     render() {
@@ -38,7 +45,26 @@ class IndexPage extends React.Component {
                         </p>
                     }
                 >
-                    <Accordion />
+                    <Accordion allowZeroExpanded={true}>
+                        {FAQ.map(function(e, i) {
+                            return (
+                                <AccordionItem key={i}>
+                                    <AccordionItemHeading>
+                                        <AccordionItemButton>
+                                            {e.question}
+                                        </AccordionItemButton>
+                                    </AccordionItemHeading>
+                                    <AccordionItemPanel>
+                                        <p
+                                            dangerouslySetInnerHTML={{
+                                                __html: e.answer,
+                                            }}
+                                        />
+                                    </AccordionItemPanel>
+                                </AccordionItem>
+                            )
+                        })}
+                    </Accordion>
                 </SupportSection>
             </AlternativeLayout>
         )

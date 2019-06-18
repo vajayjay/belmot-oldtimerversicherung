@@ -52,12 +52,5 @@ module.exports = {
                 path: `${__dirname}/content/reviews`,
             },
         },
-        `gatsby-transformer-json`,
-        {
-            resolve: `gatsby-source-filesystem`,
-            options: {
-                path: `${__dirname}/content/copy`,
-            },
-        },
     ],
 }
