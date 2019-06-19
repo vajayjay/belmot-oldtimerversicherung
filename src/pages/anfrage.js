@@ -57,25 +57,27 @@ class IndexPage extends React.Component {
                             Persönliche Informationen
                         </StyledSectionH2>
                         <fieldset>
-                            <legend>
-                                <span>Anrede</span>
+                            <legend>Can you attend?</legend>
+                            <p>
                                 <label>
                                     <input
                                         type="radio"
-                                        name="anrede-herr"
-                                        value="Herr"
-                                    />
-                                    <span>Herr</span>
+                                        name="attendance"
+                                        value="Attending"
+                                    />{" "}
+                                    Yes
                                 </label>
+                            </p>
+                            <p>
                                 <label>
                                     <input
                                         type="radio"
-                                        name="anrede-frau"
-                                        value="Frau"
-                                    />
-                                    <span>Frau</span>
+                                        name="attendance"
+                                        value="Not Attending"
+                                    />{" "}
+                                    No
                                 </label>
-                            </legend>
+                            </p>
                         </fieldset>
                         <TextInput
                             label="Vorname"
