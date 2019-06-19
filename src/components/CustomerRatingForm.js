@@ -114,7 +114,7 @@ const CustomerRatingForm = props => (
             <input
                 type="hidden"
                 name="options[redirect]"
-                value="/bewertung-erfolgreich"
+                value="https://hungry-wilson-001a08.netlify.com/bewertung-erfolgreich"
             />
             <StarRating>
                 <label htmlFor="customer-rating[star-1]">
@@ -197,7 +197,7 @@ const CustomerRatingForm = props => (
 
             <label>
                 <span>Ihre Rezension</span>
-                <textarea name="fields[review]" required />
+                <textarea name="fields[review]" rows="3" required />
             </label>
 
             <StyledButton primary>Absenden</StyledButton>
