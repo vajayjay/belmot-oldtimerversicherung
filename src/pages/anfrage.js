@@ -54,6 +54,8 @@ class IndexPage extends React.Component {
                         data-netlify-honeypot="bot-field"
                     >
                         <input type="hidden" name="bot-field" />
+                        {/* Important so netlify forms works with gatsby */}
+                        <input type="hidden" name="form-name" value="test" />
 
                         <div className="field half first">
                             <label htmlFor="name">Name</label>
