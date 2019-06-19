@@ -3,6 +3,9 @@ label {
     flex-direction: column;
     margin-bottom: var(--space-m);
 }
+legend > label {
+    flex-direction: row;
+}
 
 label > span {
     margin-bottom: 6px;
@@ -132,4 +135,8 @@ select::-ms-expand {
 
 select:focus::-ms-value {
     background-color: transparent;
+}
+
+fieldset {
+    border: none;
 }

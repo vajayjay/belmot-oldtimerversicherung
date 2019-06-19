@@ -6,7 +6,7 @@ import styled from "styled-components"
 import "../theme/forms.css"
 
 import SEO from "../components/Seo"
-import TextInput from "../components/TextInput"
+// import TextInput from "../components/TextInput"
 
 const StyledSection = styled.section`
     background: var(--color-lighter);
@@ -61,25 +61,23 @@ class IndexPage extends React.Component {
                                 <span>Anrede</span>
                                 <label>
                                     <input
-                                        label="Anrede"
                                         type="radio"
-                                        name="Anrede"
+                                        name="anrede"
                                         value="Herr"
                                     />
                                     <span>Herr</span>
                                 </label>
                                 <label>
                                     <input
-                                        label="Anrede"
-                                        name="Anrede"
                                         type="radio"
+                                        name="anrede"
                                         value="Frau"
                                     />
                                     <span>Frau</span>
                                 </label>
                             </legend>
                         </fieldset>
-                        <TextInput
+                        {/* <TextInput
                             label="Vorname"
                             name="vorname"
                             type="text"
@@ -114,7 +112,7 @@ class IndexPage extends React.Component {
                                     angebotenen Services.
                                 </span>
                             </label>
-                        </label>
+                        </label> */}
                         <input type="submit" value="Abschicken" />
                     </StyledForm>
                 </StyledSection>
