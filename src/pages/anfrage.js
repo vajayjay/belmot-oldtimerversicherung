@@ -6,7 +6,7 @@ import styled from "styled-components"
 import "../theme/forms.css"
 
 import SEO from "../components/Seo"
-// import TextInput from "../components/TextInput"
+import TextInput from "../components/TextInput"
 
 const StyledSection = styled.section`
     background: var(--color-lighter);
@@ -77,13 +77,13 @@ class IndexPage extends React.Component {
                                 </label>
                             </legend>
                         </fieldset>
-                        {/* <TextInput
+                        <TextInput
                             label="Vorname"
                             name="vorname"
                             type="text"
                             required
                         />
-                        <TextInput
+                        {/*<TextInput
                             label="Nachname"
                             name="nachname"
                             type="text"
