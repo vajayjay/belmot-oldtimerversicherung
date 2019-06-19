@@ -6,7 +6,7 @@ import Icon from "../components/layout/Icon"
 import styled from "styled-components"
 
 const StarRating = styled.fieldset`
-    /* display: flex; */
+    display: block;
     margin-bottom: var(--space-m);
     border: none;
     & > label {
