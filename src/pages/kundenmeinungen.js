@@ -1,50 +1,87 @@
 import React from "react"
 import { StaticQuery, graphql } from "gatsby"
+import styled from "styled-components"
 
 import StandardLayout from "../components/StandardLayout"
 import SEO from "../components/Seo"
 import { ICONS } from "../theme/Icons"
 import Icon from "../components/layout/Icon"
 
-import styled from "styled-components"
-// import Hero from "../components/Hero"
-// import ScrollAnchor from "../components/ScrollAnchor"
-// import Benefit from "../components/Benefit"
-// import CarPool from "../components/CarPool"
-// import TypesOfCars from "../components/TypesOfCars"
-// import Features from "../components/Features"
+const StyledSection = styled.section`
+    background: var(--color-lighter);
+`
+const StyledReviews = styled.div`
+    padding: var(--space-side);
+    & > h1 {
+        display: block;
+    }
+    & > div {
+        column-count: 1;
+        column-gap: 1em;
 
-const IconOff = styled.div`
-    display: inline-block;
-    vertical-align: middle;
-    & > svg {
-        width: 50px;
-        height: 50px;
-        fill: var(--color-medium);
+        @media (min-width: 500px) {
+            column-count: 2;
+        }
+        @media (min-width: 1200px) {
+            column-count: 3;
+        }
     }
 `
+const SingleReview = styled.div`
+    background: var(--color-white);
+    border-radius: 8px;
+    padding: 24px;
+    box-shadow: 0px 1px 8px rgba(42, 114, 212, 0.1);
+    display: inline-block;
+    margin: 0 0 1em;
+    width: 100%;
+    & > p:first-of-type {
+        color: var(--color-black);
+        & > span {
+            color: var(--color-dark);
+        }
+    }
+`
+const Review = styled.p`
+    /* font-size: 16px; */
+    /* color: var(--color-dark); */
+`
+
+// const IconOff = styled.div`
+//     display: inline-block;
+//     vertical-align: middle;
+//     & > svg {
+//         width: 50px;
+//         height: 50px;
+//         fill: var(--color-medium);
+//     }
+// `
 
 const IconOn = styled.div`
     display: inline-block;
     vertical-align: middle;
     & > svg {
-        width: 50px;
-        height: 50px;
+        width: 20px;
+        height: 20px;
         fill: var(--color-primary);
+        @media (min-width: 769px) {
+            width: 30px;
+            height: 30px;
+        }
     }
 `
 
-class Test extends React.Component {
-    render() {
-        for (let i = 0; i < 5; i++) {
-            return (
-                <IconOn>
-                    <Icon icon={ICONS.STAR} />
-                </IconOn>
-            )
-        }
-        return <p>yeas</p>
+const Stars = ({ n }) => {
+    let stars = []
+    for (let i = 0; i < n; ++i) {
+        stars.push(
+            <IconOn key={i}>
+                <Icon icon={ICONS.STAR} on />
+            </IconOn>
+        )
     }
+
+    return <div>{stars}</div>
 }
 
 const CarPool = props => (
@@ -58,29 +95,25 @@ const CarPool = props => (
                 `Oldtimer`,
             ]}
         />
-        <div>
-            {props.data.allReviewsYaml.edges.map((review, index) => {
-                return (
-                    <div key={index}>
-                        <p>{review.node.name}</p>
-                        <p>{review.node.review}</p>
-                        <p>{review.node.rating}</p>
-
-                        <p>
-                            {/* {Array.from.{review.node.rating}.map(rating, i) => <p>test</p>} */}
-                        </p>
-                    </div>
-                )
-            })}
-
-            <Test />
-            <IconOff>
-                <Icon icon={ICONS.STAR} off />
-            </IconOff>
-            <IconOn>
-                <Icon icon={ICONS.STAR} on />
-            </IconOn>
-        </div>
+        <StyledSection>
+            <StyledReviews>
+                <h1>Das sagen unsere Kunden</h1>
+                <div>
+                    {props.data.allReviewsYaml.edges.map((review, index) => {
+                        return (
+                            <SingleReview key={index}>
+                                <Stars n={review.node.rating} />
+                                <p>
+                                    {review.node.name} <span>am</span>{" "}
+                                    {review.node.date}
+                                </p>
+                                <Review>{review.node.review}</Review>
+                            </SingleReview>
+                        )
+                    })}
+                </div>
+            </StyledReviews>
+        </StyledSection>
     </StandardLayout>
 )
 
@@ -88,7 +121,7 @@ export default props => (
     <StaticQuery
         query={graphql`
             query {
-                allReviewsYaml {
+                allReviewsYaml(sort: { fields: date, order: DESC }) {
                     edges {
                         node {
                             name
