@@ -1,15 +1,19 @@
-label {
+legend,
+label,
+fieldset {
     display: flex;
     flex-direction: column;
-    margin-bottom: var(--space-m);
+    margin-bottom: var(--space-l);
 }
-legend > label {
+fieldset label {
     flex-direction: row;
+    margin-bottom: 0;
 }
-
+legend,
 label > span {
     margin-bottom: 6px;
     font-size: 18px;
+    color: var(--color-dark);
 }
 
 label > input[type="text"],
@@ -36,7 +40,7 @@ textarea:focus {
     outline: none;
 }
 
-label > label {
+legend > label {
     display: flex;
     flex-direction: row;
     align-items: baseline;

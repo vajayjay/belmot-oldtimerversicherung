@@ -15,6 +15,10 @@ const StyledForm = styled.form`
     padding: var(--space-l) var(--space-side);
     max-width: 680px;
     margin: auto;
+    & > p {
+        margin-top: calc(-1 * var(--space-l));
+        font-size: 16px;
+    }
 `
 
 const StyledSectionH2 = styled.h2`
@@ -40,12 +44,6 @@ class IndexPage extends React.Component {
                     ]}
                 />
                 <StyledSection>
-                    <h1>Online-Anfrage</h1>
-                    <MobileDisclaimer>
-                        Wir empehlen Ihnen das folgende Formular auf Grund
-                        seiner Länge auf einem Desktop-Computer auszufüllen.
-                    </MobileDisclaimer>
-                    <StyledSectionH2>Persönliche Informationen</StyledSectionH2>
                     {/* <form
                         name="contact"
                         method="post"
@@ -101,7 +99,14 @@ class IndexPage extends React.Component {
                         <input type="hidden" name="bot-field" />
                         {/* Important so netlify forms works with gatsby */}
                         <input type="hidden" name="form-name" value="contact" />
-
+                        <h1>Online-Anfrage</h1>
+                        <MobileDisclaimer>
+                            Wir empehlen Ihnen das folgende Formular auf Grund
+                            seiner Länge auf einem Desktop-Computer auszufüllen.
+                        </MobileDisclaimer>
+                        <StyledSectionH2>
+                            Persönliche Informationen
+                        </StyledSectionH2>
                         <fieldset>
                             <legend>Anrede</legend>
                             <p>
@@ -245,6 +250,7 @@ class IndexPage extends React.Component {
                             Fahrzeuge können leider nicht über Belmot versichert
                             werden.
                         </p>
+                        <br />
                         <fieldset>
                             <legend>Kennzeichen</legend>
                             <label>
@@ -323,6 +329,7 @@ class IndexPage extends React.Component {
                             Rahmen des Möglichen eine realistische und nicht
                             vorsichtig zu hoch angesetzte Kilometerleistung an.
                         </p>
+                        <br />
                         <TextInput
                             label="Motorsträke in KW"
                             type="text"
@@ -461,15 +468,20 @@ class IndexPage extends React.Component {
                             Selbsteinschätzung. Die Informationen dazu finden
                             Sie <Link to="faq">hier</Link>. Und das
                             Selbsteinschätzungsformular finden Sie{" "}
-                            <Link to="#">hier</Link>.
-                        </p>
-                        <p>
+                            <Link to="/downloads/Selbsteinschaetzung.pdf">
+                                hier
+                            </Link>
+                            .
+                            <br />
                             Hinweis: Alternativ ist eine Versicherung zum Markt-
                             oder Wiederaufbauwert möglich. Falls dies gewünscht
                             ist, geben Sie mir bitte einen Hinweis.
                             Erläuterungen zu den verschiedenen
                             Versicherungswerten finden Sie in diesem Infoblatt
                         </p>
+                        <br />
+                        <br />
+
                         <fieldset>
                             <legend>Erst-/Alltagsfahrzeug vorhanden?*</legend>
                             <label>
@@ -560,6 +572,7 @@ class IndexPage extends React.Component {
                             Hinweis: Erläuterungen zu den verschiedenen
                             Versicherungsformen finden Sie hier
                         </p>
+                        <br />
 
                         <TextInput
                             label="Unverbindlich geplanter Versicherungsbeginn"
@@ -575,7 +588,7 @@ class IndexPage extends React.Component {
                                 rows="5"
                             />
                         </label>
-                        <div id="terms">
+                        <fieldset id="terms">
                             <label>
                                 <input
                                     type="checkbox"
@@ -588,8 +601,8 @@ class IndexPage extends React.Component {
                                     angebotenen Services.
                                 </span>
                             </label>
-                        </div>
-                        <button type="submit">Absenden</button>
+                        </fieldset>
+                        <input type="submit" value="Absenden" />
                     </StyledForm>
                 </StyledSection>
             </StandardLayout>
