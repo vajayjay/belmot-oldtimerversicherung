@@ -5,10 +5,16 @@ fieldset {
     flex-direction: column;
     margin-bottom: var(--space-l);
 }
+fieldset {
+    border: none;
+}
+/* Labels of radio buttons, checkboxes and terms and conditions */
 fieldset label {
     flex-direction: row;
     margin-bottom: 0;
+    align-items: baseline;
 }
+
 legend,
 label > span {
     margin-bottom: 6px;
@@ -17,6 +23,8 @@ label > span {
 }
 
 label > input[type="text"],
+label > input[type="tel"],
+label > input[type="password"],
 label > input[type="email"],
 textarea {
     max-width: 640px;
@@ -29,23 +37,20 @@ textarea {
 }
 
 label > input[type="text"],
+label > input[type="tel"],
+label > input[type="password"],
 label > input[type="email"] {
     height: 64px;
 }
 
-label > input:focus,
+label > input[type="text"]:focus,
+label > input[type="tel"]:focus,
+label > input[type="password"]:focus,
+label > input[type="email"]:focus,
 textarea:focus {
     border: 1px solid white;
     box-shadow: 0 0 0 3px var(--color-primary);
     outline: none;
-}
-
-legend > label {
-    display: flex;
-    flex-direction: row;
-    align-items: baseline;
-    /* justify-content: flex-end; */
-    margin-bottom: 0;
 }
 
 label > label > span {
@@ -139,8 +144,4 @@ select::-ms-expand {
 
 select:focus::-ms-value {
     background-color: transparent;
-}
-
-fieldset {
-    border: none;
 }
