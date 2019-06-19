@@ -56,27 +56,29 @@ class IndexPage extends React.Component {
                         <StyledSectionH2>
                             Persönliche Informationen
                         </StyledSectionH2>
-                        <label>
-                            <span>Anrede</span>
-                            <label>
-                                <input
-                                    label="Anrede"
-                                    type="radio"
-                                    name="anrede-herr"
-                                    value="Herr"
-                                />
-                                <span>Herr</span>
-                            </label>
-                            <label>
-                                <input
-                                    label="Anrede"
-                                    name="anrede-frau"
-                                    type="radio"
-                                    value="Frau"
-                                />
-                                <span>Frau</span>
-                            </label>
-                        </label>
+                        <fieldset>
+                            <legend>
+                                <span>Anrede</span>
+                                <label>
+                                    <input
+                                        label="Anrede"
+                                        type="radio"
+                                        name="Anrede"
+                                        value="Herr"
+                                    />
+                                    <span>Herr</span>
+                                </label>
+                                <label>
+                                    <input
+                                        label="Anrede"
+                                        name="Anrede"
+                                        type="radio"
+                                        value="Frau"
+                                    />
+                                    <span>Frau</span>
+                                </label>
+                            </legend>
+                        </fieldset>
                         <TextInput
                             label="Vorname"
                             name="vorname"
