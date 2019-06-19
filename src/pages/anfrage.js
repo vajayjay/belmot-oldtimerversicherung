@@ -6,7 +6,7 @@ import styled from "styled-components"
 import "../theme/forms.css"
 
 import SEO from "../components/Seo"
-// import TextInput from "../components/TextInput"
+import TextInput from "../components/TextInput"
 
 const StyledSection = styled.section`
     background: var(--color-lighter);
@@ -103,28 +103,70 @@ class IndexPage extends React.Component {
                         <input type="hidden" name="form-name" value="contact" />
 
                         <fieldset>
-                            <legend>Can you attend?</legend>
+                            <legend>Anrede</legend>
                             <p>
                                 <label>
                                     <input
                                         type="radio"
-                                        name="attendance"
-                                        value="Attending"
+                                        name="anrede"
+                                        value="Herr"
                                     />{" "}
-                                    Yes
+                                    Herr
                                 </label>
                             </p>
                             <p>
                                 <label>
                                     <input
                                         type="radio"
-                                        name="attendance"
-                                        value="Not Attending"
+                                        name="anrede"
+                                        value="Frau"
                                     />{" "}
-                                    No
+                                    Frau
                                 </label>
                             </p>
                         </fieldset>
+                        <TextInput
+                            label="Vorname"
+                            name="vorname"
+                            type="text"
+                            required
+                        />
+                        <TextInput
+                            label="Nachname"
+                            name="nachname"
+                            type="text"
+                            required
+                        />
+                        <TextInput
+                            label="Geburtsdatum des Fahrzeughalters"
+                            name="Geburtsdatum"
+                            type="text"
+                            required
+                        />
+                        <TextInput
+                            label="Straße und Hausnummer"
+                            name="strasse-hausnummer"
+                            type="text"
+                            required
+                        />
+                        <TextInput
+                            label="Postleitzahl"
+                            name="postleitzahl"
+                            type="text"
+                            required
+                        />
+                        <TextInput
+                            label="Ort"
+                            name="ort"
+                            type="text"
+                            required
+                        />
+                        <TextInput
+                            label="Email"
+                            name="email"
+                            type="email"
+                            required
+                        />
                         <button type="submit">Absenden</button>
                     </StyledForm>
                 </StyledSection>
