@@ -62,7 +62,7 @@ class IndexPage extends React.Component {
                                 <label>
                                     <input
                                         type="radio"
-                                        name="anrede"
+                                        name="anrede-herr"
                                         value="Herr"
                                     />
                                     <span>Herr</span>
@@ -70,7 +70,7 @@ class IndexPage extends React.Component {
                                 <label>
                                     <input
                                         type="radio"
-                                        name="anrede"
+                                        name="anrede-frau"
                                         value="Frau"
                                     />
                                     <span>Frau</span>
