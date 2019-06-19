@@ -47,7 +47,7 @@ class IndexPage extends React.Component {
                     </MobileDisclaimer>
                     <StyledSectionH2>Persönliche Informationen</StyledSectionH2>
                     <form
-                        name="anfrage"
+                        name="contact"
                         method="post"
                         action="/anfrage-erfolgreich"
                         data-netlify="true"
@@ -55,8 +55,8 @@ class IndexPage extends React.Component {
                     >
                         <input type="hidden" name="bot-field" />
                         {/* Important so netlify forms works with gatsby */}
-                        <input type="hidden" name="form-name" value="anfrage" />
-
+                        <input type="hidden" name="form-name" value="contact" />
+                        <p>gatsby input</p>
                         <div className="field half first">
                             <label htmlFor="name">Name</label>
                             <input type="text" name="name" id="name" required />
