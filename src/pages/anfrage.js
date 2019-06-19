@@ -55,7 +55,7 @@ class IndexPage extends React.Component {
                     >
                         <input type="hidden" name="bot-field" />
                         {/* Important so netlify forms works with gatsby */}
-                        {/* <input type="hidden" name="form-name" value="test" /> */}
+                        <input type="hidden" name="form-name" value="anfrage" />
 
                         <div className="field half first">
                             <label htmlFor="name">Name</label>
