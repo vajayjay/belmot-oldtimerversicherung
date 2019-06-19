@@ -6,7 +6,7 @@ import styled from "styled-components"
 import "../theme/forms.css"
 
 import SEO from "../components/Seo"
-import TextInput from "../components/TextInput"
+// import TextInput from "../components/TextInput"
 
 const StyledSection = styled.section`
     background: var(--color-lighter);
@@ -40,22 +40,20 @@ class IndexPage extends React.Component {
                     ]}
                 />
                 <StyledSection>
+                    <h1>Online-Anfrage</h1>
+                    <MobileDisclaimer>
+                        Wir empehlen Ihnen das folgende Formular auf Grund
+                        seiner Länge auf einem Desktop-Computer auszufüllen.
+                    </MobileDisclaimer>
+                    <StyledSectionH2>Persönliche Informationen</StyledSectionH2>
                     <StyledForm
                         name="test"
                         method="POST"
-                        action="/anfrage-erfolgreich"
-                        data-netlify="true"
                         netlify-honeypot="bot-field"
+                        data-netlify="true"
                     >
                         <input type="hidden" name="bot-field" />
-                        <h1>Online-Anfrage</h1>
-                        <MobileDisclaimer>
-                            Wir empehlen Ihnen das folgende Formular auf Grund
-                            seiner Länge auf einem Desktop-Computer auszufüllen.
-                        </MobileDisclaimer>
-                        <StyledSectionH2>
-                            Persönliche Informationen
-                        </StyledSectionH2>
+
                         <fieldset>
                             <legend>Can you attend?</legend>
                             <p>
@@ -79,43 +77,7 @@ class IndexPage extends React.Component {
                                 </label>
                             </p>
                         </fieldset>
-                        <TextInput
-                            label="Vorname"
-                            name="vorname"
-                            type="text"
-                            required
-                        />
-                        {/*<TextInput
-                            label="Nachname"
-                            name="nachname"
-                            type="text"
-                            required
-                        />
-
-                        <label>
-                            <span>Ergänzende Angaben / Fragen</span>
-                            <textarea
-                                name="Ergänzende Angaben"
-                                id=""
-                                cols="30"
-                                rows="5"
-                            />
-                        </label>
-                        <label id="terms">
-                            <label>
-                                <input
-                                    type="checkbox"
-                                    // required
-                                    name="Terms and conditions"
-                                />
-                                <span>
-                                    Ich akzeptiere die Übertragung und
-                                    Speicherung meiner Daten zum Zwecke des
-                                    angebotenen Services.
-                                </span>
-                            </label>
-                        </label> */}
-                        <input type="submit" value="Abschicken" />
+                        <button type="submit">Absenden</button>
                     </StyledForm>
                 </StyledSection>
             </StandardLayout>
