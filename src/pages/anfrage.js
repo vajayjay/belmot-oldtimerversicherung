@@ -11,11 +11,11 @@ import SEO from "../components/Seo"
 const StyledSection = styled.section`
     background: var(--color-lighter);
 `
-// const StyledForm = styled.form`
-//     padding: var(--space-l) var(--space-side);
-//     max-width: 680px;
-//     margin: auto;
-// `
+const StyledForm = styled.form`
+    padding: var(--space-l) var(--space-side);
+    max-width: 680px;
+    margin: auto;
+`
 
 const StyledSectionH2 = styled.h2`
     font-size: 18px;
@@ -46,16 +46,16 @@ class IndexPage extends React.Component {
                         seiner Länge auf einem Desktop-Computer auszufüllen.
                     </MobileDisclaimer>
                     <StyledSectionH2>Persönliche Informationen</StyledSectionH2>
-                    <form
+                    {/* <form
                         name="contact"
                         method="post"
                         action="/anfrage-erfolgreich"
                         data-netlify="true"
                         data-netlify-honeypot="bot-field"
                     >
-                        <input type="hidden" name="bot-field" />
-                        {/* Important so netlify forms works with gatsby */}
-                        <input type="hidden" name="form-name" value="contact" />
+                        <input type="hidden" name="bot-field" />*/}
+                    {/* Important so netlify forms works with gatsby */}
+                    {/* <input type="hidden" name="form-name" value="contact" />
                         <p>gatsby input</p>
                         <div className="field half first">
                             <label htmlFor="name">Name</label>
@@ -91,14 +91,16 @@ class IndexPage extends React.Component {
                                 <input type="reset" value="Clear" />
                             </li>
                         </ul>
-                    </form>
-                    {/* <StyledForm
-                        name="test"
+                    </form> */}
+                    <StyledForm
+                        name="contact"
                         method="POST"
                         netlify-honeypot="bot-field"
                         data-netlify="true"
                     >
                         <input type="hidden" name="bot-field" />
+                        {/* Important so netlify forms works with gatsby */}
+                        <input type="hidden" name="form-name" value="contact" />
 
                         <fieldset>
                             <legend>Can you attend?</legend>
@@ -124,7 +126,7 @@ class IndexPage extends React.Component {
                             </p>
                         </fieldset>
                         <button type="submit">Absenden</button>
-                    </StyledForm> */}
+                    </StyledForm>
                 </StyledSection>
             </StandardLayout>
         )
