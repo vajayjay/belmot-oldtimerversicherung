@@ -11,11 +11,11 @@ import SEO from "../components/Seo"
 const StyledSection = styled.section`
     background: var(--color-lighter);
 `
-const StyledForm = styled.form`
-    padding: var(--space-l) var(--space-side);
-    max-width: 680px;
-    margin: auto;
-`
+// const StyledForm = styled.form`
+//     padding: var(--space-l) var(--space-side);
+//     max-width: 680px;
+//     margin: auto;
+// `
 
 const StyledSectionH2 = styled.h2`
     font-size: 18px;
@@ -46,7 +46,51 @@ class IndexPage extends React.Component {
                         seiner Länge auf einem Desktop-Computer auszufüllen.
                     </MobileDisclaimer>
                     <StyledSectionH2>Persönliche Informationen</StyledSectionH2>
-                    <StyledForm
+                    <form
+                        name="contact"
+                        method="post"
+                        action="/anfrage-erfolgreich"
+                        data-netlify="true"
+                        data-netlify-honeypot="bot-field"
+                    >
+                        <input type="hidden" name="bot-field" />
+
+                        <div className="field half first">
+                            <label htmlFor="name">Name</label>
+                            <input type="text" name="name" id="name" required />
+                        </div>
+                        <div className="field half">
+                            <label htmlFor="email">Email</label>
+                            <input
+                                type="text"
+                                name="email"
+                                id="email"
+                                required
+                            />
+                        </div>
+                        <div className="field">
+                            <label htmlFor="message">Message</label>
+                            <textarea
+                                name="message"
+                                id="message"
+                                rows="6"
+                                required
+                            />
+                        </div>
+                        <ul className="actions">
+                            <li>
+                                <input
+                                    type="submit"
+                                    value="Send Message"
+                                    className="special"
+                                />
+                            </li>
+                            <li>
+                                <input type="reset" value="Clear" />
+                            </li>
+                        </ul>
+                    </form>
+                    {/* <StyledForm
                         name="test"
                         method="POST"
                         netlify-honeypot="bot-field"
@@ -78,7 +122,7 @@ class IndexPage extends React.Component {
                             </p>
                         </fieldset>
                         <button type="submit">Absenden</button>
-                    </StyledForm>
+                    </StyledForm> */}
                 </StyledSection>
             </StandardLayout>
         )
