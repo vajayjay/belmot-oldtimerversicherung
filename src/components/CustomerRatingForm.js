@@ -183,6 +183,7 @@ const CustomerRatingForm = props => (
                     value="5"
                     name="fields[rating]"
                     id="customer-rating[star-5]"
+                    defaultChecked
                 />
             </StarRating>
             <label>
