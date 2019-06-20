@@ -12,12 +12,16 @@ const StyledSection = styled.section`
 `
 const StyledReviews = styled.div`
     padding: var(--space-side);
+
     & > h1 {
         display: block;
     }
+
     & > div {
+        display: block;
         column-count: 1;
         column-gap: 1em;
+        overflow: auto;
 
         @media (min-width: 500px) {
             column-count: 2;
@@ -32,9 +36,12 @@ const SingleReview = styled.div`
     border-radius: 8px;
     padding: 24px;
     box-shadow: 0px 1px 8px rgba(42, 114, 212, 0.1);
+    break-inside: avoid;
+
     display: inline-block;
-    margin: 0 0 1em;
+    margin: 0 0 1em 0;
     width: 100%;
+
     & > p:first-of-type {
         color: var(--color-black);
         & > span {
@@ -42,10 +49,7 @@ const SingleReview = styled.div`
         }
     }
 `
-const Review = styled.p`
-    /* font-size: 16px; */
-    /* color: var(--color-dark); */
-`
+const Review = styled.p``
 
 // const IconOff = styled.div`
 //     display: inline-block;
