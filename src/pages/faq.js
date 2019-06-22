@@ -42,17 +42,31 @@ class IndexPage extends React.Component {
                         </p>
                     }
                 >
-                    <Accordion allowZeroExpanded={true}>
+                    <Accordion
+                        allowZeroExpanded={true}
+                        itemScope
+                        itemType="https://schema.org/FAQPage"
+                    >
                         {FAQ.map(function(e, i) {
                             return (
-                                <AccordionItem key={i}>
-                                    <AccordionItemHeading>
+                                <AccordionItem
+                                    key={i}
+                                    itemScope
+                                    itemProp="mainEntity"
+                                    itemType="http://schema.org/Question"
+                                >
+                                    <AccordionItemHeading itemprop="name">
                                         <AccordionItemButton>
                                             {e.question}
                                         </AccordionItemButton>
                                     </AccordionItemHeading>
-                                    <AccordionItemPanel>
+                                    <AccordionItemPanel
+                                        itemScope
+                                        itemProp="acceptedAnswer"
+                                        itemType="http://schema.org/Answer"
+                                    >
                                         <p
+                                            itemProp="text"
                                             dangerouslySetInnerHTML={{
                                                 __html: e.answer,
                                             }}
