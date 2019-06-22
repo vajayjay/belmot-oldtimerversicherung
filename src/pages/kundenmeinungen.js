@@ -4,8 +4,7 @@ import styled from "styled-components"
 
 import StandardLayout from "../components/pagelayouts/StandardLayout"
 import SEO from "../components/Seo"
-import { ICONS } from "../theme/Icons"
-import Icon from "../components/layout/Icon"
+import SingleReview from "../components/SingleReview"
 
 const StyledSection = styled.section`
     background: var(--color-lighter);
@@ -31,62 +30,6 @@ const StyledReviews = styled.div`
         }
     }
 `
-const SingleReview = styled.div`
-    background: var(--color-white);
-    border-radius: 8px;
-    padding: 24px;
-    box-shadow: 0px 1px 8px rgba(42, 114, 212, 0.1);
-    break-inside: avoid;
-
-    display: inline-block;
-    margin: 0 0 1em 0;
-    width: 100%;
-
-    & > p:first-of-type {
-        color: var(--color-black);
-        & > span {
-            color: var(--color-dark);
-        }
-    }
-`
-const Review = styled.p``
-
-// const IconOff = styled.div`
-//     display: inline-block;
-//     vertical-align: middle;
-//     & > svg {
-//         width: 50px;
-//         height: 50px;
-//         fill: var(--color-medium);
-//     }
-// `
-
-const IconOn = styled.div`
-    display: inline-block;
-    vertical-align: middle;
-    & > svg {
-        width: 20px;
-        height: 20px;
-        fill: var(--color-primary);
-        @media (min-width: 769px) {
-            width: 30px;
-            height: 30px;
-        }
-    }
-`
-
-const Stars = ({ n }) => {
-    let stars = []
-    for (let i = 0; i < n; ++i) {
-        stars.push(
-            <IconOn key={i}>
-                <Icon icon={ICONS.STAR} on />
-            </IconOn>
-        )
-    }
-
-    return <div>{stars}</div>
-}
 
 const CarPool = props => (
     <StandardLayout>
@@ -105,14 +48,13 @@ const CarPool = props => (
                 <div>
                     {props.data.allReviewsYaml.edges.map((review, index) => {
                         return (
-                            <SingleReview key={index}>
-                                <Stars n={review.node.rating} />
-                                <p>
-                                    {review.node.name} <span>am</span>{" "}
-                                    {review.node.date}
-                                </p>
-                                <Review>{review.node.review}</Review>
-                            </SingleReview>
+                            <SingleReview
+                                key={index}
+                                rating={review.node.rating}
+                                name={review.node.name}
+                                date={review.node.date}
+                                review={review.node.review}
+                            />
                         )
                     })}
                 </div>
