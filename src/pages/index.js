@@ -1,6 +1,6 @@
 import React from "react"
 
-import StandardLayout from "../components/StandardLayout"
+import StandardLayout from "../components/pagelayouts/StandardLayout"
 import SEO from "../components/Seo"
 import Hero from "../components/Hero"
 import ScrollAnchor from "../components/ScrollAnchor"

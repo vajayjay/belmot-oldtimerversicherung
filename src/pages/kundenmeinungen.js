@@ -2,7 +2,7 @@ import React from "react"
 import { StaticQuery, graphql } from "gatsby"
 import styled from "styled-components"
 
-import StandardLayout from "../components/StandardLayout"
+import StandardLayout from "../components/pagelayouts/StandardLayout"
 import SEO from "../components/Seo"
 import { ICONS } from "../theme/Icons"
 import Icon from "../components/layout/Icon"

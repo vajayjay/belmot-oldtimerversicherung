@@ -1,7 +1,7 @@
 import React from "react"
 // import { Link } from 'gatsby'
 import styled from "styled-components"
-import AlternativeLayout from "../components/AlternativeLayout"
+import AlternativeLayout from "../components/pagelayouts/AlternativeLayout"
 import SEO from "../components/Seo"
 import SupportSection from "../components/layout/SupportSection"
 import Icon from "../components/layout/Icon"

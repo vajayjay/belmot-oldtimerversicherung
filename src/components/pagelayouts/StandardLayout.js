@@ -1,21 +1,22 @@
 import React from "react"
 import styled from "styled-components"
 
-import "../theme/font-face.css"
-import "../theme/variables.css"
-import "../theme/styles.css"
+import "../../theme/font-face.css"
+import "../../theme/variables.css"
+import "../../theme/styles.css"
 
-import NavBar from "../components/Navigation/NavBar"
-import MobileMenu from "../components/Navigation/MobileMenu"
-import Footer from "../components/Footer"
+import NavBar from "../Navigation/NavBar"
+import MobileMenu from "../Navigation/MobileMenu"
+import Footer from "../Footer"
 
-const StyledApp = styled.div`
+/*enable smooth scrolling*/
+if (typeof window !== "undefined") {
+    // eslint-disable-next-line global-require
+    require("smooth-scroll")('a[href*="#"]')
+}
+
+const App = styled.div`
     height: 100%;
-    background: linear-gradient(
-        180deg,
-        var(--color-primary) 50%,
-        var(--color-darker) 50%
-    );
 `
 const Main = styled.div`
     margin-top: 50px;
@@ -24,7 +25,7 @@ const Main = styled.div`
     }
 `
 
-class AlternativeLayout extends React.Component {
+class StandardLayout extends React.Component {
     state = {
         mobileMenuOpen: false,
     }
@@ -38,7 +39,7 @@ class AlternativeLayout extends React.Component {
     render() {
         return (
             <>
-                <StyledApp>
+                <App>
                     <NavBar
                         burgerButtonClickHandler={
                             this.burgerButtonToggleClickHandler
@@ -49,10 +50,10 @@ class AlternativeLayout extends React.Component {
                     <MobileMenu showMobileMenu={this.state.mobileMenuOpen} />
                     <Main>{this.props.children}</Main>
                     <Footer />
-                </StyledApp>
+                </App>
             </>
         )
     }
 }
 
-export default AlternativeLayout
+export default StandardLayout

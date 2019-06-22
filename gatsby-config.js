@@ -4,7 +4,7 @@ module.exports = {
         description: `SEO Description`,
         author: `@Jannis Wicke`,
         //    image: "/images/gatsby-astronaut-2.png", // Path to your image you placed in the 'static' folder
-        siteUrl: `https://www.example.com`,
+        siteUrl: `https://belmot-oldtimerversicherung.de`,
     },
     plugins: [
         `gatsby-plugin-react-helmet`,
@@ -34,8 +34,8 @@ module.exports = {
         {
             resolve: `gatsby-plugin-robots-txt`,
             options: {
-                host: "https://www.example.com",
-                sitemap: "https://www.example.com/sitemap.xml",
+                host: "https://belmot-oldtimerversicherung.de",
+                sitemap: "https://belmot-oldtimerversicherung.de/sitemap.xml",
                 policy: [{ userAgent: "*", disallow: "/" }],
             },
         },

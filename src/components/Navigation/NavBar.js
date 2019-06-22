@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import { Link } from "gatsby"
-import BurgerButtton from "./BurgerButton"
+import BurgerButton from "./BurgerButton"
 import logo from "../../../content/images/logo.svg"
 
 const Nav = styled.div`
@@ -95,7 +95,7 @@ const NavBar = props => (
                     Online-Anfrage
                 </Link>
             </DesktopLinks>
-            <BurgerButtton
+            <BurgerButton
                 click={props.burgerButtonClickHandler}
                 showMobileMenu={props.showMobileMenu}
             />

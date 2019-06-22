@@ -1,7 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 
-import StandardLayout from "../components/StandardLayout"
+import StandardLayout from "../components/pagelayouts/StandardLayout"
 import styled from "styled-components"
 import "../theme/forms.css"
 

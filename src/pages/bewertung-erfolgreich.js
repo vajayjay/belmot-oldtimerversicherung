@@ -1,7 +1,8 @@
 import React from "react"
 // import { Link } from 'gatsby'
 
-import StandardLayout from "../components/StandardLayout"
+import StandardLayout from "../components/pagelayouts/StandardLayout"
+import SectionCenteredFullHeight from "../components/layout/SectionCenteredFullHeight"
 // import styled from 'styled-components'
 
 import SEO from "../components/Seo"
@@ -14,7 +15,13 @@ class IndexPage extends React.Component {
                     title="Online-Anfrage"
                     keywords={[`gatsby`, `application`, `react`]}
                 />
-                <h1>Vielen Dank für Ihre Anfrage</h1>
+                <SectionCenteredFullHeight>
+                    <h1>Vielen Dank für Ihre Bewertung!</h1>
+                    <p>
+                        Wir überprüfen Sie und werden Sie in den nächsten Tagen
+                        veröffentlichen.
+                    </p>
+                </SectionCenteredFullHeight>
             </StandardLayout>
         )
     }
