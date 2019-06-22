@@ -11,10 +11,6 @@ const StyledFooter = styled.div`
     align-items: top;
     color: var(--color-white);
 
-    /* @media (min-width: 769px) {
-            padding: 2rem;
-        } */
-
     /*Links in footer*/
     a,
     p {
@@ -41,36 +37,63 @@ const SmallPrint = styled.p`
 `
 
 const Footer = props => (
-    <StyledFooter>
+    <StyledFooter itemScope itemType="http://schema.org/Organization">
         <div>
             <FooterTitle>Ansprechpartner</FooterTitle>
             <p>
-                Heiner Blaskewitz
+                <div
+                    itemProp="member"
+                    itemScope
+                    itemType="http://schema.org/Person"
+                >
+                    <span itemProp="name">Heiner Blaskewitz</span>
+                </div>
                 <br />
-                Versicherungsfachmann (BWV)
+                <div
+                    itemProp="member"
+                    itemScope
+                    itemType="http://schema.org/OrganizationRole"
+                >
+                    <span itemProp="roleName">Versicherungsfachmann (BWV)</span>
+                </div>
                 <br />
                 Generalagentur der Mannheimer Versicherung AG
                 <br />
-                Bahnhofstraße 35
-                <br />
-                29614 Soltau
+                <div
+                    itemProp="address"
+                    itemScope
+                    itemType="http://schema.org/PostalAddress"
+                >
+                    <span itemProp="streetAddress">Bahnhofstraße 35</span>
+                    <br />
+                    <span itemProp="postalCode">29614</span>
+                    <span itemProp="addressLocality">Soltau</span>
+                </div>
             </p>
         </div>
         <div>
             <FooterTitle>Kontakt</FooterTitle>
             <p>
-                Tel: <a href="tel:+4951919313199">05191 931 31 99</a>
+                Tel:{" "}
+                <a href="tel:+4951919313199">
+                    <span itemProp="telephone">05191 931 31 99</span>
+                </a>
                 <br />
-                Mobil: <a href="tel:+401725113611">0172 511 3611</a>
+                Mobil:{" "}
+                <a href="tel:+401725113611">
+                    <span itemProp="telephone">0172 511 3611</span>
+                </a>
                 <br />
-                Fax: 05191- 973 90 26
+                Fax: <span itemProp="faxNumber">05191- 973 90 26</span>
                 <br />
                 <a href="mailto:info@belmot-oldtimerversicherung.de">
-                    info@belmot-oldtimerversicherung.de
+                    <span itemProp="email">
+                        info@belmot-oldtimerversicherung.de
+                    </span>
                 </a>
                 <br />
                 <a href="belmot-oldtimerversicherung.de">
-                    belmot-oldtimerversicherung.de
+                    <span itemProp="url">belmot-oldtimerversicherung.de</span>
                 </a>
                 <br />
             </p>
