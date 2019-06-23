@@ -4,6 +4,7 @@ import React from "react"
 import StandardLayout from "../components/pagelayouts/StandardLayout"
 import SectionCentered from "../components/layout/SectionCentered"
 import SEO from "../components/Seo"
+import NextSteps from "../components/NextSteps"
 
 class IndexPage extends React.Component {
     render() {
@@ -29,29 +30,8 @@ class IndexPage extends React.Component {
                 </SectionCentered>
                 <SectionCentered>
                     <h2>Wie geht es weiter?</h2>
-                    <div>
-                        <h3>Angebot anfordern</h3>
-                        <p>
-                            Klicken Sie auf einen der Buttons und füllen Sie das
-                            folgende Formular auf dieser Website aus
-                        </p>
-                    </div>
-                    <div>
-                        <h3>Per E-Mail erhalten</h3>
-                        <p>
-                            Kurz darauf sende ich Ihnen ein individuelles
-                            Angebot per E-Mail zu
-                        </p>
-                    </div>
-                    <div>
-                        <h3>Angebot annehmen</h3>
-                        <p>
-                            Nehmen Sie das Angebot per E-Mail an und genießen
-                            Sie sofort den SINFONIMA® Allgefahrenschutz für Ihre
-                            Instrumente.{" "}
-                        </p>
-                    </div>
                 </SectionCentered>
+                <NextSteps />
             </StandardLayout>
         )
     }
