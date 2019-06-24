@@ -29,7 +29,7 @@ const CARS = [
         imgAlt: "Oldtimer Traktor Icon",
     },
     {
-        type: "Lieferwagen und LKW",
+        type: "Lieferwagen & LKW",
         condition: "Baujahr 1969 und älter, jüngere Fahrzeuge auf Anfrage",
         img: "lkw",
         imgAlt: "LKW Oldtimer Icon",
