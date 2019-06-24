@@ -14,8 +14,8 @@ class IndexPage extends React.Component {
                     title="Online-Anfrage"
                     keywords={[`gatsby`, `application`, `react`]}
                 />
-                <SectionCentered gradient background="red">
-                    <h1>Vielen Dank für Ihre Anfrage</h1>
+                <SectionCentered gradient>
+                    <h1>Vielen Dank für Ihre Anfrage!</h1>
                     <p>
                         Sie sollten in kurzer Zeit eine E-Mail{" "}
                         <b>mit einer Zusammenfassung ihrer Informationen</b>{" "}
@@ -27,9 +27,6 @@ class IndexPage extends React.Component {
                             info@instrumentenversicherung.online
                         </a>
                     </p>
-                </SectionCentered>
-                <SectionCentered>
-                    <h2>Wie geht es weiter?</h2>
                 </SectionCentered>
                 <NextSteps />
             </StandardLayout>

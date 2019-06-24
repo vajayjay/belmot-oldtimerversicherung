@@ -54,9 +54,6 @@
 
 @media (min-width: 480px) {
     :root {
-        /* --small: 15px;
-    --font-size: 18px;
-    --h2: 27px; */
         --h1: 40px;
         --space-side: 36px;
         --space-v: 72px;
@@ -67,7 +64,7 @@
     :root {
         --small: 16px;
         --font-size: 20px;
-        --h3: 18px;
+        --h3: 20px;
         --h2: 31px;
         --h1: 44px;
         --space-side: 72px;
@@ -80,5 +77,8 @@
         --font-size: 1.45rem;
         --nav-height: 90px;
         font-size: 1.45rem;
+        --h3: 29px;
+        --h2: 45px;
+        --h1: 64px;
     }
 }

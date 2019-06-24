@@ -48,7 +48,6 @@ const Footer = props => (
                 >
                     <span itemProp="name">Heiner Blaskewitz</span>
                 </div>
-                <br />
                 <div
                     itemProp="member"
                     itemScope
@@ -56,7 +55,6 @@ const Footer = props => (
                 >
                     <span itemProp="roleName">Versicherungsfachmann (BWV)</span>
                 </div>
-                <br />
                 Generalagentur der Mannheimer Versicherung AG
                 <br />
                 <div
@@ -66,7 +64,7 @@ const Footer = props => (
                 >
                     <span itemProp="streetAddress">Bahnhofstraße 35</span>
                     <br />
-                    <span itemProp="postalCode">29614</span>
+                    <span itemProp="postalCode">29614</span>{" "}
                     <span itemProp="addressLocality">Soltau</span>
                 </div>
             </p>
@@ -84,7 +82,7 @@ const Footer = props => (
                     <span itemProp="telephone">0172 511 3611</span>
                 </a>
                 <br />
-                Fax: <span itemProp="faxNumber">05191- 973 90 26</span>
+                Fax: <span itemProp="faxNumber">05191 - 973 90 26</span>
                 <br />
                 <a href="mailto:info@belmot-oldtimerversicherung.de">
                     <span itemProp="email">

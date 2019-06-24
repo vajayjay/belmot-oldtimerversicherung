@@ -1,5 +1,4 @@
 import React from "react"
-// import { Link } from 'gatsby'
 import styled from "styled-components"
 import AlternativeLayout from "../components/pagelayouts/AlternativeLayout"
 import SEO from "../components/Seo"
@@ -7,22 +6,18 @@ import SupportSection from "../components/layout/SupportSection"
 import Icon from "../components/layout/Icon"
 import { ICONS } from "../theme/Icons"
 
-/*Animation for Learn more/scrolldown container*/
-// const pulse = keyframes`
-//   0% {transform: scale(1);}
-//   20% {transform: scale(1.2);}
-//   50% {transform: scale(1.1);}
-//   80% {transform: scale(1.2);}
-//   100% {transform: scale(1));}
-// `
-
 const ContactLink = styled.a`
-    display: flex;
+    display: grid;
+    grid-template-columns: 60px 1fr;
     align-items: center;
     text-decoration: none;
     color: var(--color-black);
-    font-weight: 600;
+    font-weight: 500;
     transform: scale(1);
+    background: var(--color-lighter);
+    & > span {
+        margin: 20px;
+    }
     svg {
         transition: transform 200ms ease;
     }
@@ -35,15 +30,16 @@ const ContactLink = styled.a`
 const ContactIcon = styled.div`
     background: var(--color-primary);
     min-width: 60px;
-    height: 60px;
+    min-height: 60px;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-right: 20px;
+    /* margin-right: 24px; */
 
     & > svg {
         fill: var(--color-white);
-        max-width: 24px;
+        max-width: 48px;
     }
 `
 
@@ -66,19 +62,29 @@ class IndexPage extends React.Component {
                 >
                     <ContactLink href="mailto:info@belmot-oldtimerversicherung.de">
                         <ContactIcon>
-                            <Icon icon={ICONS.CHECKMARK} />
+                            <Icon icon={ICONS.MAIL} />
                         </ContactIcon>
-                        info@belmot-oldtimerversicherung.de
+                        <span>info@belmot-oldtimerversicherung.de</span>
                     </ContactLink>
                     <br />
                     <ContactLink href="tel:+4951919313199">
                         <ContactIcon>
                             <Icon icon={ICONS.PHONE} />
                         </ContactIcon>
-                        05191 931 31 99
+                        <span>05191 931 31 99</span>
                     </ContactLink>
                     <br />
-                    {/* <Link to="/">Zurück zur Startseite</Link> */}
+
+                    <ContactLink href="https://goo.gl/maps/kZyLwB73tmaPec219">
+                        <ContactIcon>
+                            <Icon icon={ICONS.LOCATION} />
+                        </ContactIcon>
+                        <span>
+                            Bahnhofstraße 35 <br />
+                            29614 Soltau
+                        </span>
+                    </ContactLink>
+                    <br />
                 </SupportSection>
             </AlternativeLayout>
         )

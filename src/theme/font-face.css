@@ -57,7 +57,8 @@ ul {
 }
 /*Make links break and not overflow*/
 a {
-    word-break: break-all;
+    overflow-wrap: break-word;
+    /* word-break: break-all; */
 }
 
 p,

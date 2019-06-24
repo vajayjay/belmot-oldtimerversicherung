@@ -2,60 +2,61 @@ import React from "react"
 import styled from "styled-components"
 import StepCard from "../components/StepCard"
 
-// Define Data for cards
-const CONTENT = [
-    {
-        heading: "Angebot anfordern",
-        body:
-            "Klicken Sie auf einen der Buttons und füllen Sie das folgende Formular auf dieser Website aus",
-    },
-    {
-        heading: "Per E-Mail erhalten",
-        body:
-            "Kurz darauf sende ich Ihnen ein individuelles Angebot per E-Mail zu",
-    },
-    {
-        heading: "Angebot annehmen",
-        body:
-            "Nehmen Sie das Angebot per E-Mail an und genießen Sie sofort den SINFONIMA® Allgefahrenschutz für Ihre Instrumente.",
-    },
-]
-
 const StyledSection = styled.section`
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
     width: 100%;
     background: var(--color-lighter);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    padding: var(--space-v) var(--space-side);
+    & > h2 {
+        margin-bottom: var(--space-l);
+        text-align: center;
+    }
 `
 
 const ContentContainer = styled.div`
-    padding: var(--space-l) 0;
-    max-width: 100%;
-    display: grid;
-    grid-gap: 24px;
-    grid-template-columns: 1fr;
-    margin: 0 var(--space-side) var(--space-v);
+    max-width: 800px;
+    margin: auto;
 
-    @media (min-width: 769px) {
-        grid-template-columns: repeat(${CONTENT.length}, 250px);
+    /* Mark first step green as done  */
+    & > div:first-child > div:first-child {
+        background: var(--color-success);
     }
-    margin: 0 auto var(--space-v) auto;
+
+    /* @media (min-width: 1000px) {
+        max-width: none;
+        display: grid;
+        grid-template-columns: repeat(3, minmax(250px, 500px));
+        grid-column-gap: 24px;
+    } */
 `
 
 const NextSteps = props => (
     <StyledSection>
-        <h2>Wie geht es weiter</h2>
+        <h2>Wie geht es weiter?</h2>
         <ContentContainer>
-            {CONTENT.map((CONTENT, index) => {
-                return (
-                    <StepCard key={index} number={index + 1}>
-                        <h3>{CONTENT.heading}</h3>
-                        <span>{CONTENT.body}</span>
-                    </StepCard>
-                )
-            })}
+            <StepCard number="✓">
+                <h3>Angebot angefordert</h3>
+                <p>
+                    Sie haben das Formular erfolgreich ausgefüllt und
+                    abgesendet.
+                </p>
+            </StepCard>
+            <StepCard number="2">
+                <h3>Per E-Mail erhalten</h3>
+                <p>
+                    In Kürze sende ich Ihnen ein individuelles Angebot per
+                    E-Mail zu.
+                </p>
+            </StepCard>
+            <StepCard number="3">
+                <h3>Angebot annehmen</h3>
+                <p>
+                    Nehmen Sie das Angebot per E-Mail an und genießen Sie
+                    sofortigen Versicherungsschutz.
+                </p>
+            </StepCard>
         </ContentContainer>
     </StyledSection>
 )
