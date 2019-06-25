@@ -5,6 +5,7 @@ import Img from "gatsby-image"
 import styled, { keyframes } from "styled-components"
 import Icon from "../components/layout/Icon"
 import { ICONS } from "../theme/Icons"
+import NumberOfReviews from "../components/NumberOfReviews"
 
 const StyledHero = styled.section`
     position: relative;
@@ -104,7 +105,7 @@ const LearnMore = styled.a`
     position: absolute;
     bottom: 0;
     margin-left: var(--space-side);
-    /* left:var(--space-l); */
+    cursor: pointer;
     background: var(--color-white);
     text-decoration: none;
     display: flex;
@@ -158,7 +159,7 @@ const Hero = props => (
                 <div>
                     <span>
                         ★★★★★ <wbr />
-                        von 461 zufriedenen Kunden
+                        von <NumberOfReviews /> zufriedenen Kunden
                     </span>
                 </div>
                 <a href="#scroll-anchor">

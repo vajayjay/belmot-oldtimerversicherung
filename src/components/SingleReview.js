@@ -1,9 +1,5 @@
 import React from "react"
-// import { StaticQuery, graphql } from "gatsby"
 import styled from "styled-components"
-
-// import StandardLayout from "../components/pagelayouts/StandardLayout" import
-// SEO from "../components/Seo"
 import { ICONS } from "../theme/Icons"
 import Icon from "../components/layout/Icon"
 
@@ -27,9 +23,15 @@ const StyledReview = styled.div`
 `
 const Review = styled.p``
 
-// const IconOff = styled.div`     display: inline-block;     vertical-align:
-// middle;     & > svg {         width: 50px;         height: 50px; fill:
-// var(--color-medium);     } `
+// const IconOff = styled.div`
+//     display: inline-block;
+//     vertical-align: middle;
+//     & > svg {
+//         width: 50px;
+//         height: 50px;
+//         fill: var(--color-medium);
+//     }
+// `
 
 const IconOn = styled.div`
     display: inline-block;

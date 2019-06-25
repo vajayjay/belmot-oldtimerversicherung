@@ -55,7 +55,7 @@ const StyledIcon = styled.div`
 `
 
 const FeaturesBasic = [
-    "20% Vorsorgeversicherung bei Wertsteigerungen, wenn das Wertgutachten im Versicherungsfall nicht älter als zwei Jahre ist",
+    "30% Vorsorgeversicherung bei Wertsteigerungen, wenn das Wertgutachten im Versicherungsfall nicht älter als zwei Jahre ist",
     "Bei Glasbruchschäden nur 150 Euro Selbstbehalt – unabhängig vom vertraglich festgelegten generellen Selbstbehalt",
     "Keine Rückstufung im Schadensfall",
     "Versicherungsschutz bei Kollision mit Tieren aller Art",
