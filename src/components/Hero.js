@@ -2,7 +2,7 @@ import React from "react"
 import { StaticQuery, graphql } from "gatsby"
 
 import Img from "gatsby-image"
-import styled, { keyframes } from "styled-components"
+import styled from "styled-components"
 import Icon from "../components/layout/Icon"
 import { ICONS } from "../theme/Icons"
 import NumberOfReviews from "../components/NumberOfReviews"
@@ -54,6 +54,7 @@ const RatingContainer = styled.div`
     height: 70px;
     /* box-shadow: 0px 4px 14px  rgba(0, 0, 0, 0.25); */
     span {
+        font-weight: 500;
         color: var(--color-white);
     }
     /*stars and text container*/
@@ -91,56 +92,56 @@ const RatingContainer = styled.div`
     }
 `
 /*Animation for Learn more/scrolldown container*/
-const bounce = keyframes`
-  from {transform: translateY(0);}
-  to {transform: translateY(3px);}
-`
+// const bounce = keyframes`
+//   from {transform: translateY(0);}
+//   to {transform: translateY(3px);}
+// `
 
 /*Lern more/scrolldown container on desktop*/
-const LearnMore = styled.a`
-    @media (max-width: 768px) {
-        display: none;
-    }
+// const LearnMore = styled.a`
+//     @media (max-width: 768px) {
+//         display: none;
+//     }
 
-    position: absolute;
-    bottom: 0;
-    margin-left: var(--space-side);
-    cursor: pointer;
-    background: var(--color-white);
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    text-transform: uppercase;
-    font-size: 16px; /*This causes wrong left margin*/
-    font-weight: 500;
-    color: var(--color-darker);
+//     position: absolute;
+//     bottom: 0;
+//     margin-left: var(--space-side);
+//     cursor: pointer;
+//     background: var(--color-white);
+//     text-decoration: none;
+//     display: flex;
+//     align-items: center;
+//     /* text-transform: uppercase; */
+//     font-size: 18px; /*This causes wrong left margin*/
+//     font-weight: 500;
+//     color: var(--color-darker);
 
-    & > span {
-        margin: 0 40px;
-    }
-    /*Blue arrow container*/
-    & > div {
-        height: 80px;
-        width: 80px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background: var(--color-primary);
-        transition: all 200ms cubic-bezier(0.075, 0.82, 0.165, 1);
+//     & > span {
+//         margin: 0 40px;
+//     }
+//     /*Blue arrow container*/
+//     & > div {
+//         height: 80px;
+//         width: 80px;
+//         display: flex;
+//         align-items: center;
+//         justify-content: center;
+//         background: var(--color-primary);
+//         transition: all 200ms cubic-bezier(0.075, 0.82, 0.165, 1);
 
-        & > svg {
-            fill: white;
-            height: 30%;
-        }
-    }
-    :hover div {
-        background: var(--color-primary-dark);
-        transition: background 200ms cubic-bezier(0.075, 0.82, 0.165, 1);
-    }
-    :hover svg {
-        animation: 300ms ${bounce} ease-in alternate infinite;
-    }
-`
+//         & > svg {
+//             fill: white;
+//             height: 30%;
+//         }
+//     }
+//     :hover div {
+//         background: var(--color-primary-dark);
+//         transition: background 200ms cubic-bezier(0.075, 0.82, 0.165, 1);
+//     }
+//     :hover svg {
+//         animation: 300ms ${bounce} ease-in alternate infinite;
+//     }
+// `
 
 const Hero = props => (
     <StyledHero>
@@ -167,12 +168,12 @@ const Hero = props => (
                 </a>
             </RatingContainer>
         </HeadlineContainer>
-        <LearnMore to="#scroll-anchor">
+        {/* <LearnMore href="#scroll-anchor">
             <span>Mehr erfahren</span>
             <div>
                 <Icon icon={ICONS.CHEVRON} />
             </div>
-        </LearnMore>
+        </LearnMore> */}
     </StyledHero>
 )
 

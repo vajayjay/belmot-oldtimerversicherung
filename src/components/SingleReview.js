@@ -13,6 +13,7 @@ const StyledReview = styled.div`
     display: inline-block;
     margin: 0 0 1em 0;
     width: 100%;
+    flex: 0 1 400px;
 
     & > p:first-of-type {
         color: var(--color-black);

@@ -8,6 +8,8 @@ import Benefit from "../components/Benefit"
 import CarPool from "../components/CarPool"
 import TypesOfCars from "../components/TypesOfCars"
 import Features from "../components/Features"
+import CTA from "../components/CTA"
+import PreviewCustomerReviews from "../components/PreviewCustomerReviews"
 
 class IndexPage extends React.Component {
     render() {
@@ -22,13 +24,14 @@ class IndexPage extends React.Component {
                         `Oldtimer`,
                     ]}
                 />
+                <CTA />
                 <Hero />
                 <ScrollAnchor />
                 <Features />
-                {/* <OfferComparison/> */}
                 <Benefit />
-                <CarPool />
                 <TypesOfCars />
+                <CarPool />
+                <PreviewCustomerReviews />
             </StandardLayout>
         )
     }
