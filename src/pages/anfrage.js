@@ -44,52 +44,6 @@ class IndexPage extends React.Component {
                     ]}
                 />
                 <StyledSection>
-                    {/* <form
-                        name="contact"
-                        method="post"
-                        action="/anfrage-erfolgreich"
-                        data-netlify="true"
-                        data-netlify-honeypot="bot-field"
-                    >
-                        <input type="hidden" name="bot-field" />*/}
-                    {/* Important so netlify forms works with gatsby */}
-                    {/* <input type="hidden" name="form-name" value="contact" />
-                        <p>gatsby input</p>
-                        <div className="field half first">
-                            <label htmlFor="name">Name</label>
-                            <input type="text" name="name" id="name" required />
-                        </div>
-                        <div className="field half">
-                            <label htmlFor="email">Email</label>
-                            <input
-                                type="text"
-                                name="email"
-                                id="email"
-                                required
-                            />
-                        </div>
-                        <div className="field">
-                            <label htmlFor="message">Message</label>
-                            <textarea
-                                name="message"
-                                id="message"
-                                rows="6"
-                                required
-                            />
-                        </div>
-                        <ul className="actions">
-                            <li>
-                                <input
-                                    type="submit"
-                                    value="Send Message"
-                                    className="special"
-                                />
-                            </li>
-                            <li>
-                                <input type="reset" value="Clear" />
-                            </li>
-                        </ul>
-                    </form> */}
                     <StyledForm
                         name="contact"
                         method="POST"
@@ -335,28 +289,38 @@ class IndexPage extends React.Component {
                             type="text"
                             name="Motorsträke in KW"
                         />
-                        <fieldset>
+                        <label>
                             <legend>Fahrzeugzustand*</legend>
-                            <label>
-                                <input
-                                    type="radio"
-                                    name="Fahrzeugzustand"
-                                    value="Makellos – Note 1"
-                                    required
-                                />
-                                <span>Makellos – Note 1</span>
-                            </label>
-                            <label>
-                                <input
-                                    type="radio"
-                                    name="Fahrzeugzustand"
-                                    value="Sehr gut – Note 1 - 2"
-                                    required
-                                />
-                                <span>Sehr gut – Note 1 - 2</span>
-                            </label>
-                            {/* Weitere Zustände fehlen */}
-                        </fieldset>
+                            <select name="Fahrzeugzustand[]" required>
+                                <option value="Makellos – Note 1">
+                                    Makellos – Note 1
+                                </option>
+                                <option value="Sehr gut – Note 1 - 2">
+                                    Sehr gut – Note 1 - 2
+                                </option>
+                                <option value="Gut – Note 2">
+                                    Gut – Note 2
+                                </option>
+                                <option value="Befriedigend – Note 2 - 3">
+                                    Befriedigend – Note 2 - 3
+                                </option>
+                                <option value="Gebraucht – Note 3">
+                                    Gebraucht – Note 3
+                                </option>
+                                <option value="Ausreichend – Note 3 - 4">
+                                    Ausreichend – Note 3 - 4
+                                </option>
+                                <option value="Verbraucht – Note 4">
+                                    Verbraucht – Note 4
+                                </option>
+                                <option value="Mangelhaft – Note 4 - 5">
+                                    Mangelhaft – Note 4 - 5
+                                </option>
+                                <option value="Restaurierungsbedürftig - Notte 5">
+                                    Restaurierungsbedürftig - Note 5
+                                </option>
+                            </select>
+                        </label>
                         <fieldset>
                             <legend>
                                 Das KFZ befindet sich weitgehend im
@@ -389,7 +353,7 @@ class IndexPage extends React.Component {
                         <fieldset>
                             <legend>
                                 Der letzte TÜV-Bericht enthält Hinweise auf
-                                Ölfeuchte an Motor und/oder Getriebe*
+                                Ölfeuchte an Motor und/oder Getriebe *
                             </legend>
                             <label>
                                 <input
@@ -417,7 +381,7 @@ class IndexPage extends React.Component {
                             name="Erläuterung zur Ölfeuchte"
                         />
                         <label>
-                            <span>Überwiegender Abstellort*</span>
+                            <legend>Überwiegender Abstellort *</legend>
                             <select name="Abstellort[]" required>
                                 <option value="eigenes Grundstück">
                                     eigenes Grundstück
@@ -439,7 +403,7 @@ class IndexPage extends React.Component {
                             </select>
                         </label>
                         <fieldset>
-                            <legend>Es gibt ein Wertgutachten*</legend>
+                            <legend>Es gibt ein Wertgutachten *</legend>
                             <label>
                                 <input
                                     type="radio"
@@ -483,7 +447,7 @@ class IndexPage extends React.Component {
                         <br />
 
                         <fieldset>
-                            <legend>Erst-/Alltagsfahrzeug vorhanden?*</legend>
+                            <legend>Erst-/Alltagsfahrzeug vorhanden? *</legend>
                             <label>
                                 <input
                                     type="radio"
@@ -502,7 +466,7 @@ class IndexPage extends React.Component {
                             </label>
                         </fieldset>
                         <fieldset>
-                            <legend>Wohnumfeld*</legend>
+                            <legend>Wohnumfeld *</legend>
                             <label>
                                 <input
                                     type="radio"
@@ -529,7 +493,7 @@ class IndexPage extends React.Component {
                             </label>
                         </fieldset>
                         <label>
-                            <span>Nutzer des KFZ*</span>
+                            <span>Nutzer des KFZ *</span>
                             <select name="Nutzer[]" required>
                                 <option value="Nur Sie selbst">
                                     Nur Sie selbst
@@ -544,13 +508,13 @@ class IndexPage extends React.Component {
                             </select>
                         </label>
                         <TextInput
-                            label="Geburtsdatum des jüngsten Fahrers*"
+                            label="Geburtsdatum des jüngsten Fahrers *"
                             type="text"
                             name="Geburtsdatum des jüngsten Fahrers"
                             required
                         />
                         <fieldset>
-                            <legend>Gewünschter Versicherungsumfang:*</legend>
+                            <legend>Gewünschter Versicherungsumfang *</legend>
                             <label>
                                 <input
                                     type="checkbox"
