@@ -11,9 +11,17 @@ const NotFoundPage = () => (
         <SEO title="404: Not found" />
         <SectionCenteredFullHeight>
             <h1>Diese Seite konnte leider nicht gefunden werden.</h1>
-
+            <p>
+                Bitte geben Sie mir bescheid, dass dieser Link nicht mehr
+                funktioniert:
+                <br />
+                <a href="mailto:info@belmot-oldtimerversicherung.de?subject=Report%20404:%20Seite%20nicht%20gefunden&amp;body=Hallo%20Herr%20Blaskewitz%2C%20der%20folgender%20Link%20funktioniert%20leider%20nicht%20mehr%3A%20%3Chier%20LINK%20einsetzten%3E">
+                    info@belmot-oldtimerversicherung.de
+                </a>
+            </p>
+            <br />
             <Button primary link="/">
-                Zurück zur Startseite
+                Zur Startseite
             </Button>
         </SectionCenteredFullHeight>
     </StandardLayout>
