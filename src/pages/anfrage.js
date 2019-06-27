@@ -352,7 +352,7 @@ class IndexPage extends React.Component {
                         <fieldset>
                             <legend>
                                 Das KFZ befindet sich weitgehend im
-                                Originalzustand ohne Umbauten (z. B. anderer
+                                Originalzustand ohne Umbauten (z.B. anderer
                                 Motor, Tieferlegung, Tuning etc.) *
                             </legend>
                             <label>
