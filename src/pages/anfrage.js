@@ -159,7 +159,7 @@ class IndexPage extends React.Component {
                             Fahrzeug-Informationen
                         </StyledSectionH2>
                         <fieldset>
-                            <legend>Fahrzeugart*</legend>
+                            <legend>Fahrzeugart *</legend>
                             <label>
                                 <input
                                     type="checkbox"
@@ -247,13 +247,13 @@ class IndexPage extends React.Component {
                             </label>
                         </fieldset>
                         <TextInput
-                            label="Hersteller*"
+                            label="Hersteller *"
                             type="text"
                             name="Hersteller"
                             required
                         />
                         <TextInput
-                            label="Typ*"
+                            label="Typ *"
                             type="text"
                             name="Typ"
                             required
@@ -265,23 +265,51 @@ class IndexPage extends React.Component {
                             required
                         />
                         <TextInput
-                            label="Versicherungssumme (Wiederbeschaffungswert) in €*"
+                            label="Versicherungssumme (Wiederbeschaffungswert) in € *"
                             type="text"
                             name="Versicherungssumme in €"
                             required
                         />
-                        <TextInput
-                            label="Jährliche Fahrleistung in km*"
-                            type="text"
-                            name="Jährliche Fahrleistung in km"
-                            required
-                        />
+                        <label>
+                            <legend>Jährliche Fahrleistung *</legend>
+                            <select name="Fahrleistung[]" required>
+                                <option value="bis 1.000 km">
+                                    bis 1.000 km
+                                </option>
+                                <option value="bis 2.000 km">
+                                    bis 2.000 km
+                                </option>
+                                <option value="bis 3.000 km">
+                                    bis 3.000 km
+                                </option>
+                                <option value="bis 4.000 km">
+                                    bis 4.000 km
+                                </option>
+                                <option value="bis 5.000 km">
+                                    bis 5.000 km
+                                </option>
+                                <option value="bis 6.000 km">
+                                    bis 6.000 km
+                                </option>
+                                <option value="bis 7.000 km">
+                                    bis 7.000 km
+                                </option>
+                                <option value="bis 8.000 km">
+                                    bis 8.000 km
+                                </option>
+                                <option value="bis 9.000 km">
+                                    bis 9.000 km
+                                </option>
+                            </select>
+                        </label>
                         <p>
                             Bitte beachten Sie, dass die angegebene
                             Kilometerleistung Auswirkungen auf die
                             Beitragsberechnung hat. Geben Sie also bitte im
                             Rahmen des Möglichen eine realistische und nicht
                             vorsichtig zu hoch angesetzte Kilometerleistung an.
+                            Über 9.000 km pro Jahr hinausgehende
+                            Kilometerleistungen sind nicht versicherbar.
                         </p>
                         <br />
                         <TextInput
@@ -290,7 +318,7 @@ class IndexPage extends React.Component {
                             name="Motorsträke in KW"
                         />
                         <label>
-                            <legend>Fahrzeugzustand*</legend>
+                            <legend>Fahrzeugzustand *</legend>
                             <select name="Fahrzeugzustand[]" required>
                                 <option value="Makellos – Note 1">
                                     Makellos – Note 1
