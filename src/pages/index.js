@@ -5,11 +5,14 @@ import SEO from "../components/Seo"
 import Hero from "../components/Hero"
 import ScrollAnchor from "../components/ScrollAnchor"
 import Benefit from "../components/Benefit"
-import CarPool from "../components/CarPool"
+import Fuhrpark from "../components/Fuhrpark"
+import Restaurierung from "../components/Restaurierung"
+import Schutzbrief from "../components/Schutzbrief"
 import TypesOfCars from "../components/TypesOfCars"
 import Features from "../components/Features"
 import CTA from "../components/CTA"
 import PreviewCustomerReviews from "../components/PreviewCustomerReviews"
+import OldtimerIstLeidenschaft from "../components/OldtimerIstLeidenschaft"
 
 class IndexPage extends React.Component {
     render() {
@@ -27,10 +30,13 @@ class IndexPage extends React.Component {
                 <CTA />
                 <Hero />
                 <ScrollAnchor />
+                <TypesOfCars />
+                <OldtimerIstLeidenschaft />
                 <Features />
                 <Benefit />
-                <TypesOfCars />
-                <CarPool />
+                <Fuhrpark />
+                <Schutzbrief />
+                <Restaurierung />
                 <PreviewCustomerReviews />
             </StandardLayout>
         )

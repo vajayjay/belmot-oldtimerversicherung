@@ -2,9 +2,9 @@ import React from "react"
 import { StaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 import styled from "styled-components"
-import Button from "../components/Button"
+// import Button from "../components/Button"
 
-const StyledCarPool = styled.section`
+const StyledFuhrpark = styled.section`
     display: flex;
     flex-wrap: wrap;
 
@@ -42,8 +42,8 @@ const ContentContainer = styled.div`
     }
 `
 
-const CarPool = props => (
-    <StyledCarPool>
+const Fuhrpark = props => (
+    <StyledFuhrpark>
         <div>
             <Img
                 fluid={props.data.imageOne.childImageSharp.fluid}
@@ -60,12 +60,12 @@ const CarPool = props => (
                     bewegten Fahrzeuge berechnet. Eine Fuhrparkversicherung ist
                     schon ab zwei Fahrzeugen möglich.
                 </p>
-                <Button primary link="/anfrage">
+                {/* <Button primary link="/anfrage">
                     Jetzt anfragen
-                </Button>
+                </Button> */}
             </div>
         </ContentContainer>
-    </StyledCarPool>
+    </StyledFuhrpark>
 )
 
 export default props => (
@@ -81,6 +81,6 @@ export default props => (
                 }
             }
         `}
-        render={data => <CarPool data={data} {...props} />}
+        render={data => <Fuhrpark data={data} {...props} />}
     />
 )

@@ -17,10 +17,18 @@ const StyledCTA = styled(Link)`
 
     position: fixed;
     z-index: 10;
-    bottom: 20%;
+    bottom: 0;
     right: 0;
-    background: var(--color-white);
+    /* -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px); */
     color: var(--color-darker);
+    background-color: rgba(255, 255, 255, 1);
+
+    @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(10px);
+        background: rgba(255, 255, 255, 0.7);
+    }
 
     font-weight: 500;
     text-decoration: none;
@@ -34,11 +42,21 @@ const StyledCTA = styled(Link)`
         display: none;
     }
 
+    /* Blur effect */
+    /* & > div:first-of-type {
+        position: absolute;
+ 
+        opacity: 0.5;
+        height: 100%;
+        width: 100%;
+        z-index: -1;
+    } */
+
     & > span {
         margin: 0 40px;
     }
     /*Blue arrow container*/
-    & > div {
+    & > div:last-of-type {
         height: 80px;
         width: 80px;
         display: flex;
@@ -58,12 +76,11 @@ const StyledCTA = styled(Link)`
         transition: background 200ms cubic-bezier(0.075, 0.82, 0.165, 1);
         box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.03);
     }
-    :hover svg {
+    svg {
         animation: 300ms ${bounce} ease-in alternate infinite;
-    }
-    & > svg {
         fill: var(--color-primary);
     }
+
     :hover {
         box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.13);
     }
