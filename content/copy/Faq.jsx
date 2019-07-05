@@ -80,7 +80,7 @@ const FAQ = [
     },
     {
         question: "Wann macht ein Saison-Kennzeichen Sinn?",
-        answer: `Ihr Vorteil: Sie zahlen nur Steuern für den angemeldeten Zeitraum. „Echte“ Oldtimer-Liebhaber wählen häufig die Kombination 3/10, also März bis Oktober, damit sie schon mit der ersten Märzsonne raus auf die Straßen dürfen! Aber: Eine Kombination aus H- und Saisonkennzeichen ist nicht möglich.
+        answer: `Ihr Vorteil: Sie zahlen nur Steuern für den angemeldeten Zeitraum. „Echte“ Oldtimer-Liebhaber wählen häufig die Kombination 3/10, also März bis Oktober, damit sie schon mit der ersten Märzsonne raus auf die Straßen dürfen!
         
         Für alle, die ihr Fahrzeug nur für begrenzte Monate des Jahres bewegen möchten! Es gelten die Bedingungen der regulären Zulassung mit dem schwarzen Kennzeichen. Das Alter des Oldtimers spielt keine Rolle. Für die Zulassung brauchen Sie lediglich eine aktuelle Versicherungsbestätigung. Ein Saisonzeitraum gilt immer vom ersten Tag 0.00 Uhr bis zum letzten Tag 24.00 Uhr. Ein Saisonkennzeichen 03-10 ist also immer vom 01. März bis zum 31. Oktober eines jeden Jahres gültig. Ihr Fahrzeug darf außerhalb des Saisonzeitraumes nicht am öffentlichen Straßenverkehr teilnehmen. Nicht zulässig ist auch das Abstellen des Fahrzeuges auf öffentlichen Straßen oder teilöffentlichem Gelände (z.B. frei zugänglicher Parkplatz).
             
@@ -90,7 +90,7 @@ const FAQ = [
     },
     {
         question: "Wann macht ein schwarzes Kennzeichen Sinn?",
-        answer: `Eher etwas für Youngtimer: Die standardzulassung ist für einen Oldtimer nicht empfehlenswert, da sie Ihr Fahrzeug nach Hubraum besteuert und dadurch oftmals teurer ist als das H-Kennzeichen. Auch die Fahrt in Umweltzonen ist oftmals nicht möglich.
+        answer: `Eher etwas für Youngtimer: Die Standardzulassung ist für einen Oldtimer nicht empfehlenswert, da sie Ihr Fahrzeug nach Hubraum besteuert und dadurch oftmals teurer ist als das H-Kennzeichen. Auch die Fahrt in Umweltzonen ist oftmals nicht möglich.
         
         Ob mit oder ohne Euro-Symbol: Das schwarze Kennzeichen steht für die reguläre Zulassung nach den Kriterien der Straßenverkehrs-Zulassungsordnung. Das Alter des Fahrzeugs spielt hierbei keine Rolle. Es wird lediglich eine aktuelle Versicherungsbestätigung benötigt. Achtung Feinstaubzonen: Trägt Ihr Oldtimer keine Feinstaubplakette, ist das Befahren von innerstädtischen Umweltzonen mit dem schwarzen Kennzeichen nicht gestattet.
         Tipp: Ein H-Kennzeichen darf überall fahren.

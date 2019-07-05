@@ -56,9 +56,9 @@ const Fuhrpark = props => (
                 <p>
                     Besonders attraktiv ist das Angebot einer
                     Fuhrparkversicherung für Sammler. Dabei wird der
-                    All-Risk-Beitrag nur für die Anzahl der maximal gleichzeitig
-                    bewegten Fahrzeuge berechnet. Eine Fuhrparkversicherung ist
-                    schon ab zwei Fahrzeugen möglich.
+                    Allgefahren-Beitrag nur für die Anzahl der maximal
+                    gleichzeitig bewegten Fahrzeuge berechnet. Eine
+                    Fuhrparkversicherung ist schon ab zwei Fahrzeugen möglich.
                 </p>
                 {/* <Button primary link="/anfrage">
                     Jetzt anfragen

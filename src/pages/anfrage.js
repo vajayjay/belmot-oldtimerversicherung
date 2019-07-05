@@ -194,17 +194,38 @@ class IndexPage extends React.Component {
                                 <span>Andere</span>
                             </label>
                         </fieldset>
-                        <TextInput
-                            label="KFZ-Kennzeichen"
-                            type="text"
-                            name="KFZ-Kennzeichen"
-                        />
                         <p>
                             Hinweis: Wohnmobile und zu Campingzwecken genutzte
                             Fahrzeuge können leider nicht über Belmot versichert
                             werden.
                         </p>
+                        <TextInput
+                            label="KFZ-Kennzeichen"
+                            type="text"
+                            name="KFZ-Kennzeichen"
+                        />
+
                         <br />
+                        <fieldset>
+                            <legend>Historisches Kennzeichen</legend>
+                            <label>
+                                <input
+                                    type="radio"
+                                    name="historisches-kennzeichen"
+                                    defaultChecked
+                                    value="Nein"
+                                />
+                                <span>Nein</span>
+                            </label>
+                            <label>
+                                <input
+                                    type="radio"
+                                    name="historisches-kennzeichen"
+                                    value="Ja"
+                                />
+                                <span>Ja</span>
+                            </label>
+                        </fieldset>
                         <fieldset>
                             <legend>Kennzeichen</legend>
                             <label>
@@ -226,26 +247,6 @@ class IndexPage extends React.Component {
                         </fieldset>
                         <TextInput label="Von" type="text" name="Von" />
                         <TextInput label="Bis" type="text" name="Bis" />
-                        <fieldset>
-                            <legend>Historisches Kennzeichen</legend>
-                            <label>
-                                <input
-                                    type="radio"
-                                    name="historisches-kennzeichen"
-                                    defaultChecked
-                                    value="Nein"
-                                />
-                                <span>Nein</span>
-                            </label>
-                            <label>
-                                <input
-                                    type="radio"
-                                    name="historisches-kennzeichen"
-                                    value="Ja"
-                                />
-                                <span>Ja</span>
-                            </label>
-                        </fieldset>
                         <TextInput
                             label="Hersteller *"
                             type="text"
@@ -270,6 +271,18 @@ class IndexPage extends React.Component {
                             name="Versicherungssumme in €"
                             required
                         />
+                        <p>
+                            Hinweis: Alternativ ist eine Versicherung zum Markt-
+                            oder Wiederaufbauwert möglich. Falls dies gewünscht
+                            ist, geben Sie mir bitte einen Hinweis.
+                            Erläuterungen zu den verschiedenen
+                            Versicherungswerten finden Sie in{" "}
+                            <Link to="/downloads/Infoblatt-Versicherungswerte.pdf">
+                                diesem Infoblatt
+                            </Link>
+                        </p>
+                        <br />
+
                         <label>
                             <legend>Jährliche Fahrleistung *</legend>
                             <select name="Fahrleistung[]" required>
@@ -303,11 +316,6 @@ class IndexPage extends React.Component {
                             </select>
                         </label>
                         <p>
-                            Bitte beachten Sie, dass die angegebene
-                            Kilometerleistung Auswirkungen auf die
-                            Beitragsberechnung hat. Geben Sie also bitte im
-                            Rahmen des Möglichen eine realistische und nicht
-                            vorsichtig zu hoch angesetzte Kilometerleistung an.
                             Über 9.000 km pro Jahr hinausgehende
                             Kilometerleistungen sind nicht versicherbar.
                         </p>
@@ -465,11 +473,6 @@ class IndexPage extends React.Component {
                             </Link>
                             .
                             <br />
-                            Hinweis: Alternativ ist eine Versicherung zum Markt-
-                            oder Wiederaufbauwert möglich. Falls dies gewünscht
-                            ist, geben Sie mir bitte einen Hinweis.
-                            Erläuterungen zu den verschiedenen
-                            Versicherungswerten finden Sie in diesem Infoblatt
                         </p>
                         <br />
                         <br />

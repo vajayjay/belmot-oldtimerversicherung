@@ -66,7 +66,7 @@ const OldtimerIstLeidenschaft = props => (
                 Unterschied: Während andere Oldtimer-Versicherungen oft
                 herkömmliche Teil- und Vollkaskoversicherungen im Sortiment
                 führen, begeistert BELMOT die Oldtimer-Spezialisten mit einer
-                umfassenderen Grunddeckung oder wahlweise mit einer
+                umfassenden Grunddeckung oder wahlweise mit einer
                 Allgefahren-Deckung mit Premium-Leistungen.
             </p>
             <span>Wählen Sie zwischen zwei Versicherungsvarianten:</span>
