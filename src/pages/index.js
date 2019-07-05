@@ -4,15 +4,20 @@ import StandardLayout from "../components/pagelayouts/StandardLayout"
 import SEO from "../components/Seo"
 import Hero from "../components/Hero"
 import ScrollAnchor from "../components/ScrollAnchor"
+import DarumBelmot from "../components/DarumBelmot"
 import Benefit from "../components/Benefit"
 import Fuhrpark from "../components/Fuhrpark"
 import Restaurierung from "../components/Restaurierung"
 import Schutzbrief from "../components/Schutzbrief"
 import TypesOfCars from "../components/TypesOfCars"
-import Features from "../components/Features"
+import Vergleich from "../components/Vergleich"
 import CTA from "../components/CTA"
 import PreviewCustomerReviews from "../components/PreviewCustomerReviews"
 import OldtimerIstLeidenschaft from "../components/OldtimerIstLeidenschaft"
+import Saisonal from "../components/Saisonal"
+import WiederbeschaffungUndYoungtimer from "../components/WiederbeschaffungUndYoungtimer"
+import MehrAlsNurVollkasko from "../components/MehrAlsNurVollkasko"
+import LeidenschaftIstBeruf from "../components/LeidenschaftIstBeruf"
 
 class IndexPage extends React.Component {
     render() {
@@ -30,14 +35,19 @@ class IndexPage extends React.Component {
                 <CTA />
                 <Hero />
                 <ScrollAnchor />
+                <DarumBelmot />
                 <TypesOfCars />
                 <OldtimerIstLeidenschaft />
-                <Features />
+                <Vergleich />
                 <Benefit />
                 <Fuhrpark />
                 <Schutzbrief />
                 <Restaurierung />
+                <WiederbeschaffungUndYoungtimer />
+                <Saisonal />
+                <MehrAlsNurVollkasko />
                 <PreviewCustomerReviews />
+                <LeidenschaftIstBeruf />
             </StandardLayout>
         )
     }

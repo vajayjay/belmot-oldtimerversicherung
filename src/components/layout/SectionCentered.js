@@ -1,9 +1,9 @@
 import React from "react"
 import styled from "styled-components"
 
-const theme = {
-    main: "red",
-}
+// const theme = {
+//     main: "red",
+// }
 const StyledSection = styled.section`
     width: 100%;
     padding: var(--space-side);

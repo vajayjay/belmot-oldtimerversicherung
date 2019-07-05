@@ -55,24 +55,24 @@ const StyledIcon = styled.div`
 `
 
 const FeaturesBasic = [
-    "30% Vorsorgeversicherung bei Wertsteigerungen, wenn das Wertgutachten im Versicherungsfall nicht älter als zwei Jahre ist",
-    "Bei Glasbruchschäden nur 150 Euro Selbstbehalt – unabhängig vom vertraglich festgelegten generellen Selbstbehalt",
-    "Keine Rückstufung im Schadensfall",
-    "Versicherungsschutz bei Kollision mit Tieren aller Art",
-    "Leistungen bei Tierbissschäden inklusive Folgeschäden",
-    "Schutz bei stationären Risiken, z. B. für Sammlungen",
-    "Diebstahlversicherung",
+    "Diebstahl",
+    "Feuer- und Elementar",
+    "Vandalismus",
+    "Tierbiss-Schäden",
+    "Kollision mit Tieren",
+    "Unfall des Transportfahrzeugs",
+    "und vieles mehr",
 ]
 const FeaturesPro = [
-    "Motorschaden",
-    "Bruchschaden",
-    "Getriebeschaden",
-    "Bremsschaden",
-    "Schäden durch ausgelaufene Batterie",
-    "Fehlbedienung",
+    "Unfallschäden",
+    "Motorschäden",
+    "Getriebeschäden",
+    "Bruchschäden",
+    "Schäden durch Fehlbedienung (z. B. Verschalten)",
+    "Schäden durch ausgelaufene Batteriesäure",
 ]
 // const Accordion = props => (
-const Features = () => (
+const Vergleich = () => (
     <StyledFetaures>
         <div>
             <h2>Grunddeckung</h2>
@@ -89,6 +89,10 @@ const Features = () => (
                     )
                 })}
             </ul>
+            <p>
+                Inklusive: 30 % Vorsorgeversicherung für Wertsteigerungen, wenn
+                das Wertgutachten im Schadenfall nicht älter als zwei Jahre ist
+            </p>
         </div>
         <div>
             <h2>Allgefahrendeckung</h2>
@@ -101,7 +105,8 @@ const Features = () => (
                     <StyledIcon>
                         <Icon icon={ICONS.CHECKMARK} />
                     </StyledIcon>
-                    Enthält alle Leistungen der Grunddeckung
+                    enthält alle Leistungen der Grunddeckung und entschädigt
+                    darüber hinaus
                 </SpecialListItem>
                 {FeaturesPro.map((FeaturesPro, index) => {
                     return (
@@ -118,4 +123,4 @@ const Features = () => (
     </StyledFetaures>
 )
 
-export default Features
+export default Vergleich

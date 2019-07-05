@@ -58,9 +58,6 @@ const Fuhrpark = props => (
                     ersten großen Auftritt in sicheren Händen ist – mit der
                     speziellen Versicherung für die Phase der Restaurierung.
                 </p>
-                {/* <Button primary link="/anfrage">
-                    Jetzt anfragen
-                </Button> */}
             </div>
         </ContentContainer>
     </StyledFuhrpark>
