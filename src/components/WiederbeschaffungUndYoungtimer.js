@@ -2,13 +2,23 @@ import React from "react"
 import styled from "styled-components"
 
 const StyledContent = styled.section`
-    @media (min-width: 798px) {
-        display: grid;
+    display: grid;
+
+    & > div:first-of-type {
+        order: 2;
+    }
+
+    @media (min-width: 1000px) {
         grid-template-columns: 1fr 1fr;
+
+        & > div:first-of-type {
+            order: 0;
+        }
     }
     & > div {
         padding: var(--space-v) var(--space-side);
     }
+
     & > div:last-of-type {
         background: var(--color-lighter);
     }

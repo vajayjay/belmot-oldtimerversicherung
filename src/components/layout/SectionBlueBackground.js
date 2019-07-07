@@ -4,7 +4,7 @@ import styled from "styled-components"
 const StyledContent = styled.section`
     width: 100%;
     background: var(--color-primary);
-    padding: 10vh var(--space-side);
+    padding: var(--space-v) var(--space-side);
     display: flex;
     flex-direction: column;
     justify-content: center;

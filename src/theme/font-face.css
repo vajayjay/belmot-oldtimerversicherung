@@ -71,7 +71,7 @@ label {
 }
 
 p {
-    margin-bottom: var(--space-s);
+    margin-bottom: var(--space-m);
     margin-top: var(--space-s);
 }
 

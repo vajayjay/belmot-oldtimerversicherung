@@ -8,7 +8,7 @@ import Button from "../components/Button"
 const StyledBenefit = styled.section`
     width: 100%;
     background: var(--color-darker);
-    padding: 10vh var(--space-side);
+    padding: var(--space-v) var(--space-side);
     display: flex;
     flex-direction: column;
     justify-content: center;

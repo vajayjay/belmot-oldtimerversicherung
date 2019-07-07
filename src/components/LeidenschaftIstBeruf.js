@@ -3,7 +3,7 @@ import styled from "styled-components"
 
 const StyledContent = styled.section`
     padding: var(--space-v) 0;
-    @media (min-width: 798px) {
+    @media (min-width: 1000px) {
         display: grid;
         grid-template-columns: 1fr 1fr;
         & > h2 {

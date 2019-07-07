@@ -21,7 +21,7 @@ const StyledIcon = styled.div`
 
 const StyledContent = styled.section`
     padding: var(--space-v) 0;
-    @media (min-width: 798px) {
+    @media (min-width: 1000px) {
         display: grid;
         grid-template-columns: 1fr 1fr;
         & > h2 {
@@ -35,9 +35,6 @@ const StyledContent = styled.section`
     & > div {
         padding: 0 var(--space-side);
     }
-    & > div:last-of-type {
-        /* background: var(--color-lighter); */
-    }
     hyphens: auto;
     @media (min-width: 600px) {
         hyphens: none;
@@ -48,6 +45,7 @@ const List = styled.ul`
     display: grid;
     grid-template-columns: 1fr 2fr;
     grid-column-gap: 24px;
+    margin-bottom: var(--space-l);
 
     & > li {
         display: grid;

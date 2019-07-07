@@ -2,7 +2,6 @@ import React from "react"
 import { StaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 import styled from "styled-components"
-// import Button from "../components/Button"
 
 const StyledFuhrpark = styled.section`
     display: flex;
@@ -72,7 +71,7 @@ export default props => (
     <StaticQuery
         query={graphql`
             query {
-                imageOne: file(relativePath: { eq: "Car-pool.jpg" }) {
+                imageOne: file(relativePath: { eq: "fuhrpark.jpg" }) {
                     childImageSharp {
                         fluid(maxWidth: 1000) {
                             ...GatsbyImageSharpFluid_withWebp
