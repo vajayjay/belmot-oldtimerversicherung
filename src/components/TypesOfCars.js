@@ -8,31 +8,31 @@ const CARS = [
         type: "PKW",
         condition: "Baujahr 1989 und älter",
         img: "pkw",
-        imgAlt: "PKW Oldtimer Icon",
+        imgAlt: "PKW-Oldtimer Icon",
     },
     {
         type: "Youngtimer",
         condition: "nach individueller Beurteilung",
         img: "youngtimer",
-        imgAlt: "Youngtimer Oldtimer Icon",
+        imgAlt: "Youngtimer Icon",
     },
     {
         type: "Motorräder",
         condition: "Baujahr 1980 und älter",
         img: "motorrad",
-        imgAlt: "Motorrad Oldtimer Icon",
+        imgAlt: "Motorrad-Oldtimer Icon",
     },
     {
         type: "Traktoren",
         condition: "Baujahr 1980 und älter",
         img: "traktor",
-        imgAlt: "Oldtimer Traktor Icon",
+        imgAlt: "Oldtimer-Traktor Icon",
     },
     {
         type: "Lieferwagen & LKW",
         condition: "Baujahr 1969 und älter, jüngere Fahrzeuge auf Anfrage",
         img: "lkw",
-        imgAlt: "LKW Oldtimer Icon",
+        imgAlt: "LKW-Oldtimer Icon",
     },
 ]
 
@@ -80,7 +80,7 @@ const TypesOfCars = props => (
         <ContentContainer>
             {CARS.map((CARS, index) => {
                 return (
-                    <TypeCard type={CARS.img} key={index}>
+                    <TypeCard type={CARS.img} key={index} imgAlt={CARS.imgAlt}>
                         <h3>{CARS.type}</h3>
                         <span>{CARS.condition}</span>
                     </TypeCard>
