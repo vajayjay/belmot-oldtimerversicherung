@@ -19,6 +19,7 @@ function SEO({ description, lang, meta, keywords, title }) {
                         title
                         description
                         author
+                        image
                     }
                 }
             }
@@ -67,6 +68,18 @@ function SEO({ description, lang, meta, keywords, title }) {
                     name: `twitter:description`,
                     content: metaDescription,
                 },
+                {
+                    name: `twitter:image`,
+                    content: site.siteMetadata.image,
+                },
+                {
+                    property: `og:image`,
+                    content: site.siteMetadata.image,
+                },
+                {
+                    itemprop: `image`,
+                    content: site.siteMetadata.image,
+                },
             ]
                 .concat(
                     keywords.length > 0
@@ -82,7 +95,7 @@ function SEO({ description, lang, meta, keywords, title }) {
 }
 
 SEO.defaultProps = {
-    lang: `en`,
+    lang: `de`,
     meta: [],
     keywords: [],
 }

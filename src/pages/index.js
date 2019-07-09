@@ -31,6 +31,7 @@ class IndexPage extends React.Component {
                         `Youngtimer`,
                         `Oldtimer`,
                     ]}
+                 
                 />
                 <CTA />
                 <Hero />

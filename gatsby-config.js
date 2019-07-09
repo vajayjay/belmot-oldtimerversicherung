@@ -1,9 +1,9 @@
 module.exports = {
     siteMetadata: {
         title: `Belmot Oldtimerversicherung`,
-        description: `SEO Description`,
-        author: `@Jannis Wicke`,
-        //    image: "/images/gatsby-astronaut-2.png", // Path to your image you placed in the 'static' folder
+        description: `Perfekt abgesichert – leistet bei Unfall, aber auch bei Motor- oder Getriebeschäden, Schäden durch Fehlbedienung oder ausgelaufenene Batterien.`,
+        author: `Heiner Blaskewittz, Jannis Wicke`,
+        image: "/social-image.jpg", // Path to your image you placed in the 'static' folder
         siteUrl: `https://belmot-oldtimerversicherung.de`,
     },
     plugins: [

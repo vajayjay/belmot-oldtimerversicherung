@@ -19,8 +19,6 @@ const StyledCTA = styled(Link)`
     z-index: 10;
     bottom: 0;
     right: 0;
-    /* -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(10px); */
     color: var(--color-darker);
     background-color: rgba(255, 255, 255, 1);
 
@@ -32,7 +30,7 @@ const StyledCTA = styled(Link)`
 
     font-weight: 500;
     text-decoration: none;
-    box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.03);
+    box-shadow: 0px 0px 16px rgba(20, 50, 105, 0.1);
     display: flex;
     align-items: center;
     font-size: 18px; /*This causes wrong left margin*/
@@ -41,16 +39,6 @@ const StyledCTA = styled(Link)`
     @media (max-width: 768px) {
         display: none;
     }
-
-    /* Blur effect */
-    /* & > div:first-of-type {
-        position: absolute;
- 
-        opacity: 0.5;
-        height: 100%;
-        width: 100%;
-        z-index: -1;
-    } */
 
     & > span {
         margin: 0 40px;
@@ -73,8 +61,8 @@ const StyledCTA = styled(Link)`
     }
     :hover div {
         background: var(--color-primary-dark);
-        transition: background 200ms cubic-bezier(0.075, 0.82, 0.165, 1);
-        box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.03);
+        transition: all 200ms cubic-bezier(0.075, 0.82, 0.165, 1);
+        box-shadow: 0px 0px 16px rgba(20, 50, 105, 0.2);
     }
     svg {
         animation: 300ms ${bounce} ease-in alternate infinite;
@@ -82,7 +70,7 @@ const StyledCTA = styled(Link)`
     }
 
     :hover {
-        box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.13);
+        box-shadow: 0px 0px 16px rgba(20, 50, 105, 0.13);
     }
 `
 

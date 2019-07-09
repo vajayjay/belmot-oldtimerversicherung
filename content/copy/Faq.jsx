@@ -1,10 +1,12 @@
-import Selbsteinschaetzung from "../downloads/Selbsteinschaetzung.pdf"
+// import React from "react"
+// import PDFSelbsteinschaetzung from "../static/Selbsteinschaetzung.pf"
+// import PDFVersicherungsbedingungen from "../downloads/PDFVersicherungsbedingungen"
 
 const FAQ = [
     {
         question:
             "Wo kann ich die Versicherungsbedingungen und sonstige Begleitinformationen nachlesen?",
-        answer: `Die Versicherungsbedingungen und sonstigen Begleitinformationen finden Sie <a href="/versicherungsbedingungen"> hier</a>`,
+        answer: `Die Versicherungsbedingungen und sonstigen Begleitinformationen finden Sie <a href="../Infoblatt-Versicherungswerte.pdf" target="_blank" rel="noopener noreferrer">hier</a>`,
     },
     {
         question: "Was versteht man unter dem Begriff Marktwert?",
@@ -42,8 +44,8 @@ const FAQ = [
         answer: `Das ist der von Ihnen persönlich definierte Wert Ihres Fahrzeugs. Bis zu einem Fahrzeugwert von 12.500 Euro akzeptiert BELMOT eine Selbsteinschätzung, bestehend aus Fotografie und ausgefülltem Formular. Der von Ihnen festgelegte Wert gilt dann als Versicherungssumme. Bitte fügen Sie einen aktuellen TÜV-Bericht und ggf. Rechnungen über Restaurationsmaßnahmen bei. Auch ein lückenlos gepflegtes Scheckheft gilt als Nachweis.
             
             <h3>Fakten:</h3>- Bis 12.500 Euro akzeptiert von BELMOT
-            - <a href=${Selbsteinschaetzung}>Unbürokratisches Selbsteinschätzungs-Formular</a>
-            - Zustandsnoten`,
+            - Zustandsnoten
+            - <a href="../Selbsteinschaetzung.pdf" target="_blank" rel="noopener noreferrer"> Unbürokratisches Selbsteinschätzungs-Formular</a>`,
     },
     {
         question: "Was ist ein Kurzgutachten?",
