@@ -52,5 +52,12 @@ module.exports = {
                 path: `${__dirname}/content/reviews`,
             },
         },
+        {
+            resolve: `gatsby-plugin-webpack-bundle-analyzer`,
+            options: {
+                analyzerPort: 3000,
+                production: false,
+            },
+        },
     ],
 }
