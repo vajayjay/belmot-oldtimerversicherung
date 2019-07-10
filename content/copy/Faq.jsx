@@ -39,13 +39,12 @@ const FAQ = [
             - Spiegelt nicht die Marktsituation wider`,
     },
     {
-        question:
-            "Was ist eine Selbsteinschätzung bei der Oldtimerversicherung?",
+        question: `Was ist eine Selbsteinschätzung bei der Oldtimerversicherung?`,
         answer: `Das ist der von Ihnen persönlich definierte Wert Ihres Fahrzeugs. Bis zu einem Fahrzeugwert von 12.500 Euro akzeptiert BELMOT eine Selbsteinschätzung, bestehend aus Fotografie und ausgefülltem Formular. Der von Ihnen festgelegte Wert gilt dann als Versicherungssumme. Bitte fügen Sie einen aktuellen TÜV-Bericht und ggf. Rechnungen über Restaurationsmaßnahmen bei. Auch ein lückenlos gepflegtes Scheckheft gilt als Nachweis.
             
             <h3>Fakten:</h3>- Bis 12.500 Euro akzeptiert von BELMOT
             - Zustandsnoten
-            - <a href="../Selbsteinschaetzung.pdf" target="_blank" rel="noopener noreferrer"> Unbürokratisches Selbsteinschätzungs-Formular</a>`,
+            - <a href="../Selbsteinschaetzung.pdf" target="_blank" rel="noopener noreferrer">Selbsteinschätzungs-Formular</a>`,
     },
     {
         question: "Was ist ein Kurzgutachten?",

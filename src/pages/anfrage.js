@@ -195,10 +195,10 @@ class IndexPage extends React.Component {
                             </label>
                         </fieldset>
                         <p>
-                            Hinweis: Wohnmobile und zu Campingzwecken genutzte
-                            Fahrzeuge können leider nicht über Belmot versichert
-                            werden.
+                            Wohnmobile und zu Campingzwecken genutzte Fahrzeuge
+                            können leider nicht über Belmot versichert werden.
                         </p>
+                        <br />
                         <TextInput
                             label="KFZ-Kennzeichen"
                             type="text"
@@ -272,14 +272,17 @@ class IndexPage extends React.Component {
                             required
                         />
                         <p>
-                            Hinweis: Alternativ ist eine Versicherung zum Markt-
-                            oder Wiederaufbauwert möglich. Falls dies gewünscht
-                            ist, geben Sie mir bitte einen Hinweis.
-                            Erläuterungen zu den verschiedenen
-                            Versicherungswerten finden Sie in{" "}
-                            <Link to="/downloads/Infoblatt-Versicherungswerte.pdf">
+                            Alternativ ist eine Versicherung zum Markt- oder
+                            Wiederaufbauwert möglich. Falls dies gewünscht ist,
+                            geben Sie mir bitte einen Hinweis. Erläuterungen zu
+                            den verschiedenen Versicherungswerten finden Sie in{" "}
+                            <a
+                                href="../Infoblatt-Versicherungswerte.pdf"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
                                 diesem Infoblatt
-                            </Link>
+                            </a>
                         </p>
                         <br />
 
@@ -468,9 +471,13 @@ class IndexPage extends React.Component {
                             Selbsteinschätzung. Die Informationen dazu finden
                             Sie <Link to="faq">hier</Link>. Und das
                             Selbsteinschätzungsformular finden Sie{" "}
-                            <Link to="/downloads/Selbsteinschaetzung.pdf">
+                            <a
+                                href="../Selbsteinschaetzung.pdf"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
                                 hier
-                            </Link>
+                            </a>
                             .
                             <br />
                         </p>
@@ -564,8 +571,15 @@ class IndexPage extends React.Component {
                             </label>
                         </fieldset>
                         <p>
-                            Hinweis: Erläuterungen zu den verschiedenen
-                            Versicherungsformen finden Sie hier
+                            Erläuterungen zu den verschiedenen
+                            Versicherungsformen finden Sie{" "}
+                            <a
+                                href="../Vergleich-Allrisk-zu-Grunddeckung.pdf"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                hier
+                            </a>
                         </p>
                         <br />
 

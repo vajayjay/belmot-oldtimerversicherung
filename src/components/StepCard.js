@@ -11,29 +11,17 @@ const StyledCard = styled.div`
     text-align: left;
     box-shadow: 0px 0px 15px rgba(58, 71, 143, 0.05);
     & > div:last-of-type {
-        padding: var(--space-m) var(--space-s) 8px;
-    }
-
-    @media (min-width: 768px) {
-        /* display: flex;
-        flex-direction: column; */
+        padding: var(--space-m) var(--space-m) 0 var(--space-m);
     }
 `
 
-const Circle = styled.div`
+const ColoredSide = styled.div`
     background: var(--color-primary);
     height: 100%;
     width: 60px;
     display: flex;
     align-items: center;
     justify-content: center;
-
-    @media (min-width: 768px) {
-        /* border-radius: 100%;
-        min-height: 120px;
-        width: 120px;
-        height: auto; */
-    }
 
     & > span {
         font-size: 30px;
@@ -47,9 +35,9 @@ const Circle = styled.div`
 
 const StepCard = props => (
     <StyledCard>
-        <Circle>
+        <ColoredSide>
             <span>{props.number}</span>
-        </Circle>
+        </ColoredSide>
         <div>{props.children}</div>
     </StyledCard>
 )

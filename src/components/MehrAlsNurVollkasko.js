@@ -112,9 +112,9 @@ const MehrAlsNurVollkasko = () => (
             <p>
                 Damit Sie Klarheit haben, benennt BELMOT nicht die versicherten
                 Gefahren, sondern ausschließlich solche, die nicht versichert
-                sind. Dazu gehören beispielsweise Schäden aufgrund - thermischer
-                Probleme, z. B. Fahren ohne genügend Kühlwasser - des
-                gewöhnlichen Alterungsprozesses oder Verschleiß.
+                sind. Dazu gehören beispielsweise Schäden aufgrund thermischer
+                Probleme, z. B. Fahren ohne genügend Kühlwasser, oder
+                Verschleiß.
             </p>
         </div>
     </StyledContent>
