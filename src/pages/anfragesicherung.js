@@ -1,9 +1,9 @@
 import React from "react"
 import { Link } from "gatsby"
+
 import StandardLayout from "../components/pagelayouts/StandardLayout"
 import styled from "styled-components"
-// import "../theme/forms.css"
-import "../theme/form-conditions.css"
+import "../theme/forms.css"
 
 import SEO from "../components/Seo"
 import TextInput from "../components/TextInput"
@@ -26,8 +26,7 @@ const StyledSectionH2 = styled.h2`
     margin: 40px 0 18px 0;
 `
 const MobileDisclaimer = styled.p`
-    padding-top: var(--space-l);
-
+    /* padding: var(--space-l) var(--space-side); */
     @media (min-width: 500px) {
         display: none;
     }
@@ -156,79 +155,6 @@ class IndexPage extends React.Component {
                             type="text"
                         />
                         <br />
-                        <StyledSectionH2>Kennzeichen</StyledSectionH2>
-
-                        <TextInput
-                            label="KFZ-Kennzeichen"
-                            type="text"
-                            name="KFZ-Kennzeichen"
-                        />
-                        <div className="condition-group">
-                            <legend>Kennzeichen</legend>
-                            <input
-                                type="radio"
-                                name="Kennzeichenfarbe"
-                                value="Rot"
-                            />
-                            <label>Rot</label>
-                            <br />
-                            <input
-                                type="radio"
-                                name="Kennzeichenfarbe"
-                                value="Schwarz"
-                                className="schwarz"
-                            />
-                            <label>Schwarz</label>
-                            <div className="schwarz-condition">
-                                <legend>Historisches Kennzeichen</legend>
-                                <input
-                                    type="radio"
-                                    name="historisches-kennzeichen"
-                                    defaultChecked
-                                    value="Nein"
-                                />
-                                <label>Nein</label>
-                                <br />
-                                <input
-                                    type="radio"
-                                    name="historisches-kennzeichen"
-                                    value="Ja"
-                                />
-                                <label>Ja</label>
-                                <br />
-                                <legend>Saison-Kennzeichen</legend>
-                                <input
-                                    type="radio"
-                                    name="saison-kennzeichen"
-                                    defaultChecked
-                                    value="Nein"
-                                />
-                                <label>Nein</label>
-                                <br />
-                                <input
-                                    type="radio"
-                                    name="saison-kennzeichen"
-                                    value="Ja"
-                                    className="saison"
-                                />
-                                <label>Ja</label>
-                                <br />
-
-                                <div className="saison-condition">
-                                    <TextInput
-                                        label="Von"
-                                        type="text"
-                                        name="Von"
-                                    />
-                                    <TextInput
-                                        label="Bis"
-                                        type="text"
-                                        name="Bis"
-                                    />
-                                </div>
-                            </div>
-                        </div>
-                        <br />
                         <StyledSectionH2>
                             Fahrzeug-Informationen
                         </StyledSectionH2>
@@ -273,7 +199,73 @@ class IndexPage extends React.Component {
                             können leider nicht über Belmot versichert werden.
                         </p>
                         <br />
+                        <TextInput
+                            label="KFZ-Kennzeichen"
+                            type="text"
+                            name="KFZ-Kennzeichen"
+                        />
 
+                        <fieldset>
+                            <legend>Kennzeichen</legend>
+                            <label>
+                                <input
+                                    type="radio"
+                                    name="Kennzeichenfarbe"
+                                    value="Rot"
+                                />
+                                <span>Rot</span>
+                            </label>
+                            <label>
+                                <input
+                                    type="radio"
+                                    name="Kennzeichenfarbe"
+                                    value="Schwarz"
+                                />
+                                <span>Schwarz</span>
+                            </label>
+                        </fieldset>
+                        <fieldset>
+                            <legend>Historisches Kennzeichen</legend>
+                            <label>
+                                <input
+                                    type="radio"
+                                    name="historisches-kennzeichen"
+                                    defaultChecked
+                                    value="Nein"
+                                />
+                                <span>Nein</span>
+                            </label>
+                            <label>
+                                <input
+                                    type="radio"
+                                    name="historisches-kennzeichen"
+                                    value="Ja"
+                                />
+                                <span>Ja</span>
+                            </label>
+                        </fieldset>
+                        <fieldset>
+                            <legend>Saison-Kennzeichen</legend>
+                            <label>
+                                <input
+                                    type="radio"
+                                    name="saison-kennzeichen"
+                                    defaultChecked
+                                    value="Nein"
+                                />
+                                <span>Nein</span>
+                            </label>
+                            <label>
+                                <input
+                                    type="radio"
+                                    name="saison-kennzeichen"
+                                    value="Ja"
+                                />
+                                <span>Ja</span>
+                            </label>
+                        </fieldset>
+                        <TextInput label="Von" type="text" name="Von" />
+                        <TextInput label="Bis" type="text" name="Bis" />
                         <TextInput
                             label="Hersteller *"
                             type="text"
@@ -496,7 +488,7 @@ class IndexPage extends React.Component {
                             Wenn es kein Wertgutachten gibt und der Fahrzeugwert
                             unter 12.500 € liegt, genügt eine
                             Selbsteinschätzung. Die Informationen dazu finden
-                            Sie <Link to="/faq">hier</Link>. Und das
+                            Sie <Link to="faq">hier</Link>. Und das
                             Selbsteinschätzungsformular finden Sie{" "}
                             <a
                                 href="../Selbsteinschaetzung.pdf"

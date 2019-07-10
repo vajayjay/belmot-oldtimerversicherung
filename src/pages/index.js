@@ -18,6 +18,7 @@ import Saisonal from "../components/Saisonal"
 import WiederbeschaffungUndYoungtimer from "../components/WiederbeschaffungUndYoungtimer"
 import MehrAlsNurVollkasko from "../components/MehrAlsNurVollkasko"
 import LeidenschaftIstBeruf from "../components/LeidenschaftIstBeruf"
+import CookieNotice from "../components/CookieNotice"
 
 class IndexPage extends React.Component {
     render() {
@@ -31,8 +32,8 @@ class IndexPage extends React.Component {
                         `Youngtimer`,
                         `Oldtimer`,
                     ]}
-                 
                 />
+                <CookieNotice />
                 <CTA />
                 <Hero />
                 <ScrollAnchor />

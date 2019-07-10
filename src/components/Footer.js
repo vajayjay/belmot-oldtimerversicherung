@@ -41,23 +41,23 @@ const Footer = props => (
         <div>
             <FooterTitle>Ansprechpartner</FooterTitle>
             <p>
-                <div
+                <span
                     itemProp="member"
                     itemScope
                     itemType="http://schema.org/Person"
                 >
                     <span itemProp="name">Heiner Blaskewitz</span>
-                </div>
-                <div
+                </span>
+                <span
                     itemProp="member"
                     itemScope
                     itemType="http://schema.org/OrganizationRole"
                 >
                     <span itemProp="roleName">Versicherungsfachmann (BWV)</span>
-                </div>
+                </span>
                 Generalagentur der Mannheimer Versicherung AG
                 <br />
-                <div
+                <span
                     itemProp="address"
                     itemScope
                     itemType="http://schema.org/PostalAddress"
@@ -66,7 +66,7 @@ const Footer = props => (
                     <br />
                     <span itemProp="postalCode">29614</span>{" "}
                     <span itemProp="addressLocality">Soltau</span>
-                </div>
+                </span>
             </p>
         </div>
         <div>

@@ -1,0 +1,33 @@
+.schwarz-condition {
+    display: none;
+}
+
+.schwarz:checked ~ .schwarz-condition {
+    display: block;
+}
+
+.saison-condition {
+    display: none;
+}
+.saison:checked ~ .saison-condition {
+    display: block;
+}
+
+.condition-group label {
+    display: inline;
+}
+.condition-group > label {
+    content: "\A";
+    display: inline;
+}
+
+.condition-group {
+    margin-bottom: var(--space-l);
+}
+.saison-condition label {
+    margin-top: var(--space-l);
+    display: flex;
+}
+.condition-group legend {
+    margin-top: var(--space-l);
+}
