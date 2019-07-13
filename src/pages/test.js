@@ -1,48 +1,88 @@
-import React from "react"
-// import { Link } from "gatsby"
-// import StandardLayout from "../components/pagelayouts/StandardLayout"
-// import styled from "styled-components"
-// import "../theme/forms.css"
-// import "../theme/form-conditions.css"
-// import SEO from "../components/Seo"
-// import TextInput from "../components/TextInput"
-class NameForm extends React.Component {
-    constructor(props) {
-        super(props)
-        this.state = {
-            value: "Please write an essay about your favorite DOM element.",
-        }
+import React, { Component } from "react"
 
-        this.handleChange = this.handleChange.bind(this)
-        this.handleSubmit = this.handleSubmit.bind(this)
+class Anfrage extends Component {
+    state = {
+        anrede: null,
+        vorname: null,
+        nachname: null,
+        geburtsdatum: null,
     }
-    // handleChange(event) {
-    //     this.setState({ value: event.target.value.toUpperCase() })
-    // }
-
-    handleChange(event) {
-        this.setState({ value: event.target.value })
+    handleChange = e => {
+        // console.log(e.target.id, e.target.value);
+        this.setState({
+            [e.target.name]: e.target.value,
+        })
     }
-
-    handleSubmit(event) {
-        alert("A name was submitted: " + this.state.value)
-        event.preventDefault()
+    handleSubmit = e => {
+        e.preventDefault()
+        console.log(this.state)
     }
-
     render() {
         return (
-            <form onSubmit={this.handleSubmit}>
-                <label>
-                    Name:
-                    <textarea
-                        value={this.state.value}
-                        onChange={this.handleChange}
-                    />
-                </label>
-                <input type="submit" value="Submit" />
-            </form>
+            <div>
+                <form onSubmit={this.handleSubmit}>
+                    <fieldset>
+                        <legend>Anrede</legend>
+                        <label>
+                            <input
+                                type="radio"
+                                id="herr"
+                                value="herr"
+                                name="anrede"
+                                defaultChecked
+                                onChange={this.handleChange}
+                            />
+                            Herr
+                        </label>
+                        <label>
+                            <input
+                                type="radio"
+                                id="frau"
+                                value="frau"
+                                name="anrede"
+                                onChange={this.handleChange}
+                            />
+                            Frau
+                        </label>
+                    </fieldset>
+                    <label htmlFor="vorname">
+                        Vorname:
+                        <input
+                            type="text"
+                            name="vorname"
+                            onChange={this.handleChange}
+                        />
+                    </label>
+                    <label htmlFor="nachname">
+                        Nachname:
+                        <input
+                            type="text"
+                            name="nachname"
+                            onChange={this.handleChange}
+                        />
+                    </label>
+                    <label htmlFor="geburtsdatum">
+                        Geburtsdatum des Fahrzeughalter
+                        <input
+                            type="text"
+                            name="geburtsdatum"
+                            onChange={this.handleChange}
+                        />
+                    </label>
+                    <label htmlFor="geburtsdatum">
+                        Geburtsdatum des Fahrzeughalter
+                        <input
+                            type="text"
+                            name="geburtsdatum"
+                            onChange={this.handleChange}
+                        />
+                    </label>
+
+                    <button>Submit</button>
+                </form>
+            </div>
         )
     }
 }
 
-export default NameForm
+export default Anfrage
