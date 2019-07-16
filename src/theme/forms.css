@@ -47,9 +47,11 @@ label > input[type="text"]:focus,
 label > input[type="tel"]:focus,
 label > input[type="password"]:focus,
 label > input[type="email"]:focus,
+label > select:focus,
 textarea:focus {
-    border: 1px solid white;
-    box-shadow: 0 0 0 3px var(--color-primary);
+    box-sizing: border-box;
+    border: 3px solid var(--color-primary);
+    border-radius: 5px;
     outline: none;
 }
 
@@ -145,3 +147,8 @@ select::-ms-expand {
 select:focus::-ms-value {
     background-color: transparent;
 }
+
+/* .error-message {
+    color: var(--color-error);
+}
+ */
