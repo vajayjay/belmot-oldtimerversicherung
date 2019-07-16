@@ -62,7 +62,6 @@ a {
 }
 
 p,
-a,
 li,
 td,
 label {
@@ -76,7 +75,7 @@ p {
 }
 
 a {
-    color: var(--color-primary-light);
+    color: var(--color-primary-dark);
 }
 
 label {

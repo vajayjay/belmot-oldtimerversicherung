@@ -152,7 +152,9 @@ select:focus::-ms-value {
     color: var(--color-error);
 }
  */
-p {
+label + p,
+fieldset + p,
+select + p {
     margin-top: calc(-1 * var(--space-l));
     font-size: 16px;
 }

@@ -3,8 +3,7 @@ import React from "react"
 import StandardLayout from "../components/pagelayouts/StandardLayout"
 import AnfrageFormular from "../components/AnfrageFormular"
 import styled from "styled-components"
-// import "../theme/forms.css"
-import "../theme/form-conditions.css"
+import "../theme/forms.css"
 
 import SEO from "../components/Seo"
 

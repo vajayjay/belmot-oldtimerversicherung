@@ -59,14 +59,13 @@ const DesktopLinks = styled.div`
         text-transform: uppercase;
         font-weight: 500;
         letter-spacing: 1px;
-        opacity: 0.8;
-        transition: opacity 200ms;
+        transition: all 100ms;
         margin-left: var(--space-l);
         padding-bottom: 20px;
 
         :hover {
-            opacity: 1;
-            transition: opacity 200ms;
+            transition: all 100ms;
+            color: var(--color-primary);
         }
 
         &.active {

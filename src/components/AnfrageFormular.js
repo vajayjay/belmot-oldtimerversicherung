@@ -2,7 +2,6 @@ import React from "react"
 import { Formik, Form, Field, ErrorMessage } from "formik"
 import * as Yup from "yup"
 import { Link } from "gatsby"
-import "../theme/forms.css"
 import styled from "styled-components"
 
 const StyledError = styled(ErrorMessage)`
@@ -17,6 +16,34 @@ const StyledH2 = styled.h2`
     margin: 40px 0 18px 0;
     @media (min-width: 759px) {
         font-size: 24px;
+    }
+`
+const Button = styled.button`
+    display: inline-block;
+    background: var(--color-primary);
+    color: var(--color-white);
+    font-size: 16px;
+    font-weight: 500;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    user-select: none;
+    cursor: pointer;
+    padding: 1rem 2rem;
+    margin-bottom: var(--space-s);
+    width: 100%;
+    transform: translateY(0);
+    transition: all var(--time-fast);
+
+    :hover {
+        color: var(--color-white);
+        background: var(--color-primary-light);
+        transform: translateY(-1px);
+        transition: all var(--time-fast);
+    }
+    :active {
+        background: var(--color-primary-dark);
+        transform: translateY(1px);
     }
 `
 
@@ -142,6 +169,7 @@ const AnfrageFormular = () => (
             hidden
             name="anfrage"
             netlify-honeypot="bot-field"
+            action="/anfrage-erfolgreich/"
         >
             <input type="hidden" name="bot-field" />
             {/* Important so netlify forms works with gatsby */}
@@ -357,8 +385,8 @@ const AnfrageFormular = () => (
                         ...values,
                     }),
                 })
-                    .then(() => alert("Success!"))
-                    .catch(error => alert(values))
+                    .then(() => console.log("Success!"))
+                    .catch(error => console.log(values))
                 event.preventDefault()
                 console.log(values)
             }}
@@ -1009,7 +1037,7 @@ const AnfrageFormular = () => (
                             </span>
                         </label>
                     </fieldset>
-                    <button type="submit">Submit</button>
+                    <Button type="submit">Absenden</Button>
                 </Form>
             )}
         </Formik>
