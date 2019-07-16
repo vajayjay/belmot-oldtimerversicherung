@@ -12,6 +12,13 @@ const StyledField = styled(Field)`
     border: ${props => props.border || ""}!important;
     border-radius: 15px;
 `
+const StyledH2 = styled.h2`
+    font-size: 18px;
+    margin: 40px 0 18px 0;
+    @media (min-width: 759px) {
+        font-size: 24px;
+    }
+`
 
 // Netlify Form bits
 const encode = data => {
@@ -145,9 +152,9 @@ const AnfrageFormular = () => (
             </fieldset>
             <input name="vorname" type="text" />
             <input name="nachname" type="text" />
-            <input name="Geburtsdatum" type="text" />
-            <input name="Strasse-&-Hausnummer" type="text" />
-            <input name="postleitzahl" type="text" />
+            <input name="geburtsdatum" type="text" />
+            <input name="strasse" type="text" />
+            <input name="plz" type="text" />
             <input name="ort" type="text" />
             <input name="email" type="email" />
             <fieldset>
@@ -163,35 +170,27 @@ const AnfrageFormular = () => (
                 <input type="checkbox" name="fahrzeugart" value="Andere" />
             </fieldset>
 
-            <input type="text" name="KFZ-Kennzeichen" />
+            <input type="text" name="kennzeichen" />
 
             <fieldset>
-                <input type="radio" name="Kennzeichenfarbe" value="Rot" />
-                <input type="radio" name="Kennzeichenfarbe" value="Schwarz" />
+                <input type="radio" name="farbe" value="Rot" />
+                <input type="radio" name="farbe" value="Schwarz" />
             </fieldset>
             <fieldset>
-                <input
-                    type="radio"
-                    name="historisches-kennzeichen"
-                    value="Nein"
-                />
-                <input
-                    type="radio"
-                    name="historisches-kennzeichen"
-                    value="Ja"
-                />
+                <input type="radio" name="historisch" value="Nein" />
+                <input type="radio" name="historisch" value="Ja" />
             </fieldset>
             <fieldset>
-                <input type="radio" name="saison-kennzeichen" value="Nein" />
-                <input type="radio" name="saison-kennzeichen" value="Ja" />
+                <input type="radio" name="saison" value="Nein" />
+                <input type="radio" name="saison" value="Ja" />
             </fieldset>
-            <input type="text" name="von" />
-            <input type="text" name="bis" />
+            <input type="text" name="saison-start" />
+            <input type="text" name="saison-ende" />
             <input type="text" name="hersteller" />
             <input type="text" name="typ" />
             <input type="text" name="erstzulassung" />
             <input type="text" name="wert" />
-            <select name="Fahrleistung[]">
+            <select name="fahrleistung[]">
                 <option value="bis 1.000 km">bis 1.000 km</option>
                 <option value="bis 2.000 km">bis 2.000 km</option>
                 <option value="bis 3.000 km">bis 3.000 km</option>
@@ -202,8 +201,8 @@ const AnfrageFormular = () => (
                 <option value="bis 8.000 km">bis 8.000 km</option>
                 <option value="bis 9.000 km">bis 9.000 km</option>
             </select>
-            <input type="text" name="Motorstraerke" />
-            <select name="Fahrzeugzustand[]">
+            <input type="text" name="motorstraerke" />
+            <select name="fahrzeugzustand[]">
                 <option value="Makellos – Note 1">Makellos – Note 1</option>
                 <option value="Sehr gut – Note 1 - 2">
                     Sehr gut – Note 1 - 2
@@ -232,7 +231,7 @@ const AnfrageFormular = () => (
                 <input type="radio" name="originalzustand" value="Nein" />
                 <span>Nein</span>
             </fieldset>
-            <input type="text" name="Umbauten" />
+            <input type="text" name="umbauten" />
             <fieldset>
                 <input type="radio" name="oelfeuchte" value="Nein" />
 
@@ -240,7 +239,7 @@ const AnfrageFormular = () => (
             </fieldset>
             <input type="text" name="oelfeuchte-details" />
 
-            <select name="Abstellort[]">
+            <select name="abstellort[]">
                 <option value="eigenes Grundstueck">eigenes Grundstück</option>
                 <option value="Carport">Carport</option>
                 <option value="Einzelgarage">Einzelgarage</option>
@@ -254,8 +253,8 @@ const AnfrageFormular = () => (
                 <option value="Halle">Halle</option>
             </select>
             <fieldset>
-                <input type="radio" name="wergutachten" value="Ja" />
-                <input type="radio" name="wergutachten" value="Nein" />
+                <input type="radio" name="wertgutachten" value="Ja" />
+                <input type="radio" name="wertgutachten" value="Nein" />
             </fieldset>
             <input type="text" name="wertgutachten-datum" />
             <fieldset>
@@ -275,7 +274,7 @@ const AnfrageFormular = () => (
                     value="Kein Wohneigentum"
                 />
             </fieldset>
-            <select name="Nutzer[]">
+            <select name="nutzer">
                 <option value="Nur Sie selbst">Nur Sie selbst</option>
                 <option value="Sie und Partner">Sie und Partner</option>
                 <option value="Sie, Partner und Kinder">
@@ -283,7 +282,7 @@ const AnfrageFormular = () => (
                 </option>
                 <option value="Auch andere">Auch andere</option>
             </select>
-            <input type="text" name="Geburtsdatum des jüngsten Fahrers" />
+            <input type="text" name="geburtsdatum-juengster-fahrer" />
             <fieldset>
                 <input
                     type="checkbox"
@@ -296,9 +295,9 @@ const AnfrageFormular = () => (
                     value="Allgefahrendeckung"
                 />
             </fieldset>
-            <input type="text" name="Geplanter Versicherungsbeginn" />
-            <textarea name="Ergänzende Angaben" id="" cols="30" rows="5" />
-            <input type="checkbox" name="Terms and conditions" />
+            <input type="text" name="versicherungsbeginn" />
+            <textarea name="fragen" id="" cols="30" rows="5" />
+            <input type="checkbox" name="akzeptiert" />
             <input type="submit" value="Absenden" />
         </form>
         {/* End of Netlify dummy form */}
@@ -369,7 +368,7 @@ const AnfrageFormular = () => (
                     <Field type="hidden" name="bot-field" />
                     <Field type="hidden" name="form-name" />
                     <fieldset>
-                        <legend>Anrede</legend>
+                        <legend>Anrede *</legend>
                         <label>
                             <Field
                                 value="herr"
@@ -386,7 +385,7 @@ const AnfrageFormular = () => (
                         <StyledError name="anrede" component="div" />
                     </fieldset>
                     <label>
-                        Vorname
+                        Vorname *
                         <StyledField
                             type="text"
                             name="vorname"
@@ -399,7 +398,7 @@ const AnfrageFormular = () => (
                         <StyledError name="vorname" component="div" />
                     </label>
                     <label>
-                        Nachname
+                        Nachname *
                         <StyledField
                             type="text"
                             name="nachname"
@@ -412,7 +411,7 @@ const AnfrageFormular = () => (
                         <StyledError name="nachname" component="div" />
                     </label>
                     <label>
-                        Geburtsdatum
+                        Geburtsdatum *
                         <StyledField
                             type="text"
                             name="geburtsdatum"
@@ -425,7 +424,7 @@ const AnfrageFormular = () => (
                         <StyledError name="geburtsdatum" component="div" />
                     </label>
                     <label>
-                        Straße und Hausnummer
+                        Straße und Hausnummer *
                         <StyledField
                             type="text"
                             name="strasse"
@@ -438,7 +437,7 @@ const AnfrageFormular = () => (
                         <StyledError name="strasse" component="div" />
                     </label>
                     <label>
-                        Postleitzahl
+                        Postleitzahl *
                         <StyledField
                             type="text"
                             name="plz"
@@ -451,7 +450,7 @@ const AnfrageFormular = () => (
                         <StyledError name="plz" component="div" />
                     </label>
                     <label>
-                        Ort
+                        Ort *
                         <StyledField
                             type="text"
                             name="ort"
@@ -464,7 +463,7 @@ const AnfrageFormular = () => (
                         <StyledError name="ort" component="div" />
                     </label>
                     <label>
-                        E-Mail
+                        E-Mail *
                         <StyledField
                             name="email"
                             type="email"
@@ -477,7 +476,7 @@ const AnfrageFormular = () => (
                         <StyledError name="email" component="div" />
                     </label>
                     <fieldset>
-                        <legend>Mitglied in einem Oldtimerclub?</legend>
+                        <legend>Mitglied in einem Oldtimerclub? *</legend>
                         <label>
                             <Field value="nein" type="radio" name="mitglied" />
                             Nein
@@ -489,14 +488,15 @@ const AnfrageFormular = () => (
                     </fieldset>
                     {values.mitglied === "ja" && (
                         <label>
-                            Name des Oldtimerclubs
+                            Name des Oldtimerclubs *
                             <Field name="oldtimerclub" type="text" />
                             <StyledError name="oldtimerclub" component="div" />
                         </label>
                     )}
-                    <h2>Kennzeichen</h2>
+                    <br />
+                    <StyledH2>Kennzeichen</StyledH2>
                     <label>
-                        KFZ-Kennzeichen
+                        KFZ-Kennzeichen *
                         <StyledField
                             type="text"
                             name="kennzeichen"
@@ -509,7 +509,7 @@ const AnfrageFormular = () => (
                         <StyledError name="kennzeichen" component="div" />
                     </label>
                     <fieldset>
-                        <legend>Kennzeichen</legend>
+                        <legend>Kennzeichen *</legend>
                         <label>
                             <Field value="rot" type="radio" name="farbe" />
                             Rot
@@ -590,7 +590,8 @@ const AnfrageFormular = () => (
                             )}
                         </div>
                     )}
-                    <h2>Fahrzeug-Informationen</h2>
+                    <br />
+                    <StyledH2>Fahrzeug-Informationen</StyledH2>
                     <fieldset>
                         <legend>Fahrzeugart *</legend>
                         <Checkbox value="PKW" name="fahrzeugart" />
@@ -603,6 +604,7 @@ const AnfrageFormular = () => (
                         Wohnmobile und zu Campingzwecken genutzte Fahrzeuge
                         können leider nicht über Belmot versichert werden.
                     </p>
+                    <br />
                     <label>
                         Hersteller *
                         <StyledField
@@ -668,6 +670,7 @@ const AnfrageFormular = () => (
                             diesem Infoblatt
                         </a>
                     </p>
+                    <br />
                     <label>
                         Jährliche Fahrleistung *
                         <Field component="select" name="fahrleistung">
@@ -688,8 +691,9 @@ const AnfrageFormular = () => (
                         Über 9.000 km pro Jahr hinausgehende Kilometerleistungen
                         sind nicht versicherbar.
                     </p>
+                    <br />
                     <label>
-                        Motorsträke in KW
+                        Motorsträke in KW *
                         <StyledField
                             type="text"
                             name="motorstaerke"
@@ -866,6 +870,7 @@ const AnfrageFormular = () => (
                         </a>
                         .
                     </p>
+                    <br />
                     <fieldset>
                         <legend>Erst-/Alltagsfahrzeug vorhanden? *</legend>
                         <label>
@@ -971,6 +976,7 @@ const AnfrageFormular = () => (
                             hier
                         </a>
                     </p>
+                    <br />
                     <label>
                         Unverbindlich geplanter Versicherungsbeginn
                         <Field type="text" name="versicherungsbeginn" />

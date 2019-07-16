@@ -21,10 +21,6 @@ const StyledForm = styled.div`
     }
 `
 
-// const StyledSectionH2 = styled.h2`
-//     font-size: 18px;
-//     margin: 40px 0 18px 0;
-// `
 const MobileDisclaimer = styled.p`
     padding-top: var(--space-l);
 
