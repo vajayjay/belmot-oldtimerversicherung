@@ -6,7 +6,7 @@ class Cookienotice extends React.Component {
             window.cookieconsent.initialise({
                 palette: {
                     popup: {
-                        background: "#0A1468",
+                        background: "#2a72d3",
                         text: "#ffffff",
                     },
                     button: {
@@ -21,7 +21,7 @@ class Cookienotice extends React.Component {
                         "Diese Website nutzt Cookies um dein Erlebnis zu verbessern.",
                     dismiss: "Verstanden",
                     link: "Mehr erfahren",
-                    href: "https://arztpraxis-schulzendorf.de/datenschutz",
+                    href: "https://belmot-oldtimerverischerung.de/datenschutz",
                 },
             })
         })

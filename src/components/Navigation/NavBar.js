@@ -4,7 +4,7 @@ import { Link } from "gatsby"
 import BurgerButton from "./BurgerButton"
 import logo from "../../../content/images/logo.svg"
 
-const Nav = styled.div`
+const Nav = styled.nav`
     position: fixed;
     display: flex;
     align-items: center;

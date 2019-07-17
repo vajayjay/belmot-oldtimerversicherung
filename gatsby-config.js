@@ -20,11 +20,11 @@ module.exports = {
         {
             resolve: `gatsby-plugin-manifest`,
             options: {
-                name: `gatsby-starter-default`,
-                short_name: `starter`,
+                name: `Belmot Oldtimerversicherung`,
+                short_name: `Oldtimerversicherung`,
                 start_url: `/`,
-                background_color: `#663399`,
-                theme_color: `#663399`,
+                background_color: `#ffffff`,
+                theme_color: `#2a72d3`,
                 display: `minimal-ui`,
                 icon: `content/images/favicon.png`, // This path is relative to the root of the site.
             },
@@ -50,13 +50,6 @@ module.exports = {
             resolve: `gatsby-source-filesystem`,
             options: {
                 path: `${__dirname}/content/reviews`,
-            },
-        },
-        {
-            resolve: `gatsby-plugin-webpack-bundle-analyzer`,
-            options: {
-                analyzerPort: 3000,
-                production: false,
             },
         },
     ],

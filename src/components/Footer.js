@@ -2,7 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import { Link } from "gatsby"
 
-const StyledFooter = styled.div`
+const StyledFooter = styled.footer`
     background-color: var(--color-darker);
     font-size: var(--small);
     padding: var(--space-l) var(--space-side);
@@ -48,6 +48,7 @@ const Footer = props => (
                 >
                     <span itemProp="name">Heiner Blaskewitz</span>
                 </span>
+                <br />
                 <span
                     itemProp="member"
                     itemScope
@@ -55,6 +56,7 @@ const Footer = props => (
                 >
                     <span itemProp="roleName">Versicherungsfachmann (BWV)</span>
                 </span>
+                <br />
                 Generalagentur der Mannheimer Versicherung AG
                 <br />
                 <span

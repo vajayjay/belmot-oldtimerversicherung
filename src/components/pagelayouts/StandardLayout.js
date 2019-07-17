@@ -18,7 +18,7 @@ if (typeof window !== "undefined") {
 const App = styled.div`
     height: 100%;
 `
-const Main = styled.div`
+const Main = styled.main`
     margin-top: 50px;
     @media (min-width: 769px) {
         margin-top: 100px;
@@ -40,6 +40,13 @@ class StandardLayout extends React.Component {
         return (
             <>
                 <App>
+                    <link
+                        rel="stylesheet"
+                        type="text/css"
+                        href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.css"
+                    />
+                    <script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.js" />
+
                     <NavBar
                         burgerButtonClickHandler={
                             this.burgerButtonToggleClickHandler
