@@ -21,6 +21,7 @@ const StyledH2 = styled.h2`
 const Button = styled.button`
     display: inline-block;
     background: var(--color-primary);
+    border: none;
     color: var(--color-white);
     font-size: 16px;
     font-weight: 500;
@@ -229,7 +230,7 @@ const AnfrageFormular = () => (
                 <option value="bis 8.000 km">bis 8.000 km</option>
                 <option value="bis 9.000 km">bis 9.000 km</option>
             </select>
-            <input type="text" name="motorstraerke" />
+            <input type="text" name="motorstaerke" />
             <select name="fahrzeugzustand[]">
                 <option value="Makellos – Note 1">Makellos – Note 1</option>
                 <option value="Sehr gut – Note 1 - 2">
@@ -377,6 +378,8 @@ const AnfrageFormular = () => (
             onSubmit={values => {
                 fetch("/", {
                     method: "POST",
+                    redirect: "follow",
+                    referrer: "no-referrer",
                     headers: {
                         "Content-Type": "application/x-www-form-urlencoded",
                     },
@@ -385,7 +388,11 @@ const AnfrageFormular = () => (
                         ...values,
                     }),
                 })
-                    .then(() => console.log("Success!"))
+                    .then(
+                        () =>
+                            // console.log("Success!")
+                            (window.location.href = "/anfrage-erfolgreich/")
+                    )
                     .catch(error => console.log(values))
                 event.preventDefault()
                 console.log(values)
