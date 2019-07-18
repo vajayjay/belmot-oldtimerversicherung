@@ -414,13 +414,13 @@ const AnfrageFormular = () => (
                             Herr
                         </label>
                         <label>
-                            <Field value="Frau" type="radio" name="anrede" />{" "}
+                            <Field value="Frau" type="radio" name="anrede" />
                             Frau
                         </label>
                         <StyledError name="anrede" component="div" />
                     </fieldset>
                     <label>
-                        Vorname *
+                        <span>Vorname *</span>
                         <StyledField
                             type="text"
                             name="vorname"
@@ -433,7 +433,7 @@ const AnfrageFormular = () => (
                         <StyledError name="vorname" component="div" />
                     </label>
                     <label>
-                        Nachname *
+                        <span>Nachname *</span>
                         <StyledField
                             type="text"
                             name="nachname"
@@ -446,7 +446,7 @@ const AnfrageFormular = () => (
                         <StyledError name="nachname" component="div" />
                     </label>
                     <label>
-                        Geburtsdatum *
+                        <span>Geburtsdatum *</span>
                         <StyledField
                             type="text"
                             name="geburtsdatum"
@@ -459,7 +459,7 @@ const AnfrageFormular = () => (
                         <StyledError name="geburtsdatum" component="div" />
                     </label>
                     <label>
-                        Straße und Hausnummer *
+                        <span>Straße und Hausnummer *</span>
                         <StyledField
                             type="text"
                             name="strasse"
@@ -472,7 +472,7 @@ const AnfrageFormular = () => (
                         <StyledError name="strasse" component="div" />
                     </label>
                     <label>
-                        Postleitzahl *
+                        <span>Postleitzahl *</span>
                         <StyledField
                             type="text"
                             name="plz"
@@ -485,7 +485,7 @@ const AnfrageFormular = () => (
                         <StyledError name="plz" component="div" />
                     </label>
                     <label>
-                        Ort *
+                        <span>Ort *</span>
                         <StyledField
                             type="text"
                             name="ort"
@@ -498,7 +498,7 @@ const AnfrageFormular = () => (
                         <StyledError name="ort" component="div" />
                     </label>
                     <label>
-                        E-Mail *
+                        <span>E-Mail *</span>
                         <StyledField
                             name="email"
                             type="email"
@@ -517,13 +517,14 @@ const AnfrageFormular = () => (
                             Nein
                         </label>
                         <label>
-                            <Field value="ja" type="radio" name="mitglied" /> Ja
+                            <Field value="ja" type="radio" name="mitglied" />
+                            Ja
                         </label>
                         <StyledError name="mitglied" component="div" />
                     </fieldset>
                     {values.mitglied === "ja" && (
                         <label>
-                            Name des Oldtimerclubs *
+                            <span>Name des Oldtimerclubs *</span>
                             <Field name="oldtimerclub" type="text" />
                             <StyledError name="oldtimerclub" component="div" />
                         </label>
@@ -531,7 +532,7 @@ const AnfrageFormular = () => (
                     <br />
                     <StyledH2>Kennzeichen</StyledH2>
                     <label>
-                        KFZ-Kennzeichen *
+                        <span>KFZ-Kennzeichen *</span>
                         <StyledField
                             type="text"
                             name="kennzeichen"
@@ -641,7 +642,7 @@ const AnfrageFormular = () => (
                     </p>
                     <br />
                     <label>
-                        Hersteller *
+                        <span>Hersteller *</span>
                         <StyledField
                             type="text"
                             name="hersteller"
@@ -654,7 +655,7 @@ const AnfrageFormular = () => (
                         <StyledError name="hersteller" component="div" />
                     </label>
                     <label>
-                        Typ *
+                        <span>Typ *</span>
                         <StyledField
                             type="text"
                             name="typ"
@@ -667,7 +668,7 @@ const AnfrageFormular = () => (
                         <StyledError name="typ" component="div" />
                     </label>
                     <label>
-                        Erstzulassung *
+                        <span>Erstzulassung *</span>
                         <StyledField
                             type="text"
                             name="erstzulassung"
@@ -680,7 +681,9 @@ const AnfrageFormular = () => (
                         <StyledError name="erstzulassung" component="div" />
                     </label>
                     <label>
-                        Versicherungssumme (Wiederbeschaffungswert) in € *
+                        <span>
+                            Versicherungssumme (Wiederbeschaffungswert) in € *
+                        </span>
                         <StyledField
                             type="text"
                             name="wert"
@@ -707,7 +710,7 @@ const AnfrageFormular = () => (
                     </p>
                     <br />
                     <label>
-                        Jährliche Fahrleistung *
+                        <span>Jährliche Fahrleistung *</span>
                         <Field component="select" name="fahrleistung">
                             <option value="">Bitte auswählen</option>
                             <option value="bis 1.000 km">bis 1.000 km</option>
@@ -728,7 +731,7 @@ const AnfrageFormular = () => (
                     </p>
                     <br />
                     <label>
-                        Motorsträke in KW *
+                        <span>Motorsträke in KW *</span>
                         <StyledField
                             type="text"
                             name="motorstaerke"
@@ -741,7 +744,7 @@ const AnfrageFormular = () => (
                         <StyledError name="motorstaerke" component="div" />
                     </label>
                     <label>
-                        Fahrzeugzustand *
+                        <span>Fahrzeugzustand *</span>
                         <Field component="select" name="fahrzeugzustand">
                             <option value="">Bitte auswählen</option>
                             <option value="Makellos – Note 1">
@@ -799,7 +802,7 @@ const AnfrageFormular = () => (
                     </fieldset>
                     {values.originalzustand === "nein" && (
                         <label>
-                            Welche Umbauten hat das Fahrzeug?
+                            <span>Welche Umbauten hat das Fahrzeug?</span>
                             <StyledField type="text" name="umbauten" />
                             <StyledError name="umbauten" component="div" />
                         </label>
@@ -826,7 +829,7 @@ const AnfrageFormular = () => (
                     </fieldset>
                     {values.oelfeuchte === "ja" && (
                         <label>
-                            Wenn ja, bitte erläutern
+                            <span>Wenn ja, bitte erläutern</span>
                             <StyledField
                                 type="text"
                                 name="oelfeuchte-details"
@@ -838,7 +841,7 @@ const AnfrageFormular = () => (
                         </label>
                     )}
                     <label>
-                        Fahrzeugzustand *
+                        <span>Überwiegender Abstellort *</span>
                         <Field component="select" name="abstellort">
                             <option value="">Bitte auswählen</option>
                             <option value="eigenes Grundstück">
@@ -882,7 +885,7 @@ const AnfrageFormular = () => (
                     </fieldset>
                     {values.wertgutachten === "ja" && (
                         <label>
-                            Wenn ja, Datum des Gutachtens
+                            <span>Wenn ja, Datum des Gutachtens</span>
                             <Field type="text" name="wertgutachten-datum" />
                             <StyledError
                                 name="wertgutachten-datum"
@@ -955,7 +958,7 @@ const AnfrageFormular = () => (
                         <StyledError name="wohnumfeld" component="div" />
                     </fieldset>
                     <label>
-                        Nutzer des KFZ *
+                        <span>Nutzer des KFZ *</span>
                         <Field component="select" name="nutzer">
                             <option value="">Bitte auswählen</option>
                             <option value="Nur Sie selbst">
@@ -974,7 +977,7 @@ const AnfrageFormular = () => (
                     {values.nutzer !== "Nur Sie selbst" &&
                         (values.nutzer !== "" && (
                             <label>
-                                Geburtsdatum des jüngsten Fahrers *
+                                <span>Geburtsdatum des jüngsten Fahrers *</span>
                                 <Field
                                     type="text"
                                     name="geburtsdatum-juengster-fahrer"
@@ -1013,7 +1016,7 @@ const AnfrageFormular = () => (
                     </p>
                     <br />
                     <label>
-                        Unverbindlich geplanter Versicherungsbeginn
+                        <span>Unverbindlich geplanter Versicherungsbeginn</span>
                         <Field type="text" name="versicherungsbeginn" />
                         <StyledError
                             name="versicherungsbeginn"
@@ -1021,7 +1024,7 @@ const AnfrageFormular = () => (
                         />
                     </label>
                     <label>
-                        Ergänzende Angaben / Fragen
+                        <span>Ergänzende Angaben / Fragen</span>
                         <Field component="textarea" name="fragen" />
                         <StyledError name="fragen" component="div" />
                     </label>
@@ -1032,11 +1035,11 @@ const AnfrageFormular = () => (
                                 type="checkbox"
                                 name="akzeptiert"
                             />
-                            <span>
+                            <span className="terms-and-conditions">
                                 Ich akzeptiere die Übertragung und Speicherung
                                 meiner Daten zum Zwecke des angebotenen
                                 Services.{" "}
-                                <Link to="/Datenschutz">Mehr dazu hier</Link>
+                                <Link to="/datenschutz">Mehr erfahren</Link>
                                 <StyledError
                                     name="akzeptiert"
                                     component="div"

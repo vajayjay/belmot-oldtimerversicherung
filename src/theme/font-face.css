@@ -77,9 +77,3 @@ p {
 a {
     color: var(--color-primary-dark);
 }
-
-label {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: var(--space-m);
-}
