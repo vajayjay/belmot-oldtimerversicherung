@@ -16,7 +16,7 @@ const SecondPage = () => (
 
         <section>
             <h2>Buttons</h2>
-            <Button primary link="#">
+            <Button primary="primary" link="#">
                 Primary Button
             </Button>
             <Button link="#">Button</Button>

@@ -59,7 +59,7 @@ const Fuhrpark = props => (
                     gleichzeitig bewegten Fahrzeuge berechnet. Eine
                     Fuhrparkversicherung ist schon ab zwei Fahrzeugen möglich.
                 </p>
-                {/* <Button primary link="/anfrage">
+                {/* <Button primary="primary" link="/anfrage">
                     Jetzt anfragen
                 </Button> */}
             </div>

@@ -19,7 +19,7 @@ const App = styled.div`
     height: 100%;
 `
 const Main = styled.main`
-    margin-top: 50px;
+    margin-top: 60px;
     @media (min-width: 769px) {
         margin-top: 100px;
     }
@@ -48,6 +48,7 @@ class StandardLayout extends React.Component {
                     />
                     {/* The following line causes an error */}
                     <MobileMenu showMobileMenu={this.state.mobileMenuOpen} />
+                    {/* <CookieNotice /> */}
                     <Main>{this.props.children}</Main>
                     <Footer />
                 </App>

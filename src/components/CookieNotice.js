@@ -1,44 +1,38 @@
 import React from "react"
-// import { CookieConsent } from "cookieconsent"
+import CookieConsent from "react-cookie-consent"
+import { Link } from "gatsby"
 
-class CookieNotice extends React.Component {
-    componentDidMount() {
-        window.addEventListener("load", function() {
-            window.cookieconsent.initialise({
-                container: document.getElementById("content"),
-                palette: {
-                    popup: {
-                        background: "#0A1468",
-                        text: "#ffffff",
-                    },
-                    button: {
-                        background: "transparent",
-                        text: "#ffffff",
-                        border: "#fff",
-                    },
-                },
-                revokable: true,
-                onStatusChange: function(status) {
-                    console.log(
-                        this.hasConsented()
-                            ? "enable cookies"
-                            : "disable cookies"
-                    )
-                },
-                position: "bottom-left",
-                content: {
-                    message:
-                        "Diese Website nutzt Cookies um dein Erlebnis zu verbessern.",
-                    dismiss: "Verstanden",
-                    link: "Mehr erfahren",
-                    href: "https://arztpraxis-schulzendorf.de/datenschutz",
-                },
-            })
-        })
-    }
-    render() {
-        return <span />
-    }
-}
+const CookieNotice = () => (
+    <div>
+        <CookieConsent
+            debug={true}
+            // disableStyles={true}
+            location="none"
+            buttonText="Verstanden"
+            cookieName="Cookies-Notice-Accepted"
+            style={{
+                background: "var(--color-primary",
+                color: "var(--color-white)",
+                position: "relative",
+                zIndex: "0",
+            }}
+            buttonStyle={{
+                background: "var(--color-white)",
+                color: "var(--color-primary)",
+                fontWeight: "600",
+                fontSize: "18px",
+                padding: "var(--space-s)",
+                border: "none",
+                cursor: "pointer",
+            }}
+            expires={365}
+        >
+            Diese Website nutzt Cookies um Ihr Erlebnis zu verbessern.{" "}
+            <Link to="/datenschutz" style={{ color: "white" }}>
+                Mehr erfahren
+            </Link>
+        </CookieConsent>
+    </div>
+)
 
 export default CookieNotice

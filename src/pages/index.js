@@ -33,8 +33,8 @@ class IndexPage extends React.Component {
                         `Oldtimer`,
                     ]}
                 />
-                <CookieNotice />
                 <CTA />
+                <CookieNotice />
                 <Hero />
                 <ScrollAnchor />
                 <DarumBelmot />

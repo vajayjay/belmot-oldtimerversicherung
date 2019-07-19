@@ -55,7 +55,7 @@ class IndexPage extends React.Component {
                                     itemProp="mainEntity"
                                     itemType="http://schema.org/Question"
                                 >
-                                    <AccordionItemHeading itemprop="name">
+                                    <AccordionItemHeading itemProp="name">
                                         <AccordionItemButton>
                                             {e.question}
                                         </AccordionItemButton>

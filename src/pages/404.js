@@ -20,7 +20,7 @@ const NotFoundPage = () => (
                 </a>
             </p>
             <br />
-            <Button primary link="/">
+            <Button primary="primary" link="/">
                 Zur Startseite
             </Button>
         </SectionCenteredFullHeight>

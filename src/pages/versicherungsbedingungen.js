@@ -62,7 +62,7 @@ class IndexPage extends React.Component {
                         F02G 0000 0419
                     </p>
                     <br />
-                    <Button link="/" primary>
+                    <Button primary="primary" link="/">
                         Zurück zur Startseite
                     </Button>
                 </SupportSection>

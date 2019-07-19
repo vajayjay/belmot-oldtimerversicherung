@@ -63,7 +63,7 @@ const Schutzbrief = props => (
                     vorbereitet, z.B. mit der Pannen- und Unfallhilfe am
                     Schadenort oder dem Transport nach Fahrzeugausfall.
                 </p>
-                {/* <Button primary link="/anfrage">
+                {/* <Button primary="primary" link="/anfrage">
                     Jetzt anfragen
                 </Button> */}
             </div>

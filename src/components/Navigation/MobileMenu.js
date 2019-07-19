@@ -15,12 +15,16 @@ const MobileNav = styled.div`
     transform: ${props =>
         props.showMobileMenu ? "translateY(0%)" : "translateY(-100%)"};
     transition: transform 400ms cubic-bezier(0.215, 0.610, 0.355, 1);
+    & a{
+          transform: ${props =>
+              props.showMobileMenu ? "translateY(0%)" : "translateY(-100px)"};
+    }
 `
 
 /*Mobile Nav Links with animation based on prop */
 const StyledLink = styled(Link)`
-    transform: ${props =>
-        props.showMobileMenu ? "translateY(0%)" : "translateY(-100px)"};
+    /* transform: ${props =>
+        props.showMobileMenu ? "translateY(0%)" : "translateY(-100px)"}; */
     color: var(--color-black);
     margin-top: 5vh;
     display: block;
@@ -60,35 +64,35 @@ const MobileMenu = props => {
         <MobileNav showMobileMenu={props.showMobileMenu}>
             <StyledLink
                 to="/"
-                showMobileMenu={props.showMobileMenu}
+                // showMobileMenu={props.showMobileMenu}
                 activeClassName="active"
             >
                 Home
             </StyledLink>
             <StyledLink
                 to="/anfrage/"
-                showMobileMenu={props.showMobileMenu}
+                // showMobileMenu={props.showMobileMenu}
                 activeClassName="active"
             >
                 Online-Anfrage
             </StyledLink>
             <StyledLink
                 to="/kontakt/"
-                showMobileMenu={props.showMobileMenu}
+                // showMobileMenu={props.showMobileMenu}
                 activeClassName="active"
             >
                 Kontakt
             </StyledLink>
             <StyledLink
                 to="/faq/"
-                showMobileMenu={props.showMobileMenu}
+                // showMobileMenu={props.showMobileMenu}
                 activeClassName="active"
             >
                 FAQ
             </StyledLink>
             <StyledLink
                 to="/versicherungsbedingungen/"
-                showMobileMenu={props.showMobileMenu}
+                // showMobileMenu={props.showMobileMenu}
                 activeClassName="active"
             >
                 Versicherungsbedingungen

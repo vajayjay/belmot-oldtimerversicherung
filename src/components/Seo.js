@@ -91,7 +91,7 @@ function SEO({ description, lang, meta, keywords, title }) {
                 )
                 .concat(meta)}
         >
-            <link
+            {/* <link
                 rel="stylesheet"
                 type="text/css"
                 href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css"
@@ -99,7 +99,7 @@ function SEO({ description, lang, meta, keywords, title }) {
             <script
                 src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js"
                 data-cfasync="false"
-            />
+            /> */}
         </Helmet>
     )
 }

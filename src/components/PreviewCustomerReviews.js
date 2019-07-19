@@ -60,7 +60,7 @@ const PreviewCustomerReviews = props => (
                     )
                 })}
             </div>
-            <Button link="/kundenmeinungen" primary>
+            <Button primary="primary" link="/kundenmeinungen">
                 Alle Bewertungen ansehen
             </Button>
         </StyledReviews>

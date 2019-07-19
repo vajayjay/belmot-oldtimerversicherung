@@ -6,7 +6,6 @@
   "author": "Jannis Wicke",
   "dependencies": {
     "babel-plugin-styled-components": "^1.10.0",
-    "cookieconsent": "^3.1.1",
     "formik": "^1.5.8",
     "gatsby": "^2.13.18",
     "gatsby-image": "^2.1.2",
@@ -23,6 +22,7 @@
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
     "react-accessible-accordion": "^3.0.0",
+    "react-cookie-consent": "^2.3.2",
     "react-dom": "^16.8.6",
     "react-helmet": "^5.2.1",
     "smooth-scroll": "^16.0.3",
