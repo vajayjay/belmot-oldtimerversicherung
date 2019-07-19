@@ -94,10 +94,13 @@ function SEO({ description, lang, meta, keywords, title }) {
             <link
                 rel="stylesheet"
                 type="text/css"
-                href="css/cookieconsent.min.css"
+                href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css"
             />
 
-            <script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.js" />
+            <script
+                src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js"
+                data-cfasync="false"
+            />
         </Helmet>
     )
 }

@@ -1,6 +1,6 @@
 import React from "react"
 
-class Cookienotice extends React.Component {
+class CookieNotice extends React.Component {
     componentDidMount() {
         window.addEventListener("load", function() {
             window.cookieconsent.initialise({
@@ -15,7 +15,7 @@ class Cookienotice extends React.Component {
                         border: "#fff",
                     },
                 },
-                position: "bottom",
+                position: "bottom-left",
                 content: {
                     message:
                         "Diese Website nutzt Cookies um dein Erlebnis zu verbessern.",
@@ -31,4 +31,4 @@ class Cookienotice extends React.Component {
     }
 }
 
-export default Cookienotice
+export default CookieNotice
