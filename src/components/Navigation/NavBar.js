@@ -3,6 +3,7 @@ import styled from "styled-components"
 import { Link } from "gatsby"
 import BurgerButton from "./BurgerButton"
 import logo from "../../../content/images/logo.svg"
+import Button from "../../components/Button"
 
 const Nav = styled.nav`
     position: fixed;
@@ -24,7 +25,7 @@ const Nav = styled.nav`
     @media (min-width: 769px) {
         height: 100px;
         padding-left: 34px;
-        padding-right: 48px;
+        padding-right: 22px;
     }
     /*Vertically center the Logo*/
     & > a {
@@ -74,6 +75,13 @@ const DesktopLinks = styled.div`
             border-bottom: 4px solid var(--color-primary);
         }
     }
+    & > a:last-of-type {
+        color: white;
+    }
+`
+
+const StyledButton = styled(Button)`
+    margin-bottom: 0;
 `
 
 const NavBar = props => (
@@ -90,9 +98,9 @@ const NavBar = props => (
                 <Link to="/kontakt" activeClassName="active">
                     Kontakt
                 </Link>
-                <Link to="/anfrage" activeClassName="active">
-                    Online-Anfrage
-                </Link>
+                <StyledButton link="/anfrage" primary="primary">
+                    Jetzt anfragen
+                </StyledButton>
             </DesktopLinks>
             <BurgerButton
                 click={props.burgerButtonClickHandler}

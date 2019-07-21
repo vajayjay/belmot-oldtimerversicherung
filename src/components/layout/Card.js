@@ -14,7 +14,7 @@ const StyledCard = styled.div`
         font-size: var(--small);
         color: var(--color-dark);
         margin-top: 1rem;
-        font-size: 14px;
+        font-size: 16px;
     }
 `
 

@@ -30,22 +30,19 @@ const LeidenschaftIstBeruf = () => (
     <StyledContent>
         <h2>Ihre Leidenschaft ist Ihr Beruf</h2>
         <div>
-            <h3>
-                BELMOT für Oldtimer-Händler – mehr Kompetenz für Sie Erweitern
-                Sie
-            </h3>
+            <h3>BELMOT für Oldtimer-Händler – mehr Kompetenz für Sie</h3>
             <p>
-                Ihre Kompetenz als Händler und bieten Sie Ihren Kunden die
-                passende Oldtimer-Versicherung zum Traumwagen: BELMOT mit der
-                herausragenden Allgefahren-Deckung. Damit ist beispielsweise
-                auch ein Motorschaden abgedeckt – das erspart im Schadensfall
-                Diskussionen zur Frage, wer zahlt. Und: BELMOT versichert zum
-                Wiederbeschaffungswert, nicht zum niedrigeren Marktwert! Mit der
-                optionalen Reparaturkostenversicherung punkten Sie ebenfalls bei
-                Ihren Kunden: Wer sich dafür entscheidet, zahlt nur noch 50
-                Prozent der Kosten. Aber auch Sie als Händler können BELMOT für
-                sich nutzen: Sichern Sie so die Fahrzeuge ab, die bei Ihnen zum
-                Verkauf stehen.
+                Erweitern Sie Ihre Kompetenz als Händler und bieten Sie Ihren
+                Kunden die passende Oldtimer-Versicherung zum Traumwagen: BELMOT
+                mit der herausragenden Allgefahren-Deckung. Damit ist
+                beispielsweise auch ein Motorschaden abgedeckt – das erspart im
+                Schadensfall Diskussionen zur Frage, wer zahlt. Und: BELMOT
+                versichert zum Wiederbeschaffungswert, nicht zum niedrigeren
+                Marktwert! Mit der optionalen Reparaturkostenversicherung
+                punkten Sie ebenfalls bei Ihren Kunden: Wer sich dafür
+                entscheidet, zahlt nur noch 50 Prozent der Kosten. Aber auch Sie
+                als Händler können BELMOT für sich nutzen: Sichern Sie so die
+                Fahrzeuge ab, die bei Ihnen zum Verkauf stehen.
             </p>
             <h3>BELMOT für Oldtimer-Museen – rundum eine sichere Sache</h3>
             <p>

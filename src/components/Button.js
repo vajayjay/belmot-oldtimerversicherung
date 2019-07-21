@@ -24,7 +24,7 @@ const StyledButton = styled(Link)`
     cursor: pointer;
 
     padding: 1rem 2rem;
-    margin-bottom: var(--space-s);
+    /* margin-bottom: var(--space-s); */
 
     width: 100%;
     transform: translateY(0);

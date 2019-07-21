@@ -6,7 +6,8 @@ import TypeCard from "../components/TypeCard"
 const CARS = [
     {
         type: "PKW",
-        condition: "Baujahr 1989 und älter",
+        condition: `Baujahr 1989 
+        und älter`,
         img: "pkw",
         imgAlt: "PKW-Oldtimer Icon",
     },
@@ -18,19 +19,21 @@ const CARS = [
     },
     {
         type: "Motorräder",
-        condition: "Baujahr 1980 und älter",
+        condition: `Baujahr 1980 
+        und älter`,
         img: "motorrad",
         imgAlt: "Motorrad-Oldtimer Icon",
     },
     {
         type: "Traktoren",
-        condition: "Baujahr 1980 und älter",
+        condition: `Baujahr 1980 
+        und älter`,
         img: "traktor",
         imgAlt: "Oldtimer-Traktor Icon",
     },
     {
         type: "Lieferwagen & LKW",
-        condition: "Baujahr 1969 und älter, jüngere Fahrzeuge auf Anfrage",
+        condition: "Baujahr 1969 & älter, jüngere Fahrzeuge auf Anfrage",
         img: "lkw",
         imgAlt: "LKW-Oldtimer Icon",
     },

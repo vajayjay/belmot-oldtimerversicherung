@@ -6,7 +6,7 @@ const FAQ = [
     {
         question:
             "Wo kann ich die Versicherungsbedingungen und sonstige Begleitinformationen nachlesen?",
-        answer: `Die Versicherungsbedingungen und sonstigen Begleitinformationen finden Sie <a href="../Infoblatt-Versicherungswerte.pdf" target="_blank" rel="noopener noreferrer">hier</a>`,
+        answer: `Die Versicherungsbedingungen und sonstigen Begleitinformationen finden Sie <a href="/versicherungsbedingungen" target="_blank" rel="noopener noreferrer">hier</a>`,
     },
     {
         question: "Was versteht man unter dem Begriff Marktwert?",
@@ -100,6 +100,7 @@ const FAQ = [
             Benziner: 25,36 Euro je angefangene 100 ccm Hubraum\nDiesel: 38,78 Euro je angefangene 100 ccm Hubraum
             
             Zum Vergleich: Ein Oldtimer mit H-Kennzeichen kostet Sie nur EUR 191,- p.a., unabhängig vom Hubraum.
+
             <h3>An- und Abmeldung</h3>Achten Sie – je nach Landkreis – bei einer vorübergehenden Stilllegung, z. B. zwecks Restauration oder Winterruhe, auf die Reservierung Ihres Kennzeichens bis zum Zeitpunkt der Wiederzulassung. Die Kfz-Steuer wird taggenau abgerechnet.
 
             <h3>Wiederzulassung</h3>Wichtig: Ihr Fahrzeug benötigt eine gültige TÜV-Untersuchung.\nBesitzt das Fahrzeug aufgrund längerer Stilllegung noch einen alten Fahrzeugbrief? Dann ist zu prüfen, ob die Abmeldung bereits länger als 18 Monate zurückliegt. Falls ja, ist die Betriebserlaubnis erloschen und eine Vollabnahme des TÜV erforderlich, z. B. nach § 23 (Oldtimergutachten). Auf jeden Fall erhalten Sie die seit 01.03.2007 gültigen neuen Fahrzeugpapiere. Ihren alten Fahrzeugbrief sollten Sie sich auf jeden Fall aushändigen lassen. Aus diesem geht die Besitzhistorie hervor und oftmals sind Bauteile oder Ausstattungen eingetragen, die aus dem neuen Dokument nicht hervorgehen. Besitzt Ihr Fahrzeug schon die aktuellen EU-Papiere, dann benötigen Sie kein Vollgutachten, falls Ihr Fahrzeug nicht länger als 7 Jahre stillgelegt war.`,
@@ -107,23 +108,14 @@ const FAQ = [
     {
         question: "Wann macht ein H-Kennzeichen Sinn?",
         answer: `H wie historisch: Ihr Oldtimer muss hierfür mindestens 30 Jahre alt sein und per Gutachten nachweisen, dass er der „Pflege des Kfz-technischen Kulturgutes“ zugeordnet werden kann. Das bedeutet, dass er im (gut erhaltenen) Originalzustand sein muss. Außerdem: Freie Fahrt in Feinstaubzonen!
-            Begehrt unter Oldtimer-Fans: Das historische Kennzeichen mit dem H am äußeren rechten Schilderrand – gültig für alle Fahrzeuge, die 30 Jahre und älter sind. Das Befahren von innerstädtischen Umweltzonen ist grundsätzlich gestattet. Alle Benziner mit Erstzulassung vor dem 01.07.1969 sowie Dieselfahrzeuge vor dem 01.07.1976 sind ohnehin von der Pflicht zur Abgasuntersuchung befreit. Das H-Kennzeichen wird in den Papieren mit der Schlüsselnummer „098“ vermerkt.
+            Alle Benziner mit Erstzulassung vor dem 01.07.1969 sowie Dieselfahrzeuge vor dem 01.07.1976 sind ohnehin von der Pflicht zur Abgasuntersuchung befreit. Das H-Kennzeichen wird in den Papieren mit der Schlüsselnummer „098“ vermerkt.
 
             <h3>Kfz-Steuer</h3>Der Steuersatz wird pauschal erhoben:
             EUR 191,73 p.a. für Kraftfahrzeuge\nEUR 46,00 p.a. für Krafträder
             
             <h3>Voraussetzungen</h3>Ihr Oldtimer muss vor mindestens 30 Jahren erstmals in den Verkehr gekommen sein und nach § 9 (1) der seit 1.3.2007 geltenden Fahrzeug-Zulassungsverordnung von einem amtlich anerkannten Sachverständigen, Prüfer oder Prüfingenieur (z.B. bei DEKRA, GTÜ, KÜS oder TÜV) ein Gutachten für die Einstufung eines Fahrzeugs als Oldtimer vorweisen können. Dabei wird festgestellt, ob sich das Fahrzeug weitgehend im Originalzustand befindet. Ein fremder Motor, eine moderne HiFi-Anlage, Sportsitze oder ein schlechter Erhaltungszustand können die Erteilung verhindern. Das Gutachten belegt, dass Ihr Fahrzeug der „Pflege des Kfz-technischen Kulturgutes“ zugeordnet werden kann. Der Gesamteindruck wird sozusagen mitbewertet.
             
-            <h3>An- und Abmeldung</h3>Wie bei einem regulären schwarzen Kennzeichen kann die Dauer der Zulassung frei gewählt werden. Die Kfz-Steuer wird taggenau abgerechnet. Viele Oldtimer-Fahrer verzichten aufgrund des günstigen Steuersatzes auf die Abmeldung über Winter.
-            Heiner Blaskewitz
-            Versicherungsfachmann (BWV)
-            Bahnhofstraße 35
-            29614 Soltau
-            Tel. 05191- 931 31 99
-            Mobil. 0172 - 5 11 36 11
-            Fax. 05191- 973 90 26
-            E-Mail: info@belmot-oldtimerversicherung.de
-            Internet: belmot-oldtimerversicherung.de`,
+            <h3>An- und Abmeldung</h3>Wie bei einem regulären schwarzen Kennzeichen kann die Dauer der Zulassung frei gewählt werden. Die Kfz-Steuer wird taggenau abgerechnet. Viele Oldtimer-Fahrer verzichten aufgrund des günstigen Steuersatzes auf die Abmeldung über Winter.`,
     },
 ]
 

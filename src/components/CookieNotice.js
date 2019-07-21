@@ -1,12 +1,19 @@
 import React from "react"
 import CookieConsent from "react-cookie-consent"
 import { Link } from "gatsby"
+import styled from "styled-components"
+
+const StyledContainer = styled.div`
+    & > div {
+        display: flex;
+        align-items: center !important;
+    }
+`
 
 const CookieNotice = () => (
-    <div>
+    <StyledContainer>
         <CookieConsent
-            debug={true}
-            // disableStyles={true}
+            debug={false}
             location="none"
             buttonText="Verstanden"
             cookieName="Cookies-Notice-Accepted"
@@ -15,6 +22,7 @@ const CookieNotice = () => (
                 color: "var(--color-white)",
                 position: "relative",
                 zIndex: "0",
+                display: "flex",
             }}
             buttonStyle={{
                 background: "var(--color-white)",
@@ -32,7 +40,7 @@ const CookieNotice = () => (
                 Mehr erfahren
             </Link>
         </CookieConsent>
-    </div>
+    </StyledContainer>
 )
 
 export default CookieNotice

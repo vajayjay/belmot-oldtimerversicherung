@@ -40,7 +40,7 @@ const IconOn = styled.div`
     & > svg {
         width: 20px;
         height: 20px;
-        fill: var(--color-primary);
+        fill: var(--color-warning);
         @media (min-width: 769px) {
             width: 30px;
             height: 30px;
