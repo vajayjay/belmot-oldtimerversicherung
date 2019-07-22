@@ -7,6 +7,7 @@ import "../theme/forms.css"
 
 import SEO from "../components/Seo"
 import TextInput from "../components/TextInput"
+import { device } from "../theme/breakpoints"
 
 const StyledSection = styled.section`
     background: var(--color-lighter);
@@ -27,7 +28,7 @@ const StyledSectionH2 = styled.h2`
 `
 const MobileDisclaimer = styled.p`
     /* padding: var(--space-l) var(--space-side); */
-    @media (min-width: 500px) {
+    @media ${device.tablet} {
         display: none;
     }
 `

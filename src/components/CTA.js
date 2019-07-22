@@ -3,6 +3,7 @@ import styled, { keyframes } from "styled-components"
 import { Link } from "gatsby"
 import Icon from "../components/layout/Icon"
 import { ICONS } from "../theme/Icons"
+import { device } from "../theme/breakpoints"
 
 /*Animation for StyledCTA container*/
 const bounce = keyframes`
@@ -11,7 +12,7 @@ const bounce = keyframes`
 `
 
 const StyledCTA = styled(Link)`
-    @media (max-width: 768px) {
+    @media ${device.tablet} {
         display: none;
     }
 
@@ -36,7 +37,7 @@ const StyledCTA = styled(Link)`
     font-size: 18px; /*This causes wrong left margin*/
     font-weight: 500;
 
-    @media (max-width: 768px) {
+    @media ${device.tablet} {
         display: none;
     }
 

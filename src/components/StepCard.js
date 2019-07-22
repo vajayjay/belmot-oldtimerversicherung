@@ -1,5 +1,6 @@
 import React from "react"
 import styled from "styled-components"
+import { device } from "../theme/breakpoints"
 
 const StyledCard = styled.div`
     /* max-width: 500px; */
@@ -27,7 +28,7 @@ const ColoredSide = styled.div`
         font-size: 30px;
         font-weight: 700;
         color: var(--color-white);
-        @media (min-width: 768px) {
+        @media ${device.tablet} {
             font-size: 40px;
         }
     }

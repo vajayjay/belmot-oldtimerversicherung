@@ -5,6 +5,7 @@ import Img from "gatsby-image"
 import styled from "styled-components"
 import Icon from "../components/layout/Icon"
 import { ICONS } from "../theme/Icons"
+import { device } from "../theme/breakpoints"
 import NumberOfReviews from "../components/NumberOfReviews"
 
 const StyledHero = styled.section`
@@ -16,7 +17,7 @@ const StyledImg = styled(Img)`
     height: 50vw;
     /* min-width: 100%; */
 
-    @media (min-width: 769px) {
+    @media ${device.tablet} {
         min-height: 500px;
         height: 80vh;
     }
@@ -39,7 +40,7 @@ const HeadlineContainer = styled.div`
         box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.25);
     }
     /*Desktop styles*/
-    @media (min-width: 769px) {
+    @media ${device.tablet} {
         position: absolute;
         top: 20vh;
         max-width: 450px;
@@ -67,7 +68,7 @@ const RatingContainer = styled.div`
         display: flex;
         flex-wrap: wrap;
         align-items: center;
-        @media (min-width: 769px) {
+        @media ${device.tablet} {
             width: 100%;
         }
     }
@@ -82,7 +83,7 @@ const RatingContainer = styled.div`
         align-items: center;
         justify-content: center;
         background: var(--color-primary-dark);
-        @media (min-width: 769px) {
+        @media ${device.tablet} {
             display: none;
         }
     }

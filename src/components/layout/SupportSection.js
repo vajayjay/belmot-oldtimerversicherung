@@ -4,7 +4,6 @@ import styled from "styled-components"
 const StyledSupportSection = styled.section`
     width: 100%;
     max-width: 1500px;
-    /* margin: auto; */
     display: flex;
     flex-basis: 1;
     flex-wrap: wrap;

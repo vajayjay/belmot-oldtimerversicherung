@@ -3,9 +3,10 @@ import React from "react"
 import styled from "styled-components"
 import Icon from "../components/layout/Icon"
 import { ICONS } from "../theme/Icons"
+import { device } from "../theme/breakpoints"
 
 const StyledFetaures = styled.section`
-    @media (min-width: 798px) {
+    @media ${device.tablet} {
         display: grid;
         grid-template-columns: 1fr 1fr;
     }
@@ -16,7 +17,7 @@ const StyledFetaures = styled.section`
         background: var(--color-lighter);
     }
     hyphens: auto;
-    @media (min-width: 600px) {
+    @media ${device.tablet} {
         hyphens: none;
     }
 `
@@ -45,7 +46,7 @@ const StyledIcon = styled.div`
         fill: var(--color-primary);
         max-width: 18px;
     }
-    @media (min-width: 798px) {
+    @media ${device.tablet} {
         margin-top: -2px;
         & > svg {
             fill: var(--color-primary);

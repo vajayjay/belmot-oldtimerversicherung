@@ -2,6 +2,7 @@ import React from "react"
 import { StaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 import styled from "styled-components"
+import { device } from "../theme/breakpoints"
 
 const StyledSection = styled.section`
     display: flex;
@@ -25,18 +26,19 @@ const ContentContainer = styled.div`
     align-items: center;
     text-align: center;
 
-    @media (min-width: 100px) {
+    /* @media (min-width: 100px) {
         padding: 1rem 0;
-    }
+    } */
 
     & > div {
         padding: var(--space-l) var(--space-side);
-        max-width: 600px;
+        max-width: 650px;
+        overflow: visible;
     }
     & p {
         margin-bottom: var(--space-m);
     }
-    @media (min-width: 1000px) {
+    @media ${device.laptop} {
         text-align: left;
     }
 `
@@ -51,7 +53,11 @@ const Schutzbrief = props => (
         </div>
         <ContentContainer>
             <div>
-                <h2>Restaurierungsversicherung</h2>
+                <h2>
+                    Restaurierungs
+                    <wbr />
+                    versicherung
+                </h2>
                 <p>
                     Sorgen Sie dafür, dass Ihr Oldtimer bereits vor seinem
                     ersten großen Auftritt in sicheren Händen ist – mit der

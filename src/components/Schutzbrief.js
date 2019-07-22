@@ -2,6 +2,7 @@ import React from "react"
 import { StaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 import styled from "styled-components"
+import { device } from "../theme/breakpoints"
 
 const StyledSection = styled.section`
     display: flex;
@@ -16,7 +17,7 @@ const StyledSection = styled.section`
         & > div {
             height: 100%;
         }
-        @media (min-width: 1000px) {
+        @media ${device.laptop} {
             order: 2;
         }
     }
@@ -28,9 +29,9 @@ const ContentContainer = styled.div`
     align-items: center;
     text-align: center;
 
-    @media (min-width: 100px) {
+    /* @media (min-width: 100px) {
         padding: 1rem 0;
-    }
+    } */
 
     & > div {
         padding: var(--space-l) var(--space-side);
@@ -39,7 +40,7 @@ const ContentContainer = styled.div`
     & p {
         margin-bottom: var(--space-m);
     }
-    @media (min-width: 1000px) {
+    @media ${device.laptop} {
         text-align: left;
     }
 `
@@ -77,7 +78,7 @@ export default props => (
             query {
                 imageOne: file(relativePath: { eq: "schutzbrief.jpg" }) {
                     childImageSharp {
-                        fluid(maxWidth: 1000) {
+                        fluid(maxWidth: 1024) {
                             ...GatsbyImageSharpFluid_withWebp
                         }
                     }

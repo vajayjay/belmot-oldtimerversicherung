@@ -4,6 +4,7 @@ import StandardLayout from "../components/pagelayouts/StandardLayout"
 import AnfrageFormular from "../components/AnfrageFormular"
 import styled from "styled-components"
 import "../theme/forms.css"
+import { device } from "../theme/breakpoints"
 
 import SEO from "../components/Seo"
 
@@ -23,7 +24,7 @@ const StyledForm = styled.div`
 const MobileDisclaimer = styled.p`
     padding-top: var(--space-l);
 
-    @media (min-width: 500px) {
+    @media ${device.tablet} {
         display: none;
     }
 `

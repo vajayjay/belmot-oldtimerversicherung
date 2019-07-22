@@ -2,6 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import Icon from "../components/layout/Icon"
 import { ICONS } from "../theme/Icons"
+import { device } from "../theme/breakpoints"
 
 const StyledIcon = styled.div`
     margin-top: -5px;
@@ -10,7 +11,7 @@ const StyledIcon = styled.div`
         fill: var(--color-primary);
         max-width: 18px;
     }
-    @media (min-width: 798px) {
+    @media ${device.tablet} {
         margin-top: -2px;
         & > svg {
             fill: var(--color-primary);
@@ -21,7 +22,7 @@ const StyledIcon = styled.div`
 
 const StyledContent = styled.section`
     padding: var(--space-v) 0;
-    @media (min-width: 1000px) {
+    @media ${device.laptop} {
         display: grid;
         grid-template-columns: 1fr 1fr;
         & > h2 {
@@ -36,7 +37,7 @@ const StyledContent = styled.section`
         padding: 0 var(--space-side);
     }
     hyphens: auto;
-    @media (min-width: 600px) {
+    @media ${device.tablet} {
         hyphens: none;
     }
 `

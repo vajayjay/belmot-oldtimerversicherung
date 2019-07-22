@@ -24,12 +24,7 @@ const ContentContainer = styled.div`
         background: var(--color-success);
     }
 
-    /* @media (min-width: 1000px) {
-        max-width: none;
-        display: grid;
-        grid-template-columns: repeat(3, minmax(250px, 500px));
-        grid-column-gap: 24px;
-    } */
+
 `
 
 const NextSteps = props => (

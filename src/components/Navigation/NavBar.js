@@ -4,6 +4,7 @@ import { Link } from "gatsby"
 import BurgerButton from "./BurgerButton"
 import logo from "../../../content/images/logo.svg"
 import Button from "../../components/Button"
+import { device } from "../../theme/breakpoints"
 
 const Nav = styled.nav`
     position: fixed;
@@ -22,7 +23,7 @@ const Nav = styled.nav`
     font-size: var(--small);
 
     /*Nav bar on desktop*/
-    @media (min-width: 769px) {
+    @media ${device.tablet} {
         height: 100px;
         padding-left: 34px;
         padding-right: 22px;
@@ -34,7 +35,7 @@ const Nav = styled.nav`
     }
 
     /*Hide BurgerButton on Dektop*/
-    @media (min-width: 769px) {
+    @media ${device.tablet} {
         & > :last-child {
             display: none;
         }
@@ -42,17 +43,18 @@ const Nav = styled.nav`
 `
 const StyledLogo = styled.img`
     height: 34px;
-    @media (min-width: 769px) {
+    @media ${device.tablet} {
         height: 36px;
     }
 `
 
 const DesktopLinks = styled.div`
     /*Hide Dekstop Nav links on mobile*/
-    @media (max-width: 768px) {
-        display: none;
-    }
+    display: none;
 
+    @media ${device.tablet} {
+        display: inline-block;
+    }
     /*Desktop Nav links*/
     & > a {
         color: var(--color-darker);

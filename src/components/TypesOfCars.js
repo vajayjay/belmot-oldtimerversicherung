@@ -1,6 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import TypeCard from "../components/TypeCard"
+import { device } from "../theme/breakpoints"
 
 // Define Data for cards
 const CARS = [
@@ -69,7 +70,7 @@ const ContentContainer = styled.div`
         content: "";
     }
 
-    @media (min-width: 769px) {
+    @media ${device.tablet} {
         grid-template-columns:
             var(--space-side)
             repeat(${CARS.length}, 230px)

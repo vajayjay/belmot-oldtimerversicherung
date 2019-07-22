@@ -2,6 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import { ICONS } from "../theme/Icons"
 import Icon from "../components/layout/Icon"
+import { device } from "../theme/breakpoints"
 
 const StyledReview = styled.div`
     background: var(--color-white);
@@ -41,7 +42,7 @@ const IconOn = styled.div`
         width: 20px;
         height: 20px;
         fill: var(--color-warning);
-        @media (min-width: 769px) {
+        @media ${device.tablet} {
             width: 30px;
             height: 30px;
         }

@@ -4,6 +4,7 @@ import styled from "styled-components"
 import "../../theme/font-face.css"
 import "../../theme/variables.css"
 import "../../theme/styles.css"
+import { device } from "../../theme/breakpoints"
 
 import NavBar from "../Navigation/NavBar"
 import MobileMenu from "../Navigation/MobileMenu"
@@ -19,7 +20,7 @@ const StyledApp = styled.div`
 `
 const Main = styled.div`
     margin-top: 60px;
-    @media (min-width: 769px) {
+    @media ${device.tablet} {
         margin-top: 100px;
     }
 `

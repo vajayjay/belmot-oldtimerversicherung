@@ -3,6 +3,7 @@ import { StaticQuery, graphql } from "gatsby"
 import styled from "styled-components"
 import SingleReview from "../components/SingleReview"
 import Button from "../components/Button"
+import { device } from "../theme/breakpoints"
 
 const StyledSection = styled.section`
     background: var(--color-lighter);
@@ -23,7 +24,7 @@ const StyledReviews = styled.div`
     & > div {
         margin-bottom: var(--space-m);
 
-        @media (min-width: 900px) {
+        @media ${device.laptop} {
             display: flex;
             justify-content: center;
             align-items: center;

@@ -3,6 +3,7 @@ import { Formik, Form, Field, ErrorMessage } from "formik"
 import * as Yup from "yup"
 import { Link } from "gatsby"
 import styled from "styled-components"
+import { device } from "../theme/breakpoints"
 
 const StyledError = styled(ErrorMessage)`
     color: var(--color-error);
@@ -14,7 +15,7 @@ const StyledField = styled(Field)`
 const StyledH2 = styled.h2`
     font-size: 18px;
     margin: 40px 0 18px 0;
-    @media (min-width: 759px) {
+    @media ${device.tablet} {
         font-size: 24px;
     }
 `

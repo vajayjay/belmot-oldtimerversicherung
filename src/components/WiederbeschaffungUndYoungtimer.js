@@ -1,5 +1,6 @@
 import React from "react"
 import styled from "styled-components"
+import { device } from "../theme/breakpoints"
 
 const StyledContent = styled.section`
     display: grid;
@@ -8,7 +9,7 @@ const StyledContent = styled.section`
         order: 2;
     }
 
-    @media (min-width: 1000px) {
+    @media ${device.laptop} {
         grid-template-columns: 1fr 1fr;
 
         & > div:first-of-type {
@@ -23,7 +24,7 @@ const StyledContent = styled.section`
         background: var(--color-lighter);
     }
     hyphens: auto;
-    @media (min-width: 600px) {
+    @media ${device.tablet} {
         hyphens: none;
     }
 `

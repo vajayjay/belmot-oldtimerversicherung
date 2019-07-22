@@ -5,6 +5,7 @@ import styled from "styled-components"
 import StandardLayout from "../components/pagelayouts/StandardLayout"
 import SEO from "../components/Seo"
 import SingleReview from "../components/SingleReview"
+import { device } from "../theme/breakpoints"
 
 const StyledSection = styled.section`
     background: var(--color-lighter);
@@ -22,7 +23,7 @@ const StyledReviews = styled.div`
         column-gap: 1em;
         overflow: auto;
 
-        @media (min-width: 500px) {
+        @media ${device.tablet} {
             column-count: 2;
         }
         @media (min-width: 1200px) {
