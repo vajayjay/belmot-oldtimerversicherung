@@ -198,7 +198,7 @@ const CustomerRatingForm = props => (
 
             <label>
                 <span>Ihre Rezension</span>
-                <textarea name="fields[review]" rows="3" required />
+                <textarea name="fields[review]" required />
             </label>
 
             <StyledButton>Absenden</StyledButton>

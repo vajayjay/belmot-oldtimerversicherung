@@ -50,7 +50,15 @@ textarea {
     font-weight: 600;
     display: block;
     width: 100%;
+}
+label > input[type="text"],
+label > input[type="tel"],
+label > input[type="password"],
+label > input[type="email"] {
     height: 56px;
+}
+textarea {
+    height: 150px;
 }
 
 label > input[type="text"]:focus,
