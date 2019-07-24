@@ -335,7 +335,7 @@ const AnfrageFormular = () => (
             initialValues={{
                 "bot-field": "",
                 "form-name": "anfrage",
-                anrede: "herr",
+                anrede: "Herr",
                 vorname: "",
                 nachname: "",
                 geburtsdatum: "",
@@ -407,7 +407,7 @@ const AnfrageFormular = () => (
                         <legend>Anrede *</legend>
                         <label>
                             <Field
-                                value="herr"
+                                value="Herr"
                                 type="radio"
                                 name="anrede"
                                 defaultChecked
@@ -803,7 +803,7 @@ const AnfrageFormular = () => (
                     </fieldset>
                     {values.originalzustand === "nein" && (
                         <label>
-                            <span>Welche Umbauten hat das Fahrzeug?</span>
+                            <span>Welche Umbauten hat das Fahrzeug? *</span>
                             <StyledField type="text" name="umbauten" />
                             <StyledError name="umbauten" component="div" />
                         </label>
