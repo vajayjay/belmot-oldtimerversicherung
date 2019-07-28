@@ -59,12 +59,11 @@ const DesktopLinks = styled.div`
     & > a {
         color: var(--color-darker);
         text-decoration: none;
-        text-transform: uppercase;
+        /* text-transform: uppercase; */
         font-weight: 500;
         letter-spacing: 1px;
         transition: all 100ms;
         margin-left: var(--space-l);
-        padding-bottom: 20px;
 
         :hover {
             transition: all 100ms;
@@ -76,6 +75,9 @@ const DesktopLinks = styled.div`
             padding-bottom: 37px;
             border-bottom: 4px solid var(--color-primary);
         }
+        & > a:not(:last-of-type) {
+            padding-bottom: 20px;
+        }
     }
     & > a:last-of-type {
         color: white;
@@ -83,7 +85,7 @@ const DesktopLinks = styled.div`
 `
 
 const StyledButton = styled(Button)`
-    margin-bottom: 0;
+    /* margin-bottom: 0; */
 `
 
 const NavBar = props => (
