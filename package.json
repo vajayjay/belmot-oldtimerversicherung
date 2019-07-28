@@ -4,6 +4,11 @@
   "description": "Gatsby landing page",
   "version": "0.1.0",
   "author": "Jannis Wicke",
+  "browserslist": [
+    ">0.25%",
+    "not IE",
+    "not dead"
+  ],
   "dependencies": {
     "babel-plugin-styled-components": "^1.10.0",
     "formik": "^1.5.8",
