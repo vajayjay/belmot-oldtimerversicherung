@@ -9,7 +9,6 @@
     "formik": "^1.5.8",
     "gatsby": "^2.13.18",
     "gatsby-image": "^2.1.2",
-    "gatsby-plugin-css-customs": "^0.3.0",
     "gatsby-plugin-manifest": "^2.1.1",
     "gatsby-plugin-offline": "^2.1.1",
     "gatsby-plugin-postcss": "^2.1.2",
