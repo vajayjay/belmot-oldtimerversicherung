@@ -16,7 +16,7 @@ const SecondPage = () => (
         >
             <ImpressumCopy />
             <br />
-            <Button link="/" primary>
+            <Button link="/" primary="primary">
                 Zurück zur Startseite
             </Button>
         </SupportSection>

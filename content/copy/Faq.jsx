@@ -40,7 +40,7 @@ const FAQ = [
     },
     {
         question: `Was ist eine Selbsteinschätzung bei der Oldtimerversicherung?`,
-        answer: `Das ist der von Ihnen persönlich definierte Wert Ihres Fahrzeugs. Bis zu einem Fahrzeugwert von 12.500 Euro akzeptiert BELMOT eine Selbsteinschätzung, bestehend aus Fotografie und ausgefülltem Formular. Der von Ihnen festgelegte Wert gilt dann als Versicherungssumme. Bitte fügen Sie einen aktuellen TÜV-Bericht und ggf. Rechnungen über Restaurationsmaßnahmen bei. Auch ein lückenlos gepflegtes Scheckheft gilt als Nachweis.
+        answer: `Das ist der von Ihnen persönlich definierte Wert Ihres Fahrzeugs. Bis zu einem Fahrzeugwert von 12.500 Euro akzeptiert BELMOT eine Selbsteinschätzung. Fotografie und ausgefülltes Formular genügen. Der von Ihnen festgelegte Wert gilt dann als Versicherungssumme. Bitte fügen Sie einen aktuellen TÜV-Bericht und – sofern vorhanden – Rechnungen über Restaurierungsmaßnahmen bei. Auch ein lückenlos gepflegtes Scheckheft gilt als Nachweis.
             
             <h3>Fakten:</h3>- Bis 12.500 Euro akzeptiert von BELMOT
             - Zustandsnoten
@@ -48,7 +48,8 @@ const FAQ = [
     },
     {
         question: "Was ist ein Kurzgutachten?",
-        answer: `Das Kurzgutachten entspricht einer Zustandseinstufung nach grober, äußerlicher Inaugenscheinnahme zum Zwecke der Wertfindung für die Versicherungseinstufung. Es werden weder eine Probefahrt durchgeführt noch technische Einzelheiten überprüft. Die Kosten belaufen sich auf rund 150 Euro zzgl. Gutachterkosten. Für ein Fahrzeug mit einem Versicherungswert über 100.000 Euro empfehlen wir ein ausführliches Wertgutachten.
+        answer: `Das Kurzgutachten ist eine Zustandseinstufung nach grober, äußerlicher Inaugenscheinnahme, um den Wert für die Versicherungseinstufung zu bestimmen. Es wird weder eine Probefahrt durchgeführt noch werden technische Einzelheiten überprüft.
+        Kosten: 150 Euro plus Gutachterkosten. Für ein Fahrzeug mit einem Versicherungswert über 100.000 Euro empfehlen wir ein ausführliches Wertgutachten.
             
             <h3>Fakten:</h3>- Beispiel-Kurzgutachten der FSP GmbH
             - Beispiel-Kurzgutachten der Classic Data GmbH
@@ -56,14 +57,18 @@ const FAQ = [
     },
     {
         question: "Was ist ein ausführliches Gutachten?",
-        answer: `Das ausführliche Gutachten, auch „großes Wertgutachten“ genannt, geht detailliert auf das zu bewertende Fahrzeug ein und berücksichtigt die gesamte Modellgeschichte und die Fahrzeugtechnik. Wertbeeinflussende Faktoren, wie z.B. Rennhistorie oder prominenter Vorbesitzer, fließen ebenfalls in die Wertermittlung mit ein. Die Kosten für ein ausführliches Wertgutachten beginnen bei 300 Euro. Für sehr seltene Fahrzeuge mit großem Recherchebedarf ist mit Kosten ab 800 Euro zu rechnen.
+        answer: `Das ausführliche Gutachten, auch „großes Wertgutachten“ genannt, geht detailliert auf das zu bewertende Fahrzeug ein und berücksichtigt die gesamte Modellgeschichte und die Fahrzeugtechnik. Wertbeeinflussende Faktoren, wie z. B. Rennhistorie oder prominenter Vorbesitzer, fließen ebenfalls in die Wertermittlung mit ein. Die Kosten für ein ausführliches Wertgutachten beginnen bei 300 Euro. Für sehr seltene Fahrzeuge mit großem Recherche- bedarf ist mit Kosten ab 800 Euro zu rechnen.
 
         <h3>Fakten:</h3>- Berücksichtigung von Historie und Technik
         - Empfehlenswert bei einem Versicherungswert ab 100.000 Euro`,
     },
     {
+        question: "Was ist eine restaurierungsbegleitendes Wertgutachten?",
+        answer: `Vom Umfang her identisch mit einem ausführlichen Wertgutachten – jedoch setzt die Bewertung hier bereits in der Phase der Restauration an. Eine individuelle Besprechung mit dem Gutachter im Vorfeld ist empfehlenswert. Im Idealfall erfolgt die Begutachtung nach Abschluss der einzelnen Teilprozesse der Restauration, wie Instandsetzung von Karosserie, Technik und Lack. Eine „haut- nahe“ Qualitätsprüfung der durchgeführten Arbeiten am zerlegten Fahrzeug ist somit gewährleistet. Die Kosten für ein solches Gutachten liegen bei mindestens 800 Euro.`,
+    },
+    {
         question: "Welches Gutachten macht Sinn?",
-        answer: `Bei der Lackpolitur wählen Sie doch auch nur das Beste. Setzen Sie daher auch bei der Bewertung Ihres „Lieblings“ auf ein „großes Wertgutachten“ durch einen sachverständigen Gutachter mit einer fundierten Aussage zum Zustand und zur Substanz des Fahrzeugs. Dies ist nach Restaurierungen oder umfangreichen Reparaturen,vor allem nach einem Zubehör-Einbau, wichtig. Darauf aufbauend kann jederzeit durch ein Kurzgutachten der neue Wert aktualisiert werden. Sinnvoll ist auch die regelmäßige Prüfung der Wertentwicklung vergleichbarer Modelle.`,
+        answer: `Setzen Sie auch bei der Bewertung Ihres Oldtimers auf ein „großes Wertgutachten“ von einem sachverständigen Gutachter mit einer fundierten Bewertung des Zustands und der Substanz des Fahrzeugs. Dies ist nach Restaurierungen oder umfangreichen Reparaturen, vor allem nach einem Zubehöreinbau, wichtig. Darauf aufbau- end kann jederzeit durch ein Kurzgutachten der Wert aktualisiert werden. Sinnvoll ist auch die regelmäßige Prüfung der Wertentwicklung vergleichbarer Modelle.`,
     },
     {
         question: "Welcher Wert ist der richtige?",

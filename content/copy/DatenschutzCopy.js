@@ -1,10 +1,18 @@
 import React from "react"
+import styled from "styled-components"
+
+const StyledList = styled.ul`
+    list-style: disc;
+    padding-left: 24px;
+`
+const StyledTable = styled.table`
+    font-size: 14px;
+`
 
 const DatenschutzCopy = () => (
     <div>
-        <h2>Datenschutzhinweise  des  Websitebetreibers</h2>
+        <h2>Datenschutzhinweise des Websitebetreibers</h2>
         <br />
-
         <h3>
             I. Hinweise im Zusammenhang mit der Agenturtätigkeit für die
             Manneimer Versicherung AG
@@ -18,7 +26,6 @@ const DatenschutzCopy = () => (
             Rechte.
         </p>
         <br />
-
         <h4>
             2. Verantwortlicher für die Datenverarbeitung / Kontakt zum
             Datenschutzbeauftragten
@@ -40,14 +47,11 @@ const DatenschutzCopy = () => (
             E-Mail: heiner@blaskewitz.com
         </p>
         <br />
-
         <h4>3. Zweck und Rechtsgrundlagen der Datenverarbeitung</h4>
         <p>
-            <b>
-                Eine Beratung sowie der Abschluss bzw. die Betreuung von
-                Versicherungen ist ohne die Verarbeitung Ihrer personenbezogenen
-                Daten nicht möglich.
-            </b>
+            Eine Beratung sowie der Abschluss bzw. die Betreuung von
+            Versicherungen ist ohne die Verarbeitung Ihrer personenbezogenen
+            Daten nicht möglich.
         </p>
         <p>
             Wir verarbeiten Ihre personenbezogenen Daten unter Beachtung der
@@ -62,27 +66,36 @@ const DatenschutzCopy = () => (
             unter www.mannheimer.de/datenschutz abrufen.
         </p>
         <p>
-            <b>
-                Die Ausübung unserer Tätigkeiten als Versicherungsvermittler ist
-                nicht möglich ohne die Verarbeitung Ihrer personenbezogenen
-                Daten einschließlich Daten der besonderen Art (z. B.
-                Gesundheitsdaten).
-            </b>
+            Die Ausübung unserer Tätigkeiten als Versicherungsvermittler ist
+            nicht möglich ohne die Verarbeitung Ihrer personenbezogenen Daten
+            einschließlich Daten der besonderen Art (z. B. Gesundheitsdaten).
             <br />
             Diese benötigen wir für:
-            <br />- die Ermittlung Ihrer Bedürfnisse hinsichtlich
-            Versicherungsprodukten,
-            <br />- die Beratung im Rahmen der Vermittlung von
-            Versicherungsprodukten,
-            <br />- die Erfüllung unserer gesetzlichen Dokumentationspflichten,
-            <br />- Angebotsberechnungen,
-            <br />- Vorbereitungshandlungen und Abschlüsse von
-            Versicherungsanträgen und -angeboten,
-            <br />- Tätigkeiten während der Dauer des Versicherungsverhältnisses
-            (Mitwirkung bei der Vertragsverwaltung und -erfüllung, insbesondere
-            im Schaden-/Leistungsfall sowie bei einer Vertragsanpassung,
-            -ergänzung oder für umfassende Auskunftserteilungen).
         </p>
+        <StyledList>
+            <li>
+                die Ermittlung Ihrer Bedürfnisse hinsichtlich
+                Versicherungsprodukten,
+            </li>
+            <li>
+                die Beratung im Rahmen der Vermittlung von
+                Versicherungsprodukten,
+            </li>
+            <li>die Erfüllung unserer gesetzlichen Dokumentationspflichten,</li>
+            <li>Angebotsberechnungen,</li>
+            <li>
+                Vorbereitungshandlungen und Abschlüsse von Versicherungsanträgen
+                und -angeboten,
+            </li>
+            <li>
+                Tätigkeiten während der Dauer des Versicherungsverhältnisses
+                (Mitwirkung bei der Vertragsverwaltung und -erfüllung,
+                insbesondere im Schaden-/Leistungsfall sowie bei einer
+                Vertragsanpassung, -ergänzung oder für umfassende
+                Auskunftserteilungen).
+            </li>
+        </StyledList>
+
         <p>
             Rechtsgrundlage für diese Verarbeitungen personenbezogener Daten für
             vorvertragliche und vertragliche Zwecke ist Art. 6
@@ -97,27 +110,32 @@ const DatenschutzCopy = () => (
             oder von Dritten zu wahren (Art. 6 Abs. 1 lit. f DS-GVO). Dies kann
             insbesondere erforderlich sein
         </p>
-        <p>- zur Gewährleistung der IT-Sicherheit und des IT-Betriebs,</p>
-        <p>
-            - zur Geltendmachung rechtlicher Ansprüche und Verteidigung bei
-            rechtlichen Streitigkeiten,
-        </p>
-        <p>- zur Aktualisierung von Adressdaten,</p>
-        <p>- zur Verhinderung von Straftaten,</p>
-        <p>
-            - bei Videoüberwachungen zur Wahrung des Hausrechts, zur Sammlung
-            von Beweismitteln bei Überfällen und Betrugsdelikten,
-        </p>
-        <p>
-            - bei Maßnahmen, die der Gebäude- und Anlagensicherheit dienen
-            (z. B. Zutrittskontrollen),
-        </p>
-        <p>- bei Maßnahmen zur Sicherstellung des Hausrechts,</p>
-        <p>
-            - zur Werbung für Produkte des Continentale Versicherungsverbunds
-            und seiner Kooperationspartner sowie für Markt- und
-            Meinungsumfragen.
-        </p>
+        <StyledList>
+            <li>zur Gewährleistung der IT-Sicherheit und des IT-Betriebs,</li>
+            <li>
+                zur Geltendmachung rechtlicher Ansprüche und Verteidigung bei
+                rechtlichen Streitigkeiten,
+            </li>
+            <li>zur Aktualisierung von Adressdaten,</li>
+            <li>zur Verhinderung von Straftaten,</li>
+            <li>
+                bei Videoüberwachungen zur Wahrung des Hausrechts, zur Sammlung
+                von Beweismitteln bei Überfällen und Betrugsdelikten,
+            </li>
+            <li>
+                bei Maßnahmen, die der Gebäude- und Anlagensicherheit dienen
+                (z. B. Zutrittskontrollen),
+            </li>
+            <li>bei Maßnahmen zur Sicherstellung des Hausrechts,</li>
+            <li>
+                zur Werbung für Produkte des Continentale Versicherungsverbunds
+                und seiner Kooperationspartner sowie für Markt- und
+                Meinungsumfragen.
+            </li>
+        </StyledList>
+        <p />
+        <p />
+        <p />
         <p>
             Ist die Verarbeitung zur Wahrung eines berechtigten Interesses
             erforderlich, stellen wir sicher, dass die Interessen, Grundrechte
@@ -142,13 +160,11 @@ const DatenschutzCopy = () => (
             informieren.
         </p>
         <br />
-
         <h4>
             4. Kategorien und Einzelne Stellen von Empfängern der
             personenbezogenen Daten
         </h4>
         <br />
-
         <h5>4.1 Externe Dienstleister</h5>
         <p>
             Wir bedienen uns zur Erfüllung unserer vertraglichen und
@@ -175,7 +191,6 @@ const DatenschutzCopy = () => (
             personenbezogenen Daten mit Versicherern erfolgen.
         </p>
         <br />
-
         <h4>5. Datenübermittlung in ein Drittland</h4>
         <p>
             Zur Prüfung und Erfüllung unserer vertraglichen Verpflichtung und
@@ -194,7 +209,6 @@ const DatenschutzCopy = () => (
             auf einer Einwilligung von Ihnen beruht.
         </p>
         <br />
-
         <h4>6. Dauer der Speicherung Ihrer Daten</h4>
         <p>
             Wir löschen Ihre personenbezogenen Daten, sobald sie für die oben
@@ -219,23 +233,13 @@ const DatenschutzCopy = () => (
             Ihnen bereitgestellten Daten in einem strukturierten, gängigen und
             maschinenlesbaren Format zustehen.
         </p>
-        <table>
-            <tbody>
-                <tr>
-                    <td valign="top">
-                        <b>
-                            Sie haben das Recht, einer Verarbeitung Ihrer
-                            personenbezogenen Daten zu Zwecken der Direktwerbung
-                            zu widersprechen. Verarbeiten wir Ihre Daten zur
-                            Wahrung berechtigter Interessen, können Sie dieser
-                            Verarbeitung widersprechen, wenn sich aus Ihrer
-                            besonderen Situation Gründe ergeben, die gegen die
-                            Datenverarbeitung sprechen.
-                        </b>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
+        <p>
+            Sie haben das Recht, einer Verarbeitung Ihrer personenbezogenen
+            Daten zu Zwecken der Direktwerbung zu widersprechen. Verarbeiten wir
+            Ihre Daten zur Wahrung berechtigter Interessen, können Sie dieser
+            Verarbeitung widersprechen, wenn sich aus Ihrer besonderen Situation
+            Gründe ergeben, die gegen die Datenverarbeitung sprechen.
+        </p>
         <p>
             Sie haben die Möglichkeit, sich mit einer Beschwerde an den oben
             genannten Verantwortlichen für die Datenverarbeitung oder, sofern
@@ -245,15 +249,14 @@ const DatenschutzCopy = () => (
         <p>
             Die Landesbeauftragte für den Datenschutz Niedersachsen
             <br />
-            Prinzenstr. 5 30159
-            <br /> Hannover
+            Prinzenstr. 5 <br />
+            30159 Hannover
             <br /> 0511 / 120-4500
             <br /> 0511 / 120-4599
             <br />
             E-Mail: poststelle@lfd.niedersachsen.de
         </p>
         <br />
-
         <h4>8. Aktualisierung der Datenschutzhinweise</h4>
         <p>
             Diese Datenschutzhinweise können aufgrund von Änderungen, z. B. der
@@ -263,7 +266,6 @@ const DatenschutzCopy = () => (
             genannten Verantwortlichen für die Datenverarbeitung.
         </p>
         <br />
-
         <h3>
             II. Weitere Hinweise im Zusammenhang mit den Webseiteninhalten und
             Funktionen
@@ -300,7 +302,6 @@ const DatenschutzCopy = () => (
             Cookies deaktiviert haben.
         </p>
         <br />
-
         <h4>2. Erbringung kostenpflichtiger Leistungen</h4>
         <p>
             Zur Erbringung kostenpflichtiger Leistungen werden von uns
@@ -309,7 +310,6 @@ const DatenschutzCopy = () => (
             Systemen bis die gesetzlichen Aufbewahrungsfristen abgelaufen sind.
         </p>
         <br />
-
         <h4>3. SSL-Verschlüsselung</h4>
         <p>
             Um die Sicherheit Ihrer Daten bei der Übertragung zu schützen,
@@ -317,7 +317,6 @@ const DatenschutzCopy = () => (
             Verschlüsselungsverfahren (z. B. SSL) über HTTPS.
         </p>
         <br />
-
         <h4>4. Kommentarfunktion</h4>
         <p>
             Wenn Nutzer Kommentare auf unserer Website hinterlassen, werden
@@ -328,23 +327,23 @@ const DatenschutzCopy = () => (
             Benutzer erstellt wurden.
         </p>
         <br />
-
-        <h4>5. Kontaktformular</h4>
+        <h4>5. Kontakt- und Anfrageformular </h4>
         <p>
             Treten Sie bzgl. Fragen jeglicher Art per E-Mail oder
-            Kontaktformular mit uns in Kontakt, erteilen Sie uns zum Zwecke der
-            Kontaktaufnahme Ihre freiwillige Einwilligung. Hierfür ist die
-            Angabe einer validen E-Mail-Adresse erforderlich. Diese dient der
-            Zuordnung der Anfrage und der anschließenden Beantwortung derselben.
-            Die Angabe weiterer Daten ist optional. Die von Ihnen gemachten
-            Angaben werden zum Zwecke der Bearbeitung der Anfrage sowie für
-            mögliche Anschlussfragen gespeichert. Nach Erledigung der von Ihnen
-            gestellten Anfrage werden personenbezogene Daten automatisch
-            gelöscht.
+            Kontakt-/Anfrageformular mit uns in Kontakt, erteilen Sie uns zum
+            Zwecke der Kontaktaufnahme Ihre freiwillige Einwilligung. Hierfür
+            ist die Angabe einer validen E-Mail-Adresse erforderlich. Diese
+            dient der Zuordnung der Anfrage und der anschließenden Beantwortung
+            derselben. Die Angabe weiterer Daten ist optional. Die von Ihnen
+            gemachten Angaben werden zum Zwecke der Bearbeitung der Anfrage
+            sowie für mögliche Anschlussfragen gespeichert. Nach Erledigung der
+            von Ihnen gestellten Anfrage werden personenbezogene Daten
+            automatisch gelöscht.
         </p>
         <br />
-
-        <h4>6. Verwendung von Google Analytics</h4>
+        <h3>Eingesetzte Dienste und Diensteanbieter:</h3>
+        <br />
+        <h4>1. Verwendung von Google Analytics</h4>
         <p>
             Diese Website benutzt Google Analytics, einen Webanalysedienst der
             Google Inc. (folgend: Google). Google Analytics verwendet sog.
@@ -384,29 +383,36 @@ const DatenschutzCopy = () => (
             und auf Ihre Nutzung der Webseite bezogenen Daten (inkl. Ihrer
             IP-Adresse) an Google sowie die Verarbeitung dieser Daten durch
             Google verhindern, indem sie das unter dem folgenden Link verfügbare
-            Browser-Plugin herunterladen und installieren: Browser Add On zur
-            Deaktivierung von Google Analytics.
+            Browser-Plugin herunterladen und installieren:{" "}
+            <a href="https://tools.google.com/dlpage/gaoptout?hl=de">
+                Browser Add On zur Deaktivierung von Google Analytics
+            </a>
+            .
         </p>
         <p>
             Zusätzlich oder als Alternative zum Browser-Add-On können Sie das
             Tracking durch Google Analytics auf unseren Seiten unterbinden,
-            indem Sie diesen Link anklicken: Google Analytics deaktivieren.
+            indem Sie diesen Link anklicken: 
+            <a href="javascript:gaOptout();">Google Analytics deaktivieren</a>.
             Dabei wird ein Opt-Out-Cookie auf Ihrem Gerät installiert. Damit
             wird die Erfassung durch Google Analytics für diese Website und für
             diesen Browser zukünftig verhindert, so lange das Cookie in Ihrem
             Browser installiert bleibt.
         </p>
         <br />
-        <h4>7. Verwendung von Scriptbibliotheken (Google Webfonts)</h4>
+        <h4>2. Verwendung von Scriptbibliotheken (Google Webfonts)</h4>
         <p>
             Um unsere Inhalte browserübergreifend korrekt und grafisch
             ansprechend darzustellen, verwenden wir auf dieser Website
             Scriptbibliotheken und Schriftbibliotheken wie z. B. Google Webfonts
-            (https://www.google.com/webfonts/). Google Webfonts werden zur
-            Vermeidung mehrfachen Ladens in den Cache Ihres Browsers übertragen.
-            Falls der Browser die Google Webfonts nicht unterstützt oder den
-            Zugriff unterbindet, werden Inhalte in einer Standardschrift
-            angezeigt.
+            (
+            <a href="https://www.google.com/webfonts/">
+                https://www.google.com/webfonts/
+            </a>
+            ). Google Webfonts werden zur Vermeidung mehrfachen Ladens in den
+            Cache Ihres Browsers übertragen. Falls der Browser die Google
+            Webfonts nicht unterstützt oder den Zugriff unterbindet, werden
+            Inhalte in einer Standardschrift angezeigt.
         </p>
         <p>
             Der Aufruf von Scriptbibliotheken oder Schriftbibliotheken löst
@@ -417,11 +423,13 @@ const DatenschutzCopy = () => (
         </p>
         <p>
             Die Datenschutzrichtlinie des Bibliothekbetreibers Google finden Sie
-            hier: https://www.google.com/policies/privacy/
+            hier:{" "}
+            <a href="https://www.google.com/policies/privacy/">
+                https://www.google.com/policies/privacy/
+            </a>
         </p>
         <br />
-
-        <h4>8. Eingebettete YouTube-Videos</h4>
+        <h4>3. Eingebettete YouTube-Videos</h4>
         <p>
             Auf einigen unserer Webseiten betten wir Youtube-Videos ein.
             Betreiber der entsprechenden Plugins ist die YouTube, LLC, 901
@@ -452,19 +460,50 @@ const DatenschutzCopy = () => (
                 https://www.google.de/intl/de/policies/privacy/
             </a>
         </p>
+        <h4>4. Netlify</h4>
+        <p>
+            Diese Website nutzt für Hosting und die Übermittlung von Formularen
+            Netlify, einen Dienst der Netlify Inc., 2325 3rd Street, Suite 215,
+            San Francisco, California 94107, USA. Dabei können Kundendaten
+            übermittelt werden. Weitere Informationen zum Datenschutz bei
+            Netlify finden Sie unter:{" "}
+            <a href="https://www.netlify.com/privacy/">
+                https://www.netlify.com/privacy/
+            </a>
+        </p>
+        <h4>5. Zapier</h4>
+        <p>
+            Zur automatisierten Beantwortung Ihrer Anfragen nutzen wir Zapier,
+            einen Dienst der Zapier Inc., 548 Market St #62411, San Francisco,
+            California 94104, USA. Dabei können Kundendaten übermittelt werden.
+            Weitere Informationen zum Datenschutz bei Zapier finden Sie unter:{" "}
+            <a href="https://zapier.com/privacy/">
+                https://zapier.com/privacy/
+            </a>
+            .
+        </p>
+        <h4>6. HotJar</h4>
+        <p>
+            Diese Website nutzt HotJar für Testing des Nutzerverhaltens und zur
+            Optimierung der Userexperience, ein Dienst von HotJar Ltd.,Level 2,
+            St Julian’s Business Centre, 3, Elia Zammit Street, St Julian’s STJ
+            1000, Malta. Weitere Informationen zum Datenschutz bei HotJar finden
+            Sie unter:{" "}
+            <a href="https://www.hotjar.com/privacy">
+                https://www.hotjar.com/privacy
+            </a>
+        </p>
         <p>
             ____________________________________________________________________________________________________________
         </p>
+
+        <h3>Anhang: </h3>
         <p>
-            <b>
-                Anhang: Unternehmen des Continentale Versicherungsverbunds auf
-                Gegenseitigkeit, die untereinander auch als Auftragnehmer und
-                Kooperationspartner tätig werden und eine zentrale
-                Datenverarbeitung vornehmen sowie Dienstleister und
-                Auftragnehmer der{" "}
-            </b>
-            <b>HV/GA/SD/BD XY der Mannheimer Versicherung AG</b>
-            <b>.</b>
+            Unternehmen des Continentale Versicherungsverbunds auf
+            Gegenseitigkeit, die untereinander auch als Auftragnehmer und
+            Kooperationspartner tätig werden und eine zentrale Datenverarbeitung
+            vornehmen sowie Dienstleister und Auftragnehmer der HV/GA/SD/BD XY
+            der Mannheimer Versicherung AG.
         </p>
         <p>
             Die folgende Liste nennt die Unternehmen des Continentale
@@ -486,7 +525,6 @@ const DatenschutzCopy = () => (
             Kooperationspartner tätig werden und eine zentrale Datenverarbeitung
             vornehmen:
         </p>
-
         <h5>Continentale Krankenversicherung a.G.</h5>
         <p>
             Rechenzentrum, Rechnungswesen, Inkasso, Exkasso, Forderungseinzug,
@@ -497,14 +535,12 @@ const DatenschutzCopy = () => (
             Schaden-/Leistungsbearbeitung, Aktenentsorgung, Druck- und
             Versanddienstleistungen, zentrale Datenverarbeitung
         </p>
-
         <h5>Continentale Sachversicherung AG</h5>
         <p>
             Antrags-, Vertrags- und Schaden-/Leistungsbearbeitung, Interner
             Service (Empfang, Telefonservice, Postservice inklusive Scannen und
             Zuordnen von Eingangspost), zentrale Datenverarbeitung
         </p>
-
         <h5>Continentale Lebensversicherung AG</h5>
         <p>
             Antrags-, Vertrags- und Schaden-/Leistungsbearbeitung, Interner
@@ -512,29 +548,25 @@ const DatenschutzCopy = () => (
             Zuordnen von Eingangspost), Darlehensverwaltung, zentrale
             Datenverarbeitung
         </p>
-
         <h5>EUROPA Versicherung AG</h5>
         <p>
             Antrags-, Vertrags- und Schaden-/Leistungsbearbeitung, Interner
             Service (Empfang, Telefonservice, Postservice inklusive Scannen und
             Zuordnen von Eingangspost), zentrale Datenverarbeitung
         </p>
-
         <h5>EUROPA Lebensversicherung AG</h5>
         <p>
             Antrags-, Vertrags- und Schaden-/Leistungsbearbeitung, Interner
             Service (Empfang, Telefonservice, Postservice inklusive Scannen und
             Zuordnen von Eingangspost), zentrale Datenverarbeitung
         </p>
-
         <h5>Mannheimer Versicherung AG</h5>
         <p>
             Antrags-, Vertrags- und Schaden-/Leistungsbearbeitung, Interner
             Service (Empfang, Telefonservice, Postservice inklusive Scannen und
             Zuordnen von Eingangspost), zentrale Datenverarbeitung
         </p>
-
-        <table>
+        <StyledTable>
             <tbody>
                 <tr>
                     <td valign="top">
@@ -571,8 +603,9 @@ const DatenschutzCopy = () => (
                     <td valign="top">Ja, teilweise</td>
                 </tr>
             </tbody>
-        </table>
-        <table>
+        </StyledTable>
+        <br />
+        <StyledTable>
             <tbody>
                 <tr>
                     <td valign="top">
@@ -666,12 +699,14 @@ const DatenschutzCopy = () => (
                     <td valign="top">Ja, teilweise</td>
                 </tr>
             </tbody>
-        </table>
-        <p>Stand 05.2018</p>
+        </StyledTable>
         <br />
-        <h3>Datenschutzhinweise der Agentur</h3>
+        <small>Stand 05.2018</small>
         <br />
-
+        <br />
+        <br />
+        <h2>Datenschutzhinweise der Agentur</h2>
+        <br />
         <h4>1. Allgemeines</h4>
         <p>
             Hiermit informieren wir Sie über die Verarbeitung Ihrer
@@ -683,7 +718,6 @@ const DatenschutzCopy = () => (
             www.mannheimer.de/datenschutz.
         </p>
         <br />
-
         <h4>
             2. Verantwortlicher für die Datenverarbeitung/Kontakt zum
             Datenschutzbeauftragten
@@ -699,7 +733,6 @@ const DatenschutzCopy = () => (
             unter datenschutz@mannheimer.de
         </p>
         <br />
-
         <h4>3. Zweck und Rechtsgrundlagen der Datenverarbeitung</h4>
         <p>
             Wir verarbeiten Ihre personenbezogenen Daten unter Beachtung der
@@ -787,7 +820,6 @@ const DatenschutzCopy = () => (
             (Art. 13 Abs. 4 und 14 Abs. 5 DS-GVO).
         </p>
         <br />
-
         <h4>
             4. Kategorien und Einzelne Stellen von Empfängern der
             personenbezogenen Daten
