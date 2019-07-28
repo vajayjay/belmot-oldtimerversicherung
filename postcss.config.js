@@ -9,7 +9,7 @@ module.exports = () => ({
             stage: 0,
         }),
         postcssCustomProperties({
-            preserve: false,
+            preserve: true,
             importFrom: "src/theme/variables.css",
         }),
     ],
