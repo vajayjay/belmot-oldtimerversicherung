@@ -36,7 +36,7 @@ module.exports = {
             options: {
                 host: "https://belmot-oldtimerversicherung.de",
                 sitemap: "https://belmot-oldtimerversicherung.de/sitemap.xml",
-                policy: [{ userAgent: "*", disallow: "/" }],
+                policy: [{ userAgent: "*", allow: "/" }],
             },
         },
         {

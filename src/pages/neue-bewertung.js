@@ -25,7 +25,9 @@ class IndexPage extends React.Component {
                         `Oldtimerversicherung`,
                         `Youngtimer`,
                         `Oldtimer`,
+                        `Bewerten`,
                     ]}
+                    index="noindex"
                 />
                 <StyledSection>
                     <StyledContent>

@@ -9,7 +9,7 @@ import Button from "../components/Button"
 
 const SecondPage = () => (
     <AlternativeLayout>
-        <SEO title="Impressum" />
+        <SEO title="Impressum" index="noindex" />
         <SupportSection
             h1={<h1>Impressum</h1>}
             // p={<p>Subline.</p>}

@@ -8,7 +8,7 @@ import SectionCenteredFullHeight from "../components/layout/SectionCenteredFullH
 
 const NotFoundPage = () => (
     <StandardLayout>
-        <SEO title="404: Not found" />
+        <SEO title="404: Nicht gefunden" index="noindex" />
         <SectionCenteredFullHeight>
             <h1>Diese Seite konnte leider nicht gefunden werden.</h1>
             <p>

@@ -49,7 +49,7 @@ class IndexPage extends React.Component {
             <AlternativeLayout>
                 <SEO
                     title="Kontakt"
-                    keywords={[`gatsby`, `application`, `react`]}
+                    keywords={[`Belmot`, `Oldtimerversicherung`, `Kontakt`, `Heiner Blaskewitz` ]}
                 />
                 <SupportSection
                     h1={<h1>Kontakt</h1>}

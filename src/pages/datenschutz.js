@@ -9,7 +9,7 @@ import DatenschutzCopy from "../../content/copy/DatenschutzCopy"
 
 const SecondPage = () => (
     <AlternativeLayout>
-        <SEO title="Datenschutz" />
+        <SEO title="Datenschutz" index="noindex" />
         <SupportSection
             h1={<h1>Datenschutz</h1>}
             // p={<p>Ich behandle ihre Daten mit Vorsicht.</p>}

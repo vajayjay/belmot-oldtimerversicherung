@@ -41,6 +41,9 @@ const CarPool = props => (
                 `Oldtimerversicherung`,
                 `Youngtimer`,
                 `Oldtimer`,
+                `Kundenmeinungen`,
+                `Bewertungen`,
+                `Review`,
             ]}
         />
         <StyledSection>

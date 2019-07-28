@@ -39,6 +39,7 @@ class IndexPage extends React.Component {
                         `Oldtimerversicherung Anfrage`,
                         `individuelle Anfrage`,
                     ]}
+                    index="noindex"
                 />
                 <StyledSection>
                     <StyledForm>

@@ -11,10 +11,7 @@ class IndexPage extends React.Component {
     render() {
         return (
             <StandardLayout>
-                <SEO
-                    title="Online-Anfrage"
-                    keywords={[`gatsby`, `application`, `react`]}
-                />
+                <SEO title="Bewertung abeschickt" index="noindex" />
                 <SectionCenteredFullHeight>
                     <h1>Vielen Dank für Ihre Bewertung!</h1>
                     <p>

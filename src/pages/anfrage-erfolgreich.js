@@ -10,10 +10,7 @@ class IndexPage extends React.Component {
     render() {
         return (
             <StandardLayout>
-                <SEO
-                    title="Online-Anfrage"
-                    keywords={[`gatsby`, `application`, `react`]}
-                />
+                <SEO title="Online-Anfrage erfolgreich" index="noindex" />
                 <SectionCentered gradient>
                     <h1>Vielen Dank für Ihre Anfrage!</h1>
                     <p>

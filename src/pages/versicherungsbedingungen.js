@@ -15,9 +15,9 @@ class IndexPage extends React.Component {
                     keywords={[
                         `Belmot`,
                         `Oldtimerversicherung`,
-                        `Fragen`,
-                        `Antworten`,
+                        `Versicherungsbedingungen`,
                     ]}
+                    index="noindex"
                 />
                 <SupportSection
                     h1={
