@@ -10,57 +10,32 @@ const FAQ = [
     },
     {
         question: "Was versteht man unter dem Begriff Marktwert?",
-        answer: `Rund 75% der deutschen Oldtimerpolicen legen den sogenannten Marktwert zugrunde. Bei seltener gehandelten Fahrzeugmodellen und bei Fahrzeugen, die schwerpunktmäßig gewerblich vertrieben werden, fließen auch der Handel (als Nettobetrag), die internationalen Auktionsergebnisse (ohne MwSt.) sowie die internationale Marktsituation mit in den Marktwert ein.
-            
-            <h3>Fakten:</h3>- Durchschnittspreis am privaten Oldtimermarkt
-            - MwSt.-neutral
-            - Basiswert bei der Mehrzahl deutscher Oldtimer-Versicherer`,
+        answer: `Rund 75% der deutschen Oldtimerpolicen legen den sogenannten Marktwert zugrunde. Bei seltener gehandelten Fahrzeugmodellen und bei Fahrzeugen, die schwerpunktmäßig gewerblich vertrieben werden, fließen auch der Handel (als Nettobetrag), die internationalen Auktionsergebnisse (ohne MwSt.) sowie die internationale Marktsituation mit in den Marktwert ein.`,
     },
     {
         question: "Was ist der Wiederbeschaffungswert?",
-        answer: `Im Gegensatz zum Marktwert geht der Wiederbeschaffungswert von einer „kurzfristigen Wiederbeschaffung“ aus. Er wird definiert aus dem Betrag, der tatsächlich für den Kauf eines gleichartigen und gleichwertigen Ersatzfahrzeugs aufgewendet werden muss. Somit berücksichtigt er den Fahrzeugkauf bei einem Händler.
-    
-        <h3>Fakten:</h3>- Enthält über die Mehrwertsteuer hinaus auch die Händlergewinnspanne
-        - Berücksichtigt eine kurzfristige Ersatzbeschaffung`,
+        answer: `Im Gegensatz zum Marktwert geht der Wiederbeschaffungswert von einer „kurzfristigen Wiederbeschaffung“ aus. Er wird definiert aus dem Betrag, der tatsächlich für den Kauf eines gleichartigen und gleichwertigen Ersatzfahrzeugs aufgewendet werden muss. Somit berücksichtigt er den Fahrzeugkauf bei einem Händler.`,
     },
     {
         question: "Was versteht man unter Wiederaufbauwert?",
-        answer: `Berücksichtigt die Tatsache, dass die Kosten für ein restauriertes Fahrzeug weitaus höher sind als die zu erzielenden durchschnittlichen Marktwerte. Es fließen die Restaurations- sowie die Anschaffungskosten eines restaurierungsfähigen Basisfahrzeugs mit ein. Es handelt sich um einen hypothetischen Wert für ein Fahrzeug in Originalzustand.
-            
-            <h3>Fakten:</h3>- Orientiert sich an den durchschnittlichen Arbeitsstundensätzen, Ersatzteilkosten und Restaurierungszeiten
-            - Versicherbar bis zu 100% über den Wiederbeschaffungswert hinaus`,
+        answer: `Berücksichtigt die Tatsache, dass die Kosten für ein restauriertes Fahrzeug weitaus höher sind als die zu erzielenden durchschnittlichen Marktwerte. Es fließen die Restaurations- sowie die Anschaffungskosten eines restaurierungsfähigen Basisfahrzeugs mit ein. Es handelt sich um einen hypothetischen Wert für ein Fahrzeug in Originalzustand.`,
     },
     {
         question: "Was sind die Wiederherstellungskosten?",
-        answer: `Die Wiederherstellungskosten beziffern den Betrag, der aufgebracht wurde, um das Fahrzeug in den aktuellen Zustand zu versetzen – also die Summe aus Anschaffungs- und Restaurationskosten. Die sicht- oder belegbaren Investitionen der Restauration ergeben die Differenz zum Wiederbeschaffungswert.
-            
-            <h3>Fakten:</h3>- Deckt die tatsächlich entstandenen Kosten einer Restauration
-            - Dient als Beleg für langwierige und aufwendige Restaurationen
-            - Spiegelt nicht die Marktsituation wider`,
+        answer: `Die Wiederherstellungskosten beziffern den Betrag, der aufgebracht wurde, um das Fahrzeug in den aktuellen Zustand zu versetzen – also die Summe aus Anschaffungs- und Restaurationskosten. Die sicht- oder belegbaren Investitionen der Restauration ergeben die Differenz zum Wiederbeschaffungswert.`,
     },
     {
         question: `Was ist eine Selbsteinschätzung bei der Oldtimerversicherung?`,
-        answer: `Das ist der von Ihnen persönlich definierte Wert Ihres Fahrzeugs. Bis zu einem Fahrzeugwert von 12.500 Euro akzeptiert BELMOT eine Selbsteinschätzung. Fotografie und ausgefülltes Formular genügen. Der von Ihnen festgelegte Wert gilt dann als Versicherungssumme. Bitte fügen Sie einen aktuellen TÜV-Bericht und – sofern vorhanden – Rechnungen über Restaurierungsmaßnahmen bei. Auch ein lückenlos gepflegtes Scheckheft gilt als Nachweis.
-            
-            <h3>Fakten:</h3>- Bis 12.500 Euro akzeptiert von BELMOT
-            - Zustandsnoten
-            - <a href="../Selbsteinschaetzung.pdf" target="_blank" rel="noopener noreferrer">Selbsteinschätzungs-Formular</a>`,
+        answer: `Das ist der von Ihnen persönlich definierte Wert Ihres Fahrzeugs. Bis zu einem Fahrzeugwert von 12.500 Euro akzeptiert BELMOT eine Selbsteinschätzung. Fotografie und ausgefülltes Formular genügen. Der von Ihnen festgelegte Wert gilt dann als Versicherungssumme. Bitte fügen Sie einen aktuellen TÜV-Bericht und – sofern vorhanden – Rechnungen über Restaurierungsmaßnahmen bei. Auch ein lückenlos gepflegtes Scheckheft gilt als Nachweis.`,
     },
     {
         question: "Was ist ein Kurzgutachten?",
         answer: `Das Kurzgutachten ist eine Zustandseinstufung nach grober, äußerlicher Inaugenscheinnahme, um den Wert für die Versicherungseinstufung zu bestimmen. Es wird weder eine Probefahrt durchgeführt noch werden technische Einzelheiten überprüft.
-        Kosten: 150 Euro plus Gutachterkosten. Für ein Fahrzeug mit einem Versicherungswert über 100.000 Euro empfehlen wir ein ausführliches Wertgutachten.
-            
-            <h3>Fakten:</h3>- Beispiel-Kurzgutachten der FSP GmbH
-            - Beispiel-Kurzgutachten der Classic Data GmbH
-            - Zustandsnoten`,
+        Kosten: 150 Euro plus Gutachterkosten. Für ein Fahrzeug mit einem Versicherungswert über 100.000 Euro empfehlen wir ein ausführliches Wertgutachten.`,
     },
     {
         question: "Was ist ein ausführliches Gutachten?",
-        answer: `Das ausführliche Gutachten, auch „großes Wertgutachten“ genannt, geht detailliert auf das zu bewertende Fahrzeug ein und berücksichtigt die gesamte Modellgeschichte und die Fahrzeugtechnik. Wertbeeinflussende Faktoren, wie z. B. Rennhistorie oder prominenter Vorbesitzer, fließen ebenfalls in die Wertermittlung mit ein. Die Kosten für ein ausführliches Wertgutachten beginnen bei 300 Euro. Für sehr seltene Fahrzeuge mit großem Recherche- bedarf ist mit Kosten ab 800 Euro zu rechnen.
-
-        <h3>Fakten:</h3>- Berücksichtigung von Historie und Technik
-        - Empfehlenswert bei einem Versicherungswert ab 100.000 Euro`,
+        answer: `Das ausführliche Gutachten, auch „großes Wertgutachten“ genannt, geht detailliert auf das zu bewertende Fahrzeug ein und berücksichtigt die gesamte Modellgeschichte und die Fahrzeugtechnik. Wertbeeinflussende Faktoren, wie z. B. Rennhistorie oder prominenter Vorbesitzer, fließen ebenfalls in die Wertermittlung mit ein. Die Kosten für ein ausführliches Wertgutachten beginnen bei 300 Euro. Für sehr seltene Fahrzeuge mit großem Recherche- bedarf ist mit Kosten ab 800 Euro zu rechnen.`,
     },
     {
         question: "Was ist eine restaurierungsbegleitendes Wertgutachten?",
@@ -121,6 +96,10 @@ const FAQ = [
             <h3>Voraussetzungen</h3>Ihr Oldtimer muss vor mindestens 30 Jahren erstmals in den Verkehr gekommen sein und nach § 9 (1) der seit 1.3.2007 geltenden Fahrzeug-Zulassungsverordnung von einem amtlich anerkannten Sachverständigen, Prüfer oder Prüfingenieur (z.B. bei DEKRA, GTÜ, KÜS oder TÜV) ein Gutachten für die Einstufung eines Fahrzeugs als Oldtimer vorweisen können. Dabei wird festgestellt, ob sich das Fahrzeug weitgehend im Originalzustand befindet. Ein fremder Motor, eine moderne HiFi-Anlage, Sportsitze oder ein schlechter Erhaltungszustand können die Erteilung verhindern. Das Gutachten belegt, dass Ihr Fahrzeug der „Pflege des Kfz-technischen Kulturgutes“ zugeordnet werden kann. Der Gesamteindruck wird sozusagen mitbewertet.
             
             <h3>An- und Abmeldung</h3>Wie bei einem regulären schwarzen Kennzeichen kann die Dauer der Zulassung frei gewählt werden. Die Kfz-Steuer wird taggenau abgerechnet. Viele Oldtimer-Fahrer verzichten aufgrund des günstigen Steuersatzes auf die Abmeldung über Winter.`,
+    },
+    {
+        question: "Wie melde ich einen Schaden?",
+        answer: `Bitte nehmen Sie telefonisch oder per E-Mail Kontakt mit mir auf.`,
     },
 ]
 
