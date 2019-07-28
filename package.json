@@ -6,7 +6,7 @@
   "author": "Jannis Wicke",
   "browserslist": [
     ">0.25%",
-    "not IE",
+    "not IE > 0",
     "not dead"
   ],
   "dependencies": {
