@@ -15,6 +15,14 @@ module.exports = {
                 path: `${__dirname}/content/images`,
             },
         },
+        `gatsby-plugin-postcss`,
+        {
+            resolve: `gatsby-plugin-css-customs`,
+            // defaults
+            options: {
+                cssModules: false,
+            },
+        },
         `gatsby-transformer-sharp`,
         `gatsby-plugin-sharp`,
         {
