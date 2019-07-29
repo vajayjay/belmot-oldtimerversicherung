@@ -1,2 +1,47 @@
 # Redirect default Netlify subdomain to primary domain
 https://hungry-wilson-001a08.netlify.com/* https://belmot-oldtimerversicherung.de/:splat 301!
+
+# Redirect to form page 
+/online-anfrageformular/ /anfrage  301
+
+# Redirect FAQ pages
+/faq-items/page/2/ /faq  301
+/faq-items/ist-ein-kurzgutachten/ /faq  301
+/faq-items/sind-die-wiederherstellungskosten/ /faq  301
+/faq-items/versteht-man-unter-wiederaufbauwert/ /faq  301
+/faq-items/ist-ein-ausfuehrliches-gutachten/ /faq  301
+/faq-items/welches-gutachten-macht-sinn/ /faq  301
+/faq-items/wann-macht-ein-h-kennzeichen-sinn/ /faq  301
+/faq-items/wann-macht-ein-saison-kennzeichen-sinn/ /faq  301
+/faq-items/ist-eine-selbsteinschaetzung-bei-der-oldtimerversicherung/ /faq  301
+
+
+# Old pages that got deleted
+/oldtimer-versicherung/  410
+/news/  410
+/author/thiemo/  410
+/4804-2/  410
+/ueber-mich/  410
+/slide/home/  410
+/category/uncategorized/  410  
+/hello-world/  410
+/portfolio-items/  410
+/belmot-produktionformationsblatt-schutzbrief/  410
+/vergleich-risk-grunddeckung/  410
+/wp-content/uploads/2015/02/Gesetzesauszüge-01_15.pdf  410
+/wp-content/uploads/2014/10/Vorbemerkung.pdf  410
+/wp-content/uploads/2014/10/Infoblatt-Versicherungswerte.pdf  410
+/wp-content/uploads/2017/06/BELMOT-Produktinformationsblatt-Haftpflicht-10_2016.pdf  410
+/wp-content/uploads/2017/06/BELMOT-Produktionformationsblatt-Kasko-10_2016.pdf  410
+/wp-content/uploads/2017/06/BELMOT-Allgemeine-Versicherungsbedingungen-2013-10_2016.pdf  410
+/wp-content/uploads/2014/10/Kundeninformation-gemäß-§-7-VVG.pdf  410
+/restauriert-gestohlen-aber-nicht-versichert/  410
+/belmot-oldtimerversicherung-de-ist-online/  410
+/sonderausstellung-im-ps-speicher-einbeck/  410
+/ueber-1-mio-euro-durch-oldtimerspendenaktion/  410
+/wp-content/uploads/2014/10/Selbsteinschätzung.pdf  410
+/happy-birthday-60-jahre-mercedes-190-sl/  410
+/lange-standzeit-des-oldies-worauf-ist-zu-achten/  410
+/wp-content/uploads/2014/10/BELMOT-Produktionformationsblatt-Haftpflicht.pdf  410
+/wp-content/uploads/2014/10/BELMOT-Produktionformationsblatt-Kasko.pdf  410
+/wp-content/uploads/2018/10/Vergleich-Allrisk-zu-Grunddeckung.pdf  410
