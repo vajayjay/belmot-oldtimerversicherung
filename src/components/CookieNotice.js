@@ -18,6 +18,7 @@ const CookieNotice = () => (
             buttonText="Verstanden"
             cookieName="Cookies-Notice-Accepted"
             style={{
+                background: "#2a72d3",
                 background: "var(--color-primary",
                 color: "var(--color-white)",
                 position: "relative",

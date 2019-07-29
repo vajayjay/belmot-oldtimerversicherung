@@ -28,6 +28,7 @@ const ContactLink = styled.a`
 `
 
 const ContactIcon = styled.div`
+    background: #2a72d3;
     background: var(--color-primary);
     min-width: 60px;
     min-height: 60px;
@@ -49,7 +50,12 @@ class IndexPage extends React.Component {
             <AlternativeLayout>
                 <SEO
                     title="Kontakt"
-                    keywords={[`Belmot`, `Oldtimerversicherung`, `Kontakt`, `Heiner Blaskewitz` ]}
+                    keywords={[
+                        `Belmot`,
+                        `Oldtimerversicherung`,
+                        `Kontakt`,
+                        `Heiner Blaskewitz`,
+                    ]}
                 />
                 <SupportSection
                     h1={<h1>Kontakt</h1>}

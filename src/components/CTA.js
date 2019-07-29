@@ -51,6 +51,7 @@ const StyledCTA = styled(Link)`
         display: flex;
         align-items: center;
         justify-content: center;
+        background: #2a72d3;
         background: var(--color-primary);
         transition: all 200ms cubic-bezier(0.075, 0.82, 0.165, 1);
 

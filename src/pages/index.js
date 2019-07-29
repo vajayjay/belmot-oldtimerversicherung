@@ -10,7 +10,7 @@ import Fuhrpark from "../components/Fuhrpark"
 import Restaurierung from "../components/Restaurierung"
 import Schutzbrief from "../components/Schutzbrief"
 import TypesOfCars from "../components/TypesOfCars"
-import Vergleich from "../components/Vergleich"
+// import Vergleich from "../components/Vergleich"
 import CTA from "../components/CTA"
 import PreviewCustomerReviews from "../components/PreviewCustomerReviews"
 import OldtimerIstLeidenschaft from "../components/OldtimerIstLeidenschaft"
@@ -40,7 +40,7 @@ class IndexPage extends React.Component {
                 <DarumBelmot />
                 <TypesOfCars />
                 <OldtimerIstLeidenschaft />
-                <Vergleich />
+                {/* <Vergleich /> */}
                 <Benefit />
                 <Fuhrpark />
                 <Schutzbrief />

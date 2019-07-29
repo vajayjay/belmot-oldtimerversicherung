@@ -21,6 +21,7 @@ const StyledH2 = styled.h2`
 `
 const Button = styled.button`
     display: inline-block;
+    background: #2a72d3;
     background: var(--color-primary);
     border: none;
     color: var(--color-white);
@@ -74,22 +75,22 @@ const FormSchema = Yup.object().shape({
         .min(4, "Ihre Eingabe ist zu kurz")
         .required("Dieses Feld ist ein Pflichtfeld"),
     strasse: Yup.string()
-        .min(4, "Ihre Eingabe ist zu kurz")
+        .min(3, "Ihre Eingabe ist zu kurz")
         .required("Dieses Feld ist ein Pflichtfeld"),
     plz: Yup.string()
         .min(4, "Ihre Eingabe ist zu kurz")
         .required("Dieses Feld ist ein Pflichtfeld"),
     ort: Yup.string()
-        .min(4, "Ihre Eingabe ist zu kurz")
+        .min(2, "Ihre Eingabe ist zu kurz")
         .required("Dieses Feld ist ein Pflichtfeld"),
     email: Yup.string()
         .email("Ihre Eingabe ist keine vollständige E-Mail-Adresse")
         .required("Dieses Feld ist ein Pflichtfeld"),
     mitglied: Yup.string().required("Dieses Feld ist ein Pflichtfeld"),
     oldtimerclub: Yup.string(),
-    kennzeichen: Yup.string()
-        .min(4, "Ihre Eingabe ist zu kurz")
-        .required("Dieses Feld ist ein Pflichtfeld"),
+    kennzeichen: Yup.string(),
+    // .min(, "Ihre Eingabe ist zu kurz")
+    // .required("Dieses Feld ist ein Pflichtfeld"),
     farbe: Yup.string().required("Dieses Feld ist ein Pflichtfeld"),
     historisch: Yup.string(),
     saison: Yup.string(),

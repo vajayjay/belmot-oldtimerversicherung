@@ -20,8 +20,8 @@ class IndexPage extends React.Component {
                         bitte Ihren Spamfilter. Falls auch dort keine E-Mail
                         vorhanden ist nehmen Sie bitte direkten Kontakt zu mir
                         auf:{" "}
-                        <a href="mailto:info@instrumentenversicherung.online">
-                            info@instrumentenversicherung.online
+                        <a href="mailto:info@belmot-oldtimerversicherung.de">
+                            info@belmot-oldtimerversicherung.de
                         </a>
                     </p>
                 </SectionCentered>

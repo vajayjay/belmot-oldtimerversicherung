@@ -52,6 +52,7 @@ const RatingRadio = styled.input`
 const StyledButton = styled.button`
     margin-top: var(--space-m);
     display: inline-block;
+    background: #2a72d3;
     background: var(--color-primary);
     border: 2px solid var(--color-primary);
     color: var(--color-white);

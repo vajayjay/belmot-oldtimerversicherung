@@ -15,6 +15,7 @@ const Nav = styled.nav`
     left: 0;
     height: 60px;
     width: 100%;
+    background: white;
     background: var(--color-white);
     box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
     overflow: hidden;
@@ -67,10 +68,12 @@ const DesktopLinks = styled.div`
 
         :hover {
             transition: all 100ms;
+            color: #2a72d3;
             color: var(--color-primary);
         }
 
         &.active {
+            color: #2a72d3;
             color: var(--color-primary);
             padding-bottom: 37px;
             border-bottom: 4px solid var(--color-primary);
@@ -86,6 +89,7 @@ const DesktopLinks = styled.div`
 
 const StyledButton = styled(Button)`
     /* margin-bottom: 0; */
+    background: blue;
 `
 
 const NavBar = props => (

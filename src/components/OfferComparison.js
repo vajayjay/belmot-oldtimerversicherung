@@ -22,6 +22,7 @@ const StyledButton = styled(Link)`
     display: flex;
     justify-content: center;
     align-items: center;
+    background: #2a72d3;
     background: var(--color-primary);
     font-size: 14px;
     font-weight: 500;

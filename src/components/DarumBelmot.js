@@ -31,6 +31,7 @@ const StyledIcon = styled.div`
     margin-top: -5px;
     margin-right: var(--space-s);
     & > svg {
+        fill: #2a72d3;
         fill: var(--color-primary);
         max-width: 18px;
     }

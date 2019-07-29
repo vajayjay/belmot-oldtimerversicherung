@@ -5,7 +5,7 @@ import { device } from "../../theme/breakpoints"
 const StyledContent = styled.section`
     width: 100%;
     background: var(--color-primary);
-    padding: var(--space-v) var(--space-side) var(--space-l);
+    padding: var(--space-v) var(--space-side);
     display: flex;
     flex-direction: column;
     justify-content: center;
