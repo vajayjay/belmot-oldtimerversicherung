@@ -46,6 +46,12 @@ const HeadlineContainer = styled.div`
         max-width: 450px;
         margin-left: var(--space-side);
     }
+    @media ${device.desktop} {
+        position: absolute;
+        top: 20vh;
+        max-width: 650px;
+        margin-left: var(--space-side);
+    }
 `
 
 /*Blue area with customer ratings*/
@@ -57,6 +63,9 @@ const RatingContainer = styled.div`
     span {
         font-weight: 500;
         color: var(--color-white);
+        @media ${device.desktop} {
+            font-size: 1.2rem;
+        }
     }
     /*stars and text container*/
     & > div {
@@ -92,57 +101,6 @@ const RatingContainer = styled.div`
         height: 30%;
     }
 `
-/*Animation for Learn more/scrolldown container*/
-// const bounce = keyframes`
-//   from {transform: translateY(0);}
-//   to {transform: translateY(3px);}
-// `
-
-/*Lern more/scrolldown container on desktop*/
-// const LearnMore = styled.a`
-//     @media (max-width: 768px) {
-//         display: none;
-//     }
-
-//     position: absolute;
-//     bottom: 0;
-//     margin-left: var(--space-side);
-//     cursor: pointer;
-//     background: var(--color-white);
-//     text-decoration: none;
-//     display: flex;
-//     align-items: center;
-//     /* text-transform: uppercase; */
-//     font-size: 18px; /*This causes wrong left margin*/
-//     font-weight: 500;
-//     color: var(--color-darker);
-
-//     & > span {
-//         margin: 0 40px;
-//     }
-//     /*Blue arrow container*/
-//     & > div {
-//         height: 80px;
-//         width: 80px;
-//         display: flex;
-//         align-items: center;
-//         justify-content: center;
-//         background: var(--color-primary);
-//         transition: all 200ms cubic-bezier(0.075, 0.82, 0.165, 1);
-
-//         & > svg {
-//             fill: white;
-//             height: 30%;
-//         }
-//     }
-//     :hover div {
-//         background: var(--color-primary-dark);
-//         transition: background 200ms cubic-bezier(0.075, 0.82, 0.165, 1);
-//     }
-//     :hover svg {
-//         animation: 300ms ${bounce} ease-in alternate infinite;
-//     }
-// `
 
 const Hero = props => (
     <StyledHero>

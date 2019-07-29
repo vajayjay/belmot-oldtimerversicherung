@@ -1,30 +1,16 @@
 import React from "react"
 import styled from "styled-components"
-// import Pkw from '../../content/images/pkw.svg'
-// import ImageSource from `../../content/images/${this.props.type}.svg`
-
 import Card from "../components/layout/Card"
+import { device } from "../theme/breakpoints"
 
-// const StyledTypeCard = styled.div`
-//     background: var(--color-white);
-//     box-shadow: 0px 3px 15px rgba(58, 71, 143, 0.05);
-//     text-align: center;
-//     padding: 30px 1vw 40px 1vw;
-//     display: flex;
-//     flex-direction: column;
-//     align-items: center;
-
-//     & > span {
-//         font-size: var(--small);
-//         color: var(--color-dark);
-//         margin-top: 1rem;
-//         font-size: 14px;
-//     }
-// `
 const Circle = styled.div`
     background: var(--color-lighter);
     min-height: 120px;
     width: 120px;
+    @media ${device.desktop} {
+        height: 200px;
+        width: 200px;
+    }
     border-radius: 100%;
     display: flex;
     align-items: center;
@@ -34,6 +20,9 @@ const Circle = styled.div`
 `
 const StyledImage = styled.img`
     max-height: 34px;
+    @media ${device.desktop} {
+        max-height: 54px;
+    }
 `
 
 const TypeCard = props => (

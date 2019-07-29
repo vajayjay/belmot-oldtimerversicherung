@@ -59,6 +59,7 @@
     :root {
         --small: 16px;
         --font-size: 20px;
+        --h4: 20px;
         --h3: 20px;
         --h2: 31px;
         --h1: 44px;
@@ -67,11 +68,13 @@
     }
 }
 
-@media (min-width: 1800px) {
+@media (min-width: 2560px) {
     :root {
+        --small: 18px;
         --font-size: 1.45rem;
         --nav-height: 90px;
         font-size: 1.45rem;
+        --h4: 26px;
         --h3: 29px;
         --h2: 45px;
         --h1: 64px;

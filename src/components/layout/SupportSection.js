@@ -1,5 +1,6 @@
 import React from "react"
 import styled from "styled-components"
+import { device } from "../../theme/breakpoints"
 
 const StyledSupportSection = styled.section`
     width: 100%;
@@ -7,8 +8,13 @@ const StyledSupportSection = styled.section`
     display: flex;
     flex-basis: 1;
     flex-wrap: wrap;
+    margin: auto;
+
     @media (min-width: 1195px) {
         padding-top: 100px;
+    }
+    @media ${device.dekstop} {
+        max-width: 2200px;
     }
 `
 
@@ -44,8 +50,11 @@ const MainContentBox = styled.div`
     width: 100%;
     padding: var(--space-side);
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-    @media (min-width: 1195px) {
+    /* @media (min-width: 1195px) {
         max-width: 900px;
+    } */
+    @media ${device.dekstop} {
+        max-width: 1500px;
     }
 `
 

@@ -21,6 +21,9 @@ const ContentContainer = styled.div`
     @media ${device.tablet} {
         text-align: center;
     }
+    @media ${device.desktop} {
+        max-width: 1200px;
+    }
     & > h2 {
         color: var(--color-white);
     }

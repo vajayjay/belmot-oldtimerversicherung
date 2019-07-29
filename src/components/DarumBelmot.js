@@ -10,6 +10,8 @@ const StyledContent = styled.section`
         & > ul {
             display: grid;
             grid-template-columns: 1fr 1fr;
+            max-width: 2000px;
+            margin: auto;
         }
     }
 
@@ -25,6 +27,9 @@ const Intro = styled.div`
     @media ${device.tablet} {
         text-align: center;
         margin-bottom: var(--space-v);
+    }
+    @media ${device.desktop} {
+        max-width: 1200px;
     }
 `
 const StyledIcon = styled.div`
@@ -48,6 +53,9 @@ const ListItem = styled.li`
     display: grid;
     grid-template-columns: 36px auto;
     max-width: 640px;
+    @media ${device.desktop} {
+        max-width: 940px;
+    }
 `
 const MehrAlsNurVollkasko = () => (
     <StyledContent>

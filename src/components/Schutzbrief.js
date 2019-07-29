@@ -36,6 +36,9 @@ const ContentContainer = styled.div`
     & > div {
         padding: var(--space-l) var(--space-side);
         max-width: 600px;
+        @media ${device.desktop} {
+            max-width: 900px;
+        }
     }
     & p {
         margin-bottom: var(--space-m);

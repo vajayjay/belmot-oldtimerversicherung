@@ -34,13 +34,6 @@ const StyledReviews = styled.div`
             }
         }
 
-        /* column-count: 1;
-        column-gap: 1em;
-        overflow: auto;
-
-        @media (min-width: 1200px) {
-            column-count: 3;
-        } */
     }
 `
 

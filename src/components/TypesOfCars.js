@@ -76,6 +76,12 @@ const ContentContainer = styled.div`
             repeat(${CARS.length}, 230px)
             var(--space-side);
     }
+    @media ${device.desktop} {
+        grid-template-columns:
+            var(--space-side)
+            repeat(${CARS.length}, 300px)
+            var(--space-side);
+    }
 `
 
 const TypesOfCars = props => (

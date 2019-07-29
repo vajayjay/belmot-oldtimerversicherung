@@ -15,6 +15,9 @@ const StyledReview = styled.div`
     margin: 0 0 1em 0;
     width: 100%;
     flex: 0 1 400px;
+    @media ${device.desktop} {
+        flex: 0 1 600px;
+    }
 
     & > p:first-of-type {
         color: var(--color-black);

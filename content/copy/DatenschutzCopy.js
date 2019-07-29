@@ -824,6 +824,7 @@ const DatenschutzCopy = () => (
             4. Kategorien und Einzelne Stellen von Empfängern der
             personenbezogenen Daten
         </h4>
+        <br />
         <h5>4.1 Spezialisierte Unternehmen der Unternehmensgruppe</h5>
         <p>
             Spezialisierte Unternehmen oder Bereiche unserer Unternehmensgruppe
