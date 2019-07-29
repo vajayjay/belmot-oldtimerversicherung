@@ -78,5 +78,12 @@ module.exports = {
                 // cookieDomain: "example.com",
             },
         },
+        {
+            resolve: `gatsby-plugin-hotjar`,
+            options: {
+                id: 1396202,
+                sv: 6,
+            },
+        },
     ],
 }
