@@ -94,12 +94,12 @@ const CustomerRatingForm = props => (
         </h1>
         <form
             method="POST"
-            action="https://dev.staticman.net/v3/entry/github/vajayjay/belmot-oldtimerversicherung/master/reviews"
+            action="https://staticman3.herokuapp.com/v3/entry/github/jannispaul/belmot-oldtimerversicherung/master/reviews"
         >
             <input
                 type="hidden"
                 name="options[redirect]"
-                value="https://hungry-wilson-001a08.netlify.com/bewertung-erfolgreich"
+                value="https://belmot-oldtimerversicherung.de/bewertung-erfolgreich"
             />
             <StarRating>
                 <label htmlFor="customer-rating[star-1]">

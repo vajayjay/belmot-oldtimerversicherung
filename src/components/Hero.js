@@ -47,10 +47,7 @@ const HeadlineContainer = styled.div`
         margin-left: var(--space-side);
     }
     @media ${device.desktop} {
-        position: absolute;
-        top: 20vh;
         max-width: 650px;
-        margin-left: var(--space-side);
     }
 `
 
