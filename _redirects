@@ -1,5 +1,10 @@
-# Redirect default Netlify subdomain to primary domain
+# Redirect domain aliases to primary domain
+https://www.belmot-oldtimerversicherung.de/* https://belmot-oldtimerversicherung.de/:splat 301!
+
+# Optional: Redirect default Netlify subdomain to primary domain
 https://hungry-wilson-001a08.netlify.com/* https://belmot-oldtimerversicherung.de/:splat 301!
+
+
 
 # Redirect to form page 
 /online-anfrageformular/ /anfrage  301
