@@ -11,7 +11,7 @@ import Restaurierung from "../components/Restaurierung"
 import Schutzbrief from "../components/Schutzbrief"
 import TypesOfCars from "../components/TypesOfCars"
 // import Vergleich from "../components/Vergleich"
-import CTA from "../components/CTA"
+// import CTA from "../components/CTA"
 import PreviewCustomerReviews from "../components/PreviewCustomerReviews"
 import OldtimerIstLeidenschaft from "../components/OldtimerIstLeidenschaft"
 import Saisonal from "../components/Saisonal"
@@ -33,7 +33,7 @@ class IndexPage extends React.Component {
                         `Oldtimer`,
                     ]}
                 />
-                <CTA />
+                {/* <CTA /> */}
                 <CookieNotice />
                 <Hero />
                 <ScrollAnchor id="darum-belmot" />
