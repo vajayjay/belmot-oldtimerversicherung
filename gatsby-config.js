@@ -1,7 +1,7 @@
 module.exports = {
     siteMetadata: {
-        title: `Belmot Oldtimerversicherung`,
-        description: `Perfekt abgesichert – leistet bei Unfall, aber auch bei Motor- oder Getriebeschäden, Schäden durch Fehlbedienung oder ausgelaufenene Batterien.`,
+        title: `🚘 Belmot Oldtimerversicherung 🚘`,
+        description: `Allgefahrendeckung – Premiumschutz auch für Motor- und Getriebeschäden. Erstklassige Beratung, beste Oldtimerversicherung.`,
         author: `Heiner Blaskewittz, Jannis Wicke`,
         image: "/social-image.jpg", // Path to your image you placed in the 'static' folder
         siteUrl: `https://belmot-oldtimerversicherung.de`,
