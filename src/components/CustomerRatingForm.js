@@ -94,7 +94,7 @@ const CustomerRatingForm = props => (
         </h1>
         <form
             method="POST"
-            action="https://staticman3.herokuapp.com/v3/entry/github/jannispaul/belmot-oldtimerversicherung/master/reviews"
+            action="https://mystaticman.herokuapp.com/v3/entry/github/jannispaul/belmot-oldtimerversicherung/master/reviews"
         >
             <input
                 type="hidden"

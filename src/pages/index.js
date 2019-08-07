@@ -36,9 +36,10 @@ class IndexPage extends React.Component {
                 <CTA />
                 <CookieNotice />
                 <Hero />
-                <ScrollAnchor />
+                <ScrollAnchor id="darum-belmot" />
                 <DarumBelmot />
                 <TypesOfCars />
+                <ScrollAnchor id="vergleich" />
                 <OldtimerIstLeidenschaft />
                 {/* <Vergleich /> */}
                 <Benefit />
