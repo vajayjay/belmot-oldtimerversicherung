@@ -60,7 +60,7 @@ const DesktopLinks = styled.div`
     & > a {
         color: var(--color-darker);
         text-decoration: none;
-        /* text-transform: uppercase; */
+        text-transform: uppercase;
         font-weight: 500;
         letter-spacing: 1px;
         transition: all 100ms;
