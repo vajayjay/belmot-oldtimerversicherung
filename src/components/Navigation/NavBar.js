@@ -88,7 +88,6 @@ const DesktopLinks = styled.div`
 `
 
 const StyledButton = styled(Button)`
-    /* margin-bottom: 0; */
     background: blue;
 `
 

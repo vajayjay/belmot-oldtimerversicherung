@@ -23,7 +23,7 @@ const StyledButton = styled(Link)`
     user-select: none;
     cursor: pointer;
 
-    padding: 1rem 2rem;
+    padding: 1rem 1.5rem;
     /* margin-bottom: var(--space-s); */
 
     width: 100%;
