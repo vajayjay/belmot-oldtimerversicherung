@@ -8,6 +8,13 @@ import { device } from "../theme/breakpoints"
 const StyledError = styled(ErrorMessage)`
     color: var(--color-error);
 `
+const FormError = styled.p`
+    color: var(--color-error);
+    background: rgba(242, 62, 62, 0.1);
+    padding: var(--space-m);
+    border: 2px solid var(--color-error);
+`
+
 const StyledField = styled(Field)`
     border: ${props => props.border || ""}!important;
     border-radius: 15px;
@@ -400,7 +407,15 @@ const AnfrageFormular = () => (
                 console.log(values)
             }}
         >
-            {({ errors, touched, values, handleSubmit }) => (
+            {({
+                errors,
+                touched,
+                values,
+                handleSubmit,
+                isValid,
+                validateForm,
+                status,
+            }) => (
                 <Form onSubmit={handleSubmit}>
                     <Field type="hidden" name="bot-field" />
                     <Field type="hidden" name="form-name" />
@@ -1050,6 +1065,14 @@ const AnfrageFormular = () => (
                         </label>
                     </fieldset>
                     <Button type="submit">Absenden</Button>
+
+                    {isValid === false && (
+                        <FormError>
+                            Einige Pflichtfelder sind noch nicht ausgefüllt.
+                            Bitte vergewissern Sie sich, dass alle oben rot
+                            markierten Felder vollständig ausgefüllt sind.
+                        </FormError>
+                    )}
                 </Form>
             )}
         </Formik>
