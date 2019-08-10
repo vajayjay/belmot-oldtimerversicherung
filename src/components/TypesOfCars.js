@@ -86,7 +86,7 @@ const ContentContainer = styled.div`
 
 const TypesOfCars = props => (
     <StyledSection>
-        <StyledH2>Die Oldtimerverischerung für</StyledH2>
+        <StyledH2>Die Oldtimerversicherung für</StyledH2>
         <ContentContainer>
             {CARS.map((CARS, index) => {
                 return (
