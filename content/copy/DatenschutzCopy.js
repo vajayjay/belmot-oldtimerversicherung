@@ -471,14 +471,15 @@ const DatenschutzCopy = () => (
                 https://www.netlify.com/privacy/
             </a>
         </p>
-        <h4>5. Zapier</h4>
+        <h4>5. Integromat</h4>
         <p>
-            Zur automatisierten Beantwortung Ihrer Anfragen nutzen wir Zapier,
-            einen Dienst der Zapier Inc., 548 Market St #62411, San Francisco,
-            California 94104, USA. Dabei können Kundendaten übermittelt werden.
-            Weitere Informationen zum Datenschutz bei Zapier finden Sie unter:{" "}
-            <a href="https://zapier.com/privacy/">
-                https://zapier.com/privacy/
+            Zur automatisierten Beantwortung Ihrer Anfragen nutzen wir
+            Integromat, einen Dienst von Integromat s.r.o., Novakovych 1954/20a
+            180 00 Prag 8, Tschechien. Dabei können Kundendaten übermittelt
+            werden. Weitere Informationen zum Datenschutz bei Integromat finden
+            Sie unter:{" "}
+            <a href="https://www.integromat.com/en/kb/privacy.html">
+                https://www.integromat.com/en/kb/privacy.html
             </a>
             .
         </p>
