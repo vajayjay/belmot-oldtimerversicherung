@@ -413,8 +413,7 @@ const AnfrageFormular = () => (
                 values,
                 handleSubmit,
                 isValid,
-                validateForm,
-                status,
+                submitCount,
             }) => (
                 <Form onSubmit={handleSubmit}>
                     <Field type="hidden" name="bot-field" />
@@ -1066,7 +1065,7 @@ const AnfrageFormular = () => (
                     </fieldset>
                     <Button type="submit">Absenden</Button>
 
-                    {isValid === false && (
+                    {isValid === false && submitCount > 0 && (
                         <FormError>
                             Einige Pflichtfelder sind noch nicht ausgefüllt.
                             Bitte vergewissern Sie sich, dass alle oben rot
