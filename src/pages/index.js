@@ -49,6 +49,7 @@ class IndexPage extends React.Component {
                 <WiederbeschaffungUndYoungtimer />
                 <Saisonal />
                 <MehrAlsNurVollkasko />
+                <ScrollAnchor id="kundenmeinungen" />
                 <PreviewCustomerReviews />
                 <LeidenschaftIstBeruf />
             </StandardLayout>

@@ -1,5 +1,5 @@
 import React from "react"
-import { StaticQuery, graphql } from "gatsby"
+import { Link, StaticQuery, graphql } from "gatsby"
 
 import Img from "gatsby-image"
 import styled from "styled-components"
@@ -10,12 +10,13 @@ import NumberOfReviews from "../components/NumberOfReviews"
 
 const StyledHero = styled.section`
     position: relative;
-    /* height:calc(100vh - 60px); */
+    margin-top: 60px;
+    max-height: calc(95vh - 60px);
+    display: flex;
+    flex-direction: column;
 `
 const StyledImg = styled(Img)`
-    position: relative;
-    height: 50vw;
-    /* min-width: 100%; */
+    height: 80vh;
 
     @media ${device.tablet} {
         min-height: 500px;
@@ -23,79 +24,164 @@ const StyledImg = styled(Img)`
     }
 `
 /*Container for all text content*/
+const TextContainer = styled.div`
+    position: relative;
+
+    /*Desktop styles*/
+    @media ${device.tablet} {
+        position: absolute;
+        max-width: 480px;
+        top: 25%;
+        margin-left: 10%;
+    }
+    /* @media ${device.desktop} {
+        max-width: 650px;
+    } */
+`
 const HeadlineContainer = styled.div`
-    background: var(--color-primary);
-    overflow: hidden;
-    box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.25);
+    position: relative;
+    padding: var(--space-m);
+    background: var(--color-white);
+    box-shadow: 0px 0px 14px rgba(0, 0, 0, 0.25);
+    z-index: 1;
     & h1 {
         margin: 0;
     }
     & span {
         color: var(--color-primary);
     }
-    /*White headline area*/
-    & > div:first-of-type {
-        padding: var(--space-m);
-        background: var(--color-white);
-        box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.25);
-    }
-    /*Desktop styles*/
     @media ${device.tablet} {
-        position: absolute;
-        top: 20vh;
-        max-width: 450px;
-        margin-left: var(--space-side);
-    }
-    @media ${device.desktop} {
-        max-width: 650px;
+        padding: var(--space-l) var(--space-l);
     }
 `
 
 /*Blue area with customer ratings*/
 const RatingContainer = styled.div`
+    display: flex;
     position: relative;
-    width: 100%;
-    height: 70px;
-    /* box-shadow: 0px 4px 14px  rgba(0, 0, 0, 0.25); */
-    span {
-        font-weight: 500;
+    fill: yellow;
+
+    & > a {
+        color: white;
         color: var(--color-white);
-        @media ${device.desktop} {
-            font-size: 1.2rem;
+        text-decoration: none;
+        padding: var(--space-m);
+        width: 100%;
+        font-weight: 500;
+        background: var(--color-primary);
+        transition: all 100ms linear;
+        :hover {
+            background: var(--color-primary-light);
+            transition: all 100ms linear;
         }
-    }
-    /*stars and text container*/
-    & > div {
-        position: absolute;
-        bottom: 0;
-        width: calc(100% - 70px);
-        height: 70px;
-        padding: 0 var(--space-m);
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        @media ${device.tablet} {
-            width: 100%;
+        /* customer rating stars */
+        & > span:first-of-type {
+            color: yellow;
+            color: var(--color-warning);
         }
     }
 
+    @media ${device.tablet} {
+        box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.25);
+        z-index: 2;
+        margin-left: -24px;
+        margin-bottom: -24px;
+        width: fit-content;
+        & > a {
+            padding: var(--space-s) var(--space-m);
+        }
+    }
+`
+
+const CTA = styled(Link)`
+    display: flex;
+    position: relative;
+    width: 100%;
+    background: var(--color-primary);
+    transition: all 100ms linear;
+    text-decoration: none;
+    :hover {
+        background: var(--color-primary-light);
+        transition: all 100ms linear;
+    }
+
     & > a {
-        position: absolute;
-        top: 0;
-        right: 0;
-        width: 70px;
-        height: 70px;
+    }
+
+    & > span {
+        color: white;
+        color: var(--color-white);
+        padding: var(--space-m);
+        font-weight: 500;
+    }
+    & > div {
         display: flex;
         align-items: center;
         justify-content: center;
+        position: absolute;
+        right: 0;
         background: var(--color-primary-dark);
-        @media ${device.tablet} {
-            display: none;
-        }
+        height: 100%;
+        width: 60px;
     }
     & svg {
         fill: white;
         height: 30%;
+        transform: rotate(-90deg);
+    }
+    @media ${device.tablet} {
+        position: relative;
+        float: right;
+        right: 0px;
+        box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.25);
+        z-index: 1;
+        margin-right: -24px;
+        margin-top: -24px;
+        width: fit-content;
+        & > span {
+            padding: var(--space-s) var(--space-m);
+            margin-right: 60px;
+        }
+        & > div {
+            /* display: none; */
+            background: var(--color-primary-light);
+        }
+        & svg {
+            fill: white;
+            height: 40%;
+            transform: rotate(-90deg);
+        }
+    }
+`
+// 3D flag/ribbon corners
+const CornerTop = styled.div`
+    display: none;
+    @media ${device.tablet} {
+        display: block;
+        background: var(--color-primary-dark);
+        transform: rotate(45deg);
+        height: 52px;
+        width: 52px;
+        position: absolute;
+        top: 27px;
+        left: -13px;
+        /* background: red; */
+        /* z-index: 5; */
+    }
+`
+const CornerBottom = styled.div`
+    display: none;
+    @media ${device.tablet} {
+        display: block;
+        background: var(--color-primary-dark);
+        transform: rotate(45deg);
+        height: 52px;
+        width: 52px;
+        position: absolute;
+        bottom: 24px;
+        right: -13px;
+        /* background: red; */
+        /* z-index: 5; */
     }
 `
 
@@ -105,31 +191,28 @@ const Hero = props => (
             fluid={props.data.imageOne.childImageSharp.fluid}
             alt="Description"
         />
-        <HeadlineContainer>
-            <div>
+        <TextContainer>
+            <RatingContainer>
+                <a href="#kundenmeinungen">
+                    <span>★★★★★</span> von <NumberOfReviews /> zufriedenen
+                    Kunden
+                </a>
+            </RatingContainer>
+            <CornerTop />
+            <HeadlineContainer>
                 <h1>
                     Versicherung für Ihren <span>Young-</span> und{" "}
                     <span>Oldtimer</span>
                 </h1>
-            </div>
-            <RatingContainer>
+            </HeadlineContainer>
+            <CTA to="/anfrage">
+                <span>Jetzt online anfragen</span>
                 <div>
-                    <span>
-                        ★★★★★ <wbr />
-                        von <NumberOfReviews /> zufriedenen Kunden
-                    </span>
-                </div>
-                <a href="#scroll-anchor">
                     <Icon icon={ICONS.CHEVRON} />
-                </a>
-            </RatingContainer>
-        </HeadlineContainer>
-        {/* <LearnMore href="#scroll-anchor">
-            <span>Mehr erfahren</span>
-            <div>
-                <Icon icon={ICONS.CHEVRON} />
-            </div>
-        </LearnMore> */}
+                </div>
+            </CTA>
+            <CornerBottom />
+        </TextContainer>
     </StyledHero>
 )
 
