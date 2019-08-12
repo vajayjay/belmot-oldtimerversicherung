@@ -82,6 +82,7 @@ const RatingContainer = styled.div`
     }
 
     @media ${device.tablet} {
+        height: 50px;
         box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.25);
         z-index: 2;
         margin-left: -24px;
@@ -130,6 +131,7 @@ const CTA = styled(Link)`
         transform: rotate(-90deg);
     }
     @media ${device.tablet} {
+        height: 50px;
         position: relative;
         float: right;
         right: 0px;
@@ -159,12 +161,17 @@ const CornerTop = styled.div`
     @media ${device.tablet} {
         display: block;
         background: var(--color-primary-dark);
-        transform: rotate(45deg);
-        height: 52px;
-        width: 52px;
+        /* transform: rotate(45deg); */
+        height: 24px;
+        width: 24px;
         position: absolute;
-        top: 27px;
-        left: -13px;
+        top: 50px;
+        left: -24px;
+        background: linear-gradient(
+            to top right,
+            transparent 17px,
+            var(--color-primary-dark) 17px
+        );
         /* background: red; */
         /* z-index: 5; */
     }
@@ -174,12 +181,16 @@ const CornerBottom = styled.div`
     @media ${device.tablet} {
         display: block;
         background: var(--color-primary-dark);
-        transform: rotate(45deg);
-        height: 52px;
-        width: 52px;
+        height: 24px;
+        width: 24px;
         position: absolute;
-        bottom: 24px;
-        right: -13px;
+        bottom: 50px;
+        right: -24px;
+        background: linear-gradient(
+            to bottom left,
+            transparent 17px,
+            var(--color-primary-dark) 17px
+        );
         /* background: red; */
         /* z-index: 5; */
     }
