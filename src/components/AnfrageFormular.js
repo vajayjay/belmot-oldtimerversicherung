@@ -93,6 +93,7 @@ const FormSchema = Yup.object().shape({
     email: Yup.string()
         .email("Ihre Eingabe ist keine vollständige E-Mail-Adresse")
         .required("Dieses Feld ist ein Pflichtfeld"),
+    telefon: Yup.string(),
     mitglied: Yup.string().required("Dieses Feld ist ein Pflichtfeld"),
     oldtimerclub: Yup.string(),
     kennzeichen: Yup.string(),
@@ -195,6 +196,7 @@ const AnfrageFormular = () => (
             <input name="plz" type="text" />
             <input name="ort" type="text" />
             <input name="email" type="email" />
+            <input name="telefon" type="text" />
             <fieldset>
                 <input type="radio" name="oldtimerclub" value="Nein" />
                 <input type="radio" name="oldtimerclub" value="Ja" />
@@ -351,6 +353,7 @@ const AnfrageFormular = () => (
                 plz: "",
                 ort: "",
                 email: "",
+                telefon: "",
                 mitglied: "",
                 oldtimerclub: "",
                 kennzeichen: "",
@@ -525,6 +528,19 @@ const AnfrageFormular = () => (
                             }
                         />
                         <StyledError name="email" component="div" />
+                    </label>
+                    <label>
+                        <span>Telefonnummer für evtl. Rückfragen</span>
+                        <StyledField
+                            name="telefon"
+                            type="text"
+                            border={
+                                errors.telefon &&
+                                touched.telefon &&
+                                "3px solid var(--color-error)"
+                            }
+                        />
+                        <StyledError name="telefon" component="div" />
                     </label>
                     <fieldset>
                         <legend>Mitglied in einem Oldtimerclub? *</legend>
