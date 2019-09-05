@@ -55,32 +55,19 @@ const StyledH2 = styled.h2`
 const ContentContainer = styled.div`
     padding: var(--space-l) 0;
     max-width: 100%;
-    /* display: flex;
-    flex-wrap: nowrap; */
-    overflow-x: auto;
+    /* overflow-x: auto;
     -webkit-overflow-scrolling: touch;
-    overflow-y: hidden;
+    overflow-y: hidden; */
     margin-bottom: 15vh;
     display: grid;
     grid-gap: 20px;
-    grid-template-columns: 0px repeat(${CARS.length}, 220px) 20px;
-
-    &::before,
-    &::after {
-        content: "";
-    }
+    grid-template-columns: repeat(auto-fill, minmax(220px, 300px));
 
     @media ${device.tablet} {
-        grid-template-columns:
-            var(--space-side)
-            repeat(${CARS.length}, 230px)
-            var(--space-side);
+        grid-template-columns: repeat(auto-fit, 230px);
     }
     @media ${device.desktop} {
-        grid-template-columns:
-            var(--space-side)
-            repeat(${CARS.length}, 300px)
-            var(--space-side);
+        grid-template-columns: repeat(auto-fit, 280px);
     }
 `
 
@@ -91,8 +78,10 @@ const TypesOfCars = props => (
             {CARS.map((CARS, index) => {
                 return (
                     <TypeCard type={CARS.img} key={index} imgAlt={CARS.imgAlt}>
-                        <h3>{CARS.type}</h3>
-                        <span>{CARS.condition}</span>
+                        <div>
+                            <h3>{CARS.type}</h3>
+                            <span>{CARS.condition}</span>
+                        </div>
                     </TypeCard>
                 )
             })}
