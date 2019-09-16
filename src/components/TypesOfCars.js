@@ -7,8 +7,7 @@ import { device } from "../theme/breakpoints"
 const CARS = [
     {
         type: "PKW",
-        condition: `Baujahr 1989 
-        und älter`,
+        condition: `Baujahr 1989 und älter`,
         img: "pkw",
         imgAlt: "PKW-Oldtimer Icon",
     },
@@ -20,15 +19,13 @@ const CARS = [
     },
     {
         type: "Motorräder",
-        condition: `Baujahr 1980 
-        und älter`,
+        condition: `Baujahr 1980 und älter`,
         img: "motorrad",
         imgAlt: "Motorrad-Oldtimer Icon",
     },
     {
         type: "Traktoren",
-        condition: `Baujahr 1980 
-        und älter`,
+        condition: `Baujahr 1980 und älter`,
         img: "traktor",
         imgAlt: "Oldtimer-Traktor Icon",
     },
@@ -53,21 +50,21 @@ const StyledH2 = styled.h2`
 `
 
 const ContentContainer = styled.div`
-    padding: var(--space-l) 0;
+    padding: var(--space-l) var(--space-side);
     max-width: 100%;
-    /* overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    overflow-y: hidden; */
     margin-bottom: 15vh;
     display: grid;
     grid-gap: 20px;
-    grid-template-columns: repeat(auto-fill, minmax(220px, 300px));
+    width: 100%;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
 
     @media ${device.tablet} {
-        grid-template-columns: repeat(auto-fit, 230px);
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     }
     @media ${device.desktop} {
-        grid-template-columns: repeat(auto-fit, 280px);
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     }
 `
 
