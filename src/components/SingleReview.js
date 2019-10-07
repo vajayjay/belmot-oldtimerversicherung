@@ -65,48 +65,6 @@ const Stars = ({ n }) => {
     return <div>{stars}</div>
 }
 
-// const SingleReview = props => (
-//     <StyledReview
-//         key={props.index}
-//         itemScope=""
-//         itemType="http://schema.org/Review"
-//     >
-//         <span
-//             itemProp="itemReviewed"
-//             itemScope=""
-//             itemType="https://schema.org/Service"
-//             hidden
-//         >
-//             <span itemProp="name">Belmot Oldtimerversicherung</span>
-//         </span>
-//         <div
-//             itemProp="reviewRating"
-//             itemScope=""
-//             itemType="http://schema.org/Rating"
-//             hidden
-//         >
-//             <span itemProp="ratingValue">{props.rating}</span>
-//             <span itemProp="bestRating">5</span>
-//             <span itemProp="worstRating">1</span>
-//         </div>
-//         <Stars n={props.rating} />
-//         <p>
-//             <span
-//                 itemProp="author"
-//                 itemScope=""
-//                 itemType="http://schema.org/Person"
-//             >
-//                 <span itemProp="name">{props.name}</span>
-//             </span>{" "}
-//             am{" "}
-//             <span itemProp="datePublished">
-//                 <time dateTime={props.date}>{props.date}</time>
-//             </span>
-//         </p>
-//         <Review itemProp="reviewBody">{props.review}</Review>
-//     </StyledReview>
-// )
-
 const SingleReview = props => (
     <StyledReview
         key={props.index}
@@ -116,7 +74,7 @@ const SingleReview = props => (
         <span
             itemProp="itemReviewed"
             itemScope
-            itemType="https://schema.org/Service"
+            itemType="https://schema.org/Product"
             hidden
         >
             <span itemProp="name">Belmot Oldtimerversicherung</span>
