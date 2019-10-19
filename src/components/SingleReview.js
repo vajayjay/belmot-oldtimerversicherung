@@ -78,7 +78,17 @@ const SingleReview = props => (
             hidden
         >
             <span itemProp="name">Belmot Oldtimerversicherung</span>
+            <span itemProp="brand">Mannheimer Versicherung AG</span>
+            <span
+                itemProp="offers"
+                itemScope
+                itemType="https://schema.org/AggregateOffer"
+            >
+                ab <span itemProp="lowPrice">4.47</span> €
+                <meta itemProp="priceCurrency" content="EUR" />
+            </span>
         </span>
+
         <div
             itemProp="reviewRating"
             itemScope
@@ -86,6 +96,7 @@ const SingleReview = props => (
             hidden
         >
             <span itemProp="ratingValue">{props.rating}</span>
+            <span itemProp="reviewCount">{props.reviewCount}</span>
             <span itemProp="bestRating">5</span>
             <span itemProp="worstRating">1</span>
         </div>

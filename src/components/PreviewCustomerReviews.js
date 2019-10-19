@@ -33,39 +33,66 @@ const StyledReviews = styled.div`
                 margin-right: 20px;
             }
         }
-
     }
 `
 
-const PreviewCustomerReviews = props => (
-    <StyledSection>
-        <StyledReviews>
-            <h2>Geschätzt und weiterempfohlen</h2>
-            <div>
-                {props.data.allReviewsYaml.edges.map((review, index) => {
-                    return (
-                        <SingleReview
-                            key={index}
-                            rating={review.node.rating}
-                            name={review.node.name}
-                            date={review.node.date}
-                            review={review.node.review}
-                        />
-                    )
-                })}
-            </div>
-            <Button primary="primary" link="/kundenmeinungen">
-                Alle Bewertungen ansehen
-            </Button>
-        </StyledReviews>
-    </StyledSection>
-)
+class PreviewCustomerReviews extends React.Component {
+    // Component's constructor
+    constructor(props) {
+        // Required to call original constructor
+        super(props)
+
+        // Props are now accessible from here
+        this.averageRating =
+            props.data.allReviewsYaml.nodes
+                .map(i => i.rating)
+                .reduce((a, b) => a + b, 0) /
+            props.data.allReviewsYaml.totalCount
+    }
+    s
+
+    // This is called when ReactDOM.render is called on <Element />
+    render() {
+        // And from here
+        return (
+            <StyledSection>
+                <StyledReviews>
+                    <h2>Geschätzt und weiterempfohlen</h2>
+                    <div>
+                        {this.props.data.allReviewsYaml.edges.map(
+                            (review, index) => {
+                                return (
+                                    <SingleReview
+                                        key={index}
+                                        rating={review.node.rating}
+                                        name={review.node.name}
+                                        date={review.node.date}
+                                        review={review.node.review}
+                                        averageRating={this.averageRating}
+                                        reviewCount={review.totalCount}
+                                    />
+                                )
+                            }
+                        )}
+                    </div>
+                    <Button primary="primary" link="/kundenmeinungen">
+                        Alle Bewertungen ansehen
+                    </Button>
+                </StyledReviews>
+            </StyledSection>
+        )
+    }
+}
 
 export default props => (
     <StaticQuery
         query={graphql`
             query {
                 allReviewsYaml(sort: { fields: date, order: DESC }, limit: 3) {
+                    totalCount
+                    nodes {
+                        rating
+                    }
                     edges {
                         node {
                             name

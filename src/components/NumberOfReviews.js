@@ -11,6 +11,9 @@ export default props => (
             query {
                 allReviewsYaml(sort: { fields: date, order: DESC }) {
                     totalCount
+                    nodes {
+                        rating
+                    }
                 }
             }
         `}
