@@ -68,6 +68,7 @@ const Stars = ({ n }) => {
 const SingleReview = props => (
     <StyledReview
         key={props.index}
+        itemProp="review"
         itemScope
         itemType="http://schema.org/Review"
     >
@@ -79,14 +80,16 @@ const SingleReview = props => (
         >
             <span itemProp="name">Belmot Oldtimerversicherung</span>
             <span itemProp="brand">Mannheimer Versicherung AG</span>
-            <span
+            <div
                 itemProp="offers"
                 itemScope
                 itemType="https://schema.org/AggregateOffer"
             >
                 ab <span itemProp="lowPrice">4.47</span> €
                 <meta itemProp="priceCurrency" content="EUR" />
-            </span>
+                <span itemProp="availability">OnlineOnly</span>
+                <span itemProp="offerCount">1</span>
+            </div>
         </span>
 
         <div
