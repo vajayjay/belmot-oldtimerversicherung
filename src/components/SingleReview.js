@@ -85,7 +85,7 @@ const SingleReview = props => (
                 itemScope
                 itemType="https://schema.org/AggregateOffer"
             >
-                ab <span itemProp="lowPrice">4.47</span> €
+                ab <span itemProp="lowPrice">95.20</span> €
                 <meta itemProp="priceCurrency" content="EUR" />
                 <span itemProp="availability">OnlineOnly</span>
                 <span itemProp="offerCount">1</span>
