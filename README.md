@@ -15,7 +15,6 @@ npm install --global gatsby-cli
 ## Install node modules with npm
 
 ```sh
-cd arztpraxis-schulzendorf
 npm install
 ```
 
