@@ -1062,11 +1062,7 @@ const AnfrageFormular = () => (
                     </label>
                     <fieldset>
                         <label>
-                            <Field
-                                value="ja"
-                                type="checkbox"
-                                name="akzeptiert"
-                            />
+                            <Field type="checkbox" name="akzeptiert" />
                             <span className="terms-and-conditions">
                                 Ich akzeptiere die Übertragung und Speicherung
                                 meiner Daten zum Zwecke des angebotenen
