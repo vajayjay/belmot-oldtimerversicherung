@@ -41,3 +41,9 @@ npm outdated
 ```sh
 npm run upgrade-interactive
 ```
+
+## Test form
+
+```sh
+npm run test:e2e
+```

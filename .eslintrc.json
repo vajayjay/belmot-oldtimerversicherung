@@ -6,7 +6,8 @@
     "extends": [
         "react-app",
         "eslint:recommended",
-        "plugin:react/recommended"
+        "plugin:react/recommended",
+        "plugin:cypress/recommended"
     ],
     "globals": {
         "Atomics": "readonly",
