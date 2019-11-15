@@ -37,10 +37,12 @@
     "yup": "^0.27.0"
   },
   "devDependencies": {
+    "cypress": "^3.6.1",
     "eslint": "^6.6.0",
     "eslint-plugin-react": "^7.16.0",
     "npm-check": "^5.9.0",
-    "prettier": "^1.18.2"
+    "prettier": "^1.18.2",
+    "start-server-and-test": "^1.10.6"
   },
   "keywords": [
     "gatsby"
@@ -53,7 +55,9 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\"",
-    "upgrade-interactive": "npm-check --update"
+    "upgrade-interactive": "npm-check --update",
+    "cy:open": "cypress open",
+    "test:e2e": "start-server-and-test develop http://localhost:8000 cy:open"
   },
   "repository": {
     "type": "git",
