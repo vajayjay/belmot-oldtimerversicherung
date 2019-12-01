@@ -6,6 +6,7 @@ import Hero from "../components/Hero"
 import ScrollAnchor from "../components/ScrollAnchor"
 import DarumBelmot from "../components/DarumBelmot"
 import Benefit from "../components/Benefit"
+import Video from "../components/Video"
 import Fuhrpark from "../components/Fuhrpark"
 import Restaurierung from "../components/Restaurierung"
 import Schutzbrief from "../components/Schutzbrief"
@@ -51,6 +52,7 @@ class IndexPage extends React.Component {
                 <MehrAlsNurVollkasko />
                 <ScrollAnchor id="kundenmeinungen" />
                 <PreviewCustomerReviews />
+                <Video />
                 <LeidenschaftIstBeruf />
             </StandardLayout>
         )
