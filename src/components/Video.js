@@ -1,9 +1,5 @@
 import React from "react"
-
 import styled from "styled-components"
-// import Icon from "../components/layout/Icon"
-// import { ICONS } from "../theme/Icons"
-// import Button from "../components/Button"
 import { device } from "../theme/breakpoints"
 
 const StyledVideo = styled.section`
@@ -37,8 +33,7 @@ const ContentContainer = styled.div`
     }
     iframe {
         max-width: 100%;
-        /* height: auto; */
-        background: red;
+        background: var(--color-black);
     }
 `
 
@@ -55,7 +50,6 @@ const Video = props => (
                 allowFullScreen
                 title="Belmot Oldtimerversicherung Video"
             ></iframe>
-            {/* <Button link="/anfrage">Jetzt anfragen</Button> */}
         </ContentContainer>
     </StyledVideo>
 )

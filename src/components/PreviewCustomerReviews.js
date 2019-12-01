@@ -3,37 +3,44 @@ import { StaticQuery, graphql } from "gatsby"
 import styled from "styled-components"
 import SingleReview from "../components/SingleReview"
 import Button from "../components/Button"
-import { device } from "../theme/breakpoints"
+// import { device } from "../theme/breakpoints"
+import NumberOfReviews from "../components/NumberOfReviews"
 
 const StyledSection = styled.section`
     background: var(--color-lighter);
+    position: relative;
+    display: block;
+    padding: var(--space-v) var(--space-side);
+`
+const StyledSummary = styled.div`
+    max-width: 900px;
+    margin: auto;
+    text-align: center;
+    margin-bottom: var(--space-side);
+
+    & > span:first-of-type {
+        color: var(--color-warning);
+        font-size: 30px;
+    }
+    & > p {
+        margin-bottom: 0;
+    }
 `
 const StyledReviews = styled.div`
-    padding: var(--space-v) var(--space-side);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    max-width: 900px;
+    margin: auto;
+    margin-bottom: var(--space-side);
 
     & > h2 {
         display: block;
         text-align: center;
         margin-bottom: var(--space-m);
     }
-
-    & > div {
-        margin-bottom: var(--space-m);
-
-        @media ${device.laptop} {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-
-            & > div:not(:last-child) {
-                margin-right: 20px;
-            }
-        }
-    }
+`
+const StyledButton = styled.div`
+    margin: auto;
+    position: relative;
+    text-align: center;
 `
 
 class PreviewCustomerReviews extends React.Component {
@@ -56,8 +63,15 @@ class PreviewCustomerReviews extends React.Component {
         // And from here
         return (
             <StyledSection>
-                <StyledReviews>
+                <StyledSummary>
                     <h2>Geschätzt und weiterempfohlen</h2>
+                    <p>
+                        <NumberOfReviews /> Kundenbewertungen mit
+                    </p>
+                    <span>★★★★★</span>
+                </StyledSummary>
+
+                <StyledReviews>
                     <div>
                         {this.props.data.allReviewsYaml.edges.map(
                             (review, index) => {
@@ -75,10 +89,12 @@ class PreviewCustomerReviews extends React.Component {
                             }
                         )}
                     </div>
+                </StyledReviews>
+                <StyledButton>
                     <Button primary="primary" link="/kundenmeinungen">
                         Alle Bewertungen ansehen
                     </Button>
-                </StyledReviews>
+                </StyledButton>
             </StyledSection>
         )
     }
