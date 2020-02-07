@@ -52,6 +52,7 @@ module.exports = {
                 path: `${__dirname}/content/reviews`,
             },
         },
+        `gatsby-plugin-preact`,
         {
             resolve: `gatsby-plugin-google-analytics`,
             options: {
