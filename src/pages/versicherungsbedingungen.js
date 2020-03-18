@@ -59,7 +59,7 @@ class IndexPage extends React.Component {
                     <p>
                         Geben Sie dort den folgenden Code ein:
                         <br />
-                        F02G 0000 0419
+                        F02G 0000 0519
                     </p>
                     <br />
                     <Button primary="primary" link="/">
