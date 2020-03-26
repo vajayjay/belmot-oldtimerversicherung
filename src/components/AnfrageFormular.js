@@ -917,8 +917,12 @@ const AnfrageFormular = () => (
                     </fieldset>
                     {values.wertgutachten === "ja" && (
                         <label>
-                            <span>Wenn ja, Datum des Gutachtens</span>
-                            <Field type="text" name="wertgutachten-datum" />
+                            <span>Datum des Gutachtens *</span>
+                            <Field
+                                type="text"
+                                name="wertgutachten-datum"
+                                placeholder="TT.MM.JJJJ"
+                            />
                             <StyledError
                                 name="wertgutachten-datum"
                                 component="div"
@@ -1007,7 +1011,7 @@ const AnfrageFormular = () => (
                         <StyledError name="nutzer" component="div" />
                     </label>
                     {values.nutzer !== "Nur Sie selbst" &&
-                        (values.nutzer !== "" && (
+                        values.nutzer !== "" && (
                             <label>
                                 <span>Geburtsdatum des jüngsten Fahrers *</span>
                                 <Field
@@ -1019,7 +1023,7 @@ const AnfrageFormular = () => (
                                     component="div"
                                 />
                             </label>
-                        ))}
+                        )}
                     <fieldset>
                         <legend>Gewünschter Versicherungsumfang *</legend>
                         <Checkbox
