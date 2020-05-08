@@ -12,7 +12,7 @@ const SecondPage = () => (
         <SEO title="Datenschutz" index="noindex" />
         <SupportSection
             h1={<h1>Datenschutz</h1>}
-            // p={<p>Ich behandle ihre Daten mit Vorsicht.</p>}
+            // p={<p>Ich behandle Ihre Daten mit Vorsicht.</p>}
         >
             <DatenschutzCopy />
             <br />

@@ -27,7 +27,7 @@ class IndexPage extends React.Component {
                     />
                     <h1>Vielen Dank für Ihre Bewertung!</h1>
                     <p>
-                        Wir überprüfen ihre Bewertung und werden sie in den
+                        Wir überprüfen Ihre Bewertung und werden sie in den
                         nächsten Tagen veröffentlichen.
                     </p>
                 </SectionCenteredFullHeight>
