@@ -120,7 +120,13 @@ const FormSchema = Yup.object().shape({
     "oelfeuchte-details": Yup.string(),
     abstellort: Yup.string().required("Dieses Feld ist ein Pflichtfeld"),
     wertgutachten: Yup.string().required("Dieses Feld ist ein Pflichtfeld"),
-    "wertgutachten-datum": Yup.string(),
+    // "wertgutachten-datum": Yup.string(),
+    "wertgutachten-datum": Yup.string()
+        .required("Dieses Feld ist ein Pflichtfeld")
+        .when("wertgutachten", {
+            is: "ja",
+            otherwise: s => s,
+        }),
     alltagsfahrzeug: Yup.string().required("Dieses Feld ist ein Pflichtfeld"),
     wohnumfeld: Yup.string()
         .min(4, "Ihre Eingabe ist zu kurz")
@@ -140,6 +146,13 @@ const FormSchema = Yup.object().shape({
         )
         .required("Bitte akzeptieren Sie die Nutzungsbedingungen"),
 })
+
+// if (FormSchema.wertgutachten === "ja") {
+//     console.log("yes")
+//     FormSchema["wertgutachten-datum"] = Yup.string().required(
+//         "Dieses Feld ist ein Pflichtfeld"
+//     )
+// }
 
 function Checkbox(props) {
     return (
