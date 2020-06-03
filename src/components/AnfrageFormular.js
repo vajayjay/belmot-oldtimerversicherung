@@ -121,12 +121,10 @@ const FormSchema = Yup.object().shape({
     abstellort: Yup.string().required("Dieses Feld ist ein Pflichtfeld"),
     wertgutachten: Yup.string().required("Dieses Feld ist ein Pflichtfeld"),
     // "wertgutachten-datum": Yup.string(),
-    "wertgutachten-datum": Yup.string()
-        .required("Dieses Feld ist ein Pflichtfeld")
-        .when("wertgutachten", {
-            is: "ja",
-            otherwise: s => s,
-        }),
+    "wertgutachten-datum": Yup.string().when("wertgutachten", {
+        is: wertgutachten => wertgutachten === "ja",
+        then: Yup.string().required("Dieses Feld ist ein Pflichtfeld"),
+    }),
     alltagsfahrzeug: Yup.string().required("Dieses Feld ist ein Pflichtfeld"),
     wohnumfeld: Yup.string()
         .min(4, "Ihre Eingabe ist zu kurz")
