@@ -23,11 +23,9 @@ const ContentContainer = styled.div`
     & > div:first-child > div:first-child {
         background: var(--color-success);
     }
-
-
 `
 
-const NextSteps = props => (
+const NextSteps = (props) => (
     <StyledSection>
         <h2>Wie geht es weiter?</h2>
         <ContentContainer>
@@ -48,8 +46,8 @@ const NextSteps = props => (
             <StepCard number="3">
                 <h3>Angebot annehmen</h3>
                 <p>
-                    Nehmen Sie das Angebot per E-Mail an und genießen Sie
-                    sofortigen Versicherungsschutz.
+                    Angebot annehmen und schon bald ist Ihr Schätzchen gut
+                    versichert.
                 </p>
             </StepCard>
         </ContentContainer>
