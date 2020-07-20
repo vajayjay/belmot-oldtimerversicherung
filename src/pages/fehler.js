@@ -4,7 +4,6 @@ import React from "react"
 import StandardLayout from "../components/pagelayouts/StandardLayout"
 import SectionCentered from "../components/layout/SectionCentered"
 import SEO from "../components/Seo"
-import NextSteps from "../components/NextSteps"
 
 class IndexPage extends React.Component {
     render() {
@@ -21,7 +20,6 @@ class IndexPage extends React.Component {
                         </a>
                     </p>
                 </SectionCentered>
-                {/* <NextSteps /> */}
             </StandardLayout>
         )
     }
