@@ -474,9 +474,11 @@ const AnfrageFormular = () => (
                         // If response is ok
                         if (response.ok) {
                             // redirect to schaden-gemeldet page and remove
-                            window.location.href = "/anfrage-erfolgreich/"
-                            // Clear saved formdata from localstorage
-                            // localStorage.removeItem(storageID);
+                            values.sammlung === "nein"
+                                ? (window.location.href =
+                                      "/anfrage-erfolgreich/")
+                                : (window.location.href =
+                                      "/anfrage-erfolgreich-sammlung/")
                         }
                     })
                     // If there is an error log it to console and reidrect to fehler page
