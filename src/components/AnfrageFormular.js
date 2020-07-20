@@ -96,44 +96,100 @@ const FormSchema = Yup.object().shape({
     telefon: Yup.string(),
     mitglied: Yup.string().required("Dieses Feld ist ein Pflichtfeld"),
     oldtimerclub: Yup.string(),
-    kennzeichen: Yup.string(),
+    sammlung: Yup.string(),
+    kennzeichen: Yup.string().when("sammlung", {
+        is: "nein",
+        then: Yup.string().required("Dieses Feld ist ein Pflichtfeld"),
+    }),
     // .min(, "Ihre Eingabe ist zu kurz")
     // .required("Dieses Feld ist ein Pflichtfeld"),
-    farbe: Yup.string().required("Dieses Feld ist ein Pflichtfeld"),
+    farbe: Yup.string().when("sammlung", {
+        is: "nein",
+        then: Yup.string().required("Dieses Feld ist ein Pflichtfeld"),
+    }),
     historisch: Yup.string(),
     saison: Yup.string(),
     "saison-start": Yup.string(),
     "saison-ende": Yup.string(),
-    fahrzeugart: Yup.array().required("Dieses Feld ist ein Pflichtfeld"),
-    hersteller: Yup.string().required("Dieses Feld ist ein Pflichtfeld"),
-    typ: Yup.string().required("Dieses Feld ist ein Pflichtfeld"),
+    fahrzeugart: Yup.string().when("sammlung", {
+        is: "nein",
+        then: Yup.string().required("Dieses Feld ist ein Pflichtfeld"),
+    }),
+    hersteller: Yup.string().when("sammlung", {
+        is: "nein",
+        then: Yup.string().required("Dieses Feld ist ein Pflichtfeld"),
+    }),
+    typ: Yup.string().when("sammlung", {
+        is: "nein",
+        then: Yup.string().required("Dieses Feld ist ein Pflichtfeld"),
+    }),
     erstzulassung: Yup.string()
         .min(4, "Ihre Eingabe ist zu kurz")
-        .required("Dieses Feld ist ein Pflichtfeld"),
-    wert: Yup.string().required("Dieses Feld ist ein Pflichtfeld"),
-    fahrleistung: Yup.string().required("Dieses Feld ist ein Pflichtfeld"),
-    motorstaerke: Yup.string().required("Dieses Feld ist ein Pflichtfeld"),
-    fahrzeugzustand: Yup.string().required("Dieses Feld ist ein Pflichtfeld"),
-    originalzustand: Yup.string().required("Dieses Feld ist ein Pflichtfeld"),
+        .when("sammlung", {
+            is: "nein",
+            then: Yup.string().required("Dieses Feld ist ein Pflichtfeld"),
+        }),
+    wert: Yup.string().when("sammlung", {
+        is: "nein",
+        then: Yup.string().required("Dieses Feld ist ein Pflichtfeld"),
+    }),
+    fahrleistung: Yup.string().when("sammlung", {
+        is: "nein",
+        then: Yup.string().required("Dieses Feld ist ein Pflichtfeld"),
+    }),
+    motorstaerke: Yup.string().when("sammlung", {
+        is: "nein",
+        then: Yup.string().required("Dieses Feld ist ein Pflichtfeld"),
+    }),
+    fahrzeugzustand: Yup.string().when("sammlung", {
+        is: "nein",
+        then: Yup.string().required("Dieses Feld ist ein Pflichtfeld"),
+    }),
+    originalzustand: Yup.string().when("sammlung", {
+        is: "nein",
+        then: Yup.string().required("Dieses Feld ist ein Pflichtfeld"),
+    }),
     umbauten: Yup.string(),
-    oelfeuchte: Yup.string().required("Dieses Feld ist ein Pflichtfeld"),
+    oelfeuchte: Yup.string().when("sammlung", {
+        is: "nein",
+        then: Yup.string().required("Dieses Feld ist ein Pflichtfeld"),
+    }),
     "oelfeuchte-details": Yup.string(),
-    abstellort: Yup.string().required("Dieses Feld ist ein Pflichtfeld"),
-    wertgutachten: Yup.string().required("Dieses Feld ist ein Pflichtfeld"),
+    abstellort: Yup.string().when("sammlung", {
+        is: "nein",
+        then: Yup.string().required("Dieses Feld ist ein Pflichtfeld"),
+    }),
+    wertgutachten: Yup.string().when("sammlung", {
+        is: "nein",
+        then: Yup.string().required("Dieses Feld ist ein Pflichtfeld"),
+    }),
     // "wertgutachten-datum": Yup.string(),
     "wertgutachten-datum": Yup.string().when("wertgutachten", {
         is: wertgutachten => wertgutachten === "ja",
+        then: Yup.string().when("sammlung", {
+            is: "nein",
+            then: Yup.string().required("Dieses Feld ist ein Pflichtfeld"),
+        }),
+    }),
+    alltagsfahrzeug: Yup.string().when("sammlung", {
+        is: "nein",
         then: Yup.string().required("Dieses Feld ist ein Pflichtfeld"),
     }),
-    alltagsfahrzeug: Yup.string().required("Dieses Feld ist ein Pflichtfeld"),
-    wohnumfeld: Yup.string()
-        .min(4, "Ihre Eingabe ist zu kurz")
-        .required("Dieses Feld ist ein Pflichtfeld"),
-    nutzer: Yup.string().required("Dieses Feld ist ein Pflichtfeld"),
+    wohnumfeld: Yup.string().when("sammlung", {
+        is: "nein",
+        then: Yup.string()
+            .min(4, "Ihre Eingabe ist zu kurz")
+            .required("Dieses Feld ist ein Pflichtfeld"),
+    }),
+    nutzer: Yup.string().when("sammlung", {
+        is: "nein",
+        then: Yup.string().required("Dieses Feld ist ein Pflichtfeld"),
+    }),
     "geburtsdatum-juengster-fahrer": Yup.string(),
-    versicherungsumfang: Yup.array().required(
-        "Dieses Feld ist ein Pflichtfeld"
-    ),
+    versicherungsumfang: Yup.string().when("sammlung", {
+        is: "nein",
+        then: Yup.string().required("Dieses Feld ist ein Pflichtfeld"),
+    }),
     versicherungsbeginn: Yup.string(),
     fragen: Yup.string(),
     akzeptiert: Yup.bool()
@@ -367,6 +423,7 @@ const AnfrageFormular = () => (
                 telefon: "",
                 mitglied: "",
                 oldtimerclub: "",
+                sammlung: "nein",
                 kennzeichen: "",
                 farbe: "",
                 historisch: "",
@@ -399,26 +456,34 @@ const AnfrageFormular = () => (
             }}
             validationSchema={FormSchema}
             onSubmit={values => {
-                fetch("/", {
-                    method: "POST",
-                    redirect: "follow",
-                    referrer: "no-referrer",
-                    headers: {
-                        "Content-Type": "application/x-www-form-urlencoded",
-                    },
-                    body: encode({
-                        "form-name": "anfrage",
-                        ...values,
-                    }),
-                })
-                    .then(
-                        () =>
-                            // console.log("Success!")
-                            (window.location.href = "/anfrage-erfolgreich/")
-                    )
-                    .catch(error => console.log(values))
-                event.preventDefault()
-                console.log(values)
+                fetch(
+                    "https://hook.integromat.com/fpxpeuvk4mjtdxmqifluia6yx8tsjssy",
+                    {
+                        method: "POST",
+                        redirect: "follow",
+                        headers: {
+                            "Content-Type": "application/x-www-form-urlencoded",
+                        },
+                        body: encode({
+                            "form-name": "anfrage",
+                            ...values,
+                        }),
+                    }
+                )
+                    .then(response => {
+                        // If response is ok
+                        if (response.ok) {
+                            // redirect to schaden-gemeldet page and remove
+                            window.location.href = "/anfrage-erfolgreich/"
+                            // Clear saved formdata from localstorage
+                            // localStorage.removeItem(storageID);
+                        }
+                    })
+                    // If there is an error log it to console and reidrect to fehler page
+                    .catch(error => {
+                        console.error("Error: ", error)
+                        window.location.href = "/fehler/"
+                    })
             }}
         >
             {({
@@ -573,495 +638,614 @@ const AnfrageFormular = () => (
                         </label>
                     )}
                     <br />
-                    <StyledH2>Kennzeichen</StyledH2>
-                    <label>
-                        <span>KFZ-Kennzeichen *</span>
-                        <StyledField
-                            type="text"
-                            name="kennzeichen"
-                            border={
-                                errors.kennzeichen &&
-                                touched.kennzeichen &&
-                                "3px solid var(--color-error)"
-                            }
-                        />
-                        <StyledError name="kennzeichen" component="div" />
-                    </label>
                     <fieldset>
-                        <legend>Kennzeichen *</legend>
+                        <legend>
+                            Wie viele Fahrzeuge möchten Sie versichern? *
+                        </legend>
                         <label>
-                            <Field value="rot" type="radio" name="farbe" />
-                            Rot
+                            <Field value="nein" type="radio" name="sammlung" />
+                            Eins
                         </label>
                         <label>
-                            <Field value="schwarz" type="radio" name="farbe" />
-                            Schwarz
+                            <Field value="ja" type="radio" name="sammlung" />
+                            Zwei oder mehr
                         </label>
-                        <StyledError name="farbe" component="div" />
+                        <StyledError name="sammlung" component="div" />
                     </fieldset>
-                    {values.farbe === "schwarz" && (
+                    <br />
+                    {values.sammlung === "nein" && (
                         <div>
-                            <fieldset>
-                                <legend>Historisches Kennzeichen</legend>
-                                <label>
-                                    <Field
-                                        value="nein"
-                                        type="radio"
-                                        name="historisch"
-                                    />
-                                    Nein
-                                </label>
-                                <label>
-                                    <Field
-                                        value="ja"
-                                        type="radio"
-                                        name="historisch"
-                                    />
-                                    Ja
-                                </label>
-                                <StyledError
-                                    name="historisch"
-                                    component="div"
-                                />
-                            </fieldset>
-                            <fieldset>
-                                <legend>Saison-Kennzeichen</legend>
-                                <label>
-                                    <Field
-                                        value="nein"
-                                        type="radio"
-                                        name="saison"
-                                    />
-                                    Nein
-                                </label>
-                                <label>
-                                    <Field
-                                        value="ja"
-                                        type="radio"
-                                        name="saison"
-                                    />
-                                    Ja
-                                </label>
-                                <StyledError name="saison" component="div" />
-                            </fieldset>
-                            {values.saison === "ja" && (
-                                <div>
-                                    <label>
-                                        Von
-                                        <Field
-                                            type="text"
-                                            name="saison-start"
-                                        />
-                                        <StyledError
-                                            name="saison-start"
-                                            component="div"
-                                        />
-                                    </label>
-                                    <label>
-                                        Bis
-                                        <Field type="text" name="saison-ende" />
-                                        <StyledError
-                                            name="saison-ende"
-                                            component="div"
-                                        />
-                                    </label>
-                                </div>
-                            )}
-                        </div>
-                    )}
-                    <br />
-                    <StyledH2>Fahrzeug-Informationen</StyledH2>
-                    <fieldset>
-                        <legend>Fahrzeugart *</legend>
-                        <Checkbox value="PKW" name="fahrzeugart" />
-                        <Checkbox value="Motorrad" name="fahrzeugart" />
-                        <Checkbox value="Traktor" name="fahrzeugart" />
-                        <Checkbox value="Andere" name="fahrzeugart" />
-                        <StyledError name="fahrzeugart" component="div" />
-                    </fieldset>
-                    <p>
-                        Wohnmobile und zu Campingzwecken genutzte Fahrzeuge
-                        können leider nicht über Belmot versichert werden.
-                    </p>
-                    <br />
-                    <label>
-                        <span>Hersteller *</span>
-                        <StyledField
-                            type="text"
-                            name="hersteller"
-                            border={
-                                errors.hersteller &&
-                                touched.hersteller &&
-                                "3px solid var(--color-error)"
-                            }
-                        />
-                        <StyledError name="hersteller" component="div" />
-                    </label>
-                    <label>
-                        <span>Typ *</span>
-                        <StyledField
-                            type="text"
-                            name="typ"
-                            border={
-                                errors.typ &&
-                                touched.typ &&
-                                "3px solid var(--color-error)"
-                            }
-                        />
-                        <StyledError name="typ" component="div" />
-                    </label>
-                    <label>
-                        <span>Erstzulassung *</span>
-                        <StyledField
-                            type="text"
-                            name="erstzulassung"
-                            border={
-                                errors.erstzulassung &&
-                                touched.erstzulassung &&
-                                "3px solid var(--color-error)"
-                            }
-                        />
-                        <StyledError name="erstzulassung" component="div" />
-                    </label>
-                    <label>
-                        <span>
-                            Versicherungssumme (Wiederbeschaffungswert) in € *
-                        </span>
-                        <StyledField
-                            type="text"
-                            name="wert"
-                            border={
-                                errors.wert &&
-                                touched.wert &&
-                                "3px solid var(--color-error)"
-                            }
-                        />
-                        <StyledError name="wert" component="div" />
-                    </label>
-                    <p>
-                        Alternativ ist eine Versicherung zum Markt- oder
-                        Wiederaufbauwert möglich. Falls dies gewünscht ist,
-                        geben Sie mir bitte einen Hinweis. Erläuterungen zu den
-                        verschiedenen Versicherungswerten finden Sie in{" "}
-                        <a
-                            href="../Infoblatt-Versicherungswerte.pdf"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            diesem Infoblatt
-                        </a>
-                    </p>
-                    <br />
-                    <label>
-                        <span>Jährliche Fahrleistung *</span>
-                        <Field component="select" name="fahrleistung">
-                            <option value="">Bitte auswählen</option>
-                            <option value="bis 1.000 km">bis 1.000 km</option>
-                            <option value="bis 2.000 km">bis 2.000 km</option>
-                            <option value="bis 3.000 km">bis 3.000 km</option>
-                            <option value="bis 4.000 km">bis 4.000 km</option>
-                            <option value="bis 5.000 km">bis 5.000 km</option>
-                            <option value="bis 6.000 km">bis 6.000 km</option>
-                            <option value="bis 7.000 km">bis 7.000 km</option>
-                            <option value="bis 8.000 km">bis 8.000 km</option>
-                            <option value="bis 9.000 km">bis 9.000 km</option>
-                        </Field>
-                        <StyledError name="fahrleistung" component="div" />
-                    </label>
-                    <p>
-                        Über 9.000 km pro Jahr hinausgehende Kilometerleistungen
-                        sind nicht versicherbar.
-                    </p>
-                    <br />
-                    <label>
-                        <span>Motorsträke in KW *</span>
-                        <StyledField
-                            type="text"
-                            name="motorstaerke"
-                            border={
-                                errors.motorstaerke &&
-                                touched.motorstaerke &&
-                                "3px solid var(--color-error)"
-                            }
-                        />
-                        <StyledError name="motorstaerke" component="div" />
-                    </label>
-                    <label>
-                        <span>Fahrzeugzustand *</span>
-                        <Field component="select" name="fahrzeugzustand">
-                            <option value="">Bitte auswählen</option>
-                            <option value="Makellos – Note 1">
-                                Makellos – Note 1
-                            </option>
-                            <option value="Sehr gut – Note 1 - 2">
-                                Sehr gut – Note 1 - 2
-                            </option>
-                            <option value="Gut – Note 2">Gut – Note 2</option>
-                            <option value="Befriedigend – Note 2 - 3">
-                                Befriedigend – Note 2 - 3
-                            </option>
-                            <option value="Gebraucht – Note 3">
-                                Gebraucht – Note 3
-                            </option>
-                            <option value="Ausreichend – Note 3 - 4">
-                                Ausreichend – Note 3 - 4
-                            </option>
-                            <option value="Verbraucht – Note 4">
-                                Verbraucht – Note 4
-                            </option>
-                            <option value="Mangelhaft – Note 4 - 5">
-                                Mangelhaft – Note 4 - 5
-                            </option>
-                            <option value="Restaurierungsbedürftig - Notte 5">
-                                Restaurierungsbedürftig - Note 5
-                            </option>
-                        </Field>
-                        <StyledError name="fahrzeugzustand" component="div" />
-                    </label>
-                    <fieldset>
-                        <legend>
-                            Das KFZ befindet sich weitgehend im Originalzustand
-                            ohne Umbauten (z.B. anderer Motor, Tieferlegung,
-                            Tuning etc.) *
-                        </legend>
-                        <label>
-                            <Field
-                                value="ja"
-                                type="radio"
-                                name="originalzustand"
-                                defaultChecked
-                            />
-                            Ja
-                        </label>
-                        <label>
-                            <Field
-                                value="nein"
-                                type="radio"
-                                name="originalzustand"
-                            />
-                            Nein
-                        </label>
-                        <StyledError name="originalzustand" component="div" />
-                    </fieldset>
-                    {values.originalzustand === "nein" && (
-                        <label>
-                            <span>Welche Umbauten hat das Fahrzeug? *</span>
-                            <StyledField type="text" name="umbauten" />
-                            <StyledError name="umbauten" component="div" />
-                        </label>
-                    )}
-                    <fieldset>
-                        <legend>
-                            Der letzte TÜV-Bericht enthält Hinweise auf
-                            Ölfeuchte an Motor und/oder Getriebe *
-                        </legend>
-                        <label>
-                            <Field
-                                value="nein"
-                                type="radio"
-                                name="oelfeuchte"
-                                defaultChecked
-                            />
-                            Nein
-                        </label>
-                        <label>
-                            <Field value="ja" type="radio" name="oelfeuchte" />
-                            Ja
-                        </label>
-                        <StyledError name="oelfeuchte" component="div" />
-                    </fieldset>
-                    {values.oelfeuchte === "ja" && (
-                        <label>
-                            <span>Wenn ja, bitte erläutern</span>
-                            <StyledField
-                                type="text"
-                                name="oelfeuchte-details"
-                            />
-                            <StyledError
-                                name="oelfeuchte-details"
-                                component="div"
-                            />
-                        </label>
-                    )}
-                    <label>
-                        <span>Überwiegender Abstellort *</span>
-                        <Field component="select" name="abstellort">
-                            <option value="">Bitte auswählen</option>
-                            <option value="eigenes Grundstück">
-                                eigenes Grundstück
-                            </option>
-                            <option value="Carport">Carport</option>
-                            <option value="Einzelgarage">Einzelgarage</option>
-                            <option value="Tiefgarage nicht öffentlich">
-                                Tiefgarage nicht öffentlich
-                            </option>
-                            <option value="Tiefgarage öffentlich">
-                                Tiefgarage öffentlich
-                            </option>
-                            <option value="Tiefgarage Parkbox">
-                                Tiefgarage Parkbox
-                            </option>
-                            <option value="Halle">Halle</option>
-                        </Field>
-                        <StyledError name="abstellort" component="div" />
-                    </label>
-                    <fieldset>
-                        <legend>Es gibt ein Wertgutachten *</legend>
-                        <label>
-                            <Field
-                                value="nein"
-                                type="radio"
-                                name="wertgutachten"
-                                defaultChecked
-                            />
-                            Nein
-                        </label>
-                        <label>
-                            <Field
-                                value="ja"
-                                type="radio"
-                                name="wertgutachten"
-                            />
-                            Ja
-                        </label>
-                        <StyledError name="wertgutachten" component="div" />
-                    </fieldset>
-                    {values.wertgutachten === "ja" && (
-                        <label>
-                            <span>Datum des Gutachtens *</span>
-                            <Field
-                                type="text"
-                                name="wertgutachten-datum"
-                                placeholder="TT.MM.JJJJ"
-                            />
-                            <StyledError
-                                name="wertgutachten-datum"
-                                component="div"
-                            />
-                        </label>
-                    )}
-                    <p>
-                        Wenn es kein Wertgutachten gibt und der Fahrzeugwert
-                        unter 12.500 € liegt, genügt eine Selbsteinschätzung.
-                        Die Informationen dazu finden Sie{" "}
-                        <Link to="/faq">hier</Link>. Und das
-                        Selbsteinschätzungsformular finden Sie{" "}
-                        <a
-                            href="../Selbsteinschaetzung.pdf"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            hier
-                        </a>
-                        .
-                    </p>
-                    <br />
-                    <fieldset>
-                        <legend>Erst-/Alltagsfahrzeug vorhanden? *</legend>
-                        <label>
-                            <Field
-                                value="ja"
-                                type="radio"
-                                name="alltagsfahrzeug"
-                            />
-                            Ja
-                        </label>
-                        <label>
-                            <Field
-                                value="nein"
-                                type="radio"
-                                name="alltagsfahrzeug"
-                            />
-                            Nein
-                        </label>
-                        <StyledError name="alltagsfahrzeug" component="div" />
-                    </fieldset>
-                    <fieldset>
-                        <legend>Wohnumfeld *</legend>
-                        <label>
-                            <Field
-                                value="einfamilienhaus"
-                                type="radio"
-                                name="wohnumfeld"
-                            />
-                            Einfamilienhaus
-                        </label>
-                        <label>
-                            <Field
-                                value="eigentumswohnung"
-                                type="radio"
-                                name="wohnumfeld"
-                            />
-                            Eigentumswohnung
-                        </label>
-                        <label>
-                            <Field
-                                value="Kein Wohneigentum"
-                                type="radio"
-                                name="wohnumfeld"
-                            />
-                            Kein Wohneigentum
-                        </label>
-                        <StyledError name="wohnumfeld" component="div" />
-                    </fieldset>
-                    <label>
-                        <span>Nutzer des KFZ *</span>
-                        <Field component="select" name="nutzer">
-                            <option value="">Bitte auswählen</option>
-                            <option value="Nur Sie selbst">
-                                Nur Sie selbst
-                            </option>
-                            <option value="Sie und Partner">
-                                Sie und Partner
-                            </option>
-                            <option value="Sie, Partner und Kinder">
-                                Sie, Partner und Kinder
-                            </option>
-                            <option value="Auch andere">Auch andere</option>
-                        </Field>
-                        <StyledError name="nutzer" component="div" />
-                    </label>
-                    {values.nutzer !== "Nur Sie selbst" &&
-                        values.nutzer !== "" && (
+                            <StyledH2>Kennzeichen</StyledH2>
                             <label>
-                                <span>Geburtsdatum des jüngsten Fahrers *</span>
-                                <Field
+                                <span>KFZ-Kennzeichen *</span>
+                                <StyledField
                                     type="text"
-                                    name="geburtsdatum-juengster-fahrer"
+                                    name="kennzeichen"
+                                    border={
+                                        errors.kennzeichen &&
+                                        touched.kennzeichen &&
+                                        "3px solid var(--color-error)"
+                                    }
                                 />
                                 <StyledError
-                                    name="geburtsdatum-juengster-fahrer"
+                                    name="kennzeichen"
                                     component="div"
                                 />
                             </label>
-                        )}
-                    <fieldset>
-                        <legend>Gewünschter Versicherungsumfang *</legend>
-                        <Checkbox
-                            value="Grunddeckung"
-                            name="versicherungsumfang"
-                        />
-                        <Checkbox
-                            value="Allgefahrendeckung"
-                            name="versicherungsumfang"
-                        />
-                        <StyledError
-                            name="versicherungsumfang"
-                            component="div"
-                        />
-                    </fieldset>
-                    <p>
-                        Erläuterungen zu den verschiedenen Versicherungsformen
-                        finden Sie{" "}
-                        <a
-                            href="../Vergleich-Allrisk-zu-Grunddeckung.pdf"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            hier
-                        </a>
-                    </p>
-                    <br />
+                            <fieldset>
+                                <legend>Kennzeichen *</legend>
+                                <label>
+                                    <Field
+                                        value="rot"
+                                        type="radio"
+                                        name="farbe"
+                                    />
+                                    Rot
+                                </label>
+                                <label>
+                                    <Field
+                                        value="schwarz"
+                                        type="radio"
+                                        name="farbe"
+                                    />
+                                    Schwarz
+                                </label>
+                                <StyledError name="farbe" component="div" />
+                            </fieldset>
+                            {values.farbe === "schwarz" && (
+                                <div>
+                                    <fieldset>
+                                        <legend>
+                                            Historisches Kennzeichen
+                                        </legend>
+                                        <label>
+                                            <Field
+                                                value="nein"
+                                                type="radio"
+                                                name="historisch"
+                                            />
+                                            Nein
+                                        </label>
+                                        <label>
+                                            <Field
+                                                value="ja"
+                                                type="radio"
+                                                name="historisch"
+                                            />
+                                            Ja
+                                        </label>
+                                        <StyledError
+                                            name="historisch"
+                                            component="div"
+                                        />
+                                    </fieldset>
+                                    <fieldset>
+                                        <legend>Saison-Kennzeichen</legend>
+                                        <label>
+                                            <Field
+                                                value="nein"
+                                                type="radio"
+                                                name="saison"
+                                            />
+                                            Nein
+                                        </label>
+                                        <label>
+                                            <Field
+                                                value="ja"
+                                                type="radio"
+                                                name="saison"
+                                            />
+                                            Ja
+                                        </label>
+                                        <StyledError
+                                            name="saison"
+                                            component="div"
+                                        />
+                                    </fieldset>
+                                    {values.saison === "ja" && (
+                                        <div>
+                                            <label>
+                                                Von
+                                                <Field
+                                                    type="text"
+                                                    name="saison-start"
+                                                />
+                                                <StyledError
+                                                    name="saison-start"
+                                                    component="div"
+                                                />
+                                            </label>
+                                            <label>
+                                                Bis
+                                                <Field
+                                                    type="text"
+                                                    name="saison-ende"
+                                                />
+                                                <StyledError
+                                                    name="saison-ende"
+                                                    component="div"
+                                                />
+                                            </label>
+                                        </div>
+                                    )}
+                                </div>
+                            )}
+                            <br />
+                            <StyledH2>Fahrzeug-Informationen</StyledH2>
+                            <fieldset>
+                                <legend>Fahrzeugart *</legend>
+                                <Checkbox value="PKW" name="fahrzeugart" />
+                                <Checkbox value="Motorrad" name="fahrzeugart" />
+                                <Checkbox value="Traktor" name="fahrzeugart" />
+                                <Checkbox value="Andere" name="fahrzeugart" />
+                                <StyledError
+                                    name="fahrzeugart"
+                                    component="div"
+                                />
+                            </fieldset>
+                            <p>
+                                Wohnmobile und zu Campingzwecken genutzte
+                                Fahrzeuge können leider nicht über Belmot
+                                versichert werden.
+                            </p>
+                            <br />
+                            <label>
+                                <span>Hersteller *</span>
+                                <StyledField
+                                    type="text"
+                                    name="hersteller"
+                                    border={
+                                        errors.hersteller &&
+                                        touched.hersteller &&
+                                        "3px solid var(--color-error)"
+                                    }
+                                />
+                                <StyledError
+                                    name="hersteller"
+                                    component="div"
+                                />
+                            </label>
+                            <label>
+                                <span>Typ *</span>
+                                <StyledField
+                                    type="text"
+                                    name="typ"
+                                    border={
+                                        errors.typ &&
+                                        touched.typ &&
+                                        "3px solid var(--color-error)"
+                                    }
+                                />
+                                <StyledError name="typ" component="div" />
+                            </label>
+                            <label>
+                                <span>Erstzulassung *</span>
+                                <StyledField
+                                    type="text"
+                                    name="erstzulassung"
+                                    border={
+                                        errors.erstzulassung &&
+                                        touched.erstzulassung &&
+                                        "3px solid var(--color-error)"
+                                    }
+                                />
+                                <StyledError
+                                    name="erstzulassung"
+                                    component="div"
+                                />
+                            </label>
+                            <label>
+                                <span>
+                                    Versicherungssumme (Wiederbeschaffungswert)
+                                    in € *
+                                </span>
+                                <StyledField
+                                    type="text"
+                                    name="wert"
+                                    border={
+                                        errors.wert &&
+                                        touched.wert &&
+                                        "3px solid var(--color-error)"
+                                    }
+                                />
+                                <StyledError name="wert" component="div" />
+                            </label>
+                            <p>
+                                Alternativ ist eine Versicherung zum Markt- oder
+                                Wiederaufbauwert möglich. Falls dies gewünscht
+                                ist, geben Sie mir bitte einen Hinweis.
+                                Erläuterungen zu den verschiedenen
+                                Versicherungswerten finden Sie in{" "}
+                                <a
+                                    href="../Infoblatt-Versicherungswerte.pdf"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    diesem Infoblatt
+                                </a>
+                            </p>
+                            <br />
+                            <label>
+                                <span>Jährliche Fahrleistung *</span>
+                                <Field component="select" name="fahrleistung">
+                                    <option value="">Bitte auswählen</option>
+                                    <option value="bis 1.000 km">
+                                        bis 1.000 km
+                                    </option>
+                                    <option value="bis 2.000 km">
+                                        bis 2.000 km
+                                    </option>
+                                    <option value="bis 3.000 km">
+                                        bis 3.000 km
+                                    </option>
+                                    <option value="bis 4.000 km">
+                                        bis 4.000 km
+                                    </option>
+                                    <option value="bis 5.000 km">
+                                        bis 5.000 km
+                                    </option>
+                                    <option value="bis 6.000 km">
+                                        bis 6.000 km
+                                    </option>
+                                    <option value="bis 7.000 km">
+                                        bis 7.000 km
+                                    </option>
+                                    <option value="bis 8.000 km">
+                                        bis 8.000 km
+                                    </option>
+                                    <option value="bis 9.000 km">
+                                        bis 9.000 km
+                                    </option>
+                                </Field>
+                                <StyledError
+                                    name="fahrleistung"
+                                    component="div"
+                                />
+                            </label>
+                            <p>
+                                Über 9.000 km pro Jahr hinausgehende
+                                Kilometerleistungen sind nicht versicherbar.
+                            </p>
+                            <br />
+                            <label>
+                                <span>Motorsträke in KW *</span>
+                                <StyledField
+                                    type="text"
+                                    name="motorstaerke"
+                                    border={
+                                        errors.motorstaerke &&
+                                        touched.motorstaerke &&
+                                        "3px solid var(--color-error)"
+                                    }
+                                />
+                                <StyledError
+                                    name="motorstaerke"
+                                    component="div"
+                                />
+                            </label>
+                            <label>
+                                <span>Fahrzeugzustand *</span>
+                                <Field
+                                    component="select"
+                                    name="fahrzeugzustand"
+                                >
+                                    <option value="">Bitte auswählen</option>
+                                    <option value="Makellos – Note 1">
+                                        Makellos – Note 1
+                                    </option>
+                                    <option value="Sehr gut – Note 1 - 2">
+                                        Sehr gut – Note 1 - 2
+                                    </option>
+                                    <option value="Gut – Note 2">
+                                        Gut – Note 2
+                                    </option>
+                                    <option value="Befriedigend – Note 2 - 3">
+                                        Befriedigend – Note 2 - 3
+                                    </option>
+                                    <option value="Gebraucht – Note 3">
+                                        Gebraucht – Note 3
+                                    </option>
+                                    <option value="Ausreichend – Note 3 - 4">
+                                        Ausreichend – Note 3 - 4
+                                    </option>
+                                    <option value="Verbraucht – Note 4">
+                                        Verbraucht – Note 4
+                                    </option>
+                                    <option value="Mangelhaft – Note 4 - 5">
+                                        Mangelhaft – Note 4 - 5
+                                    </option>
+                                    <option value="Restaurierungsbedürftig - Notte 5">
+                                        Restaurierungsbedürftig - Note 5
+                                    </option>
+                                </Field>
+                                <StyledError
+                                    name="fahrzeugzustand"
+                                    component="div"
+                                />
+                            </label>
+                            <fieldset>
+                                <legend>
+                                    Das KFZ befindet sich weitgehend im
+                                    Originalzustand ohne Umbauten (z.B. anderer
+                                    Motor, Tieferlegung, Tuning etc.) *
+                                </legend>
+                                <label>
+                                    <Field
+                                        value="ja"
+                                        type="radio"
+                                        name="originalzustand"
+                                        defaultChecked
+                                    />
+                                    Ja
+                                </label>
+                                <label>
+                                    <Field
+                                        value="nein"
+                                        type="radio"
+                                        name="originalzustand"
+                                    />
+                                    Nein
+                                </label>
+                                <StyledError
+                                    name="originalzustand"
+                                    component="div"
+                                />
+                            </fieldset>
+                            {values.originalzustand === "nein" && (
+                                <label>
+                                    <span>
+                                        Welche Umbauten hat das Fahrzeug? *
+                                    </span>
+                                    <StyledField type="text" name="umbauten" />
+                                    <StyledError
+                                        name="umbauten"
+                                        component="div"
+                                    />
+                                </label>
+                            )}
+                            <fieldset>
+                                <legend>
+                                    Der letzte TÜV-Bericht enthält Hinweise auf
+                                    Ölfeuchte an Motor und/oder Getriebe *
+                                </legend>
+                                <label>
+                                    <Field
+                                        value="nein"
+                                        type="radio"
+                                        name="oelfeuchte"
+                                        defaultChecked
+                                    />
+                                    Nein
+                                </label>
+                                <label>
+                                    <Field
+                                        value="ja"
+                                        type="radio"
+                                        name="oelfeuchte"
+                                    />
+                                    Ja
+                                </label>
+                                <StyledError
+                                    name="oelfeuchte"
+                                    component="div"
+                                />
+                            </fieldset>
+                            {values.oelfeuchte === "ja" && (
+                                <label>
+                                    <span>Wenn ja, bitte erläutern</span>
+                                    <StyledField
+                                        type="text"
+                                        name="oelfeuchte-details"
+                                    />
+                                    <StyledError
+                                        name="oelfeuchte-details"
+                                        component="div"
+                                    />
+                                </label>
+                            )}
+                            <label>
+                                <span>Überwiegender Abstellort *</span>
+                                <Field component="select" name="abstellort">
+                                    <option value="">Bitte auswählen</option>
+                                    <option value="eigenes Grundstück">
+                                        eigenes Grundstück
+                                    </option>
+                                    <option value="Carport">Carport</option>
+                                    <option value="Einzelgarage">
+                                        Einzelgarage
+                                    </option>
+                                    <option value="Tiefgarage nicht öffentlich">
+                                        Tiefgarage nicht öffentlich
+                                    </option>
+                                    <option value="Tiefgarage öffentlich">
+                                        Tiefgarage öffentlich
+                                    </option>
+                                    <option value="Tiefgarage Parkbox">
+                                        Tiefgarage Parkbox
+                                    </option>
+                                    <option value="Halle">Halle</option>
+                                </Field>
+                                <StyledError
+                                    name="abstellort"
+                                    component="div"
+                                />
+                            </label>
+                            <fieldset>
+                                <legend>Es gibt ein Wertgutachten *</legend>
+                                <label>
+                                    <Field
+                                        value="nein"
+                                        type="radio"
+                                        name="wertgutachten"
+                                        defaultChecked
+                                    />
+                                    Nein
+                                </label>
+                                <label>
+                                    <Field
+                                        value="ja"
+                                        type="radio"
+                                        name="wertgutachten"
+                                    />
+                                    Ja
+                                </label>
+                                <StyledError
+                                    name="wertgutachten"
+                                    component="div"
+                                />
+                            </fieldset>
+                            {values.wertgutachten === "ja" && (
+                                <label>
+                                    <span>Datum des Gutachtens *</span>
+                                    <Field
+                                        type="text"
+                                        name="wertgutachten-datum"
+                                        placeholder="TT.MM.JJJJ"
+                                    />
+                                    <StyledError
+                                        name="wertgutachten-datum"
+                                        component="div"
+                                    />
+                                </label>
+                            )}
+                            <p>
+                                Wenn es kein Wertgutachten gibt und der
+                                Fahrzeugwert unter 12.500 € liegt, genügt eine
+                                Selbsteinschätzung. Die Informationen dazu
+                                finden Sie <Link to="/faq">hier</Link>. Und das
+                                Selbsteinschätzungsformular finden Sie{" "}
+                                <a
+                                    href="../Selbsteinschaetzung.pdf"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    hier
+                                </a>
+                                .
+                            </p>
+                            <br />
+                            <fieldset>
+                                <legend>
+                                    Erst-/Alltagsfahrzeug vorhanden? *
+                                </legend>
+                                <label>
+                                    <Field
+                                        value="ja"
+                                        type="radio"
+                                        name="alltagsfahrzeug"
+                                    />
+                                    Ja
+                                </label>
+                                <label>
+                                    <Field
+                                        value="nein"
+                                        type="radio"
+                                        name="alltagsfahrzeug"
+                                    />
+                                    Nein
+                                </label>
+                                <StyledError
+                                    name="alltagsfahrzeug"
+                                    component="div"
+                                />
+                            </fieldset>
+                            <fieldset>
+                                <legend>Wohnumfeld *</legend>
+                                <label>
+                                    <Field
+                                        value="einfamilienhaus"
+                                        type="radio"
+                                        name="wohnumfeld"
+                                    />
+                                    Einfamilienhaus
+                                </label>
+                                <label>
+                                    <Field
+                                        value="eigentumswohnung"
+                                        type="radio"
+                                        name="wohnumfeld"
+                                    />
+                                    Eigentumswohnung
+                                </label>
+                                <label>
+                                    <Field
+                                        value="Kein Wohneigentum"
+                                        type="radio"
+                                        name="wohnumfeld"
+                                    />
+                                    Kein Wohneigentum
+                                </label>
+                                <StyledError
+                                    name="wohnumfeld"
+                                    component="div"
+                                />
+                            </fieldset>
+                            <label>
+                                <span>Nutzer des KFZ *</span>
+                                <Field component="select" name="nutzer">
+                                    <option value="">Bitte auswählen</option>
+                                    <option value="Nur Sie selbst">
+                                        Nur Sie selbst
+                                    </option>
+                                    <option value="Sie und Partner">
+                                        Sie und Partner
+                                    </option>
+                                    <option value="Sie, Partner und Kinder">
+                                        Sie, Partner und Kinder
+                                    </option>
+                                    <option value="Auch andere">
+                                        Auch andere
+                                    </option>
+                                </Field>
+                                <StyledError name="nutzer" component="div" />
+                            </label>
+                            {values.nutzer !== "Nur Sie selbst" &&
+                                values.nutzer !== "" && (
+                                    <label>
+                                        <span>
+                                            Geburtsdatum des jüngsten Fahrers *
+                                        </span>
+                                        <Field
+                                            type="text"
+                                            name="geburtsdatum-juengster-fahrer"
+                                        />
+                                        <StyledError
+                                            name="geburtsdatum-juengster-fahrer"
+                                            component="div"
+                                        />
+                                    </label>
+                                )}
+                            <fieldset>
+                                <legend>
+                                    Gewünschter Versicherungsumfang *
+                                </legend>
+                                <Checkbox
+                                    value="Grunddeckung"
+                                    name="versicherungsumfang"
+                                />
+                                <Checkbox
+                                    value="Allgefahrendeckung"
+                                    name="versicherungsumfang"
+                                />
+                                <StyledError
+                                    name="versicherungsumfang"
+                                    component="div"
+                                />
+                            </fieldset>
+                            <p>
+                                Erläuterungen zu den verschiedenen
+                                Versicherungsformen finden Sie{" "}
+                                <a
+                                    href="../Vergleich-Allrisk-zu-Grunddeckung.pdf"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    hier
+                                </a>
+                            </p>
+                            <br />
+                        </div>
+                    )}
                     <label>
                         <span>Unverbindlich geplanter Versicherungsbeginn</span>
                         <Field type="text" name="versicherungsbeginn" />

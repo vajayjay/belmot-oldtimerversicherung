@@ -60,6 +60,7 @@ label > input[type="email"] {
 }
 textarea {
     height: 150px;
+    font-family: inherit;
 }
 
 label > input[type="text"]:focus,
