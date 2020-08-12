@@ -16,7 +16,7 @@ const FormError = styled.p`
 `
 
 const StyledField = styled(Field)`
-    border: ${props => props.border || ""}!important;
+    border: ${(props) => props.border || ""}!important;
     border-radius: 15px;
 `
 const StyledH2 = styled.h2`
@@ -58,10 +58,11 @@ const Button = styled.button`
 `
 
 // Netlify Form bits
-const encode = data => {
+const encode = (data) => {
     return Object.keys(data)
         .map(
-            key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
+            (key) =>
+                encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
         )
         .join("&")
 }
@@ -111,6 +112,7 @@ const FormSchema = Yup.object().shape({
     saison: Yup.string(),
     "saison-start": Yup.string(),
     "saison-ende": Yup.string(),
+    zugelassen: Yup.string(),
     fahrzeugart: Yup.string().when("sammlung", {
         is: "nein",
         then: Yup.string().required("Dieses Feld ist ein Pflichtfeld"),
@@ -165,7 +167,7 @@ const FormSchema = Yup.object().shape({
     }),
     // "wertgutachten-datum": Yup.string(),
     "wertgutachten-datum": Yup.string().when("wertgutachten", {
-        is: wertgutachten => wertgutachten === "ja",
+        is: (wertgutachten) => wertgutachten === "ja",
         then: Yup.string().when("sammlung", {
             is: "nein",
             then: Yup.string().required("Dieses Feld ist ein Pflichtfeld"),
@@ -196,7 +198,7 @@ const FormSchema = Yup.object().shape({
         .test(
             "akzeptiert",
             "Bitte akzeptieren Sie die Nutzungsbedingungen",
-            value => value === true
+            (value) => value === true
         )
         .required("Bitte akzeptieren Sie die Nutzungsbedingungen"),
 })
@@ -220,7 +222,7 @@ function Checkbox(props) {
                         onChange={() => {
                             if (field.value.includes(props.value)) {
                                 const nextValue = field.value.filter(
-                                    value => value !== props.value
+                                    (value) => value !== props.value
                                 )
                                 form.setFieldValue(props.name, nextValue)
                             } else {
@@ -242,7 +244,7 @@ const AnfrageFormular = () => (
     <div>
         <h1>Online-Anfrage</h1>
         {/* Netlify Dummy Form ; */}
-        <form
+        {/* <form
             data-netlify="true"
             hidden
             name="anfrage"
@@ -250,7 +252,7 @@ const AnfrageFormular = () => (
             action="/anfrage-erfolgreich/"
         >
             <input type="hidden" name="bot-field" />
-            {/* Important so netlify forms works with gatsby */}
+Important so netlify forms works with gatsby 
             <input type="hidden" name="form-name" value="anfrage" />
             <fieldset>
                 <input type="radio" name="anrede" value="Herr" />
@@ -406,7 +408,7 @@ const AnfrageFormular = () => (
             <textarea name="fragen" id="" cols="30" rows="5" />
             <input type="checkbox" name="akzeptiert" />
             <input type="submit" value="Absenden" />
-        </form>
+        </form> */}
         {/* End of Netlify dummy form */}
         <Formik
             initialValues={{
@@ -430,6 +432,7 @@ const AnfrageFormular = () => (
                 saison: "",
                 "saison-start": "",
                 "saison-ende": "",
+                zugelassen: "nein",
                 fahrzeugart: [],
                 hersteller: "",
                 typ: "",
@@ -455,7 +458,7 @@ const AnfrageFormular = () => (
                 akzeptiert: false,
             }}
             validationSchema={FormSchema}
-            onSubmit={values => {
+            onSubmit={(values) => {
                 fetch(
                     "https://hook.integromat.com/fpxpeuvk4mjtdxmqifluia6yx8tsjssy",
                     {
@@ -470,7 +473,7 @@ const AnfrageFormular = () => (
                         }),
                     }
                 )
-                    .then(response => {
+                    .then((response) => {
                         // If response is ok
                         if (response.ok) {
                             // redirect to schaden-gemeldet page and remove
@@ -482,7 +485,7 @@ const AnfrageFormular = () => (
                         }
                     })
                     // If there is an error log it to console and reidrect to fehler page
-                    .catch(error => {
+                    .catch((error) => {
                         console.error("Error: ", error)
                         window.location.href = "/fehler/"
                     })
@@ -772,6 +775,34 @@ const AnfrageFormular = () => (
                                     )}
                                 </div>
                             )}
+                            <br />
+                            <StyledH2>Zulassung</StyledH2>
+                            <fieldset>
+                                <legend>
+                                    Ist das KFZ bereits auf Sie zugelassen? *
+                                </legend>
+                                <label>
+                                    <Field
+                                        value="ja"
+                                        type="radio"
+                                        name="zugelassen"
+                                    />
+                                    Ja
+                                </label>
+                                <label>
+                                    <Field
+                                        value="nein"
+                                        type="radio"
+                                        name="zugelassen"
+                                        defaultChecked
+                                    />
+                                    Nein
+                                </label>
+                                <StyledError
+                                    name="zugelassen"
+                                    component="div"
+                                />
+                            </fieldset>
                             <br />
                             <StyledH2>Fahrzeug-Informationen</StyledH2>
                             <fieldset>
