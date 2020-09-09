@@ -662,7 +662,9 @@ Important so netlify forms works with gatsby
                         <div>
                             <StyledH2>Kennzeichen</StyledH2>
                             <label>
-                                <span>KFZ-Kennzeichen *</span>
+                                <span>
+                                    KFZ-Kennzeichen oder Zulassungsbezirk *
+                                </span>
                                 <StyledField
                                     type="text"
                                     name="kennzeichen"
