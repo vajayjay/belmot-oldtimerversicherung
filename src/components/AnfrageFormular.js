@@ -113,9 +113,9 @@ const FormSchema = Yup.object().shape({
     "saison-start": Yup.string(),
     "saison-ende": Yup.string(),
     zugelassen: Yup.string(),
-    fahrzeugart: Yup.string().when("sammlung", {
+    fahrzeugart: Yup.mixed().when("sammlung", {
         is: "nein",
-        then: Yup.string().required("Dieses Feld ist ein Pflichtfeld"),
+        then: Yup.array().min(1, "Dieses Feld ist ein Pflichtfeld"),
     }),
     hersteller: Yup.string().when("sammlung", {
         is: "nein",
@@ -192,9 +192,9 @@ const FormSchema = Yup.object().shape({
         then: Yup.string().required("Dieses Feld ist ein Pflichtfeld"),
     }),
     "geburtsdatum-juengster-fahrer": Yup.string(),
-    versicherungsumfang: Yup.string().when("sammlung", {
+    versicherungsumfang: Yup.mixed().when("sammlung", {
         is: "nein",
-        then: Yup.string().required("Dieses Feld ist ein Pflichtfeld"),
+        then: Yup.array().min(1, "Dieses Feld ist ein Pflichtfeld"),
     }),
     versicherungsbeginn: Yup.string(),
     fragen: Yup.string(),
@@ -247,173 +247,6 @@ function Checkbox(props) {
 const AnfrageFormular = () => (
     <div>
         <h1>Online-Anfrage</h1>
-        {/* Netlify Dummy Form ; */}
-        {/* <form
-            data-netlify="true"
-            hidden
-            name="anfrage"
-            netlify-honeypot="bot-field"
-            action="/anfrage-erfolgreich/"
-        >
-            <input type="hidden" name="bot-field" />
-Important so netlify forms works with gatsby 
-            <input type="hidden" name="form-name" value="anfrage" />
-            <fieldset>
-                <input type="radio" name="anrede" value="Herr" />
-                <input type="radio" name="anrede" value="Frau" />
-            </fieldset>
-            <input name="vorname" type="text" />
-            <input name="nachname" type="text" />
-            <input name="geburtsdatum" type="text" />
-            <input name="strasse" type="text" />
-            <input name="plz" type="text" />
-            <input name="ort" type="text" />
-            <input name="email" type="email" />
-            <input name="telefon" type="text" />
-            <fieldset>
-                <input type="radio" name="oldtimerclub" value="Nein" />
-                <input type="radio" name="oldtimerclub" value="Ja" />
-            </fieldset>
-            <input name="oldtimerclub" type="text" />
-            <fieldset>
-                <input type="checkbox" name="fahrzeugart" value="PKW" />
-                <input type="checkbox" name="fahrzeugart" value="Motorrad" />
-                <input type="checkbox" name="fahrzeugart" value="Traktor" />
-
-                <input type="checkbox" name="fahrzeugart" value="Andere" />
-            </fieldset>
-
-            <input type="text" name="kennzeichen" />
-
-            <fieldset>
-                <input type="radio" name="farbe" value="Rot" />
-                <input type="radio" name="farbe" value="Schwarz" />
-            </fieldset>
-            <fieldset>
-                <input type="radio" name="historisch" value="Nein" />
-                <input type="radio" name="historisch" value="Ja" />
-            </fieldset>
-            <fieldset>
-                <input type="radio" name="saison" value="Nein" />
-                <input type="radio" name="saison" value="Ja" />
-            </fieldset>
-            <input type="text" name="saison-start" />
-            <input type="text" name="saison-ende" />
-            <input type="text" name="hersteller" />
-            <input type="text" name="typ" />
-            <input type="text" name="erstzulassung" />
-            <input type="text" name="wert" />
-            <select name="fahrleistung[]">
-                <option value="bis 1.000 km">bis 1.000 km</option>
-                <option value="bis 2.000 km">bis 2.000 km</option>
-                <option value="bis 3.000 km">bis 3.000 km</option>
-                <option value="bis 4.000 km">bis 4.000 km</option>
-                <option value="bis 5.000 km">bis 5.000 km</option>
-                <option value="bis 6.000 km">bis 6.000 km</option>
-                <option value="bis 7.000 km">bis 7.000 km</option>
-                <option value="bis 8.000 km">bis 8.000 km</option>
-                <option value="bis 9.000 km">bis 9.000 km</option>
-            </select>
-            <input type="text" name="motorstaerke" />
-            <select name="fahrzeugzustand[]">
-                <option value="Makellos – Note 1">Makellos – Note 1</option>
-                <option value="Sehr gut – Note 1 - 2">
-                    Sehr gut – Note 1 - 2
-                </option>
-                <option value="Gut – Note 2">Gut – Note 2</option>
-                <option value="Befriedigend – Note 2 - 3">
-                    Befriedigend – Note 2 - 3
-                </option>
-                <option value="Gebraucht – Note 3">Gebraucht – Note 3</option>
-                <option value="Ausreichend – Note 3 - 4">
-                    Ausreichend – Note 3 - 4
-                </option>
-                <option value="Verbraucht – Note 4">Verbraucht – Note 4</option>
-                <option value="Mangelhaft – Note 4 - 5">
-                    Mangelhaft – Note 4 - 5
-                </option>
-                <option value="Restaurierungsbedürftig - Notte 5">
-                    Restaurierungsbedürftig - Note 5
-                </option>
-            </select>
-
-            <fieldset>
-                <input type="radio" name="originalzustand" value="Ja" />
-                <span>Ja</span>
-
-                <input type="radio" name="originalzustand" value="Nein" />
-                <span>Nein</span>
-            </fieldset>
-            <input type="text" name="umbauten" />
-            <fieldset>
-                <input type="radio" name="oelfeuchte" value="Nein" />
-
-                <input type="radio" name="oelfeuchte" value="Ja" />
-            </fieldset>
-            <input type="text" name="oelfeuchte-details" />
-
-            <select name="abstellort[]">
-                <option value="eigenes Grundstueck">eigenes Grundstück</option>
-                <option value="Carport">Carport</option>
-                <option value="Einzelgarage">Einzelgarage</option>
-                <option value="Tiefgarage nicht öffentlich">
-                    Tiefgarage nicht öffentlich
-                </option>
-                <option value="Tiefgarage öffentlich">
-                    Tiefgarage öffentlich
-                </option>
-                <option value="Tiefgarage Parkbox">Tiefgarage Parkbox</option>
-                <option value="Halle">Halle</option>
-            </select>
-            <fieldset>
-                <input type="radio" name="wertgutachten" value="Ja" />
-                <input type="radio" name="wertgutachten" value="Nein" />
-            </fieldset>
-            <input type="text" name="wertgutachten-datum" />
-            <fieldset>
-                <input type="radio" name="alltagsfahrzeug" value="Ja" />
-                <input type="radio" name="alltagsfahrzeug" value="Nein" />
-            </fieldset>
-            <fieldset>
-                <input type="radio" name="wohnumfeld" value="Einfamilienhaus" />
-                <input
-                    type="radio"
-                    name="wohnumfeld"
-                    value="Eigentumswohnung"
-                />
-                <input
-                    type="radio"
-                    name="wohnumfeld"
-                    value="Kein Wohneigentum"
-                />
-            </fieldset>
-            <select name="nutzer">
-                <option value="Nur Sie selbst">Nur Sie selbst</option>
-                <option value="Sie und Partner">Sie und Partner</option>
-                <option value="Sie, Partner und Kinder">
-                    Sie, Partner und Kinder
-                </option>
-                <option value="Auch andere">Auch andere</option>
-            </select>
-            <input type="text" name="geburtsdatum-juengster-fahrer" />
-            <fieldset>
-                <input
-                    type="checkbox"
-                    name="versicherungsumfang"
-                    value="Grunddeckung"
-                />
-                <input
-                    type="checkbox"
-                    name="versicherungsumfang"
-                    value="Allgefahrendeckung"
-                />
-            </fieldset>
-            <input type="text" name="versicherungsbeginn" />
-            <textarea name="fragen" id="" cols="30" rows="5" />
-            <input type="checkbox" name="akzeptiert" />
-            <input type="submit" value="Absenden" />
-        </form> */}
-        {/* End of Netlify dummy form */}
         <Formik
             initialValues={{
                 "bot-field": "",
