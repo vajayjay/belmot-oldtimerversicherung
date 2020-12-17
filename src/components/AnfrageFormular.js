@@ -143,6 +143,10 @@ const FormSchema = Yup.object().shape({
         is: "nein",
         then: Yup.string().required("Dieses Feld ist ein Pflichtfeld"),
     }),
+    gesamtkilometerleistung: Yup.string().when("sammlung", {
+        is: "nein",
+        then: Yup.string().required("Dieses Feld ist ein Pflichtfeld"),
+    }),
     fahrzeugzustand: Yup.string().when("sammlung", {
         is: "nein",
         then: Yup.string().required("Dieses Feld ist ein Pflichtfeld"),
@@ -440,6 +444,7 @@ Important so netlify forms works with gatsby
                 wert: "",
                 fahrleistung: "",
                 motorstaerke: "",
+                gesamtkilometerleistung: "",
                 fahrzeugzustand: "",
                 originalzustand: "ja",
                 umbauten: "",
@@ -943,7 +948,7 @@ Important so netlify forms works with gatsby
                             </p>
                             <br />
                             <label>
-                                <span>Motorsträke in KW *</span>
+                                <span>Motorsträke in kW *</span>
                                 <StyledField
                                     type="text"
                                     name="motorstaerke"
@@ -955,6 +960,25 @@ Important so netlify forms works with gatsby
                                 />
                                 <StyledError
                                     name="motorstaerke"
+                                    component="div"
+                                />
+                            </label>
+                            <label>
+                                <span>
+                                    Aktuelle Gesamtkilometerleistung des
+                                    Fahrzeugs in km*
+                                </span>
+                                <StyledField
+                                    type="text"
+                                    name="gesamtkilometerleistung"
+                                    border={
+                                        errors.gesamtkilometerleistung &&
+                                        touched.gesamtkilometerleistung &&
+                                        "3px solid var(--color-error)"
+                                    }
+                                />
+                                <StyledError
+                                    name="gesamtkilometerleistung"
                                     component="div"
                                 />
                             </label>
