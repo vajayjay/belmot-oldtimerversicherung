@@ -38,11 +38,11 @@ const StyledImage = styled.img`
     }
 `
 
-const TypeCard = props => (
+const TypeCard = (props) => (
     <Card>
         <Circle>
             <StyledImage
-                src={require(`../../content/images/${props.type}.svg`)}
+                src={require(`../../content/images/${props.type}.svg`).default}
                 alt={props.imgAlt}
             />
         </Circle>

@@ -32,7 +32,7 @@ const StyledReviews = styled.div`
     }
 `
 
-const CarPool = props => (
+const CarPool = (props) => (
     <StandardLayout>
         <SEO
             title="Belmot Oldtimerversicherung"
@@ -67,7 +67,9 @@ const CarPool = props => (
     </StandardLayout>
 )
 
-export default props => (
+//  const Named = () => {}
+
+const reviewQuery = (props) => (
     <StaticQuery
         query={graphql`
             query {
@@ -84,6 +86,7 @@ export default props => (
                 }
             }
         `}
-        render={data => <CarPool data={data} {...props} />}
+        render={(data) => <CarPool data={data} {...props} />}
     />
 )
+export default reviewQuery
