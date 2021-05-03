@@ -22,7 +22,9 @@ class IndexPage extends React.Component {
                 <SEO title="Bewertung erfolgreich " index="noindex" />
                 <SectionCenteredFullHeight>
                     <StyledImage
-                        src={require(`../../content/images/success.svg`)}
+                        src={
+                            require(`../../content/images/success.svg`).default
+                        }
                         alt="Icon mit Konfetti"
                     />
                     <h1>Vielen Dank für Ihre Bewertung!</h1>
