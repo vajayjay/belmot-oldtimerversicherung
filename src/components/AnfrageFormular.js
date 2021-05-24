@@ -115,7 +115,8 @@ const FormSchema = Yup.object().shape({
     zugelassen: Yup.string(),
     fahrzeugart: Yup.mixed().when("sammlung", {
         is: "nein",
-        then: Yup.array().min(1, "Dieses Feld ist ein Pflichtfeld"),
+        then: Yup.string().required("Dieses Feld ist ein Pflichtfeld"),
+        // then: Yup.array().min(1, "Dieses Feld ist ein Pflichtfeld"),
     }),
     hersteller: Yup.string().when("sammlung", {
         is: "nein",
@@ -129,6 +130,12 @@ const FormSchema = Yup.object().shape({
         .min(4, "Ihre Eingabe ist zu kurz")
         .when("sammlung", {
             is: "nein",
+            then: Yup.string().required("Dieses Feld ist ein Pflichtfeld"),
+        }),
+    verwendung: Yup.string()
+        .min(4, "Ihre Eingabe ist zu kurz")
+        .when("fahrzeugart", {
+            is: "Traktor",
             then: Yup.string().required("Dieses Feld ist ein Pflichtfeld"),
         }),
     wert: Yup.string().when("sammlung", {
@@ -270,7 +277,8 @@ const AnfrageFormular = () => (
                 "saison-start": "",
                 "saison-ende": "",
                 zugelassen: "nein",
-                fahrzeugart: [],
+                fahrzeugart: "",
+                verwendung: "",
                 hersteller: "",
                 typ: "",
                 erstzulassung: "",
@@ -647,10 +655,43 @@ const AnfrageFormular = () => (
                             <StyledH2>Fahrzeug-Informationen</StyledH2>
                             <fieldset>
                                 <legend>Fahrzeugart *</legend>
-                                <Checkbox value="PKW" name="fahrzeugart" />
+                                {/* <Checkbox value="PKW" name="fahrzeugart" />
                                 <Checkbox value="Motorrad" name="fahrzeugart" />
                                 <Checkbox value="Traktor" name="fahrzeugart" />
-                                <Checkbox value="Andere" name="fahrzeugart" />
+                                <Checkbox value="LKW" name="fahrzeugart" /> */}
+                                <label>
+                                    <Field
+                                        value="PKW"
+                                        type="radio"
+                                        name="fahrzeugart"
+                                        defaultChecked
+                                    />
+                                    PKW
+                                </label>
+                                <label>
+                                    <Field
+                                        value="Motorrad"
+                                        type="radio"
+                                        name="fahrzeugart"
+                                    />
+                                    Motorrad
+                                </label>
+                                <label>
+                                    <Field
+                                        value="Traktor"
+                                        type="radio"
+                                        name="fahrzeugart"
+                                    />
+                                    Traktor
+                                </label>
+                                <label>
+                                    <Field
+                                        value="LKW"
+                                        type="radio"
+                                        name="fahrzeugart"
+                                    />
+                                    LKW
+                                </label>
                                 <StyledError
                                     name="fahrzeugart"
                                     component="div"
@@ -661,6 +702,24 @@ const AnfrageFormular = () => (
                                 Fahrzeuge können leider nicht über Belmot
                                 versichert werden.
                             </p>
+                            <br />
+                            {(values.fahrzeugart === "Traktor" ||
+                                values.fahrzeugart === "LKW") && (
+                                <label>
+                                    <span>
+                                        Kurze Beschreibung der geplanten
+                                        Verwendung / Einsatzzwecke *
+                                    </span>
+                                    <Field
+                                        component="textarea"
+                                        name="verwendung"
+                                    />
+                                    <StyledError
+                                        name="verwendung"
+                                        component="div"
+                                    />
+                                </label>
+                            )}
                             <br />
                             <label>
                                 <span>Hersteller *</span>
