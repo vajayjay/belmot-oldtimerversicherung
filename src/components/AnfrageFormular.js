@@ -655,10 +655,6 @@ const AnfrageFormular = () => (
                             <StyledH2>Fahrzeug-Informationen</StyledH2>
                             <fieldset>
                                 <legend>Fahrzeugart *</legend>
-                                {/* <Checkbox value="PKW" name="fahrzeugart" />
-                                <Checkbox value="Motorrad" name="fahrzeugart" />
-                                <Checkbox value="Traktor" name="fahrzeugart" />
-                                <Checkbox value="LKW" name="fahrzeugart" /> */}
                                 <label>
                                     <Field
                                         value="PKW"
