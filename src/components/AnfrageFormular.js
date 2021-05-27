@@ -727,7 +727,10 @@ const AnfrageFormular = () => (
                             </fieldset>
                             <br />
                             {(values.fahrzeugart === "Traktor" ||
-                                values.fahrzeugart === "LKW") && (
+                                values.fahrzeugart === "LKW" ||
+                                values.fahrzeugart === "Omnibus" ||
+                                values.fahrzeugart === "Wohnmobil" ||
+                                values.fahrzeugart === "Sonstige") && (
                                 <label>
                                     <span>
                                         Kurze Beschreibung der geplanten
@@ -793,7 +796,7 @@ const AnfrageFormular = () => (
                                 <span>Spitzname</span>
                                 <StyledField
                                     type="text"
-                                    name="baureihe"
+                                    name="spitzname"
                                     border={
                                         errors.spitzname &&
                                         touched.spitzname &&
