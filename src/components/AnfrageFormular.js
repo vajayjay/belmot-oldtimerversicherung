@@ -122,10 +122,12 @@ const FormSchema = Yup.object().shape({
         is: "nein",
         then: Yup.string().required("Dieses Feld ist ein Pflichtfeld"),
     }),
-    typ: Yup.string().when("sammlung", {
+    modellname: Yup.string().when("sammlung", {
         is: "nein",
         then: Yup.string().required("Dieses Feld ist ein Pflichtfeld"),
     }),
+    baureihe: Yup.string(),
+    spitzname: Yup.string(),
     erstzulassung: Yup.string()
         .min(4, "Ihre Eingabe ist zu kurz")
         .when("sammlung", {
@@ -280,7 +282,9 @@ const AnfrageFormular = () => (
                 fahrzeugart: "",
                 verwendung: "",
                 hersteller: "",
-                typ: "",
+                modellname: "",
+                baureihe: "",
+                spitzname: "",
                 erstzulassung: "",
                 wert: "",
                 fahrleistung: "",
@@ -509,7 +513,8 @@ const AnfrageFormular = () => (
                             <StyledH2>Kennzeichen</StyledH2>
                             <label>
                                 <span>
-                                    KFZ-Kennzeichen oder Zulassungsbezirk *
+                                    KFZ-Kennzeichen oder Kennzeichen des
+                                    Zulassungsbezirks *
                                 </span>
                                 <StyledField
                                     type="text"
@@ -678,7 +683,8 @@ const AnfrageFormular = () => (
                                         type="radio"
                                         name="fahrzeugart"
                                     />
-                                    Traktor
+                                    Traktor (ohne Nutzung zum ursprünglichen
+                                    Zweck)
                                 </label>
                                 <label>
                                     <Field
@@ -686,18 +692,39 @@ const AnfrageFormular = () => (
                                         type="radio"
                                         name="fahrzeugart"
                                     />
-                                    LKW
+                                    LKW (ohne Nutzung zum ursprünglichen Zweck)
+                                </label>
+                                <label>
+                                    <Field
+                                        value="Omnibus"
+                                        type="radio"
+                                        name="fahrzeugart"
+                                    />
+                                    Omnibus (ohne Nutzung zum ursprünglichen
+                                    Zweck)
+                                </label>
+                                <label>
+                                    <Field
+                                        value="Wohnmobil"
+                                        type="radio"
+                                        name="fahrzeugart"
+                                    />
+                                    Wohnmobil (ohne Nutzung zum ursprünglichen
+                                    Zweck)
+                                </label>
+                                <label>
+                                    <Field
+                                        value="Sonstige"
+                                        type="radio"
+                                        name="fahrzeugart"
+                                    />
+                                    Sonstige
                                 </label>
                                 <StyledError
                                     name="fahrzeugart"
                                     component="div"
                                 />
                             </fieldset>
-                            <p>
-                                Wohnmobile und zu Campingzwecken genutzte
-                                Fahrzeuge können leider nicht über Belmot
-                                versichert werden.
-                            </p>
                             <br />
                             {(values.fahrzeugart === "Traktor" ||
                                 values.fahrzeugart === "LKW") && (
@@ -734,17 +761,46 @@ const AnfrageFormular = () => (
                                 />
                             </label>
                             <label>
-                                <span>Typ *</span>
+                                <span>Modellname *</span>
                                 <StyledField
                                     type="text"
-                                    name="typ"
+                                    name="modellname"
                                     border={
-                                        errors.typ &&
-                                        touched.typ &&
+                                        errors.modellname &&
+                                        touched.modellname &&
                                         "3px solid var(--color-error)"
                                     }
                                 />
-                                <StyledError name="typ" component="div" />
+                                <StyledError
+                                    name="modellname"
+                                    component="div"
+                                />
+                            </label>
+                            <label>
+                                <span>Baureihe </span>
+                                <StyledField
+                                    type="text"
+                                    name="baureihe"
+                                    border={
+                                        errors.baureihe &&
+                                        touched.baureihe &&
+                                        "3px solid var(--color-error)"
+                                    }
+                                />
+                                <StyledError name="baureihe" component="div" />
+                            </label>
+                            <label>
+                                <span>Spitzname</span>
+                                <StyledField
+                                    type="text"
+                                    name="baureihe"
+                                    border={
+                                        errors.spitzname &&
+                                        touched.spitzname &&
+                                        "3px solid var(--color-error)"
+                                    }
+                                />
+                                <StyledError name="spitzname" component="div" />
                             </label>
                             <label>
                                 <span>Erstzulassung *</span>
