@@ -139,6 +139,22 @@ const FormSchema = Yup.object().shape({
         .when("fahrzeugart", {
             is: "Traktor",
             then: Yup.string().required("Dieses Feld ist ein Pflichtfeld"),
+        })
+        .when("fahrzeugart", {
+            is: "LKW",
+            then: Yup.string().required("Dieses Feld ist ein Pflichtfeld"),
+        })
+        .when("fahrzeugart", {
+            is: "Omnisbus",
+            then: Yup.string().required("Dieses Feld ist ein Pflichtfeld"),
+        })
+        .when("fahrzeugart", {
+            is: "Wohnmobil",
+            then: Yup.string().required("Dieses Feld ist ein Pflichtfeld"),
+        })
+        .when("fahrzeugart", {
+            is: "Sonstige",
+            then: Yup.string().required("Dieses Feld ist ein Pflichtfeld"),
         }),
     wert: Yup.string().when("sammlung", {
         is: "nein",
@@ -793,7 +809,7 @@ const AnfrageFormular = () => (
                                 <StyledError name="baureihe" component="div" />
                             </label>
                             <label>
-                                <span>Spitzname</span>
+                                <span>Spitzname (wenn bekannt)</span>
                                 <StyledField
                                     type="text"
                                     name="spitzname"
