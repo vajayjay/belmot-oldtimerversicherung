@@ -145,7 +145,7 @@ const FormSchema = Yup.object().shape({
             then: Yup.string().required("Dieses Feld ist ein Pflichtfeld"),
         })
         .when("fahrzeugart", {
-            is: "Omnisbus",
+            is: "Omnibus",
             then: Yup.string().required("Dieses Feld ist ein Pflichtfeld"),
         })
         .when("fahrzeugart", {
