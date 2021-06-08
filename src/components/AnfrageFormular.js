@@ -85,6 +85,7 @@ const FormSchema = Yup.object().shape({
     strasse: Yup.string()
         .min(3, "Ihre Eingabe ist zu kurz")
         .required("Dieses Feld ist ein Pflichtfeld"),
+    hausnummer: Yup.string().required("Dieses Feld ist ein Pflichtfeld"),
     plz: Yup.string()
         .min(4, "Ihre Eingabe ist zu kurz")
         .required("Dieses Feld ist ein Pflichtfeld"),
@@ -281,6 +282,7 @@ const AnfrageFormular = () => (
                 nachname: "",
                 geburtsdatum: "",
                 strasse: "",
+                hausnummer: "",
                 plz: "",
                 ort: "",
                 email: "",
@@ -425,7 +427,7 @@ const AnfrageFormular = () => (
                         <StyledError name="geburtsdatum" component="div" />
                     </label>
                     <label>
-                        <span>Straße und Hausnummer *</span>
+                        <span>Straße *</span>
                         <StyledField
                             type="text"
                             name="strasse"
@@ -436,6 +438,19 @@ const AnfrageFormular = () => (
                             }
                         />
                         <StyledError name="strasse" component="div" />
+                    </label>
+                    <label>
+                        <span>Hausnummer *</span>
+                        <StyledField
+                            type="text"
+                            name="hausnummer"
+                            border={
+                                errors.hausnummer &&
+                                touched.hausnummer &&
+                                "3px solid var(--color-error)"
+                            }
+                        />
+                        <StyledError name="hausnummer" component="div" />
                     </label>
                     <label>
                         <span>Postleitzahl *</span>
