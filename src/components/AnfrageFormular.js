@@ -691,74 +691,35 @@ const AnfrageFormular = () => (
                             </fieldset>
                             <br />
                             <StyledH2>Fahrzeug-Informationen</StyledH2>
-                            <fieldset>
-                                <legend>Fahrzeugart *</legend>
-                                <label>
-                                    <Field
-                                        value="PKW"
-                                        type="radio"
-                                        name="fahrzeugart"
-                                        defaultChecked
-                                    />
-                                    PKW
-                                </label>
-                                <label>
-                                    <Field
-                                        value="Motorrad"
-                                        type="radio"
-                                        name="fahrzeugart"
-                                    />
-                                    Motorrad
-                                </label>
-                                <label>
-                                    <Field
-                                        value="Traktor"
-                                        type="radio"
-                                        name="fahrzeugart"
-                                    />
-                                    Traktor (ohne Nutzung zum ursprünglichen
-                                    Zweck)
-                                </label>
-                                <label>
-                                    <Field
-                                        value="LKW"
-                                        type="radio"
-                                        name="fahrzeugart"
-                                    />
-                                    LKW (ohne Nutzung zum ursprünglichen Zweck)
-                                </label>
-                                <label>
-                                    <Field
-                                        value="Omnibus"
-                                        type="radio"
-                                        name="fahrzeugart"
-                                    />
-                                    Omnibus (ohne Nutzung zum ursprünglichen
-                                    Zweck)
-                                </label>
-                                <label>
-                                    <Field
-                                        value="Wohnmobil"
-                                        type="radio"
-                                        name="fahrzeugart"
-                                    />
-                                    Wohnmobil (ohne Nutzung zum ursprünglichen
-                                    Zweck)
-                                </label>
-                                <label>
-                                    <Field
-                                        value="Sonstige"
-                                        type="radio"
-                                        name="fahrzeugart"
-                                    />
-                                    Sonstige
-                                </label>
+                            <label>
+                                <span>Fahrzeugart *</span>
+                                <Field component="select" name="fahrzeugart">
+                                    <option value="">Bitte auswählen</option>
+                                    <option value="PKW">PKW</option>
+                                    <option value="Motorrad">Motorrad</option>
+                                    <option value="Traktor">
+                                        Traktor (ohne Nutzung zum ursprünglichen
+                                        Zweck)
+                                    </option>
+                                    <option value="LKW">
+                                        LKW (ohne Nutzung zum ursprünglichen
+                                        Zweck)
+                                    </option>
+                                    <option value="Omnibus">
+                                        Omnibus (ohne Nutzung zum ursprünglichen
+                                        Zweck)
+                                    </option>
+                                    <option value="Wohnmobil">
+                                        Wohnmobil (ohne Nutzung zum
+                                        ursprünglichen Zweck)
+                                    </option>
+                                    <option value="Sonstige">Sonstige</option>
+                                </Field>
                                 <StyledError
                                     name="fahrzeugart"
                                     component="div"
                                 />
-                            </fieldset>
-                            <br />
+                            </label>
                             {(values.fahrzeugart === "Traktor" ||
                                 values.fahrzeugart === "LKW" ||
                                 values.fahrzeugart === "Omnibus" ||
@@ -779,7 +740,6 @@ const AnfrageFormular = () => (
                                     />
                                 </label>
                             )}
-                            <br />
                             <label>
                                 <span>Hersteller *</span>
                                 <StyledField
