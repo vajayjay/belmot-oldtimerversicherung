@@ -36,7 +36,7 @@ const SmallPrint = styled.p`
     opacity: 0.6;
 `
 
-const Footer = props => (
+const Footer = (props) => (
     <StyledFooter itemScope itemType="http://schema.org/Organization">
         <div>
             <FooterTitle>Ansprechpartner</FooterTitle>
@@ -76,15 +76,15 @@ const Footer = props => (
             <p>
                 Tel:{" "}
                 <a href="tel:+4951919313199">
-                    <span itemProp="telephone">05191 931 31 99</span>
+                    <span itemProp="telephone">+49(0)591 931 31 99</span>
                 </a>
                 <br />
                 Mobil:{" "}
                 <a href="tel:+401725113611">
-                    <span itemProp="telephone">0172 511 3611</span>
+                    <span itemProp="telephone">+49(0)172 511 3611</span>
                 </a>
                 <br />
-                Fax: <span itemProp="faxNumber">05191 - 973 90 26</span>
+                Fax: <span itemProp="faxNumber">+49(0)5191 - 973 90 26</span>
                 <br />
                 <a href="mailto:info@belmot-oldtimerversicherung.de">
                     <span itemProp="email">

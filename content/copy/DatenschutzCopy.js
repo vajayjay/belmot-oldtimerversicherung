@@ -251,8 +251,8 @@ const DatenschutzCopy = () => (
             <br />
             Prinzenstr. 5 <br />
             30159 Hannover
-            <br /> 0511 / 120-4500
-            <br /> 0511 / 120-4599
+            <br /> +49(0)511 / 120-4500
+            <br /> +49(0)511 / 120-4599
             <br />
             E-Mail: poststelle@lfd.niedersachsen.de
         </p>
