@@ -128,7 +128,7 @@ const FormSchema = Yup.object().shape({
         then: Yup.string().required("Dieses Feld ist ein Pflichtfeld"),
     }),
     baureihe: Yup.string(),
-    karosserieform: Yup.string(),
+    karosserieform: Yup.string().required("Dieses Feld ist ein Pflichtfeld"),
     spitzname: Yup.string(),
     erstzulassung: Yup.string()
         .min(4, "Ihre Eingabe ist zu kurz")
@@ -829,7 +829,7 @@ const AnfrageFormular = () => (
                                 <span>Karosserieform *</span>
                                 <Field component="select" name="karosserieform">
                                     <option value="">Bitte auswählen</option>
-                                    <option value="Limousine">Limousine</option>
+                                    <option value="limousine">Limousine</option>
                                     <option value="kombi">Kombi</option>
                                     <option value="coupe">Coupé</option>
                                     <option value="cabrio">Cabrio</option>
