@@ -786,6 +786,19 @@ const AnfrageFormular = () => (
                                 <StyledError name="baureihe" component="div" />
                             </label>
                             <label>
+                                <span>Spitzname (wenn bekannt)</span>
+                                <StyledField
+                                    type="text"
+                                    name="spitzname"
+                                    border={
+                                        errors.spitzname &&
+                                        touched.spitzname &&
+                                        "3px solid var(--color-error)"
+                                    }
+                                />
+                                <StyledError name="spitzname" component="div" />
+                            </label>
+                            <label>
                                 <span>Karosserieform *</span>
                                 <Field component="select" name="karosserieform">
                                     <option value="">Bitte auswählen</option>
@@ -816,19 +829,6 @@ const AnfrageFormular = () => (
                                     name="motorstaerke"
                                     component="div"
                                 />
-                            </label>
-                            <label>
-                                <span>Spitzname (wenn bekannt)</span>
-                                <StyledField
-                                    type="text"
-                                    name="spitzname"
-                                    border={
-                                        errors.spitzname &&
-                                        touched.spitzname &&
-                                        "3px solid var(--color-error)"
-                                    }
-                                />
-                                <StyledError name="spitzname" component="div" />
                             </label>
                             <label>
                                 <span>Erstzulassung *</span>
