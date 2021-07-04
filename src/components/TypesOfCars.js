@@ -7,31 +7,31 @@ import { device } from "../theme/breakpoints"
 const CARS = [
     {
         type: "PKW",
-        condition: `Baujahr 1989 und älter`,
+        condition: `Erstzulassung 1989 und älter, max. 9.000 km pro Jahr`,
         img: "pkw",
         imgAlt: "PKW-Oldtimer Icon",
     },
     {
         type: "Youngtimer",
-        condition: "nach individueller Beurteilung",
+        condition: "Erstzulassung 1990 bis 1999, max. 6.000 km pro Jahr",
         img: "youngtimer",
         imgAlt: "Youngtimer Icon",
     },
     {
         type: "Motorräder",
-        condition: `Baujahr 1980 und älter`,
+        condition: `Erstzulassung 1980 und älter`,
         img: "motorrad",
         imgAlt: "Motorrad-Oldtimer Icon",
     },
     {
         type: "Traktoren",
-        condition: `Baujahr 1980 und älter`,
+        condition: `Erstzulassung 1980 und älter`,
         img: "traktor",
         imgAlt: "Oldtimer-Traktor Icon",
     },
     {
         type: "Lieferwagen & LKW",
-        condition: "Baujahr 1969 & älter, jüngere Fahrzeuge auf Anfrage",
+        condition: "Erstzulassung 1980 & älter, jüngere Fahrzeuge auf Anfrage",
         img: "lkw",
         imgAlt: "LKW-Oldtimer Icon",
     },
@@ -68,7 +68,7 @@ const ContentContainer = styled.div`
     }
 `
 
-const TypesOfCars = props => (
+const TypesOfCars = (props) => (
     <StyledSection>
         <StyledH2>Die Oldtimerversicherung für</StyledH2>
         <ContentContainer>

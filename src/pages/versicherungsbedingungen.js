@@ -34,7 +34,7 @@ class IndexPage extends React.Component {
                             <br />
                             info@belmot-oldtimerversicherung.de
                             <br />
-                            05191- 931 31 99
+                            +49(0)5191- 931 31 99
                         </p>
                     }
                 >

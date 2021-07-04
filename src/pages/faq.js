@@ -38,7 +38,9 @@ class IndexPage extends React.Component {
                                 info@belmot-oldtimerversicherung.de
                             </a>
                             <br />
-                            <a href="tel:+4951919313199">05191 - 931 31 99</a>
+                            <a href="tel:+4951919313199">
+                                +49(0)5191 - 931 31 99
+                            </a>
                         </p>
                     }
                 >
@@ -47,7 +49,7 @@ class IndexPage extends React.Component {
                         itemScope
                         itemType="https://schema.org/FAQPage"
                     >
-                        {FAQ.map(function(e, i) {
+                        {FAQ.map(function (e, i) {
                             return (
                                 <AccordionItem
                                     key={i}

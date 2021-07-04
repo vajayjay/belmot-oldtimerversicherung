@@ -12,7 +12,7 @@ const Features = {
         "Vandalismus",
         "Tierbiss-Schäden",
         "Kollision mit Tieren",
-        "Unfall des Transportfahrzeugs",
+        "Transportschäden",
     ],
     pro: [
         "Unfallschäden",
@@ -23,29 +23,6 @@ const Features = {
         "Schäden durch ausgelaufene Batteriesäure",
     ],
 }
-// const FeaturesBasic = [
-//     "Diebstahl",
-//     "Feuer- und Elementar",
-//     "Vandalismus",
-//     "Tierbiss-Schäden",
-//     "Kollision mit Tieren",
-//     "Unfall des Transportfahrzeugs",
-// ]
-// const FeaturesPro = [
-//     "Diebstahl",
-//     "Feuer- und Elementar",
-//     "Vandalismus",
-//     "Tierbiss-Schäden",
-//     "Kollision mit Tieren",
-//     "Unfall des Transportfahrzeugs",
-//     "Unfallschäden",
-//     "Motorschäden",
-//     "Getriebeschäden",
-//     "Bruchschäden",
-//     "Schäden durch Fehlbedienung (z. B. Verschalten)",
-//     "Schäden durch ausgelaufene Batteriesäure",
-// ]
-
 const StyledSection = styled.section`
     /* & > div {
         padding: 0 var(--space-side);
@@ -107,7 +84,7 @@ const StyledIcon = styled.div`
     margin-top: -5px;
     margin-right: var(--space-s);
     & > svg {
-        fill: ${props => (props.notAFeature ? "#f23e3e" : "#2a72d3")};
+        fill: ${(props) => (props.notAFeature ? "#f23e3e" : "#2a72d3")};
         max-width: 18px;
     }
     @media ${device.tablet} {
@@ -118,7 +95,7 @@ const StyledIcon = styled.div`
     }
 `
 
-const OldtimerIstLeidenschaft = props => (
+const OldtimerIstLeidenschaft = (props) => (
     <StyledSection>
         <SectionBlueBackground>
             <h2>Ihr Oldtimer ist Ihre Leidenschaft?</h2>

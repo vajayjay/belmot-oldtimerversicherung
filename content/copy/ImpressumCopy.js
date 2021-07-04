@@ -24,9 +24,9 @@ const ImpressumCopy = () => (
             <br />
             29614 Soltau
             <br />
-            Tel.: 05191 - 931 3199
+            Tel.: +49(0)5191 - 931 3199
             <br />
-            Fax 05191 - 973 9026
+            Fax +49(0)5191 - 973 9026
         </p>
         <br />
         <h3>Verantwortlicher gem. § 5 Telemediengesetz (TMG), § 55 RStV:</h3>
@@ -46,9 +46,9 @@ const ImpressumCopy = () => (
             <br />
             29614 Soltau
             <br />
-            Tel.: 05191 - 931 3199
+            Tel.: +49(0)5191 - 931 3199
             <br />
-            Fax 05191 - 973 9026
+            Fax +49(0)5191 - 973 9026
         </p>
         <br />
         <br />

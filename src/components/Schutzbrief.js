@@ -48,7 +48,7 @@ const ContentContainer = styled.div`
     }
 `
 
-const Schutzbrief = props => (
+const Schutzbrief = (props) => (
     <StyledSection>
         <div>
             <Img
@@ -65,7 +65,11 @@ const Schutzbrief = props => (
                     ihren Dienst. Und das meist kurz vor der geplanten Tour. Mit
                     dem BELMOT Schutzbrief sind Sie auf alle Allüren bestens
                     vorbereitet, z.B. mit der Pannen- und Unfallhilfe am
-                    Schadenort oder dem Transport nach Fahrzeugausfall.
+                    Schadenort oder dem Transport nach Fahrzeugausfall.{" "}
+                    <i>
+                        Ein Highlight: Abschleppkosten werden bis zu 1.500 €
+                        ersetzt!
+                    </i>
                 </p>
                 {/* <Button primary="primary" link="/anfrage">
                     Jetzt anfragen
@@ -75,7 +79,7 @@ const Schutzbrief = props => (
     </StyledSection>
 )
 
-export default props => (
+export default (props) => (
     <StaticQuery
         query={graphql`
             query {
@@ -88,6 +92,6 @@ export default props => (
                 }
             }
         `}
-        render={data => <Schutzbrief data={data} {...props} />}
+        render={(data) => <Schutzbrief data={data} {...props} />}
     />
 )

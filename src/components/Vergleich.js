@@ -61,7 +61,7 @@ const FeaturesBasic = [
     "Vandalismus",
     "Tierbiss-Schäden",
     "Kollision mit Tieren",
-    "Unfall des Transportfahrzeugs",
+    "Transportschäden",
     "und vieles mehr",
 ]
 const FeaturesPro = [

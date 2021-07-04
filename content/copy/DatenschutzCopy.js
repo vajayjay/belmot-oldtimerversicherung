@@ -40,9 +40,9 @@ const DatenschutzCopy = () => (
             29614 Soltau
         </p>
         <p>
-            Telefon: 05191-9313199
+            Telefon: +49(0)5191-9313199
             <br />
-            Mobil 0172-5113611
+            Mobil +49(0)172-5113611
             <br />
             E-Mail: heiner@blaskewitz.com
         </p>

@@ -77,7 +77,7 @@ class IndexPage extends React.Component {
                         <ContactIcon>
                             <Icon icon={ICONS.PHONE} />
                         </ContactIcon>
-                        <span>05191 931 31 99</span>
+                        <span>+49(0)5191 931 31 99</span>
                     </ContactLink>
                     <br />
 
