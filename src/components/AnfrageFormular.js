@@ -128,6 +128,7 @@ const FormSchema = Yup.object().shape({
         then: Yup.string().required("Dieses Feld ist ein Pflichtfeld"),
     }),
     baureihe: Yup.string(),
+    karosserieform: Yup.string(),
     spitzname: Yup.string(),
     erstzulassung: Yup.string()
         .min(4, "Ihre Eingabe ist zu kurz")
@@ -302,6 +303,7 @@ const AnfrageFormular = () => (
                 hersteller: "",
                 modellname: "",
                 baureihe: "",
+                karosserieform: "",
                 spitzname: "",
                 erstzulassung: "",
                 wert: "",
@@ -824,6 +826,38 @@ const AnfrageFormular = () => (
                                 <StyledError name="baureihe" component="div" />
                             </label>
                             <label>
+                                <span>Karosserieform *</span>
+                                <Field component="select" name="karosserieform">
+                                    <option value="">Bitte auswählen</option>
+                                    <option value="Limousine">Limousine</option>
+                                    <option value="kombi">Kombi</option>
+                                    <option value="coupe">Coupé</option>
+                                    <option value="cabrio">Cabrio</option>
+                                    <option value="bus">Bus</option>
+                                    <option value="sonstige">Sonstige</option>
+                                </Field>
+                                <StyledError
+                                    name="karosserieform"
+                                    component="div"
+                                />
+                            </label>
+                            <label>
+                                <span>Motorsträke in kW *</span>
+                                <StyledField
+                                    type="text"
+                                    name="motorstaerke"
+                                    border={
+                                        errors.motorstaerke &&
+                                        touched.motorstaerke &&
+                                        "3px solid var(--color-error)"
+                                    }
+                                />
+                                <StyledError
+                                    name="motorstaerke"
+                                    component="div"
+                                />
+                            </label>
+                            <label>
                                 <span>Spitzname (wenn bekannt)</span>
                                 <StyledField
                                     type="text"
@@ -925,22 +959,7 @@ const AnfrageFormular = () => (
                                 Kilometerleistungen sind nicht versicherbar.
                             </p>
                             <br />
-                            <label>
-                                <span>Motorsträke in kW *</span>
-                                <StyledField
-                                    type="text"
-                                    name="motorstaerke"
-                                    border={
-                                        errors.motorstaerke &&
-                                        touched.motorstaerke &&
-                                        "3px solid var(--color-error)"
-                                    }
-                                />
-                                <StyledError
-                                    name="motorstaerke"
-                                    component="div"
-                                />
-                            </label>
+
                             <label>
                                 <span>
                                     Aktuelle Gesamtkilometerleistung des
