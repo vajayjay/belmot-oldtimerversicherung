@@ -57,9 +57,16 @@ class IndexPage extends React.Component {
                         https://service.mannheimer.de/webcode/start.do
                     </a>
                     <p>
-                        Geben Sie dort den folgenden Code ein:
+                        Geben Sie dort einen der folgenden Codes ein:
                         <br />
-                        F02G 4000 1019
+                        <br />
+                        Fahrzeuge bis Erstzulassung 31.12.1989: <br />
+                        <b>F026 4000 0121</b>
+                        <br />
+                        <br />
+                        Fahrzeuge mit Erstzulassung 01.01.1990 bis 31.12.1999:
+                        <br />
+                        <b>F014 8000 0121</b>
                     </p>
                     <br />
                     <Button primary="primary" link="/">
