@@ -916,7 +916,9 @@ const AnfrageFormular = () => (
                             </label>
                             <p>
                                 Über 9.000 km pro Jahr hinausgehende
-                                Kilometerleistungen sind nicht versicherbar.
+                                Kilometerleistungen sind nicht versicherbar. Für
+                                Fahrzeuge mit einem Wert unter 12.500 € sind
+                                maximal 3.000 km p.a. versicherbar
                             </p>
                             <br />
 
