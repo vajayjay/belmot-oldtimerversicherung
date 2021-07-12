@@ -815,7 +815,7 @@ const AnfrageFormular = () => (
                                 />
                             </label>
                             <label>
-                                <span>Motorsträke in kW *</span>
+                                <span>Motorstärke in kW *</span>
                                 <StyledField
                                     type="text"
                                     name="motorstaerke"
